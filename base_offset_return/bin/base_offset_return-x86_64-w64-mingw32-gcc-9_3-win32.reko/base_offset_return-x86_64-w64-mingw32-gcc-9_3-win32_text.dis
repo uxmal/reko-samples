@@ -1,0 +1,1782 @@
+void fn0000000069601000()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed: SCZO rax rcx
+// Preserved: rsp
+fn0000000069601000_entry:
+l0000000069601000:
+l0000000069601007_thunk_fn0000000069602870:
+	fn0000000069602870(0x0000000069607000<p64>)
+	return
+fn0000000069601000_exit:
+
+
+word32 fn0000000069601010(word32 edx, selector gs)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      DllMain
+// MayUse:  gs:[0..15] rdx:[0..31]
+// LiveOut: rax
+// Trashed: SCZO rax rcx rdx
+// Preserved: r12 r13 r8 rbp rbx rdi rsi rsp
+fn0000000069601010_entry:
+	word32 edx = SLICE(rdx, word32, 0)
+l0000000069601010:
+	branch edx != 0<32> l00000000696010A0
+l00000000696010A0:
+	branch edx != 1<32> l0000000069601158
+l0000000069601158:
+	return 1<32>
+l00000000696010A9:
+	word64 rbx_49 = Mem20[0x0000000069604260<p64>:word64]
+	word64 rsi_50 = Mem20[Mem20[gs:0x30<32>:word64] + 8<64>:word64]
+l00000000696010E0:
+	word32 edi_100
+	__lock()
+	word64 rax_61
+	__cmpxchg(Mem20[rbx_49:word64], rsi_50, 0<u64>, out rax_61)
+	branch rax_61 != 0<64> l00000000696010D0
+l00000000696010D0:
+	branch rsi_50 == rax_61 l0000000069601190
+l0000000069601190:
+	edi_100 = 1<32> (alias)
+l00000000696010D9:
+	Sleep(0x3E8<u64>)
+l00000000696010ED:
+	edi_100 = 0<32> (alias)
+l00000000696010EF:
+	word64 rsi_75 = Mem20[0x0000000069604270<p64>:word64]
+	branch SLICE((uint64) Mem20[rsi_75:word32], word32, 0) == 1<32> l00000000696011F0
+l00000000696011F0:
+	_amsg_exit(0x1F<u64>)
+l0000000069601101:
+	branch SLICE((uint64) Mem20[rsi_75:word32], word32, 0) == 0<32> l00000000696011B0
+l00000000696011B0:
+	word64 rdx_86 = Mem20[0x00000000696042B0<p64>:word64]
+	word64 rcx_87 = Mem20[0x00000000696042A0<p64>:word64]
+	Mem88[rsi_75:word32] = 1<32>
+	_initterm(rcx_87, rdx_86)
+l000000006960110B:
+	branch SLICE((uint64) Mem90[rsi_75:word32], word32, 0) == 1<32> l00000000696011D0
+l00000000696011D0:
+	_initterm(Mem90[0x0000000069604280<p64>:word64], Mem90[0x0000000069604290<p64>:word64])
+	Mem97[rsi_75:word32] = 2<32>
+l0000000069601116:
+	branch edi_100 == 0<32> l00000000696011A0
+l00000000696011A0:
+	Mem114[rbx_49:word64] = 0<u64>
+l000000006960111E:
+	branch Mem116[Mem116[0x0000000069604230<p64>:word64]:word64] == 0<64> l000000006960113A
+l000000006960112D:
+	fn00000000696016F0(2<32>)
+l000000006960113A:
+	Mem145[0x0000000069607018<p64>:word32] = Mem116[0x0000000069607018<p64>:word32] + 1<32>
+	return 1<32>
+l0000000069601026:
+	word32 edx_169 = SLICE((uint64) Mem20[0x0000000069607018<p64>:word32], word32, 0)
+	word64 rax_168 = 0<u64>
+	branch edx_169 <= 0<32> l0000000069601090
+l0000000069601032:
+	word64 rbx_173 = Mem20[0x0000000069604260<p64>:word64]
+	Mem180[0x0000000069607018<p64>:word32] = SLICE((uint64) (edx_169 - 1<32>), word32, 0)
+l000000006960105F:
+	__lock()
+	word64 rax_187
+	__cmpxchg(Mem180[rbx_173:word64], 1<u64>, 0<u64>, out rax_187)
+	branch rax_187 != 0<64> l0000000069601058
+l0000000069601058:
+	Sleep(0x3E8<u64>)
+l000000006960106F:
+	word64 rdi_194 = Mem180[0x0000000069604270<p64>:word64]
+	branch SLICE((uint64) Mem180[rdi_194:word32], word32, 0) == 2<32> l0000000069601170
+l0000000069601170:
+	fn0000000069602980(0x0000000069607000<p64>)
+	Mem206[rdi_194:word32] = 0<32>
+	Mem208[rbx_173:word64] = rax_187
+	rax_168 = 1<u64>
+l0000000069601081:
+	_amsg_exit(0x1F<u64>)
+	rax_168 = 1<u64>
+l0000000069601090:
+	return SLICE(rax_168, word32, 0)
+fn0000000069601010_exit:
+
+
+word32 fn0000000069601200(word32 edx, selector gs)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      DllMain
+// MayUse:  gs:[0..15] rdx:[0..31]
+// LiveOut: rax
+// Trashed: SCZO rax rcx rdx
+// Preserved: r12 r13 r14 r8 rbx rsi rsp
+fn0000000069601200_entry:
+	word32 edx = SLICE(rdx, word32, 0)
+l0000000069601200:
+	word32 r14d_138
+	word32 eax_103
+	word64 rsi_19 = Mem17[0x0000000069604250<p64>:word64]
+	Mem23[rsi_19:word32] = edx
+	word64 r12_24 = (uint64) edx
+	r12d_115 = SLICE(r12_24, word32, 0) (alias)
+	word32 r12d_115 = SLICE(r12_24, word32, 0)
+	branch edx != 0<32> l0000000069601280
+l0000000069601280:
+	fn0000000069601A10()
+	eax_103 = r12_24 - 1<64>
+	word64 rdx_33 = (uint64) r12d_115
+	branch r12_24 >u 2<64> l0000000069601308
+l0000000069601308:
+	fn0000000069602810()
+	r14d_138 = SLICE((uint64) (r12_24 - 1<64>), word32, 0) (alias)
+	branch r12d_115 != 3<32> l0000000069601264
+l000000006960131A:
+l0000000069601298:
+	word32 eax_48 = SLICE((uint64) (uint32) fn0000000069601010(rdx_33, gs), word32, 0)
+	branch eax_48 == 0<32> l0000000069601261
+l00000000696012A1:
+	fn0000000069602800()
+	r14d_138 = SLICE((uint64) eax_48, word32, 0) (alias)
+	branch eax_48 == 0<32> l0000000069601320
+l0000000069601320:
+	branch r12d_115 != 1<32> l0000000069601261
+l000000006960132A:
+l00000000696012B6:
+	branch r12d_115 != 1<32> l000000006960132C
+l000000006960132C:
+	fn0000000069602810()
+	r14d_138 = SLICE((uint64) eax_48, word32, 0) (alias)
+l00000000696012BC:
+	fn00000000696014C0(r8)
+	fn0000000069602810()
+	r14d_138 = SLICE((uint64) eax_48, word32, 0) (alias)
+	branch eax_48 != 0<32> l0000000069601264
+l00000000696012D8:
+	fn0000000069602810()
+	fn0000000069602800()
+l00000000696012F2:
+	fn0000000069601010(0<u64>, gs)
+l0000000069601222:
+	eax_103 = SLICE((uint64) Mem23[0x0000000069607018<p64>:word32], word32, 0) (alias)
+	branch eax_103 == 0<32> l0000000069601261
+l000000006960122C:
+	fn0000000069601A10()
+	fn0000000069602810()
+l000000006960123E:
+	fn0000000069602800()
+	r14d_138 = SLICE((uint64) eax_103, word32, 0) (alias)
+	branch SLICE((uint64) (uint32) fn0000000069601010((uint64) r12d_115, gs), word32, 0) != 0<32> l0000000069601264
+l0000000069601261:
+	r14d_138 = 0<32> (alias)
+l0000000069601264:
+	Mem153[rsi_19:word32] = 0xFFFFFFFF<32>
+	return SLICE((uint64) r14d_138, word32, 0)
+fn0000000069601200_exit:
+
+
+BOOL DllMain(HANDLE hModule, DWORD dwReason, LPVOID lpReserved)
+// stackDelta: 8; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  gs:[0..15] rdx:[0..63]
+// LiveOut: eax
+// Trashed: eax
+// Preserved:
+DllMain_entry:
+	word32 rdx_32_32_49 = SLICE(dwReason, word32, 32)
+l0000000069601350:
+	Mem6[Mem0[0x00000000696042C0<p64>:word64]:word32] = 0<32>
+	word64 rdx_50 = SEQ(rdx_32_32_49, dwReason)
+	branch dwReason == 1<32> l0000000069601370
+l0000000069601370:
+	fn00000000696014E0()
+	fn0000000069601EC0()
+	word64 rdx_35 = (uint64) dwReason
+l000000006960139A_thunk_fn0000000069601200:
+	return SLICE((uint64) (uint32) fn0000000069601200(rdx_35, gs), BOOL, 0)
+l0000000069601366:
+l000000006960136A_thunk_fn0000000069601200:
+	return SLICE((uint64) (uint32) fn0000000069601200(rdx_50, gs), BOOL, 0)
+DllMain_exit:
+
+
+void fn00000000696013A0(word64 rcx)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      fn00000000696014C0
+//      fn0000000069602AF0
+// MayUse:  rcx:[0..63]
+// LiveOut:
+// Trashed: SCZO rax rcx rdx
+// Preserved: rsp
+fn00000000696013A0_entry:
+l00000000696013A0:
+l00000000696013AA_thunk_fn00000000696028A0:
+	fn00000000696028A0(0x0000000069607000<p64>, rcx)
+	return
+fn00000000696013A0_exit:
+
+
+void fn00000000696013B0()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      fn0000000069602AF0
+// MayUse: 
+// LiveOut:
+// Trashed: SCZO rax rcx rdx
+// Preserved: rsp
+fn00000000696013B0_entry:
+l00000000696013B0:
+l00000000696013B7_thunk_fn00000000696013A0:
+	fn00000000696013A0(0x00000000696013C0<p64>)
+	return
+fn00000000696013B0_exit:
+
+
+void fn00000000696013C0()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed:
+// Preserved: rsp
+fn00000000696013C0_entry:
+l00000000696013C0:
+	return
+fn00000000696013C0_exit:
+
+
+word32 getIndex(byte cl)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      foo
+// MayUse:  rcx:[0..7]
+// LiveOut: rax
+// Trashed: SCZO rax
+// Preserved: rsp
+getIndex_entry:
+l00000000696013D0:
+	return SLICE((uint64) ((uint32) (uint8) (rcx == 0<64>) + 1<32>), word32, 0)
+getIndex_exit:
+
+
+void foo(word64 rcx)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  rcx:[0..63]
+// LiveOut:
+// Trashed: SCZO rax rdx
+// Preserved: rsp
+foo_entry:
+l00000000696013E0:
+	branch rcx == 0<64> l0000000069601400
+l0000000069601400:
+	return
+l00000000696013E9:
+	Mem18[rcx + (int64) SLICE((uint64) ((uint32) getIndex(rcx)), word32, 0) * 4<64>:word32] = 0<32>
+	return
+foo_exit:
+
+
+void fn0000000069601410()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed: SCZO rax rdx
+// Preserved: rsp
+fn0000000069601410_entry:
+l0000000069601410:
+	word64 rax_10 = Mem0[Mem0[0x0000000069603010<p64>:word64]:word64]
+	branch rax_10 == 0<64> l0000000069601445
+l0000000069601423:
+l0000000069601428:
+	call rax_10 (retsize: 8;)
+		uses: rdx:rax_16 + 8<64>
+	word64 rax_16 = Mem15[0x0000000069603010<p64>:word64]
+	rax_10 = Mem15[rax_16 + 8<64>:word64]
+	Mem19[0x0000000069603010<p64>:word64] = rax_16 + 8<64>
+	branch rax_10 != 0<64> l0000000069601428
+l0000000069601445:
+	return
+fn0000000069601410_exit:
+
+
+void fn0000000069601450(word64 r8)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      fn00000000696014C0
+// MayUse:  r8:[32..63]
+// LiveOut:
+// Trashed: SCZO r8 rax rcx rdx
+// Preserved: rbx rsi rsp
+fn0000000069601450_entry:
+	word32 r8_32_32 = SLICE(r8, word32, 32)
+l0000000069601450:
+	word64 rdx_10 = Mem8[0x0000000069604200<p64>:word64]
+	word32 eax_12 = Mem8[rdx_10:word32]
+	word32 ecx_31 = SLICE((uint64) eax_12, word32, 0)
+	branch eax_12 == 0xFFFFFFFF<32> l00000000696014A0
+l00000000696014A0:
+	word64 rax_16 = 0<u64>
+l00000000696014A8:
+	word64 r8_26 = SEQ(r8_32_32, rax_16 + 1<64>)
+	ecx_31 = SLICE((uint64) SLICE(rax_16, word32, 0), word32, 0) (alias)
+	rax_16 = r8_26
+	branch Mem8[rdx_10 + r8_26 * 8<64>:word64] != 0<64> l00000000696014A8
+l00000000696014B8:
+l0000000069601467:
+	branch ecx_31 == 0<32> l000000006960148B
+l000000006960146B:
+	word64 rax_37 = (uint64) ecx_31
+	word64 rbx_40 = rdx_10 + rax_37 * 8<64>
+	word64 rsi_43 = rdx_10 - 8<64> + (rax_37 - (uint64) (ecx_31 - 1<32>)) * 8<64>
+l0000000069601480:
+	word64 r8_50
+	call fn9090909090909090 (retsize: 8;)
+		uses: r8_32_32:r8_32_32_78,r8d:r8d_91
+		defs: r8:r8_50
+	word32 r8_32_32_78 = SLICE(r8_50, word32, 32)
+	word32 r8d_91 = SLICE(r8_50, word32, 0)
+	rbx_40 = rbx_40 - 8<64>
+	branch rbx_40 != rsi_43 l0000000069601480
+l000000006960148B:
+l0000000069601498_thunk_fn00000000696013A0:
+	fn00000000696013A0(0x0000000069601410<p64>)
+	return
+fn0000000069601450_exit:
+
+
+void fn00000000696014C0(word64 r8)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      DllMain
+// MayUse:  r8:[0..63]
+// LiveOut:
+// Trashed: SCZO r8 rax rcx rdx
+// Preserved: rsp
+fn00000000696014C0_entry:
+l00000000696014C0:
+	branch SLICE((uint64) Mem0[0x0000000069607020<p64>:word32], word32, 0) == 0<32> l00000000696014D0
+l00000000696014D0:
+	Mem9[0x0000000069607020<p64>:word32] = 1<32>
+l00000000696014DA_thunk_fn0000000069601450:
+	fn0000000069601450(r8)
+	return
+l00000000696014CA:
+	return
+fn00000000696014C0_exit:
+
+
+void fn00000000696014E0()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      DllMain
+// MayUse: 
+// LiveOut:
+// Trashed: SCZO rax rcx rdx
+// Preserved: r12 rbp rbx rdi rsi rsp
+fn00000000696014E0_entry:
+l00000000696014E0:
+	word64 rbx_19 = Mem17[0x0000000069603070<p64>:word64]
+	branch rbx_19 == 0x2DDFA232<64> l0000000069601520
+l0000000069601520:
+	word64 rdx_48
+	GetSystemTimeAsFileTime(fp - 0x38<64>)
+	word32 ebp_35 = SLICE((uint64) GetCurrentProcessId(), word32, 0)
+	word32 edi_39 = SLICE((uint64) GetCurrentThreadId(), word32, 0)
+	word32 r12d_42 = SLICE((uint64) GetTickCount(), word32, 0)
+	QueryPerformanceCounter(fp - 0x30<64>)
+	word64 rax_44 = (uint64) r12d_42 ^ ((uint64) edi_39 ^ ((uint64) ebp_35 ^ (qwLoc30 ^ 0<64>)))
+	word64 rax_45 = rax_44 & 0xFFFFFFFF<64>
+	branch (rax_44 & 0xFFFFFFFF<64>) == rbx_19 l00000000696015A0
+l00000000696015A0:
+	rdx_48 = 0xD2205DCC<64>
+	rax_45 = 0x2DDFA233<64>
+l000000006960157B:
+	rdx_48 = ~(rax_44 & 0xFFFFFFFF<64>)
+l0000000069601581:
+	Mem53[0x0000000069603070<p64>:word64] = rax_45
+	Mem55[0x0000000069603080<p64>:word64] = rdx_48
+	return
+l0000000069601509:
+	Mem70[0x0000000069603080<p64>:word64] = ~rbx_19
+	return
+fn00000000696014E0_exit:
+
+
+void fn00000000696015C0(word64 rcx, word64 qwArg00)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  rcx:[0..63] Stack +0000:[0..63]
+// LiveOut:
+// Trashed:
+// Preserved:
+// Terminates process
+fn00000000696015C0_exit:
+fn00000000696015C0_entry:
+l00000000696015C0:
+	RtlCaptureContext(0x0000000069607040<p64>)
+	word64 rsi_17 = Mem11[0x0000000069607138<p64>:word64]
+	branch RtlLookupFunctionEntry(rsi_17, fp - 0x40<64>, 0<u64>) == 0<64> l000000006960169D
+l00000000696015FD:
+	call KERNEL32.dll!RtlVirtualUnwind (retsize: 8;)
+		uses: r8:rsi_17,rax:0x0000000069607040<p64>,rcx:0<u64>,rdx:qwLoc40,Stack +0028:0x0000000069607040<p64>,Stack +0030:fp - 0x30<64>,Stack +0038:fp - 0x38<64>,Stack +0040:0<64>,Stack +0050:qwLoc40,Stack +0090:qwArg00
+l0000000069601633:
+	word64 rax_46 = Mem45[0x0000000069607138<p64>:word64]
+	Mem52[0x00000000696070C0<p64>:word64] = rcx
+	Mem53[0x0000000069607530<p64>:word64] = rax_46
+	Mem55[0x0000000069607520<p64>:word64] = 0xC0000409<64>
+	word32 rax_32_32_66 = SLICE(SetUnhandledExceptionFilter(0<u64>), word32, 32)
+	UnhandledExceptionFilter(0x0000000069604000<p64>)
+	TerminateProcess(SEQ(rax_32_32_66, GetCurrentProcess()), 0xC0000409<u64>)
+	abort()
+l000000006960169D:
+	Mem73[0x0000000069607138<p64>:word64] = qwArg00
+	Mem75[0x00000000696070D8<p64>:word64] = fp - 0x10<64>
+
+
+void fn00000000696016C0(word32 edx)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  edx:[0..31]
+// LiveOut:
+// Trashed: SCZO rax rcx
+// Preserved: rsp
+fn00000000696016C0_entry:
+l00000000696016C0:
+	branch edx == 3<32> l00000000696016E0
+l00000000696016C9:
+	branch edx == 0<32> l00000000696016E0
+l00000000696016E0:
+	fn00000000696022F0(edx)
+	return
+l00000000696016CD:
+	return
+fn00000000696016C0_exit:
+
+
+word32 fn00000000696016F0(word32 edx)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      fn0000000069601010
+// MayUse:  edx:[0..31]
+// LiveOut: edx
+// Trashed: SCZO edx rax rcx
+// Preserved: rbx rsi rsp
+fn00000000696016F0_entry:
+l00000000696016F0:
+	word64 rax_10 = Mem8[0x00000000696041F0<p64>:word64]
+	branch Mem8[rax_10:word32] == 2<32> l0000000069601708
+l0000000069601702:
+	Mem13[rax_10:word32] = 2<32>
+l0000000069601708:
+	branch edx == 2<32> l0000000069601720
+l0000000069601720:
+	word64 rbx_18 = 0x000000006960A050<p64>
+	branch 0x000000006960A050<p64> == 0x000000006960A050<p64> l0000000069601712
+l0000000069601733:
+l0000000069601738:
+	word64 rax_24 = Mem60[rbx_18:word64]
+	branch rax_24 == 0<64> l0000000069601742
+l0000000069601740:
+	word64 rcx_77
+	call rax_24 (retsize: 8;)
+		uses: edx:edx_29,rcx:rcx_77
+		defs: edx:edx_32,rcx:rcx_77
+l0000000069601742:
+	rbx_18 = rbx_18 + 8<64>
+	branch 0x000000006960A050<p64> != rbx_18 l0000000069601738
+l000000006960174B:
+	return edx
+l000000006960170D:
+	branch edx == 1<32> l0000000069601760
+l0000000069601760:
+	fn00000000696022F0(edx)
+	return edx
+l0000000069601712:
+	return edx
+fn00000000696016F0_exit:
+
+
+void fn0000000069601780()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed: SCZO rax
+// Preserved: rsp
+fn0000000069601780_entry:
+l0000000069601780:
+	return
+fn0000000069601780_exit:
+
+
+word64 fn0000000069601790(word64 rcx)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      fn0000000069601800
+//      fn0000000069601A10
+// MayUse:  rcx:[0..63]
+// LiveOut: rcx
+// Trashed: SCZO r12 r8 r9 rax rbx rcx rdx rsp
+// Preserved:
+fn0000000069601790_entry:
+l0000000069601790:
+	word64 rax_23 = fn0000000069602A00(2<32>)
+	fwrite(0x0000000069604080<p64>, 1<u64>, 0x1B<u64>, rax_23)
+	word64 rcx_48
+	word64 rdx_50
+	word64 r8_51
+	call msvcrt.dll!vfprintf (retsize: 8;)
+		uses: r8:fp + 0x10<64>,r9:rax_23,rcx:fn0000000069602A00(2<32>),rdx:rcx
+		defs: r8:r8_51,rcx:rcx_48,rdx:rdx_50
+	abort()
+l00000000696017FA_thunk_fn0000000069601800:
+	return fn0000000069601800(rcx_48, rdx_50, r8_51)
+fn0000000069601790_exit:
+
+
+word64 fn0000000069601800(word64 rcx, word64 rdx, word32 r8d)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      fn0000000069601790
+//      fn0000000069601A10
+// MayUse:  r8:[0..31] rcx:[0..63] rdx:[0..63]
+// LiveOut: rcx
+// Trashed: SCZO r10 r12 r8 r9 rax rbp rbx rcx rdi rdx rsi rsp
+// Preserved:
+fn0000000069601800_entry:
+l0000000069601800:
+	word64 rcx_102
+	word64 rdi_172
+	word64 rdi_19 = (int64) Mem17[0x00000000696075E4<p64>:word32]
+	word32 edi_26 = SLICE(rdi_19, word32, 0)
+	word64 rbx_25 = r8
+	word32 ebx_180 = SLICE(r8, word32, 0)
+	branch edi_26 <= 0<32> l00000000696019A8
+l0000000069601822:
+	word64 rax_31 = Mem17[0x00000000696075E8<p64>:word64] + 0x18<64>
+	word64 rcx_433 = 0<64>
+l0000000069601830:
+	word32 ecx_45 = SLICE(rcx_433, word32, 0)
+	word64 rdx_35 = Mem17[rax_31:word64]
+	branch rcx <u rdx_35 l000000006960184C
+l0000000069601838:
+	rcx_102 = rcx_433 (alias)
+	branch rcx <u rdx_35 + (uint64) Mem17[Mem17[rax_31 + 8<64>:word64] + 8<64>:word32] l00000000696018D7
+l000000006960184C:
+	rcx_433 = (uint64) (ecx_45 + 1<32>)
+	rax_31 = rax_31 + 0x28<64>
+	rdi_172 = rdi_19 (alias)
+	rbx_25 = r8 (alias)
+	branch SLICE(rcx_433, word32, 0) != edi_26 l0000000069601830
+l0000000069601857:
+	ebx_180 = SLICE(rbx_25, word32, 0) (alias)
+	ebx_180 = SLICE(rbx_25, word32, 0) (alias)
+	ebx_180 = SLICE(rbx_25, word32, 0) (alias)
+	word64 rax_59 = fn0000000069602500(rcx)
+	branch rax_59 == 0<64> l00000000696019E2
+l00000000696019E2:
+	fn0000000069601790(0x00000000696040A0<p64>)
+l000000006960186B:
+	word64 rdi_85 = rdi_172 * 5<64>
+	word64 rax_87 = Mem83[0x00000000696075E8<p64>:word64] + (rdi_85 << 3<64>)
+	Mem89[rax_87 + 0x20<64>:word64] = rax_59
+	Mem90[rax_87:word32] = 0<32>
+	word64 rax_92 = fn0000000069602630()
+	word64 rax_103 = Mem90[0x00000000696075E8<p64>:word64]
+	rcx_102 = (uint64) Mem90[rax_59 + 0xC<64>:word32] + rax_92
+	Mem104[rax_103 + 0x18<64> + (rdi_85 << 3<64>):word64] = rcx_102
+	branch SEQ(SLICE(rax_103, word32, 32), VirtualQuery(rcx_102, fp - 0x58<64>, 0x30<u64>)) == 0<64> l00000000696019F1
+l00000000696019F1:
+	fn0000000069601790(0x00000000696040C0<p64>)
+l0000000069601A0D_thunk_fn0000000069601A10:
+	return fn0000000069601A10()
+l00000000696018B8:
+	word64 rax_136 = (uint64) dwLoc34
+	word32 eax_143 = SLICE(rax_136, word32, 0)
+	branch SLICE((uint64) (rax_136 - 0x40<64> & 0xFFFFFFBF<32>), word32, 0) == 0<32> l00000000696018D0
+l00000000696018C4:
+	branch SLICE((uint64) (SLICE((uint64) (eax_143 - 4<32>), word32, 0) & 0xFFFFFFFB<32>), word32, 0) != 0<32> l0000000069601960
+l0000000069601960:
+	word64 rdi_154 = (rdi_85 << 3<64>) + Mem104[0x00000000696075E8<p64>:word64]
+	Mem155[rdi_154 + 8<64>:word64] = qwLoc58
+	Mem157[rdi_154 + 0x10<64>:word64] = qwLoc40
+	rcx_102 = qwLoc58
+	branch VirtualProtect(qwLoc58, qwLoc40, 0x40<u64>, rdi_154) != 0<32> l00000000696018D0
+l0000000069601990:
+	GetLastError()
+	fn0000000069601790(0x00000000696040F8<p64>)
+l00000000696019A8:
+	rdi_172 = 0<u64>
+l00000000696018D0:
+	Mem178[0x00000000696075E4<p64>:word32] = Mem176[0x00000000696075E4<p64>:word32] + 1<32>
+l00000000696018D7:
+	byte bl_247 = SLICE(ebx_180, byte, 0)
+	branch ebx_180 >=u 8<32> l0000000069601908
+l0000000069601908:
+	Mem200[rcx:word64] = Mem194[rdx:word64]
+	word64 rax_201 = (uint64) ebx_180
+	Mem203[rcx - 8<64> + rax_201:word64] = Mem200[rdx - 8<64> + rax_201:word64]
+	word64 r12_204 = rcx - (rcx + 8<64> & 0xFFFFFFFFFFFFFFF8<64>)
+	rcx_102 = rcx + 8<64> & 0xFFFFFFFFFFFFFFF8<64>
+	word64 rsi_207 = rdx - r12_204
+	word32 ebx_210 = SLICE((uint64) (SLICE((uint64) (ebx_180 + SLICE(r12_204, word32, 0)), word32, 0) & 0xFFFFFFF8<32>), word32, 0)
+	branch ebx_210 <u 8<32> l00000000696018F9
+l0000000069601935:
+	word32 ebx_306 = SLICE((uint64) (ebx_210 & 0xFFFFFFF8<32>), word32, 0)
+	word32 eax_215 = 0<32>
+l000000006960193A:
+	word64 rdx_219 = (uint64) eax_215
+	Mem225[(rcx + 8<64> & 0xFFFFFFFFFFFFFFF8<64>) + rdx_219:word64] = Mem222[rsi_207 + rdx_219:word64]
+	eax_215 = SLICE((uint64) (eax_215 + 8<32>), word32, 0) (alias)
+	branch eax_215 <u ebx_306 l000000006960193A
+l000000006960194B:
+	return rcx_102
+l00000000696018DC:
+	byte bl_266 = SLICE(ebx_180, byte, 0)
+	branch (bl_247 & 4<8>) != 0<8> l00000000696019B0
+l00000000696019B0:
+	Mem256[rcx:word32] = SLICE((uint64) Mem194[rdx:word32], word32, 0)
+	word64 rbx_254 = (uint64) ebx_180
+	Mem259[rcx - 4<64> + rbx_254:word32] = SLICE((uint64) Mem256[rdx - 4<64> + rbx_254:word32], word32, 0)
+l00000000696018E5:
+	branch ebx_180 == 0<32> l00000000696018F9
+l00000000696018E9:
+	Mem265[rcx:byte] = SLICE((word32) Mem194[rdx:byte], byte, 0)
+	branch (bl_266 & 2<8>) != 0<8> l00000000696019D0
+l00000000696019D0:
+	word64 rbx_272 = (uint64) ebx_180
+	Mem275[rcx - 2<64> + rbx_272:word16] = SLICE((word32) Mem265[rdx - 2<64> + rbx_272:word16], word16, 0)
+l00000000696018F9:
+	return rcx_102
+fn0000000069601800_exit:
+
+
+word64 fn0000000069601A10()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      DllMain
+//      fn0000000069601800
+// MayUse: 
+// LiveOut: rcx
+// Trashed: SCZO r10 r12 r8 r9 rax rbp rbx rcx rdi rdx rsi rsp
+// Preserved: r13 r14 r15
+fn0000000069601A10_entry:
+l0000000069601A10:
+	word64 rsi_29 = (uint64) Mem26[0x00000000696075E0<p64>:word32]
+	word32 esi_390 = SLICE(rsi_29, word32, 0)
+	esi_390 = SLICE(rsi_29, word32, 0) (alias)
+	esi_390 = SLICE(rsi_29, word32, 0) (alias)
+	branch SLICE(rsi_29, word32, 0) == 0<32> l0000000069601A48
+l0000000069601A48:
+	Mem34[0x00000000696075E0<p64>:word32] = 1<32>
+	word64 rax_45 = (int64) SLICE((uint64) (uint32) fn0000000069602590(out rcx), word32, 0) * 0x28<64> + 0xF<32>
+	fn00000000696027C0(rax_45 & 0xFFFFFFFFFFFFFFF0<64>)
+	word64 r12_53 = Mem34[0x0000000069604210<p64>:word64]
+	word64 rbx_114 = Mem34[0x0000000069604220<p64>:word64]
+	Mem55[0x00000000696075E4<p64>:word32] = 0<32>
+	Mem58[0x00000000696075E8<p64>:word64] = fp - 0x78<64> - (rax_45 & 0xFFFFFFFFFFFFFFF0<64>) + 0x20<64>
+	word64 rax_60 = r12_53 - rbx_114
+	branch rax_60 <= 7<64> l0000000069601A32
+l0000000069601AA1:
+	word64 rax_681
+	word64 rdx_63 = (uint64) Mem58[rbx_114:word32]
+	word32 edx_66 = SLICE(rdx_63, word32, 0)
+	branch rax_60 > 0xB<64> l0000000069601BF8
+l0000000069601BF8:
+	branch edx_66 != 0<32> l0000000069601C80
+l0000000069601C00:
+	rax_681 = (uint64) Mem58[rbx_114 + 4<64>:word32]
+	branch SLICE((uint64) (SLICE((uint64) SLICE(rax_681, word32, 0), word32, 0) | Mem58[rbx_114 + 8<64>:word32]), word32, 0) != 0<32> l0000000069601AB8
+l0000000069601C0E:
+	rdx_63 = (uint64) Mem58[rbx_114 + 0xC<64>:word32]
+	rbx_114 = rbx_114 + 0xC<64>
+l0000000069601AAD:
+	branch SLICE(rdx_63, word32, 0) != 0<32> l0000000069601C80
+l0000000069601AB5:
+	rax_681 = (uint64) Mem58[rbx_114 + 4<64>:word32]
+l0000000069601AB8:
+	branch SLICE(rax_681, word32, 0) != 0<32> l0000000069601C80
+l0000000069601C80:
+	branch rbx_114 >=u r12_53 l0000000069601A32
+l0000000069601C89:
+	word64 r13_105 = Mem58[0x0000000069604240<p64>:word64]
+	word64 r12_113 = rbx_114 + 8<64>
+l0000000069601CA8:
+	rbx_114 = rbx_114 + 8<64>
+	rcx = fn0000000069601800((uint64) Mem115[rbx_114 + 4<64>:word32] + r13_105, fp - 0x50<64>, 4<u64>)
+	branch rbx_114 != r12_113 l0000000069601CA8
+l0000000069601CCC:
+l0000000069601AC0:
+	branch SLICE((uint64) Mem58[rbx_114 + 8<64>:word32], word32, 0) != 1<32> l0000000069601CE8
+l0000000069601ACC:
+	word64 rbx_148 = rbx_114 + 0xC<64>
+	word64 r13_150 = Mem58[0x0000000069604240<p64>:word64]
+	branch rbx_148 <u r12_53 l0000000069601B29
+l0000000069601B29:
+	word64 rcx_256
+	word64 rcx_218
+	word64 rcx_200
+	word32 r8d_158 = (word32) Mem155[rbx_148 + 8<64>:byte]
+	word64 rcx_161 = (uint64) Mem155[rbx_148 + 4<64>:word32] + r13_150
+	branch r8d_158 == 0x20<32> l0000000069601C50
+l0000000069601C50:
+	branch SLICE((uint64) Mem155[rcx_161:word32], word32, 0) < 0<32> l0000000069601C62
+l0000000069601C5E_1:
+l0000000069601C62:
+	rcx_200 = fn0000000069601800(rcx_200, fp - 0x50<64>, 4<u64>)
+	rcx = rcx_200
+l0000000069601B46:
+	branch r8d_158 >u 0x20<32> l0000000069601C20
+l0000000069601C20:
+	branch r8d_158 != 0x40<32> l0000000069601CD1
+l0000000069601C2A:
+	rcx_218 = fn0000000069601800(rcx_218, fp - 0x50<64>, 8<u64>)
+	rcx = rcx_218
+l0000000069601B4C:
+	branch r8d_158 == 8<32> l0000000069601AF0
+l0000000069601AF0:
+	branch SLICE((word32) Mem155[rcx_161:byte], byte, 0) >= 0<8> l0000000069601B08
+l0000000069601B04_1:
+l0000000069601B08:
+	rcx_256 = fn0000000069601800(rcx_256, fp - 0x50<64>, 1<u64>)
+	rcx = rcx_256
+l0000000069601B20:
+	rbx_148 = rbx_148 + 0xC<64>
+	branch rbx_148 >=u r12_53 l0000000069601BA0
+l0000000069601B52:
+	branch r8d_158 != 0x10<32> l0000000069601CD1
+l0000000069601CD1:
+	fn0000000069601790(0x0000000069604158<p64>)
+l0000000069601CE8:
+	word64 rcx_313 = fn0000000069601790(0x0000000069604120<p64>)
+l0000000069601CFF_thunk_fn0000000069601D00:
+	return fn0000000069601D00(rcx_313)
+l0000000069601B5C:
+	branch SLICE((word32) Mem155[rcx_161:word16], word16, 0) >= 0<16> l0000000069601B75
+l0000000069601B71_1:
+l0000000069601B75:
+	rbx_148 = rbx_148 + 0xC<64>
+	rcx = fn0000000069601800(rcx, fp - 0x50<64>, 2<u64>)
+	branch rbx_148 <u r12_53 l0000000069601B29
+l0000000069601B96:
+l0000000069601BA0:
+	branch SLICE((uint64) Mem364[0x00000000696075E4<p64>:word32], word32, 0) <= 0<32> l0000000069601A32
+l0000000069601BAE:
+	word64 rbx_371 = 0<u64>
+l0000000069601BC0:
+	word64 rax_378 = Mem364[0x00000000696075E8<p64>:word64] + rbx_371
+	word64 r8_379 = (uint64) Mem364[rax_378:word32]
+	branch SLICE(r8_379, word32, 0) == 0<32> l0000000069601BE0
+l0000000069601BD2:
+	rcx = Mem364[rax_378 + 8<64>:word64]
+	VirtualProtect(rcx, Mem364[rax_378 + 0x10<64>:word64], r8_379, fp - 0x50<64>)
+l0000000069601BE0:
+	esi_390 = SLICE((uint64) (esi_390 + 1<32>), word32, 0) (alias)
+	rbx_371 = rbx_371 + 0x28<64>
+	branch esi_390 < Mem364[0x00000000696075E4<p64>:word32] l0000000069601BC0
+l0000000069601BEF:
+l0000000069601AEA:
+l0000000069601A32:
+	return rcx
+fn0000000069601A10_exit:
+
+
+word64 fn0000000069601D00(word64 rcx)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      fn0000000069601A10
+// MayUse:  rcx:[0..63]
+// LiveOut: rcx
+// Trashed: SCZO r8 rax rcx rdx
+// Preserved: rsp
+fn0000000069601D00_entry:
+l0000000069601D00:
+	word32 eax_7 = SLICE((uint64) Mem0[rcx:word32], word32, 0)
+	branch eax_7 >u 0xC0000096<32> l0000000069601E40
+l0000000069601D11:
+	branch eax_7 <=u 0xC000008B<32> l0000000069601D70
+l0000000069601D70:
+	branch eax_7 == 0xC0000005<32> l0000000069601E10
+l0000000069601E10:
+	rcx = 0xB<u64>
+	word64 rax_16 = signal(0xB<u64>, 0<u64>)
+	branch rax_16 == 1<64> l0000000069601EA0
+l0000000069601EA0:
+	signal(0xB<u64>, 1<u64>)
+	rcx = 0xB<u64>
+l0000000069601E22:
+	branch rax_16 == 0<64> l0000000069601E50
+l0000000069601E27:
+	rax_16(0xB<u64>)
+	rcx = <invalid>
+l0000000069601D7B:
+	branch eax_7 <=u 0xC0000005<32> l0000000069601DC3
+l0000000069601DC3:
+	return rcx
+l0000000069601D7D:
+	branch eax_7 == 0xC0000008<32> l0000000069601D5F
+l0000000069601D87:
+	branch eax_7 != 0xC000001D<32> l0000000069601E40
+l0000000069601E40:
+l0000000069601D18:
+	word64 rax_55 = (uint64) (eax_7 + 0x3FFFFF73<32>)
+	branch SLICE(rax_55, word32, 0) >u 9<32> l0000000069601D5C
+l0000000069601D22:
+	word64 rax_106
+	switch (SLICE((int64) Mem0[0x0000000069604190<p64> + rax_55 * 4<64>:word32] + 0x0000000069604190<p64>, word32, 0)) { l0000000069601D32 l0000000069601D32 l0000000069601D32 l0000000069601D32 l0000000069601D32 l0000000069601D5C l0000000069601D32 l0000000069601DD7 l0000000069601D5C l0000000069601D92 }
+l0000000069601D92:
+	rcx = 4<u64>
+	word64 rax_66 = signal(4<u64>, 0<u64>)
+	branch rax_66 == 1<64> l0000000069601E60
+l0000000069601E60:
+	signal(4<u64>, 1<u64>)
+	rcx = 4<u64>
+l0000000069601DA8:
+	branch rax_66 == 0<64> l0000000069601E50
+l0000000069601E50:
+l0000000069601DB1:
+	rax_66(4<u64>)
+	word64 rcx_83 = <invalid>
+	return rcx_83
+l0000000069601DD7:
+	rax_106 = signal(8<u64>, 0<u64>)
+	branch rax_106 == 1<64> l0000000069601E80
+l0000000069601E80:
+	signal(8<u64>, 1<u64>)
+	rcx = 8<u64>
+l0000000069601D32:
+	rax_106 = signal(8<u64>, 0<u64>)
+	branch rax_106 != 1<64> l0000000069601DED
+l0000000069601DED:
+	rcx = 8<u64>
+	branch rax_106 == 0<64> l0000000069601D5F
+l0000000069601DFC:
+	word64 rdx_119
+	call rax_106 (retsize: 8;)
+		uses: rcx:8<u64>,rdx:rdx_119
+		defs: rcx:rcx_118,rdx:rdx_119
+l0000000069601D48:
+	signal(8<u64>, 1<u64>)
+	fn00000000696027B0()
+	rcx = 8<u64>
+l0000000069601D5C:
+l0000000069601D5F:
+	return rcx
+fn0000000069601D00_exit:
+
+
+void fn0000000069601EC0()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      DllMain
+// MayUse: 
+// LiveOut:
+// Trashed: SCZO r8 r9 rax rcx rdx
+// Preserved: r12 rbp rbx rdi rsi rsp
+fn0000000069601EC0_entry:
+l0000000069601EC0:
+	word64 rax_21 = fn0000000069602630()
+	word64 rax_29 = (uint64) Mem17[0x0000000069607608<p64>:word32]
+	word32 rax_32_32_39 = SLICE(rax_29, word32, 32)
+	branch SLICE(rax_29, word32, 0) != 0<32> l0000000069601F01
+l0000000069601EDC:
+	branch rax_21 == 0<64> l0000000069601F01
+l0000000069601EE1:
+	Mem38[0x0000000069607608<p64>:word32] = 1<32>
+	word64 rax_40 = fn0000000069602460(rax_32_32_39, 0x00000000696041B8<p64>)
+	branch rax_40 == 0<64> l0000000069601F10
+l0000000069601F10:
+	word64 rbx_51 = 0x0000000069607720<p64>
+	word64 rcx_143 = 0x30<u64>
+	word64 r12_53 = 0<u64>
+	word64 rdi_140 = 0x0000000069607720<p64>
+l0000000069601F30:
+	branch rcx_143 == 0<64> l0000000069601F33
+l0000000069601F33:
+	word64 rcx_138 = 0x20<u64>
+	word64 rdi_135 = 0x0000000069607620<p64>
+	word32 ebp_170 = SLICE(0x0000000069601D00<p64> - rax_21, word32, 0)
+l0000000069601F3E:
+	branch rcx_138 == 0<64> l0000000069601F41
+l0000000069601F41:
+	word64 rdi_70 = 0x0000000069607620<p64>
+l0000000069601F7D:
+	word64 rax_75 = fn00000000696025C0(r12_53)
+	branch rax_75 != 0<64> l0000000069601F50
+l0000000069601F50:
+	Mem86[rdi_70:byte] = 9<8>
+	Mem91[rdi_70 + 4<64>:word32] = ebp_170
+	rbx_51 = rbx_51 + 0xC<64>
+	word32 edx_93 = SLICE((uint64) Mem91[rax_75 + 0xC<64>:word32], word32, 0)
+	Mem94[rbx_51 - 0xC<64>:word32] = edx_93
+	Mem101[rbx_51 - 8<64>:word32] = SLICE((uint64) (edx_93 + Mem94[rax_75 + 8<64>:word32]), word32, 0)
+	Mem103[rbx_51 - 4<64>:word32] = SLICE(rdi_70 - rax_21, word32, 0)
+	r12_53 = r12_53 + 1<64>
+	rdi_70 = rdi_70 + 8<64>
+	branch r12_53 == 0x20<64> l0000000069601FA0
+l0000000069601FA0:
+l0000000069601F8A:
+	branch r12_53 == 0<64> l0000000069601EFC
+l0000000069601F93:
+l0000000069601FA5:
+	word64 r9_132
+	call KERNEL32.dll!RtlAddFunctionTable (retsize: 8;)
+		uses: r8:rax_21,r9:r9_132,rcx:0x0000000069607720<p64>
+		defs: r9:r9_132
+l0000000069601F3E_1:
+	Mem136[rdi_135:word64] = rax_40
+	rdi_135 = rdi_135 + 8<i64>
+	rcx_138 = rcx_138 - 1<64>
+l0000000069601F30_1:
+	Mem141[rdi_140:word64] = rax_40
+	rdi_140 = rdi_140 + 8<i64>
+	rcx_143 = rcx_143 - 1<64>
+l0000000069601EFC:
+l0000000069601F01:
+	return
+fn0000000069601EC0_exit:
+
+
+void fn0000000069601FC0(word64 rcx)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  rcx:[0..63]
+// LiveOut:
+// Trashed: SCZO rax rcx rdx
+// Preserved: r12 rsp
+fn0000000069601FC0_entry:
+l0000000069601FC0:
+	word64 rdx_8 = Mem5[rcx:word64]
+	word32 eax_11 = SLICE((uint64) Mem5[rdx_8:word32], word32, 0)
+	branch SLICE((uint64) (SLICE((uint64) eax_11, word32, 0) & 0x20FFFFFF<32>), word32, 0) == 0x20474343<32> l00000000696020B0
+l00000000696020B0:
+	branch (Mem5[rdx_8 + 4<64>:byte] & 1<8>) != 0<8> l0000000069601FE2
+l00000000696020BA:
+l0000000069601FE2:
+	branch eax_11 >u 0xC0000096<32> l0000000069602097
+l0000000069601FED:
+	branch eax_11 <=u 0xC000008B<32> l0000000069602048
+l0000000069602048:
+	branch eax_11 == 0xC0000005<32> l00000000696020F8
+l00000000696020F8:
+	word64 rax_30 = signal(0xB<u64>, 0<u64>)
+	branch rax_30 == 1<64> l0000000069602159
+l0000000069602159:
+	signal(0xB<u64>, 1<u64>)
+l000000006960210A:
+	branch rax_30 == 0<64> l0000000069602097
+l000000006960210F:
+	rax_30(0xB<u64>)
+l0000000069602053:
+	branch eax_11 <=u 0xC0000005<32> l0000000069602090
+l0000000069602090:
+	branch eax_11 == 0x80000002<32> l0000000069602038
+l0000000069602055:
+	branch eax_11 == 0xC0000008<32> l0000000069602038
+l000000006960205C:
+	branch eax_11 != 0xC000001D<32> l0000000069602097
+l0000000069601FF4:
+	word64 rax_59 = (uint64) (eax_11 + 0x3FFFFF73<32>)
+	branch SLICE(rax_59, word32, 0) >u 9<32> l0000000069602038
+l0000000069601FFE:
+	word64 rax_104
+	switch (SLICE((int64) Mem5[0x00000000696041C0<p64> + rax_59 * 4<64>:word32] + 0x00000000696041C0<p64>, word32, 0)) { l000000006960200E l000000006960200E l000000006960200E l000000006960200E l000000006960200E l0000000069602038 l000000006960200E l00000000696020C9 l0000000069602038 l0000000069602063 }
+l0000000069602063:
+	word64 rax_71 = signal(4<u64>, 0<u64>)
+	branch rax_71 == 1<64> l0000000069602120
+l0000000069602120:
+	signal(4<u64>, 1<u64>)
+l0000000069602079:
+	branch rax_71 == 0<64> l0000000069602097
+l000000006960207E:
+	rax_71(4<u64>)
+l00000000696020C9:
+	rax_104 = signal(8<u64>, 0<u64>)
+	branch rax_104 == 1<64> l0000000069602140
+l0000000069602140:
+	signal(8<u64>, 1<u64>)
+l000000006960200E:
+	rax_104 = signal(8<u64>, 0<u64>)
+	branch rax_104 != 1<64> l00000000696020DB
+l00000000696020DB:
+	branch rax_104 == 0<64> l0000000069602097
+l0000000069602097:
+	word64 rax_115 = Mem5[0x0000000069607600<p64>:word64]
+	word32 eax_135 = SLICE(rax_115, word32, 0)
+	branch rax_115 == 0<64> l00000000696020C0
+l00000000696020C0:
+	return
+l00000000696020A3:
+	switch (eax_135 - 0xC000008B<32>) { }
+l00000000696020E0:
+	call rax_104 (retsize: 8;)
+		uses: rcx:8<u64>
+l0000000069602024:
+	signal(8<u64>, 1<u64>)
+	fn00000000696027B0()
+l0000000069602038:
+l000000006960203D:
+	return
+fn0000000069601FC0_exit:
+
+
+void fn0000000069602170()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      fn00000000696022F0
+// MayUse: 
+// LiveOut:
+// Trashed: SCZO rax rcx
+// Preserved: r12 rbx rdi rsi rsp
+fn0000000069602170_entry:
+l0000000069602170:
+	EnterCriticalSection(0x00000000696078C0<p64>)
+	word64 rbx_17 = Mem14[0x00000000696078A0<p64>:word64]
+	branch rbx_17 == 0<64> l00000000696021C4
+l0000000069602192:
+l00000000696021A0:
+	word64 rax_26 = TlsGetValue((uint64) Mem14[rbx_17:word32])
+	branch GetLastError() != 0<32> l00000000696021BB
+l00000000696021AD:
+	branch rax_26 == 0<64> l00000000696021BB
+l00000000696021B2:
+	word64 rax_41
+	call Mem14[rbx_17 + 8<64>:word64] (retsize: 8;)
+		uses: rax:rax_41,rcx:rax_26
+		defs: rax:rax_41
+l00000000696021BB:
+	rbx_17 = Mem14[rbx_17 + 0x10<64>:word64]
+	branch rbx_17 != 0<64> l00000000696021A0
+l00000000696021C4:
+	LeaveCriticalSection(0x00000000696078C0<p64>)
+	return
+fn0000000069602170_exit:
+
+
+void fn00000000696021E0(word32 ecx, word64 rdx)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  rcx:[0..31] rdx:[0..63]
+// LiveOut:
+// Trashed: SCZO rax rcx rdx
+// Preserved: rbx rdi rsi rsp
+fn00000000696021E0_entry:
+	word32 ecx = SLICE(rcx, word32, 0)
+l00000000696021E0:
+	word32 edi_34 = SLICE((uint64) ecx, word32, 0)
+	branch SLICE((uint64) Mem11[0x00000000696078A8<p64>:word32], word32, 0) != 0<32> l0000000069602200
+l0000000069602200:
+	word64 rax_24 = calloc(1<u64>, 0x18<u64>)
+	branch rax_24 == 0<64> l0000000069602253
+l0000000069602253:
+l0000000069602217:
+	Mem35[rax_24:word32] = edi_34
+	Mem37[rax_24 + 8<64>:word64] = rdx
+	EnterCriticalSection(0x00000000696078C0<p64>)
+	word64 rax_38 = Mem37[0x00000000696078A0<p64>:word64]
+	Mem40[0x00000000696078A0<p64>:word64] = rax_24
+	Mem41[rax_24 + 0x10<64>:word64] = rax_38
+	LeaveCriticalSection(0x00000000696078C0<p64>)
+	return
+l00000000696021F6:
+	return
+fn00000000696021E0_exit:
+
+
+void fn0000000069602260(word32 ecx)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  rcx:[0..31]
+// LiveOut:
+// Trashed: SCZO rax rcx rdx
+// Preserved: rbx rsp
+fn0000000069602260_entry:
+	word32 ecx = SLICE(rcx, word32, 0)
+l0000000069602260:
+	word32 ebx_59 = SLICE((uint64) ecx, word32, 0)
+	branch SLICE((uint64) Mem5[0x00000000696078A8<p64>:word32], word32, 0) != 0<32> l0000000069602280
+l0000000069602280:
+	EnterCriticalSection(0x00000000696078C0<p64>)
+	word64 rcx_15 = Mem5[0x00000000696078A0<p64>:word64]
+	branch rcx_15 == 0<64> l00000000696022C3
+l0000000069602299:
+	word64 rdx_19 = 0<u64>
+l00000000696022AB:
+	word64 rax_29 = Mem5[rcx_15 + 0x10<64>:word64]
+	branch SLICE((uint64) Mem5[rcx_15:word32], word32, 0) != ebx_59 l00000000696022A0
+l00000000696022A0:
+	rdx_19 = rcx_15
+	branch rax_29 == 0<64> l00000000696022C3
+l00000000696022A8:
+	rcx_15 = rax_29
+l00000000696022B5:
+	branch rdx_19 == 0<64> l00000000696022E0
+l00000000696022E0:
+	Mem40[0x00000000696078A0<p64>:word64] = rax_29
+l00000000696022BA:
+	Mem41[rdx_19 + 0x10<64>:word64] = rax_29
+l00000000696022BE:
+	free(rcx_15)
+l00000000696022C3:
+	LeaveCriticalSection(0x00000000696078C0<p64>)
+	return
+l0000000069602271:
+	return
+fn0000000069602260_exit:
+
+
+void fn00000000696022F0(word32 edx)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      fn00000000696016C0
+//      fn00000000696016F0
+// MayUse:  edx:[0..31]
+// LiveOut:
+// Trashed: SCZO rax rcx
+// Preserved: rbx rsp
+fn00000000696022F0_entry:
+l00000000696022F0:
+	branch edx == 2<32> l00000000696023C0
+l00000000696023C0:
+	fn00000000696027B0()
+	return
+l00000000696022FE:
+	branch edx >u 2<32> l0000000069602328
+l0000000069602328:
+	branch edx != 3<32> l0000000069602318
+l000000006960232D:
+	branch SLICE((uint64) Mem5[0x00000000696078A8<p64>:word32], word32, 0) == 0<32> l0000000069602318
+l0000000069602337:
+	fn0000000069602170()
+l0000000069602300:
+	branch edx == 0<32> l0000000069602350
+l0000000069602350:
+	branch SLICE((uint64) Mem5[0x00000000696078A8<p64>:word32], word32, 0) == 0<32> l000000006960235F
+l000000006960235A:
+	fn0000000069602170()
+l000000006960235F:
+	branch SLICE((uint64) Mem5[0x00000000696078A8<p64>:word32], word32, 0) != 1<32> l0000000069602318
+l000000006960236A:
+	word64 rbx_48 = Mem5[0x00000000696078A0<p64>:word64]
+	branch rbx_48 == 0<64> l0000000069602391
+l0000000069602376:
+l0000000069602380:
+	rbx_48 = Mem5[rbx_48 + 0x10<64>:word64]
+	free(rbx_48)
+	branch rbx_48 != 0<64> l0000000069602380
+l0000000069602391:
+	Mem60[0x00000000696078A0<p64>:word64] = 0<64>
+	Mem61[0x00000000696078A8<p64>:word32] = 0<32>
+	DeleteCriticalSection(0x00000000696078C0<p64>)
+l0000000069602304:
+	branch SLICE((uint64) Mem5[0x00000000696078A8<p64>:word32], word32, 0) == 0<32> l0000000069602340
+l0000000069602340:
+	InitializeCriticalSection(0x00000000696078C0<p64>)
+l000000006960230E:
+	Mem68[0x00000000696078A8<p64>:word32] = 1<32>
+l0000000069602318:
+	return
+fn00000000696022F0_exit:
+
+
+word32 fn00000000696023D0(word64 rcx, ptr64 & rdxOut)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      fn00000000696023F0
+//      fn0000000069602460
+//      fn0000000069602500
+//      fn0000000069602590
+//      fn00000000696025C0
+//      fn0000000069602630
+//      fn0000000069602660
+//      fn00000000696026F0
+// MayUse:  rcx:[0..63]
+// LiveOut: rax rdx
+// Trashed: SCZO rax rdx
+// Preserved: rsp
+fn00000000696023D0_entry:
+l00000000696023D0:
+	word64 rdx_6 = (int64) Mem0[rcx + 0x3C<64>:word32] + rcx
+	word64 rax_20 = 0<u64>
+	branch Mem0[rdx_6:word32] != 0x4550<32> l00000000696023ED
+l00000000696023E2:
+	rax_20 = (uint64) (uint8) (Mem0[rdx_6 + 0x18<64>:word16] == 0x20B<16>) (alias)
+l00000000696023ED:
+	rdxOut = rdx_6
+	return SLICE(rax_20, word32, 0)
+fn00000000696023D0_exit:
+
+
+void fn00000000696023F0(word64 rcx)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  rcx:[0..63]
+// LiveOut:
+// Trashed: SCZO rax rdx
+// Preserved: rsp
+fn00000000696023F0_entry:
+l00000000696023F0:
+	branch Mem0[rcx:word16] != 0x5A4D<16> l0000000069602400
+l0000000069602400:
+	return
+l00000000696023F7:
+l00000000696023F7_thunk_fn00000000696023D0:
+	word64 rdx_28
+	fn00000000696023D0(rcx, out rdx_28)
+	return
+fn00000000696023F0_exit:
+
+
+void fn0000000069602410(word64 rcx, word64 rdx)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  rcx:[0..63] rdx:[0..63]
+// LiveOut:
+// Trashed: SCZO r8 r9 rax rcx
+// Preserved: rsp
+fn0000000069602410_entry:
+l0000000069602410:
+	word64 rax_5 = (int64) Mem0[rcx + 0x3C<64>:word32]
+	word64 rcx_6 = rcx + rax_5
+	word64 rax_10 = rcx_6 + 0x18<64> + SEQ(SLICE(rax_5, word32, 32), (word32) Mem0[rcx_6 + 0x14<64>:word16])
+	word32 ecx_11 = (word32) Mem0[rcx_6 + 6<64>:word16]
+	branch ecx_11 == 0<32> l0000000069602455
+l0000000069602428:
+	word64 r9_19 = rax_10 + 0x28<64> + (uint64) (ecx_11 - 1<32>) * 0x28<64>
+l0000000069602438:
+	word64 r8_22 = (uint64) Mem0[rax_10 + 0xC<64>:word32]
+	word32 ecx_27 = SLICE(r8_22, word32, 0)
+	branch r8_22 >u rdx l000000006960244C
+l0000000069602444:
+	branch (uint64) (ecx_27 + Mem0[rax_10 + 8<64>:word32]) >u rdx l0000000069602457
+l000000006960244C:
+	rax_10 = rax_10 + 0x28<64>
+	branch rax_10 != r9_19 l0000000069602438
+l0000000069602455:
+l0000000069602457:
+	return
+fn0000000069602410_exit:
+
+
+word64 fn0000000069602460(word32 rax_32_32, word64 rcx)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      fn0000000069601EC0
+// MayUse:  rax_32_32:[0..31] rcx:[0..63]
+// LiveOut: rax
+// Trashed: SCZO r8 rax rcx rdx
+// Preserved: r12 rbx rsi rsp
+fn0000000069602460_entry:
+l0000000069602460:
+	branch SEQ(rax_32_32, strlen(rcx)) >u 8<64> l00000000696024F0
+l0000000069602476:
+	word64 rcx_20 = Mem11[0x0000000069604240<p64>:word64]
+	word64 r12_21 = 0<u64>
+	branch Mem11[rcx_20:word16] != 0x5A4D<16> l00000000696024DE
+l0000000069602487:
+	word64 rdx_128
+	branch SLICE((uint64) (uint32) fn00000000696023D0(rcx_20, out rdx_128), word32, 0) == 0<32> l00000000696024DE
+l0000000069602490:
+	word64 rax_34 = (int64) Mem11[rcx_20 + 0x3C<64>:word32]
+	word64 rcx_35 = rcx_20 + rax_34
+	r12_21 = rcx_35 + 0x18<64> + SEQ(SLICE(rax_34, word32, 32), (word32) Mem11[rcx_35 + 0x14<64>:word16])
+	word32 eax_40 = (word32) Mem11[rcx_35 + 6<64>:word16]
+	branch eax_40 == 0<32> l00000000696024F0
+l00000000696024A8:
+	word64 rsi_48 = r12_21 + 0x28<64> + (uint64) (eax_40 - 1<32>) * 0x28<64>
+l00000000696024C9:
+	branch strncmp(r12_21, rcx, 8<u64>) != 0<32> l00000000696024C0
+l00000000696024C0:
+	r12_21 = r12_21 + 0x28<64>
+	branch r12_21 == rsi_48 l00000000696024F0
+l00000000696024F0:
+	return 0<u64>
+l00000000696024DE:
+	return r12_21
+fn0000000069602460_exit:
+
+
+word64 fn0000000069602500(word64 rcx)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      fn0000000069601800
+// MayUse:  rcx:[0..63]
+// LiveOut: rax
+// Trashed: SCZO r10 r8 r9 rax rcx rdx
+// Preserved: rsp
+fn0000000069602500_entry:
+l0000000069602500:
+	word64 r10_5 = Mem0[0x0000000069604240<p64>:word64]
+	word64 r8_29 = 0<u64>
+	branch Mem0[r10_5:word16] != 0x5A4D<16> l0000000069602579
+l0000000069602519:
+	word64 rdx_13
+	branch SLICE((uint64) (uint32) fn00000000696023D0(r10_5, out rdx_13), word32, 0) == 0<32> l0000000069602579
+l0000000069602525:
+	word64 rax_22 = (int64) Mem0[r10_5 + 0x3C<64>:word32]
+	word64 r10_25 = r10_5 + rax_22
+	word64 rcx_24 = rcx - r10_5
+	r8_29 = r10_25 + 0x18<64> + SEQ(SLICE(rax_22, word32, 32), (word32) Mem0[r10_25 + 0x14<64>:word16])
+	word32 eax_30 = (word32) Mem0[r10_25 + 6<64>:word16]
+	branch eax_30 == 0<32> l0000000069602576
+l0000000069602545:
+	word64 r9_38 = r8_29 + 0x28<64> + (uint64) (eax_30 - 1<32>) * 0x28<64>
+l0000000069602558:
+	word64 rdx_41 = (uint64) Mem0[r8_29 + 0xC<64>:word32]
+	word32 eax_46 = SLICE(rdx_41, word32, 0)
+	branch rcx_24 <u rdx_41 l000000006960256D
+l0000000069602564:
+	branch rcx_24 <u (uint64) (eax_46 + Mem0[r8_29 + 8<64>:word32]) l0000000069602579
+l000000006960256D:
+	r8_29 = r8_29 + 0x28<64>
+	branch r8_29 != r9_38 l0000000069602558
+l0000000069602576:
+	r8_29 = 0<u64>
+l0000000069602579:
+	return r8_29
+fn0000000069602500_exit:
+
+
+word32 fn0000000069602590(ptr64 & rcxOut)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      fn0000000069601A10
+// MayUse: 
+// LiveOut: rax rcx
+// Trashed: SCZO rax rcx rdx
+// Preserved: rsp
+fn0000000069602590_entry:
+l0000000069602590:
+	word64 rcx_5 = Mem0[0x0000000069604240<p64>:word64]
+	word64 rax_26 = 0<u64>
+	branch Mem0[rcx_5:word16] != 0x5A4D<16> l00000000696025B6
+l00000000696025A4:
+	word64 rdx_35
+	rax_26 = (uint64) (uint32) fn00000000696023D0(rcx_5, out rdx_35)
+	branch SLICE(rax_26, word32, 0) == 0<32> l00000000696025B6
+l00000000696025AD:
+	word64 rax_19 = (int64) Mem0[rcx_5 + 0x3C<64>:word32]
+	rax_26 = SEQ(SLICE(rax_19, word32, 32), (word32) Mem0[rax_19 + 6<64> + rcx_5:word16]) (alias)
+l00000000696025B6:
+	rcxOut = rcx_5
+	return SLICE(rax_26, word32, 0)
+fn0000000069602590_exit:
+
+
+word64 fn00000000696025C0(word64 rcx)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      fn0000000069601EC0
+// MayUse:  rcx:[0..63]
+// LiveOut: rax
+// Trashed: SCZO r8 r9 rax rcx rdx
+// Preserved: rsp
+fn00000000696025C0_entry:
+l00000000696025C0:
+	word64 r8_26 = 0<u64>
+	word64 r9_41 = rcx
+	word64 rcx_8 = Mem0[0x0000000069604240<p64>:word64]
+	branch Mem0[rcx_8:word16] != 0x5A4D<16> l0000000069602624
+l00000000696025D8:
+	word64 rdx_82
+	branch SLICE((uint64) (uint32) fn00000000696023D0(rcx_8, out rdx_82), word32, 0) == 0<32> l0000000069602624
+l00000000696025E1:
+	word64 rax_21 = (int64) Mem0[rcx_8 + 0x3C<64>:word32]
+	word64 rcx_22 = rcx_8 + rax_21
+	r8_26 = rcx_22 + 0x18<64> + SEQ(SLICE(rax_21, word32, 32), (word32) Mem0[rcx_22 + 0x14<64>:word16])
+	word32 eax_27 = (word32) Mem0[rcx_22 + 6<64>:word16]
+	branch eax_27 == 0<32> l0000000069602621
+l00000000696025F9:
+	word64 rax_35 = r8_26 + 0x28<64> + (uint64) (eax_27 - 1<32>) * 0x28<64>
+l0000000069602608:
+	branch (Mem0[r8_26 + 0x27<64>:byte] & 0x20<8>) == 0<8> l0000000069602618
+l000000006960260F:
+	branch r9_41 == 0<64> l0000000069602624
+l0000000069602614:
+	r9_41 = r9_41 - 1<64>
+l0000000069602618:
+	r8_26 = r8_26 + 0x28<64>
+	branch r8_26 != rax_35 l0000000069602608
+l0000000069602621:
+	r8_26 = 0<u64>
+l0000000069602624:
+	return r8_26
+fn00000000696025C0_exit:
+
+
+word64 fn0000000069602630()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      fn0000000069601800
+//      fn0000000069601EC0
+// MayUse: 
+// LiveOut: rax
+// Trashed: SCZO r8 rax rcx rdx
+// Preserved: rsp
+fn0000000069602630_entry:
+l0000000069602630:
+	word64 rcx_5 = Mem0[0x0000000069604240<p64>:word64]
+	word64 r8_19 = 0<u64>
+	branch Mem0[rcx_5:word16] != 0x5A4D<16> l0000000069602650
+l0000000069602645:
+	word64 rdx_32
+	branch SLICE((uint64) (uint32) fn00000000696023D0(rcx_5, out rdx_32), word32, 0) == 0<32> l0000000069602650
+l000000006960264C_1:
+	r8_19 = rcx_5
+l0000000069602650:
+	return r8_19
+fn0000000069602630_exit:
+
+
+void fn0000000069602660(word64 rcx)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  rcx:[0..63]
+// LiveOut:
+// Trashed: SCZO r8 r9 rax rcx rdx
+// Preserved: rsp
+fn0000000069602660_entry:
+l0000000069602660:
+	word64 r9_5 = Mem0[0x0000000069604240<p64>:word64]
+	branch Mem0[r9_5:word16] != 0x5A4D<16> l00000000696026CF
+l0000000069602678:
+	word64 rdx_13
+	branch SLICE((uint64) (uint32) fn00000000696023D0(r9_5, out rdx_13), word32, 0) == 0<32> l00000000696026CF
+l0000000069602684:
+	word64 rax_22 = (int64) Mem0[r9_5 + 0x3C<64>:word32]
+	word64 r9_25 = r9_5 + rax_22
+	word64 rcx_24 = rcx - r9_5
+	word32 edx_27 = (word32) Mem0[r9_25 + 6<64>:word16]
+	word64 rax_30 = r9_25 + 0x18<64> + SEQ(SLICE(rax_22, word32, 32), (word32) Mem0[r9_25 + 0x14<64>:word16])
+	branch edx_27 == 0<32> l00000000696026CD
+l00000000696026A4:
+	word64 r9_38 = rax_30 + 0x28<64> + (uint64) (edx_27 - 1<32>) * 0x28<64>
+l00000000696026B0:
+	word64 r8_41 = (uint64) Mem0[rax_30 + 0xC<64>:word32]
+	word32 edx_46 = SLICE(r8_41, word32, 0)
+	branch rcx_24 <u r8_41 l00000000696026C4
+l00000000696026BC:
+	branch rcx_24 <u (uint64) (edx_46 + Mem0[rax_30 + 8<64>:word32]) l00000000696026D8
+l00000000696026D8:
+	return
+l00000000696026C4:
+	rax_30 = rax_30 + 0x28<64>
+	branch rax_30 != r9_38 l00000000696026B0
+l00000000696026CD:
+l00000000696026CF:
+	return
+fn0000000069602660_exit:
+
+
+void fn00000000696026F0(word32 ecx)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  rcx:[0..31]
+// LiveOut:
+// Trashed: SCZO r10 r11 r8 r9 rax rcx rdx
+// Preserved: rsp
+fn00000000696026F0_entry:
+	word32 ecx = SLICE(rcx, word32, 0)
+l00000000696026F0:
+	word64 r11_5 = Mem0[0x0000000069604240<p64>:word64]
+	word64 r8_168 = (uint64) ecx
+	branch Mem0[r11_5:word16] != 0x5A4D<16> l0000000069602768
+l0000000069602709:
+	word32 rdx_32_32_30 = SLICE(rdx_13, word32, 32)
+	word64 rdx_13
+	branch SLICE((uint64) (uint32) fn00000000696023D0(r11_5, out rdx_13), word32, 0) == 0<32> l0000000069602768
+l0000000069602715:
+	word64 rcx_23 = (int64) Mem0[r11_5 + 0x3C<64>:word32] + r11_5
+	word64 rax_24 = (uint64) Mem0[rcx_23 + 0x90<64>:word32]
+	branch SLICE(rax_24, word32, 0) == 0<32> l0000000069602768
+l0000000069602726:
+	word64 rdx_32 = rcx_23 + 0x18<64> + SEQ(rdx_32_32_30, (word32) Mem0[rcx_23 + 0x14<64>:word16])
+	word32 ecx_33 = (word32) Mem0[rcx_23 + 6<64>:word16]
+	branch ecx_33 == 0<32> l0000000069602768
+l0000000069602737:
+	word64 r10_41 = rdx_32 + 0x28<64> + (uint64) (ecx_33 - 1<32>) * 0x28<64>
+l0000000069602748:
+	word64 r9_44 = (uint64) Mem0[rdx_32 + 0xC<64>:word32]
+	word32 ecx_49 = SLICE(r9_44, word32, 0)
+	branch rax_24 <u r9_44 l000000006960275C
+l0000000069602754:
+	branch rax_24 <u (uint64) (ecx_49 + Mem0[rdx_32 + 8<64>:word32]) l0000000069602770
+l0000000069602770:
+	word64 rax_54 = rax_24 + r11_5
+l0000000069602780:
+	word32 r8d_69 = SLICE(r8_168, word32, 0)
+	branch SLICE((uint64) Mem0[rax_54 + 4<64>:word32], word32, 0) != 0<32> l000000006960278E
+l0000000069602787:
+	branch SLICE((uint64) Mem0[rax_54 + 0xC<64>:word32], word32, 0) == 0<32> l0000000069602765
+l000000006960278E:
+	branch r8d_69 > 0<32> l0000000069602778
+l0000000069602778:
+	r8_168 = (uint64) (r8d_69 - 1<32>)
+	rax_54 = rax_54 + 0x14<64>
+l0000000069602793:
+	return
+l000000006960275C:
+	rdx_32 = rdx_32 + 0x28<64>
+	branch rdx_32 != r10_41 l0000000069602748
+l0000000069602765:
+l0000000069602768:
+	return
+fn00000000696026F0_exit:
+
+
+void fn00000000696027B0()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      fn0000000069601D00
+//      fn0000000069601FC0
+//      fn00000000696022F0
+// MayUse: 
+// LiveOut:
+// Trashed:
+// Preserved: rsp
+fn00000000696027B0_entry:
+l00000000696027B0:
+	__fninit()
+	return
+fn00000000696027B0_exit:
+
+
+void fn00000000696027C0(word64 rax)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      fn0000000069601A10
+// MayUse:  rax:[0..63]
+// LiveOut:
+// Trashed: SCZO
+// Preserved: rax rcx rsp
+fn00000000696027C0_entry:
+l00000000696027C0:
+	word64 rcx_10 = fp + 8<64>
+	branch rax <u 0x1000<64> l00000000696027E8
+l00000000696027CF:
+	rcx_10 = rcx_10 - 0x1000<64>
+	Mem16[rcx_10:word64] = Mem14[rcx_10:word64]
+	rax = rax - 0x1000<64>
+	branch rax >u 0x1000<64> l00000000696027CF
+l00000000696027E8:
+	word64 rcx_24 = rcx_10 - rax
+	Mem27[rcx_24:word64] = Mem25[rcx_24:word64]
+	return
+fn00000000696027C0_exit:
+
+
+void fn0000000069602800()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      DllMain
+// MayUse: 
+// LiveOut:
+// Trashed: rax
+// Preserved: rsp
+fn0000000069602800_entry:
+l0000000069602800:
+	return
+fn0000000069602800_exit:
+
+
+void fn0000000069602810()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      DllMain
+// MayUse: 
+// LiveOut:
+// Trashed: rax
+// Preserved: rsp
+fn0000000069602810_entry:
+l0000000069602810:
+	return
+fn0000000069602810_exit:
+
+
+void fn0000000069602870(word64 rcx)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      fn0000000069601000
+// MayUse:  rcx:[0..63]
+// LiveOut:
+// Trashed: SCZO rax
+// Preserved: rsp
+fn0000000069602870_entry:
+l0000000069602870:
+	branch rcx == 0<64> l000000006960288F
+l000000006960288F:
+	return
+l0000000069602875:
+	Mem12[rcx + 0x10<64>:word64] = 0<64>
+	Mem13[rcx + 8<64>:word64] = 0<64>
+	Mem14[rcx:word64] = 0<64>
+	return
+fn0000000069602870_exit:
+
+
+void fn00000000696028A0(word64 rcx, word64 rdx)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      fn00000000696013A0
+// MayUse:  rcx:[0..63] rdx:[0..63]
+// LiveOut:
+// Trashed: SCZO rax
+// Preserved: rbp rbx rcx rdi rdx rsi rsp
+fn00000000696028A0_entry:
+l00000000696028A0:
+	branch rcx == 0<64> l000000006960295B
+l000000006960295B:
+l00000000696028B7:
+	word64 rax_33
+	word64 rdx_31
+	word64 rdx_38
+	call lock (retsize: 8;)
+		uses: rcx:8<u64>,rdx:rdx
+	branch Mem14[rcx:word64] == 0<64> l0000000069602930
+l0000000069602930:
+	rax_33 = calloc(0x20<u64>, 8<u64>)
+	Mem34[rcx:word64] = rax_33
+	rdx_31 = 8<u64>
+	branch rax_33 == 0<64> l0000000069602962
+l0000000069602947:
+	Mem39[rcx + 8<64>:word64] = rax_33
+	Mem40[rcx + 0x10<64>:word64] = rax_33 + 0x100<64>
+	rdx_38 = rax_33 + 0x100<64>
+l00000000696028C7:
+	rax_33 = Mem14[rcx + 8<64>:word64]
+	rdx_38 = Mem14[rcx + 0x10<64>:word64]
+l00000000696028CF:
+	branch rdx_38 == rax_33 l00000000696028F8
+l00000000696028F8:
+	word64 rcx_49 = Mem48[rcx:word64]
+	word64 rax_50 = rax_33 - rcx_49
+	word64 rdx_54 = rax_50 >> 3<64> << 4<64>
+	word64 rax_56 = realloc(rcx_49, rdx_54)
+	rdx_31 = rax_56
+	branch rax_56 == 0<64> l0000000069602962
+l0000000069602962:
+	call unlock (retsize: 8;)
+		uses: rcx:8<u64>,rdx:rdx_67
+l000000006960291C:
+	Mem81[rcx:word64] = rax_56
+	Mem83[rcx + 0x10<64>:word64] = rax_56 + rdx_54
+	rax_33 = rax_56 + rax_50
+l00000000696028D4:
+	word64 rdx_85 = rax_33 + 8<64>
+	Mem88[rcx + 8<64>:word64] = rdx_85
+	Mem90[rax_33:word64] = rdx
+	call unlock (retsize: 8;)
+		uses: rcx:8<u64>,rdx:rdx_85
+l00000000696028EB:
+	return
+fn00000000696028A0_exit:
+
+
+void fn0000000069602980(word64 rcx)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      fn0000000069601010
+// MayUse:  rcx:[0..63]
+// LiveOut:
+// Trashed: SCZO rax rcx
+// Preserved: r12 rbx rsi rsp
+fn0000000069602980_entry:
+l0000000069602980:
+	call lock (retsize: 8;)
+		uses: rcx:8<u64>
+	word64 r12_20 = Mem11[rcx:word64]
+	word64 rbx_21 = Mem11[rcx + 8<64>:word64]
+	Mem22[rcx + 0x10<64>:word64] = 0<64>
+	Mem23[rcx + 8<64>:word64] = 0<64>
+	Mem25[rcx:word64] = 0<64>
+	word64 rcx_26
+	call unlock (retsize: 8;)
+		uses: rcx:8<u64>
+		defs: rcx:rcx_26
+	branch r12_20 == 0<64> l00000000696029E6
+l00000000696029C2:
+	rbx_21 = rbx_21 - 8<64>
+	branch r12_20 >u rbx_21 l00000000696029DE
+l00000000696029CB:
+	word64 rax_39 = Mem25[rbx_21:word64]
+	branch rax_39 == 0<64> l00000000696029C2
+l00000000696029D3:
+	call rax_39 (retsize: 8;)
+		uses: rcx:rcx_45
+		defs: rcx:rcx_47
+	rbx_21 = rbx_21 - 8<64>
+	branch r12_20 <=u rbx_21 l00000000696029CB
+l00000000696029DE:
+	free(r12_20)
+l00000000696029E6:
+	return
+fn0000000069602980_exit:
+
+
+word64 fn0000000069602A00(word32 ecx)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      fn0000000069601790
+// MayUse:  ecx:[0..31]
+// LiveOut: rax
+// Trashed: SCZO rax rcx rdx
+// Preserved: rbx rsp
+fn0000000069602A00_entry:
+l0000000069602A00:
+	word64 rax_12
+	call _iob_func (retsize: 8;)
+		uses: ecx:ecx
+		defs: rax:rax_12
+	return rax_12 + (uint64) SLICE((uint64) ecx, word32, 0) * 0x30<64>
+fn0000000069602A00_exit:
+
+
+void fn0000000069602AF0()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed: SCZO rax rcx rdx
+// Preserved: rsp
+fn0000000069602AF0_entry:
+l0000000069602AF0:
+l0000000069602AF0_thunk_fn00000000696013B0:
+	fn00000000696013B0()
+	return
+fn0000000069602AF0_exit:
+
+

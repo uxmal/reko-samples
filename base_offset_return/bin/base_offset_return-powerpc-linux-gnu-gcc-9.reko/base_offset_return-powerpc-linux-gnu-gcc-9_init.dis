@@ -1,0 +1,19 @@
+void _init(word32 xer)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  xer:[0..31]
+// LiveOut:
+// Trashed: cr0 ctr r0 r11 r3 r4 r9 xer
+// Preserved: lr r1 r30
+_init_entry:
+l000002F4:
+	branch Mem9[0x0001FFF0<p32>:word32] == 0<32> l00000324
+l00000320:
+	fn00000660(0x0001FFF4<p32>)
+l00000324:
+	frame_dummy(xer)
+	__do_global_ctors_aux()
+	return
+_init_exit:
+
+

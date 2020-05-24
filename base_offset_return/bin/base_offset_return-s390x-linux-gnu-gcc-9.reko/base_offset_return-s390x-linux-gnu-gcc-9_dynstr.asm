@@ -1,0 +1,8 @@
+;;; Segment .dynstr (000002D8)
+000002D8                         00 5F 5F 67 6D 6F 6E 5F         .__gmon_
+000002E0 73 74 61 72 74 5F 5F 00 5F 49 54 4D 5F 64 65 72 start__._ITM_der
+000002F0 65 67 69 73 74 65 72 54 4D 43 6C 6F 6E 65 54 61 egisterTMCloneTa
+00000300 62 6C 65 00 5F 49 54 4D 5F 72 65 67 69 73 74 65 ble._ITM_registe
+00000310 72 54 4D 43 6C 6F 6E 65 54 61 62 6C 65 00 5F 5F rTMCloneTable.__
+00000320 63 78 61 5F 66 69 6E 61 6C 69 7A 65 00 67 65 74 cxa_finalize.get
+00000330 49 6E 64 65 78 00 66 6F 6F 00                   Index.foo.     

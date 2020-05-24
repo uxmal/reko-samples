@@ -1,0 +1,8 @@
+;;; Segment .rel.dyn (00000230)
+; 00010F38  23 00000000 
+; 00010F3C  23 00000000 
+; 00011028  23 00000000 
+; 00011018  21 00000003 __cxa_finalize
+; 0001101C  21 00000004 _ITM_registerTMCloneTable
+; 00011020  21 00000005 _ITM_deregisterTMCloneTable
+; 00011024  21 00000006 __gmon_start__

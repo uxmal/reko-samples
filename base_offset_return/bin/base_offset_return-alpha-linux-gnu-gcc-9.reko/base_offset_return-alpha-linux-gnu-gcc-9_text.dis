@@ -1,0 +1,216 @@
+void fn0000000000000450(word64 r0, word64 r27)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  r0:[0..63] r27:[0..63]
+// LiveOut:
+// Trashed: r1 r16 r26 r27 r29 r30
+// Preserved:
+fn0000000000000450_entry:
+l0000000000000450:
+	branch (word64) (r27 + 0x11BB0<64> == r0) != 0<64> l000000000000048C
+l0000000000000474_thunk_fn0000000000000478:
+	fn0000000000000478(r27 + 0x19BC0<64>)
+	return
+l0000000000000474_thunk_fn0000000000000478:
+	fn0000000000000478(r27 + 0x19BC0<64>)
+	return
+fn0000000000000450_exit:
+
+
+word64 fn0000000000000458(word64 r0, word64 r29)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      fn0000000000000508
+// MayUse:  r0:[0..63] r29:[0..63]
+// LiveOut: r16 r30
+// Trashed: r1 r16 r26 r27 r29 r30
+// Preserved:
+fn0000000000000458_entry:
+l0000000000000458:
+	branch (word64) (r29 - 0x8010<64> == r0) != 0<64> l000000000000048C_in_fn0000000000000458
+l000000000000048C_in_fn0000000000000458:
+	return <invalid>
+l0000000000000474_thunk_fn0000000000000478:
+	fn0000000000000478(r29)
+	return <invalid>
+fn0000000000000458_exit:
+
+
+void fn0000000000000478(word64 r29)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      fn0000000000000450
+//      fn0000000000000458
+// MayUse:  r29:[0..63]
+// LiveOut:
+// Trashed: r26 r27 r29
+// Preserved: r30
+fn0000000000000478_entry:
+l0000000000000478:
+	word64 r27_5 = Mem0[r29 - 0x7FF0<64>:word64]
+	branch r27_5 == 0<64> l000000000000048C
+l0000000000000480:
+	call r27_5 (retsize: 0;)
+		uses: r29:r29
+l000000000000048C:
+	return
+fn0000000000000478_exit:
+
+
+void fn0000000000000508(word64 r0, word64 r8, word64 r9, word64 r10, word64 r13, word64 r16, word64 r26, word64 r29)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      _fini
+// MayUse:  r0:[0..63] r10:[0..63] r13:[0..63] r16:[0..63] r26:[0..63] r29:[0..63] r8:[0..63] r9:[0..63]
+// LiveOut:
+// Trashed: r0 r1 r16 r2 r27 r29 r8
+// Preserved: r10 r11 r12 r13 r26 r30 r9
+fn0000000000000508_entry:
+l0000000000000508:
+	word64 r30_26 = fp - 0x30<64>
+	word64 r11_104 = r29
+	word64 r12_10 = r29 - 0x7FD0<64>
+	branch __extbl(Mem9[r29 - 0x7FD0<64>:word64], r0) != 0<64> l00000000000005E0
+l0000000000000538:
+	branch Mem21[r29 - 0x8000<64>:word64] == 0<64> l0000000000000558
+l0000000000000540:
+	word64 r27_36
+	word64 r2_39
+	call Mem21[r29 - 0x8000<64>:word64] (retsize: 0;)
+		uses: r0:r0,r1:r29,r10:r10,r11:r29,r12:r29 - 0x7FD0<64>,r13:r13,r16:Mem21[r29 - 0x7FD8<64>:word64],r2:r2_39,r26:r26,r27:r27_36,r29:r29,r8:r8_38,r9:r9
+		defs: r0:r0_33,r11:r11_27,r12:r12_29,r16:r16_37,r2:r2_39,r26:r26_31,r27:r27_36,r30:r30_26,r8:r8_38
+	r29 = r26 + 0x19AC0<64>
+l0000000000000558:
+	word64 r1_51 = Mem21[r29 - 0x7FC8<64>:word64]
+	word64 r13_45 = r29
+	word64 r9_54 = __src(r29 - 0x8168<64> - r8, 3<8>) - 1<64>
+	word64 r10_56 = r29 - 0x8170<64>
+	branch (word64) (r1_51 <u r8) == 0<64> l00000000000005B8
+l000000000000058C:
+	0<64> = Mem21[r30_26:word64]
+l0000000000000590:
+	word64 r1_59 = r1_51 + 1<64>
+	Mem61[r13_45 - 0x7FC8<64>:word64] = r1_59
+	word64 r1_63 = r1_59 * 8<64> + r16
+	word64 r27_84
+	call Mem61[r1_63:word64] (retsize: 0;)
+		uses: r0:r0_70,r1:r1_63,r10:r10_71,r11:r11_65,r12:r12_67,r13:r13_60,r16:r16_85,r2:r2_91,r26:r26_68,r27:r27_84,r29:r29_66,r8:r8_72,r9:r9_69
+		defs: r0:r0_81,r10:r10_82,r11:r11_75,r12:r12_77,r13:r13_83,r16:r16_85,r26:r26_79,r27:r27_84,r30:r30_74,r8:r8_86,r9:r9_80
+	r1_51 = Mem61[r13_45 - 0x7FC8<64>:word64]
+	r29 = r26 + 0x19A6C<64>
+	word64 r2_91 = (word64) (r1_51 <u r8)
+	branch r2_91 != 0<64> l0000000000000590
+l00000000000005B8:
+	0<64> = Mem93[r30_26:word64]
+	word64 r16_98 = fn0000000000000458(r0, r29)
+	word64 r30_99 = <invalid>
+	0<64> = Mem93[r30_99:word64]
+	0<64> = Mem93[r30_99:word64]
+	word64 r2_106 = Mem93[r11_104 - 0x7FD0<64>:word64]
+	word64 r1_107 = __insbl(1<64>, r0)
+	__mskbl(r2_106, r0)
+	__stq_u(Mem93[r11_104 - 0x7FD0<64>:word64], r1_107 | r16_98)
+l00000000000005E0:
+	return
+fn0000000000000508_exit:
+
+
+word64 fn0000000000000608(word64 r0, word64 r26, word64 r29, word64 qwArg00)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      _init
+// MayUse:  r0:[0..63] r26:[0..63] r29:[0..63] Stack +0000:[0..63]
+// LiveOut: r16
+// Trashed: r0 r1 r16 r17 r2 r27 r29
+// Preserved: r26 r30
+fn0000000000000608_entry:
+l0000000000000608:
+	0<64> = qwArg00
+l00000000000004A8:
+	word64 r1_10 = r29 - 0x8010<64> - r0
+	__src(r1_10, 3<8>)
+	word64 r16_21 = r29 - 0x8010<64>
+	branch __src((r1_10 >>u 0x3F<8>) + (r29 - 0x8010<64>), 1<8>) == 0<64> l00000000000004EC
+l00000000000004D8:
+	word64 r27_18 = Mem17[r29 - 0x7FF8<64>:word64]
+	branch r27_18 == 0<64> l00000000000004EC
+l00000000000004E0:
+	word64 r27_27
+	call r27_18 (retsize: 0;)
+		uses: r0:r0,r26:r26,r27:r27_27,r29:r29,Stack +0010:qwArg00
+		defs: r16:r16_21,r27:r27_27
+l00000000000004EC:
+	return r16_21
+fn0000000000000608_exit:
+
+
+void getIndex()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed:
+// Preserved:
+// Terminates process
+getIndex_exit:
+getIndex_entry:
+
+
+void foo(word64 r16, word64 r24, word64 r26, word64 r27)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  r16:[0..63] r24:[0..63] r26:[0..63] r27:[0..63]
+// LiveOut:
+// Trashed: r0 r16 r24 r27 r29 r8
+// Preserved: r26 r30 r9
+foo_entry:
+l0000000000000630:
+	branch r16 == 0<64> l0000000000000668
+l0000000000000650:
+	word64 r27_15 = Mem13[r27 + 0x119F8<64>:word64]
+	word64 r0_20
+	word64 r8_24
+	call r27_15 (retsize: 0;)
+		uses: r16:r16,r24:r24,r26:r26,r27:r27_15,r8:r8_24,r9:r24
+		defs: r0:r0_20,r8:r8_24
+	Mem28[r0_20 * 4<64> + r8_24:word32] = 0<32>
+l0000000000000668:
+	return
+foo_exit:
+
+
+void fn0000000000000688(word64 r16, word64 r24, word64 r26, word64 r29)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      _init
+// MayUse:  r16:[0..63] r24:[0..63] r26:[0..63] r29:[0..63]
+// LiveOut:
+// Trashed: r1 r16 r24 r27 r29
+// Preserved: r10 r26 r30 r9
+fn0000000000000688_entry:
+l0000000000000688:
+	word64 r27_14 = Mem13[r29 - 0x8180<64>:word64]
+	word64 r10_11 = 0xFFFFFFFFFFFFFFFF<64>
+	branch (word64) (r27_14 == r16) != 0<64> l00000000000006DC
+l00000000000006B0:
+	0<64> = r26
+	0<64> = r24
+	0<64> = r26
+	word64 r9_17 = r29 - 0x8180<64>
+l00000000000006C0:
+	call r27_14 (retsize: 0;)
+		uses: r10:r10_23,r16:r16_25,r24:r24_26,r26:r26_24,r29:r29_22,r9:r9_19 - 8<64>
+		defs: r10:r10_31,r16:r16_34,r24:r24_36,r26:r26_32,r9:r9_29
+	r27_14 = Mem13[r9_17:word64]
+	r29 = r26 + 0x19948<64>
+	branch (word64) (r27_14 == r16) == 0<64> l00000000000006C0
+l00000000000006DC:
+	return
+fn0000000000000688_exit:
+
+

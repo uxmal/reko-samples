@@ -1,0 +1,20 @@
+;;; Segment .dynamic (00010F40)
+; DT_INIT              00000280
+; DT_DEBUG             000003AC
+; DT_INIT_ARRAY        00010F38
+; DT_INIT_ARRAYSZ      00000004
+; DT_FINI_ARRAY        00010F3C
+; DT_FINI_ARRAYSZ      00000004
+; DT_GNU_HASH          00000118
+; DT_STRTAB            000001CC
+; DT_SYMTAB            0000013C
+; DT_STRSZ             00000062
+; DT_SYMENT                  16
+; DT_PLTGOT            00011000
+; DT_PLTRELSZ                24
+; DT_PLTREL            00000011
+; DT_JMPREL            00000268
+; DT_REL               00000230
+; DT_RELSZ                   56
+; DT_RELENT                   8
+; DT_RELCOUNT                 3

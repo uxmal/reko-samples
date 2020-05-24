@@ -1,0 +1,509 @@
+// fn00000418
+// Return size: 0
+define fn00000418
+fn00000418_entry:
+	r30 = fp
+	// succ:  l00000418
+l00000418:
+	r1 = r19 + -2048<i32>
+	r22 = r1 + 2012<i64>
+	r21 = (uint64) Mem0[r22:word32]
+	r19 = (uint64) Mem0[r22 + 4<i64>:word32]
+	call r21 (retsize: 0;)
+	return
+	// succ:  fn00000418_exit
+fn00000418_exit:
+
+
+// fn0000042C
+// Return size: 0
+define fn0000042C
+fn0000042C_entry:
+	r30 = fp
+	// succ:  l0000042C
+l0000042C:
+	r1 = r19 + -2048<i32>
+	r22 = r1 + 1980<i64>
+	r21 = (uint64) Mem0[r22:word32]
+	r19 = (uint64) Mem0[r22 + 4<i64>:word32]
+	call r21 (retsize: 0;)
+	return
+	// succ:  fn0000042C_exit
+fn0000042C_exit:
+
+
+// gmon_initializer
+// Return size: 0
+define gmon_initializer
+gmon_initializer_entry:
+	r30 = fp
+	// succ:  l00000440
+l00000440:
+	Mem0[r30 + -20<i64>:word32] = SLICE(r2, word32, 0)
+	v4 = r30 + 64<i64>
+	r30 = v4
+	Mem0[v4:word32] = SLICE(r4, word32, 0)
+	Mem0[r30 + -60<i64>:word32] = SLICE(r3, word32, 0)
+	r1 = r19 + 0<i32>
+	r28 = (uint64) Mem0[r1 + 8<i64>:word32]
+	r3 = (uint64) Mem0[r28:word32]
+	branch r3 == 0<32> l00000440_ds_t
+	// succ:  l00000440_ds_f l00000440_ds_t
+l00000440_ds_f:
+	r4 = r19 + 0<64>
+	goto l00000460
+	// succ:  l00000460
+l00000440_ds_t:
+	r4 = r19 + 0<64>
+	goto l00000480
+	// succ:  l00000480
+l00000460:
+	Mem0[r30 + -32<i64>:word32] = SLICE(r19, word32, 0)
+	r26 = r3 + 0<64>
+	call __canonicalize_funcptr_for_compare (retsize: 0;)
+	branch r28 == 0<32> l00000460_ds_t
+	// succ:  l00000460_ds_f l00000460_ds_t
+l00000460_ds_f:
+	r19 = r4 + 0<64>
+	goto l00000474
+	// succ:  l00000474
+l00000460_ds_t:
+	r19 = r4 + 0<64>
+	goto l00000480
+	// succ:  l00000480
+l00000474:
+	r22 = r3 + 0<64>
+	r2 = r31 + 0<64>
+	call fn000006B0 (retsize: 0;)
+l00000480:
+	r2 = (uint64) Mem0[r30 + -84<i64>:word32]
+	r3 = (uint64) Mem0[r30 + -60<i64>:word32]
+	r30 = r30 + -64<i64>
+	r4 = (uint64) Mem0[r30:word32]
+	return
+	// succ:  gmon_initializer_exit
+gmon_initializer_exit:
+
+
+// deregister_tm_clones
+// Return size: 0
+define deregister_tm_clones
+deregister_tm_clones_entry:
+	r30 = fp
+	// succ:  l00000494
+l00000494:
+	r1 = r19 + 0<i32>
+	Mem0[r30 + -20<i64>:word32] = SLICE(r2, word32, 0)
+	r26 = (uint64) Mem0[r1 + 16<i64>:word32]
+	v7 = r30 + 64<i64>
+	r30 = v7
+	Mem0[v7:word32] = SLICE(r4, word32, 0)
+	r1 = r19 + 0<i32>
+	r1 = (uint64) Mem0[r1 + 56<i64>:word32]
+	r28 = r1 + 0<64>
+	Mem0[r30 + -32<i64>:word32] = SLICE(r19, word32, 0)
+	branch r26 == r28 l00000494_ds_t
+	// succ:  l00000494_ds_f l00000494_ds_t
+l00000494_ds_f:
+	r1 = r19 + 0<i32>
+	goto l000004BC
+	// succ:  l000004BC
+l00000494_ds_t:
+	r1 = r19 + 0<i32>
+	goto l000004D4
+	// succ:  l000004D4
+l000004BC:
+	r28 = (uint64) Mem0[r1 + 28<i64>:word32]
+	r22 = (uint64) Mem0[r28:word32]
+	branch r22 == 0<32> l000004BC_ds_t
+	// succ:  l000004BC_ds_f l000004BC_ds_t
+l000004BC_ds_f:
+	r2 = (uint64) Mem0[r30 + -84<i64>:word32]
+	goto l000004CC
+	// succ:  l000004CC
+l000004BC_ds_t:
+	r2 = (uint64) Mem0[r30 + -84<i64>:word32]
+	goto l000004D8
+	// succ:  l000004D8
+l000004CC:
+	r2 = r31 + 0<64>
+	call fn000006B0 (retsize: 0;)
+l000004D4:
+	r2 = (uint64) Mem0[r30 + -84<i64>:word32]
+	// succ:  l000004D8
+l000004D8:
+	r30 = r30 + -64<i64>
+	r4 = (uint64) Mem0[r30:word32]
+	return
+	// succ:  deregister_tm_clones_exit
+deregister_tm_clones_exit:
+
+
+// register_tm_clones
+// Return size: 0
+define register_tm_clones
+register_tm_clones_entry:
+	r30 = fp
+	// succ:  l000004E0
+l000004E0:
+	r1 = r19 + 0<i32>
+	Mem0[r30 + -20<i64>:word32] = SLICE(r2, word32, 0)
+	r26 = (uint64) Mem0[r1 + 16<i64>:word32]
+	v7 = r30 + 64<i64>
+	r30 = v7
+	Mem0[v7:word32] = SLICE(r4, word32, 0)
+	r1 = r19 + 0<i32>
+	r1 = (uint64) Mem0[r1 + 56<i64>:word32]
+	r28 = r1 + 0<64>
+	Mem0[r30 + -32<i64>:word32] = SLICE(r19, word32, 0)
+	r28 = r28 - r26
+	r20 = (int32) SLICE(r28, word30, 3)
+	r25 = (uint32) SLICE(r28, bool, 32)
+	r25 = r25 + r20
+	r25 = (int32) SLICE(r25, word31, 2)
+	branch r25 == 0<32> l000004E0_ds_t
+	// succ:  l000004E0_ds_f l000004E0_ds_t
+l000004E0_ds_f:
+	r1 = r19 + 0<i32>
+	goto l0000051C
+	// succ:  l0000051C
+l000004E0_ds_t:
+	r1 = r19 + 0<i32>
+	goto l00000534
+	// succ:  l00000534
+l0000051C:
+	r28 = (uint64) Mem0[r1 + 32<i64>:word32]
+	r22 = (uint64) Mem0[r28:word32]
+	branch r22 == 0<32> l0000051C_ds_t
+	// succ:  l0000051C_ds_f l0000051C_ds_t
+l0000051C_ds_f:
+	r2 = (uint64) Mem0[r30 + -84<i64>:word32]
+	goto l0000052C
+	// succ:  l0000052C
+l0000051C_ds_t:
+	r2 = (uint64) Mem0[r30 + -84<i64>:word32]
+	goto l00000538
+	// succ:  l00000538
+l0000052C:
+	r2 = r31 + 0<64>
+	call fn000006B0 (retsize: 0;)
+l00000534:
+	r2 = (uint64) Mem0[r30 + -84<i64>:word32]
+	// succ:  l00000538
+l00000538:
+	r30 = r30 + -64<i64>
+	r4 = (uint64) Mem0[r30:word32]
+	return
+	// succ:  register_tm_clones_exit
+register_tm_clones_exit:
+
+
+// __do_global_dtors_aux
+// Return size: 0
+define __do_global_dtors_aux
+__do_global_dtors_aux_entry:
+	r30 = fp
+	// succ:  l00000540
+l00000540:
+	Mem0[r30 + -20<i64>:word32] = SLICE(r2, word32, 0)
+	r1 = r19 + 0<i32>
+	v6 = r30 + 128<i64>
+	r30 = v6
+	Mem0[v6:word32] = SLICE(r7, word32, 0)
+	r7 = (uint64) Mem0[r1 + 20<i64>:word32]
+	Mem0[r30 + -124<i64>:word32] = SLICE(r6, word32, 0)
+	Mem0[r30 + -120<i64>:word32] = SLICE(r5, word32, 0)
+	Mem0[r30 + -116<i64>:word32] = SLICE(r4, word32, 0)
+	Mem0[r30 + -112<i64>:word32] = SLICE(r3, word32, 0)
+	Mem0[r30 + -32<i64>:word32] = SLICE(r19, word32, 0)
+	r28 = (uint64) Mem0[r7:byte]
+	branch r28 != 0<32> l00000540_ds_t
+	// succ:  l00000540_ds_f l00000540_ds_t
+l00000540_ds_f:
+	r1 = r19 + 0<i32>
+	goto l00000570
+	// succ:  l00000570
+l00000540_ds_t:
+	r1 = r19 + 0<i32>
+	goto l00000608
+	// succ:  l00000608
+l00000570:
+	r28 = (uint64) Mem0[r1 + 36<i64>:word32]
+	r28 = (uint64) Mem0[r28:word32]
+	branch r28 == 0<32> l00000570_ds_t
+	// succ:  l00000570_ds_f l00000570_ds_t
+l00000570_ds_f:
+	r1 = r19 + 0<i32>
+	goto l00000580
+	// succ:  l00000580
+l00000570_ds_t:
+	r1 = r19 + 0<i32>
+	goto l00000594
+	// succ:  l00000594
+l00000580:
+	r28 = (uint64) Mem0[r1 + 52<i64>:word32]
+	r4 = r19 + 0<64>
+	r26 = (uint64) Mem0[r28:word32]
+	call fn0000042C (retsize: 0;)
+	r19 = r4 + 0<64>
+	// succ:  l00000594
+l00000594:
+	r1 = r19 + 0<i32>
+	r28 = r1 + 0<64>
+	r5 = (uint64) Mem0[r28 + 48<i64>:word32]
+	r1 = r19 + 0<i32>
+	r28 = (uint64) Mem0[r1 + 12<i64>:word32]
+	r5 = r5 - r28
+	r1 = r19 + 0<i32>
+	r5 = (int32) SLICE(r5, word30, 3)
+	r3 = (uint64) Mem0[r1 + 24<i64>:word32]
+	r28 = (uint64) Mem0[r3:word32]
+	r1 = r19 + 0<i32>
+	r5 = r5 + -1<i64>
+	r1 = (uint64) Mem0[r1 + 12<i64>:word32]
+	r6 = r1 + 0<64>
+l00000608:
+	r2 = (uint64) Mem0[r30 + -148<i64>:word32]
+	r6 = (uint64) Mem0[r30 + -124<i64>:word32]
+	r5 = (uint64) Mem0[r30 + -120<i64>:word32]
+	r4 = (uint64) Mem0[r30 + -116<i64>:word32]
+	r3 = (uint64) Mem0[r30 + -112<i64>:word32]
+	r30 = r30 + -128<i64>
+	r7 = (uint64) Mem0[r30:word32]
+	return
+	// succ:  __do_global_dtors_aux_exit
+__do_global_dtors_aux_exit:
+
+
+// call___do_global_dtors_aux
+// Return size: 0
+define call___do_global_dtors_aux
+call___do_global_dtors_aux_entry:
+	r30 = fp
+	// succ:  l00000624
+l00000624:
+	Mem0[r30 + -20<i64>:word32] = SLICE(r2, word32, 0)
+	v4 = r30 + 64<i64>
+	r30 = v4
+	Mem0[v4:word32] = SLICE(r4, word32, 0)
+	Mem0[r30 + -32<i64>:word32] = SLICE(r19, word32, 0)
+	r2 = (uint64) Mem0[r30 + -84<i64>:word32]
+	r30 = r30 + -64<i64>
+	r4 = (uint64) Mem0[r30:word32]
+	return
+	// succ:  call___do_global_dtors_aux_exit
+call___do_global_dtors_aux_exit:
+
+
+// frame_dummy
+// Return size: 0
+define frame_dummy
+frame_dummy_entry:
+	r30 = fp
+	// succ:  l0000063C
+l0000063C:
+	Mem0[r30 + -20<i64>:word32] = SLICE(r2, word32, 0)
+	r2 = (uint64) Mem0[r30 + -20<i64>:word32]
+	goto 0x000004E0<p32>
+	// succ:  l00000644_thunk_register_tm_clones
+l00000644_thunk_register_tm_clones:
+	call register_tm_clones (retsize: 0;)
+	return
+	// succ:  frame_dummy_exit
+frame_dummy_exit:
+
+
+// call_frame_dummy
+// Return size: 0
+define call_frame_dummy
+call_frame_dummy_entry:
+	r30 = fp
+	// succ:  l00000650
+l00000650:
+	Mem0[r30 + -20<i64>:word32] = SLICE(r2, word32, 0)
+	v4 = r30 + 64<i64>
+	r30 = v4
+	Mem0[v4:word32] = SLICE(r4, word32, 0)
+	Mem0[r30 + -32<i64>:word32] = SLICE(r19, word32, 0)
+	r2 = (uint64) Mem0[r30 + -84<i64>:word32]
+	r30 = r30 + -64<i64>
+	r4 = (uint64) Mem0[r30:word32]
+	return
+	// succ:  call_frame_dummy_exit
+call_frame_dummy_exit:
+
+
+// getIndex
+// Return size: 0
+define getIndex
+getIndex_entry:
+	r30 = fp
+	// succ:  l00000668
+l00000668:
+getIndex_exit:
+
+
+// foo
+// Return size: 0
+define foo
+foo_entry:
+	r30 = fp
+	// succ:  l00000678
+l00000678:
+	Mem0[r30 + -20<i64>:word32] = SLICE(r2, word32, 0)
+	v4 = r30 + 64<i64>
+	r30 = v4
+	Mem0[v4:word32] = SLICE(r3, word32, 0)
+foo_exit:
+
+
+// fn000006B0
+// Return size: 0
+define fn000006B0
+fn000006B0_entry:
+	r30 = fp
+	// succ:  l000006B0
+l000006B0:
+	0<64> = (uint32) SLICE(r22, bool, 2)
+	r21 = (uint64) Mem0[r22 + -2<i64>:word32]
+	call r22 (retsize: 0;)
+	return
+	// succ:  fn000006B0_exit
+fn000006B0_exit:
+
+
+// __canonicalize_funcptr_for_compare
+// Return size: 0
+define __canonicalize_funcptr_for_compare
+__canonicalize_funcptr_for_compare_entry:
+	r30 = fp
+	// succ:  l000006C4
+l000006C4:
+	Mem0[r30 + -20<i64>:word32] = SLICE(r2, word32, 0)
+	r28 = r26 + 0<64>
+	v6 = r30 + 64<i64>
+	r30 = v6
+	Mem0[v6:word32] = SLICE(r4, word32, 0)
+	Mem0[r30 + -60<i64>:word32] = SLICE(r3, word32, 0)
+	branch r26 == 0xFFFFFFFF<32> l000006C4_ds_t
+	// succ:  l000006C4_ds_f l000006C4_ds_t
+l000006C4_ds_f:
+	Mem0[r30 + -32<i64>:word32] = SLICE(r19, word32, 0)
+	goto l000006DC
+	// succ:  l000006DC
+l000006C4_ds_t:
+	Mem0[r30 + -32<i64>:word32] = SLICE(r19, word32, 0)
+	goto l00000748
+	// succ:  l00000748
+l000006DC:
+	r20 = r0 + 4095<i64>
+l00000748:
+	r2 = (uint64) Mem0[r30 + -84<i64>:word32]
+	r3 = (uint64) Mem0[r30 + -60<i64>:word32]
+	r30 = r30 + -64<i64>
+	r4 = (uint64) Mem0[r30:word32]
+	return
+	// succ:  __canonicalize_funcptr_for_compare_exit
+__canonicalize_funcptr_for_compare_exit:
+
+
+// __do_global_ctors_aux
+// Return size: 0
+define __do_global_ctors_aux
+__do_global_ctors_aux_entry:
+	r30 = fp
+	// succ:  l00000800
+l00000800:
+	r1 = r19 + 0<i32>
+	Mem0[r30 + -20<i64>:word32] = SLICE(r2, word32, 0)
+	v6 = r30 + 128<i64>
+	r30 = v6
+	Mem0[v6:word32] = SLICE(r7, word32, 0)
+	Mem0[r30 + -120<i64>:word32] = SLICE(r5, word32, 0)
+	r5 = (uint64) Mem0[r1 + 44<i64>:word32]
+	Mem0[r30 + -116<i64>:word32] = SLICE(r4, word32, 0)
+	r4 = r19 + 0<64>
+	Mem0[r30 + -112<i64>:word32] = SLICE(r3, word32, 0)
+	Mem0[r30 + -32<i64>:word32] = SLICE(r19, word32, 0)
+	Mem0[r30 + -124<i64>:word32] = SLICE(r6, word32, 0)
+	r6 = (uint64) Mem0[r5 + -4<i64>:word32]
+	r26 = r6 + 0<64>
+	call __canonicalize_funcptr_for_compare (retsize: 0;)
+	r19 = r4 + 0<64>
+	r26 = r0 + -1<i64>
+	r4 = r19 + 0<64>
+	r3 = r28 + 0<64>
+	call __canonicalize_funcptr_for_compare (retsize: 0;)
+	branch r28 == r3 l00000800_ds_t
+	// succ:  l00000800_ds_f l00000800_ds_t
+l00000800_ds_f:
+	r19 = r4 + 0<64>
+	goto l00000850
+	// succ:  l00000850
+l00000800_ds_t:
+	r19 = r4 + 0<64>
+	goto l00000898
+	// succ:  l00000898
+l00000850:
+	r5 = r5 + -4<i64>
+	r7 = r0 + -1<i64>
+	// succ:  l00000858
+l00000858:
+	r22 = r6 + 0<64>
+	r4 = r19 + 0<64>
+	r2 = r31 + 0<64>
+	call fn000006B0 (retsize: 0;)
+	r5 = r5 + -4<i64>
+	r6 = (uint64) Mem0[r5:word32]
+	r19 = r4 + 0<64>
+	r26 = r6 + 0<64>
+	r4 = r19 + 0<64>
+	call __canonicalize_funcptr_for_compare (retsize: 0;)
+	r19 = r4 + 0<64>
+	r26 = r7 + 0<64>
+	r4 = r19 + 0<64>
+	r3 = r28 + 0<64>
+	call __canonicalize_funcptr_for_compare (retsize: 0;)
+	branch r28 != r3 l00000858_ds_t
+	// succ:  l00000858_ds_f l00000858_ds_t
+l00000858_ds_f:
+	r19 = r4 + 0<64>
+	goto l00000898
+	// succ:  l00000898
+l00000858_ds_t:
+	r19 = r4 + 0<64>
+	goto l00000858
+	// succ:  l00000858
+l00000898:
+	r2 = (uint64) Mem0[r30 + -148<i64>:word32]
+	r6 = (uint64) Mem0[r30 + -124<i64>:word32]
+	r5 = (uint64) Mem0[r30 + -120<i64>:word32]
+	r4 = (uint64) Mem0[r30 + -116<i64>:word32]
+	r3 = (uint64) Mem0[r30 + -112<i64>:word32]
+	r30 = r30 + -128<i64>
+	r7 = (uint64) Mem0[r30:word32]
+	return
+	// succ:  __do_global_ctors_aux_exit
+__do_global_ctors_aux_exit:
+
+
+// call___do_global_ctors_aux
+// Return size: 0
+define call___do_global_ctors_aux
+call___do_global_ctors_aux_entry:
+	r30 = fp
+	// succ:  l000008B4
+l000008B4:
+	Mem0[r30 + -20<i64>:word32] = SLICE(r2, word32, 0)
+	v4 = r30 + 64<i64>
+	r30 = v4
+	Mem0[v4:word32] = SLICE(r4, word32, 0)
+	Mem0[r30 + -32<i64>:word32] = SLICE(r19, word32, 0)
+	r2 = (uint64) Mem0[r30 + -84<i64>:word32]
+	r30 = r30 + -64<i64>
+	r4 = (uint64) Mem0[r30:word32]
+	return
+	// succ:  call___do_global_ctors_aux_exit
+call___do_global_ctors_aux_exit:
+
+

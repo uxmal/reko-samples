@@ -1,0 +1,34 @@
+void fn000002A0()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      __do_global_dtors_aux
+// MayUse: 
+// LiveOut:
+// Trashed: ip pc
+// Preserved: sp
+fn000002A0_entry:
+l000002A0:
+	call Mem0[0x0001100C<p32>:word32] (retsize: 0;)
+		uses: ip:0x0001100C<p32>
+	return
+fn000002A0_exit:
+
+
+void fn000002AC()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      foo
+// MayUse: 
+// LiveOut:
+// Trashed: ip pc
+// Preserved: sp
+fn000002AC_entry:
+l000002AC:
+	call Mem0[0x00011010<p32>:word32] (retsize: 0;)
+		uses: ip:0x00011010<p32>
+	return
+fn000002AC_exit:
+
+

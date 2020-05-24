@@ -1,0 +1,14 @@
+void _init()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed: sp x0 x16 x17 x29 x30
+// Preserved:
+_init_entry:
+l0000000000000448:
+	call_weak_fn()
+	return
+_init_exit:
+
+

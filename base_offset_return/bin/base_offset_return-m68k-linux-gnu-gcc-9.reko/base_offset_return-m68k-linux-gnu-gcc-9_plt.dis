@@ -1,0 +1,32 @@
+void fn000003A0()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      __do_global_dtors_aux
+// MayUse: 
+// LiveOut:
+// Trashed:
+// Preserved: a7
+fn000003A0_entry:
+l000003A0:
+	call Mem0[0x0000400C<p32>:word32] (retsize: 0;)
+	return
+fn000003A0_exit:
+
+
+void fn000003B4()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      _init
+// MayUse: 
+// LiveOut:
+// Trashed:
+// Preserved: a7
+fn000003B4_entry:
+l000003B4:
+	call Mem0[0x00004010<p32>:word32] (retsize: 0;)
+	return
+fn000003B4_exit:
+
+

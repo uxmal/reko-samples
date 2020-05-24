@@ -1,0 +1,19 @@
+;;; Segment .dynamic (0000018C)
+; DT_INIT              00000374
+; DT_DEBUG             00000640
+; DT_HASH              0000024C
+; DT_STRTAB            00000300
+; DT_SYMTAB            00000280
+; DT_STRSZ             00000062
+; DT_SYMENT                  16
+; DT_PLTGOT            000106A0
+; DT_REL               00000364
+; DT_RELSZ                   16
+; DT_RELENT                   8
+; DT_MIPS_RLD_VERSION  00000001
+; DT_MIPS_FLAGS        00000002
+; DT_MIPS_BASE_ADDRESS 00000000
+; DT_MIPS_LOCAL_GOTNO        10
+; DT_MIPS_SYMTABNO            8
+; DT_MIPS_UNREFEXTNO         22
+; DT_MIPS_GOTSYM              3

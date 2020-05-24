@@ -1,0 +1,25 @@
+// _fini
+// Return size: 0
+define _fini
+_fini_entry:
+	r30 = fp
+	// succ:  l000008CC
+l000008CC:
+	Mem0[r30 + -20<i64>:word32] = SLICE(r2, word32, 0)
+	v4 = r30 + 64<i64>
+	r30 = v4
+	Mem0[v4:word32] = SLICE(r4, word32, 0)
+	Mem0[r30 + -32<i64>:word32] = SLICE(r19, word32, 0)
+	r4 = r19 + 0<64>
+	r4 = r19 + 0<64>
+	call __do_global_dtors_aux (retsize: 0;)
+	r19 = r4 + 0<64>
+	r2 = (uint64) Mem0[r30 + -84<i64>:word32]
+	r19 = r4 + 0<64>
+	r30 = r30 + -64<i64>
+	r4 = (uint64) Mem0[r30:word32]
+	return
+	// succ:  _fini_exit
+_fini_exit:
+
+
