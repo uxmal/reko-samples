@@ -1,5 +1,4 @@
 decompile.exe --dasm-bytes --heuristic shingle base_offset_return-aarch64-linux-gnu-gcc-9
-decompile.exe --dasm-bytes --heuristic shingle base_offset_return-aarch64-linux-gnu-gcc-9.out
 decompile.exe --dasm-bytes --heuristic shingle base_offset_return-alpha-linux-gnu-gcc-9
 decompile.exe --dasm-bytes --heuristic shingle base_offset_return-arm-linux-gnueabi-gcc-9
 decompile.exe --dasm-bytes --heuristic shingle base_offset_return-arm-linux-gnueabihf-gcc-9
@@ -9,7 +8,11 @@ decompile.exe --dasm-bytes --heuristic shingle base_offset_return-hppa-linux-gnu
 decompile.exe --dasm-bytes --heuristic shingle base_offset_return-i686-linux-gnu-gcc-9
 decompile.exe --dasm-bytes --heuristic shingle base_offset_return-m68k-linux-gnu-gcc-9
 decompile.exe --dasm-bytes --heuristic shingle base_offset_return-mips-linux-gnu-gcc-9
+decompile.exe --dasm-bytes --heuristic shingle base_offset_return-mips64-linux-gnuabi64-gcc-9
+decompile.exe --dasm-bytes --heuristic shingle base_offset_return-mips64el-linux-gnuabi64-gcc-9
 decompile.exe --dasm-bytes --heuristic shingle base_offset_return-mipsel-linux-gnu-gcc-10
+decompile.exe --dasm-bytes --heuristic shingle base_offset_return-mipsisa64r6-linux-gnuabi64-gcc-9
+decompile.exe --dasm-bytes --heuristic shingle base_offset_return-mipsisa64r6el-linux-gnuabi64-gcc-9
 decompile.exe --dasm-bytes --heuristic shingle base_offset_return-powerpc-linux-gnu-gcc-9
 decompile.exe --dasm-bytes --heuristic shingle base_offset_return-powerpc64-linux-gnu-gcc-9
 decompile.exe --dasm-bytes --heuristic shingle base_offset_return-powerpc64le-linux-gnu-gcc-9
