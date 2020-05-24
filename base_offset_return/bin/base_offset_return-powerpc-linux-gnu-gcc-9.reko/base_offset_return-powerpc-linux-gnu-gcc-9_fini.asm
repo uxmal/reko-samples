@@ -2,15 +2,15 @@
 
 ;; _fini: 000006C0
 _fini proc
-	stwu	r1,-16(r1)
-	mflr	r0
-	stw	r0,20(r1)
-	stw	r30,8(r1)
-	bl	$000006D4
-	mflr	r30
-	bl	$00000410
-	lwz	r0,20(r1)
-	mtlr	r0
-	lwz	r30,8(r1)
-	addi	r1,r1,+0010
-	blr
+9421FFF0     	stwu	r1,-16(r1)
+7C0802A6     	mflr	r0
+90010014     	stw	r0,20(r1)
+93C10008     	stw	r30,8(r1)
+429F0005     	bl	$000006D4
+7FC802A6     	mflr	r30
+4BFFFD39     	bl	$00000410
+80010014     	lwz	r0,20(r1)
+7C0803A6     	mtlr	r0
+83C10008     	lwz	r30,8(r1)
+38210010     	addi	r1,r1,+0010
+4E800020     	blr

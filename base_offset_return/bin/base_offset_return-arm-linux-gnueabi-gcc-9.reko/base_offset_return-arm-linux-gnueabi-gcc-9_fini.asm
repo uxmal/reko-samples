@@ -2,5 +2,5 @@
 
 ;; _fini: 0000041C
 _fini proc
-	push	{r3,lr}
-	pop	{r3,pc}
+E92D4008     	push	{r3,lr}
+E8BD8008     	pop	{r3,pc}

@@ -5,6 +5,6 @@
 000002B0 10 CA 8C E2 5C FD BC E5                         ....\...       
 
 l000002B8:
-	add	ip,pc,#0
-	add	ip,ip,#&10000
-	ldr	pc,[ip,#&D54]!
+E28FC600     	add	ip,pc,#0
+E28CCA10     	add	ip,ip,#&10000
+E5BCFD54     	ldr	pc,[ip,#&D54]!

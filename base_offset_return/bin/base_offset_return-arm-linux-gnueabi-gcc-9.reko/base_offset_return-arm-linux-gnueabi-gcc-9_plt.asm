@@ -6,19 +6,19 @@
 ;;   Called from:
 ;;     000003B4 (in __do_global_dtors_aux)
 fn000002A0 proc
-	add	ip,pc,#0
-	add	ip,ip,#&10000
-	ldr	pc,[ip,#&D64]!
+E28FC600     	add	ip,pc,#0
+E28CCA10     	add	ip,ip,#&10000
+E5BCFD64     	ldr	pc,[ip,#&D64]!
 
 ;; fn000002AC: 000002AC
 ;;   Called from:
 ;;     00000404 (in foo)
 fn000002AC proc
-	add	ip,pc,#0
-	add	ip,ip,#&10000
-	ldr	pc,[ip,#&D5C]!
+E28FC600     	add	ip,pc,#0
+E28CCA10     	add	ip,ip,#&10000
+E5BCFD5C     	ldr	pc,[ip,#&D5C]!
 
 l000002B8:
-	add	ip,pc,#0
-	add	ip,ip,#&10000
-	ldr	pc,[ip,#&D54]!
+E28FC600     	add	ip,pc,#0
+E28CCA10     	add	ip,ip,#&10000
+E5BCFD54     	ldr	pc,[ip,#&D54]!
