@@ -84,7 +84,7 @@ void __do_global_dtors_aux()
 // Preserved: NZCV x19
 __do_global_dtors_aux_entry:
 l0000000000000538:
-	branch (word32) Mem11[0x0000000000011020<p64>:byte] != 0<32> l0000000000000574
+	branch CONVERT(Mem11[0x0000000000011020<p64>:byte], byte, word32) != 0<32> l0000000000000574
 l0000000000000550:
 	branch Mem11[0x0000000000010FC8<p64>:word64] == 0<64> l0000000000000568
 l000000000000055C:
@@ -139,7 +139,7 @@ l00000000000005B8:
 	return
 l000000000000059C:
 	fn0000000000000490()
-	Mem16[x0 + (int64) ((int32) w0_15):word32] = 0<32>
+	Mem16[x0 + CONVERT(w0_15, word32, int64):word32] = 0<32>
 	return
 foo_exit:
 

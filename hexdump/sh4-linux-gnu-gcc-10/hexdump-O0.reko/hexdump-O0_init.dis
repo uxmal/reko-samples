@@ -1,0 +1,26 @@
+void _init(word32 pr)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  pr:[0..31]
+// LiveOut:
+// Trashed: T pr r0 r1 r12 r14
+// Preserved: r15
+_init_entry:
+l00000320:
+	word32 r12_11 = Mem5[0x00000340<p32>:word32] + 0x00000340<p32>
+	branch Mem14[Mem14[0x00000344<p32>:word32] + r12_11:word32] == 0<32> l00000320_ds_t
+l00000320_ds_t:
+l0000033C:
+l0000034C:
+	word32 r1_19 = Mem14[0x00000368<p32>:word32]
+	call 0x00000368<p32> + r1_19 (retsize: 0;)
+		uses: pr:0x0000036C<p32>,r0:0x0000036C<p32>,r1:r1_19,r12:r12_11,r14:fp - 12<i32>
+	return
+_init_exit:
+l00000320_ds_f:
+l00000336:
+	word32 r1_30 = Mem14[0x00000348<p32>:word32]
+	call 0x0000033C<p32> + r1_30 (retsize: 0;)
+		uses: pr:pr,r1:r1_30,r12:r12_11,r14:fp - 12<i32>
+
+

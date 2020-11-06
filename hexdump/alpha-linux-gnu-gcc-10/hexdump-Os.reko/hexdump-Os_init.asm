@@ -1,0 +1,38 @@
+;;; Segment .init (0000000000000450)
+
+;; _init: 0000000000000450
+_init proc
+27BB0002     	ldah	r29,2(r27)
+23BD9BC0     	lda	r29,-6440(r29)
+43C2153E     	subq	r30,10,r30
+A77D8010     	ldq	r27,-7FF0(r29)
+B75E0000     	stq	r26,0(r30)
+B7BE0008     	stq	r29,8(r30)
+E7600002     	beq	r27,0000000000000474
+
+l000000000000046C:
+6B5B4000     	jsr	r26,r27
+A7BE0008     	ldq	r29,8(r30)
+
+l0000000000000474:
+2FFE0000     	ldq_u	zero,0(r30)
+C3A00000     	br	r29,000000000000047C
+
+l000000000000047C:
+27BD0002     	ldah	r29,2(r29)
+23BD9B94     	lda	r29,-646C(r29)
+2FFE0000     	ldq_u	zero,0(r30)
+2FFE0000     	ldq_u	zero,0(r30)
+D34000A2     	bsr	r26,0000000000000718
+C3A00000     	br	r29,0000000000000494
+
+l0000000000000494:
+27BD0002     	ldah	r29,2(r29)
+23BD9B7C     	lda	r29,-6484(r29)
+2FFE0000     	ldq_u	zero,0(r30)
+2FFE0000     	ldq_u	zero,0(r30)
+D34000A8     	bsr	r26,0000000000000748
+A75E0000     	ldq	r26,0(r30)
+A7BE0008     	ldq	r29,8(r30)
+43C2141E     	addq	r30,10,r30
+6BFA8001     	ret	zero,r26

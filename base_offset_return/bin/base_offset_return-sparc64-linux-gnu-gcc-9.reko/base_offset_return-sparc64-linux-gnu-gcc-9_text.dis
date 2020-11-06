@@ -1,0 +1,331 @@
+word64 __sparc_get_pc_thunk.l7(word64 o7, word64 l7)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      _init
+//      deregister_tm_clones
+//      __do_global_dtors_aux
+//      frame_dummy
+//      __do_global_ctors_aux
+// MayUse:  l7:[0..63] o7:[0..63]
+// LiveOut: l7
+// Trashed: l7
+// Preserved: sp
+__sparc_get_pc_thunk.l7_entry:
+l0000000000000520:
+	return o7 + l7
+__sparc_get_pc_thunk.l7_exit:
+
+
+word64 deregister_tm_clones(word64 o1, word64 o2, word64 o3, word64 o4, word64 o5, word64 o7, ptr64 & i7Out)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      __do_global_dtors_aux
+// MayUse:  o1:[0..63] o2:[0..63] o3:[0..63] o4:[0..63] o5:[0..63] o7:[0..63]
+// LiveOut: i3 i7
+// Trashed: NZVC g0 g1 i0 i1 i2 i3 i4 i5 i6 i7 l7
+// Preserved: o0 o1 o2 o3 o4 o5 o7 sp
+deregister_tm_clones_entry:
+l0000000000000540:
+	word64 l7_22 = __sparc_get_pc_thunk.l7(o7, 0x101AB8<64>)
+	branch l7_22 + 0x1E8<64> - (l7_22 + 0x1E8<64>) == 0<64> l0000000000000540_ds_t
+l0000000000000540_ds_t:
+l000000000000058C:
+	i7Out = o7 + 8<i64>
+	return o3
+l0000000000000540_ds_f:
+	word64 g1_43 = 0<32>
+l0000000000000574:
+	branch Mem0[l7_22 + (g1_43 ^ 0x10<64>):word64] == 0<64> l0000000000000574_ds_t
+	word64 o0_49
+	word64 o1_51
+	word64 o2_53
+	word64 i3_54
+	word64 o3_55
+	word64 o4_57
+	word64 o5_59
+	word64 i7_61
+	call fn000000000003058C (retsize: 0;)
+		uses: o0:l7_22 + 0x1E8<64>,o1:o1,o2:o2,o3:o3,o4:o4,o5:o5,o7:o7
+		defs: i3:i3_54,i7:i7_61,o0:o0_49,o1:o1_51,o2:o2_53,o3:o3_55,o4:o4_57,o5:o5_59
+	i7Out = i7_61
+	return i3_54
+l0000000000000574_ds_t:
+l0000000000000580_then:
+l0000000000000574_ds_f:
+l0000000000000584:
+	call fn00101AB8 (retsize: 0;)
+		uses: o0:o0_49,o1:o1_51,o2:o2_53,o3:o3_55,o4:o4_57,o5:o5_59,o7:0x0000000000000584<p64>
+deregister_tm_clones_exit:
+
+
+word64 register_tm_clones(word64 o2, word64 o3, word64 o4, word64 o5, word64 o7, ptr64 & o1Out, ptr64 & o2Out, ptr64 & o3Out, ptr64 & o4Out, ptr64 & o5Out, ptr64 & o7Out)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      frame_dummy
+// MayUse:  o2:[0..63] o3:[0..63] o4:[0..63] o5:[0..63] o7:[0..63]
+// LiveOut: o0 o1 o2 o3 o4 o5 o7
+// Trashed: g1 g2 i0 i1 i2 i3 i4 i5 i6 i7 l7 o0 o1 o2 o3 o4 o5 o7 sp
+// Preserved:
+register_tm_clones_entry:
+l0000000000000594:
+	word64 l7_22 = __sparc_get_pc_thunk.l7(o7, 0x101A64<64>)
+	word64 g1_29 = l7_22 + 0x1E8<64> - (l7_22 + 0x1E8<64>)
+	word64 o1_32 = (g1_29 >>u 0x3F<64>) + (g1_29 >> 3<64>)
+	branch o1_32 >> 1<64> == 0<64> l0000000000000594_ds_t
+	word64 o0_35
+	word64 o1_37
+	word64 o2_39
+	word64 o3_41
+	word64 o4_43
+	word64 o5_45
+	word64 o7_48
+	word64 l7_50
+	call fn00000000000105F0 (retsize: 0;)
+		uses: o0:l7_22 + 0x1E8<64>,o1:o1_32 >> 1<64>,o2:o2,o3:o3,o4:o4,o5:o5,o7:o7
+		defs: l7:l7_50,o0:o0_35,o1:o1_37,o2:o2_39,o3:o3_41,o4:o4_43,o5:o5_45,o7:o7_48
+	o1Out = o1_37
+	o2Out = o2_39
+	o3Out = o3_41
+	o4Out = o4_43
+	o5Out = o5_45
+	o7Out = o7_48
+	return o0_35
+l0000000000000594_ds_t:
+l00000000000005D4_then:
+l0000000000000594_ds_f:
+	word64 g1_54 = 0<32>
+l00000000000005D8:
+	branch Mem0[l7_50 + (g1_54 ^ 0x38<64>):word64] == 0<64> l00000000000005D8_ds_t
+	word64 o0_59
+	word64 o1_61
+	word64 o2_63
+	word64 o3_65
+	word64 o4_67
+	word64 o5_69
+	word64 o7_72
+	call fn00000000000305F0 (retsize: 0;)
+		uses: o0:o0_35,o1:o1_37,o2:o2_39,o3:o3_41,o4:o4_43,o5:o5_45,o7:o7_48
+		defs: o0:o0_59,o1:o1_61,o2:o2_63,o3:o3_65,o4:o4_67,o5:o5_69,o7:o7_72
+	o1Out = o1_61
+	o2Out = o2_63
+	o3Out = o3_65
+	o4Out = o4_67
+	o5Out = o5_69
+	o7Out = o7_72
+	return o0_59
+l00000000000005D8_ds_t:
+l00000000000005E4_then:
+l00000000000005D8_ds_f:
+l00000000000005E8:
+	word64 i0_80
+	word64 i1_82
+	word64 i2_84
+	word64 i3_86
+	word64 i4_88
+	word64 i5_90
+	word64 i7_93
+	call fn00101A64 (retsize: 0;)
+		uses: o0:o0_59,o1:o1_61,o2:o2_63,o3:o3_65,o4:o4_67,o5:o5_69,o7:0x00000000000005E8<p64>
+		defs: i0:i0_80,i1:i1_82,i2:i2_84,i3:i3_86,i4:i4_88,i5:i5_90,i7:i7_93
+	o1Out = i1_82
+	o2Out = i2_84
+	o3Out = i3_86
+	o4Out = i4_88
+	o5Out = i5_90
+	o7Out = i7_93
+	return i0_80
+register_tm_clones_exit:
+
+
+void __do_global_dtors_aux(word64 o0, word64 o1, word64 o2, word64 o3, word64 o4, word64 o5, word64 o7)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      _fini
+// MayUse:  o0:[0..63] o1:[0..63] o2:[0..63] o3:[0..63] o4:[0..63] o5:[0..63] o7:[0..63]
+// LiveOut:
+// Trashed: NZVC g0 g1 g2 i0 i1 i2 i3 i4 i5 i6 i7 l7 o0 o1 o2 o3 o4 o5 o7 sp
+// Preserved:
+__do_global_dtors_aux_entry:
+l00000000000005F8:
+	word64 l7_22 = __sparc_get_pc_thunk.l7(o7, 0x101A00<64>)
+	branch CONVERT(Mem0[l7_22 + 0x1E8<64>:byte], byte, ui64) != 0<64> l00000000000005F8_ds_t
+l00000000000005F8_ds_t:
+l00000000000005F8_ds_f:
+	word64 g1_32 = 0<32>
+l0000000000000624:
+	branch Mem0[l7_22 + (g1_32 ^ 8<64>):word64] == 0<64> l0000000000000624_ds_t
+	word64 o1_39
+	word64 o2_41
+	word64 o3_43
+	word64 o4_45
+	word64 o5_47
+	word64 o7_50
+	word64 l7_51
+	word64 g2_54
+	call fn0000000000010644 (retsize: 0;)
+		uses: g2:g2_54,o0:o0,o1:o1,o2:o2,o3:o3,o4:o4,o5:o5,o7:o7
+		defs: g2:g2_54,l7:l7_51,o1:o1_39,o2:o2_41,o3:o3_43,o4:o4_45,o5:o5_47,o7:o7_50
+	return
+l0000000000000624_ds_t:
+l0000000000000630_then:
+l0000000000000624_ds_f:
+	word64 g1_57 = 0<32>
+l0000000000000634:
+	word64 g1_59 = l7_51 + (g1_57 ^ 0x1E0<64>)
+	word64 o1_65
+	word64 o2_67
+	word64 o3_69
+	word64 o4_71
+	word64 o5_73
+	word64 o7_76
+	word64 l7_77
+	call __cxa_finalize (retsize: 0;)
+		uses: g1:g1_59,g2:g2_95 ^ 0xFFFFFFFFFFFFFE50<64>,o0:Mem0[g1_59:word64],o1:o1_39,o2:o2_41,o3:o3_43,o4:o4_45,o5:o5_47,o7:o7_50
+		defs: l7:l7_77,o1:o1_65,o2:o2_67,o3:o3_69,o4:o4_71,o5:o5_73,o7:o7_76
+	word64 g1_93 = Mem0[l7_77 + 0x1F0<64>:word64]
+	word64 g2_95 = 0<32>
+	branch g1_93 - (((l7_77 + 0xFFFFFFFFFFFFFE58<64>) - (l7_77 + 0xFFFFFFFFFFFFFE50<64>) >> 3<64>) + 0xFFFFFFFFFFFFFFFF<64>) >=u 0<64> l0000000000000634_ds_t
+l0000000000000634_ds_t:
+l00000000000006B4:
+	word64 i7_195
+	Mem132[deregister_tm_clones(o1_65, o2_67, o3_69, o4_71, o5_73, o7_76, out i7_195):byte] = 1<8>
+l00000000000006C4:
+	return
+l0000000000000634_ds_f:
+l0000000000000690:
+	Mem106[l7_77 + 0x1F0<64>:word64] = g1_93 + 1<64>
+	fn000001F0()
+__do_global_dtors_aux_exit:
+
+
+void call___do_global_dtors_aux()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed: i0 i1 i2 i3 i4 i5 i6 i7
+// Preserved: o0 o1 o2 o3 o4 o5 o7 sp
+call___do_global_dtors_aux_entry:
+l00000000000006CC:
+	return
+call___do_global_dtors_aux_exit:
+
+
+word64 frame_dummy(word64 o2, word64 o3, word64 o4, word64 o5, word64 o7, ptr64 & o1Out, ptr64 & o2Out, ptr64 & o3Out, ptr64 & o4Out, ptr64 & o5Out, ptr64 & o7Out)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      _init
+// MayUse:  o2:[0..63] o3:[0..63] o4:[0..63] o5:[0..63] o7:[0..63]
+// LiveOut: o0 o1 o2 o3 o4 o5 o7
+// Trashed: g1 g2 i0 i1 i2 i3 i4 i5 i6 i7 l7 o0 o1 o2 o3 o4 o5 o7
+// Preserved: sp
+frame_dummy_entry:
+l00000000000006D8:
+l00000000000006DC_thunk_register_tm_clones:
+	word64 o1_39
+	word64 o2_40
+	word64 o3_41
+	word64 o4_42
+	word64 o5_43
+	word64 o7_44
+	word64 o0_38 = register_tm_clones(o2, o3, o4, o5, o7, out o1_39, out o2_40, out o3_41, out o4_42, out o5_43, out o7_44)
+	o1Out = o1_39
+	o2Out = o2_40
+	o3Out = o3_41
+	o4Out = o4_42
+	o5Out = o5_43
+	o7Out = o7_44
+	return o0_38
+frame_dummy_exit:
+
+
+void call_frame_dummy()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed: i0 i1 i2 i3 i4 i5 i6 i7
+// Preserved: o0 o1 o2 o3 o4 o5 o7 sp
+call_frame_dummy_entry:
+l00000000000006E4:
+	return
+call_frame_dummy_exit:
+
+
+void getIndex()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed:
+// Preserved:
+// Terminates process
+getIndex_exit:
+getIndex_entry:
+
+
+void foo(word64 o0)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  o0:[0..63]
+// LiveOut:
+// Trashed: i0 i1 i2 i3 i4 i5 i6 i7 o0
+// Preserved: o1 o2 o3 o4 o5 o7 sp
+foo_entry:
+l0000000000000708:
+	branch o0 == 0<64> l0000000000000708_ds_t
+l0000000000000708_ds_t:
+l0000000000000724:
+	return
+foo_exit:
+l0000000000000708_ds_f:
+l0000000000000714:
+	fn00000000001021C0()
+
+
+void __do_global_ctors_aux(word64 o0, word64 o1, word64 o2, word64 o3, word64 o4, word64 o5, word64 o7)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      _init
+// MayUse:  o0:[0..63] o1:[0..63] o2:[0..63] o3:[0..63] o4:[0..63] o5:[0..63] o7:[0..63]
+// LiveOut:
+// Trashed: NZVC g0 g1 i0 i1 i2 i3 i4 i5 i6 i7 l7
+// Preserved: o0 o1 o2 o3 o4 o5 o7 sp
+__do_global_ctors_aux_entry:
+l0000000000000730:
+	word64 l7_25 = __sparc_get_pc_thunk.l7(o7, 0x1018C0<64>) + 0xFFFFFFFFFFFFFE48<64>
+	branch Mem0[l7_25 + -8<i32>:word64] == 0xFFFFFFFFFFFFFFFF<64> l0000000000000730_ds_t
+l0000000000000730_ds_t:
+l0000000000000730_ds_f:
+	word64 l7_32 = l7_25 + 0xFFFFFFFFFFFFFFF8<64>
+l000000000000075C:
+	call fnFFFFFE48 (retsize: 0;)
+		uses: l7:l7_34 + 0xFFFFFFFFFFFFFFF8<64>,o0:o0_36,o1:o1_37,o2:o2_38,o3:o3_39,o4:o4_40,o5:o5_41,o7:0x000000000000075C<p64>
+		defs: l7:l7_60,o0:o0_45,o1:o1_47,o2:o2_49,o3:o3_51,o4:o4_53,o5:o5_55
+	branch Mem0[l7_32:word64] != 0xFFFFFFFFFFFFFFFF<64> l000000000000075C_ds_t
+l000000000000075C_ds_t:
+l000000000000075C_ds_f:
+l0000000000000774:
+	return
+__do_global_ctors_aux_exit:
+
+
+void call___do_global_ctors_aux()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed: i0 i1 i2 i3 i4 i5 i6 i7
+// Preserved: o0 o1 o2 o3 o4 o5 o7 sp
+call___do_global_ctors_aux_entry:
+l000000000000077C:
+	return
+call___do_global_ctors_aux_exit:
+
+

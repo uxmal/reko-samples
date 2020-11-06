@@ -1,0 +1,68 @@
+void fn00000310()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      __do_global_dtors_aux
+// MayUse: 
+// LiveOut:
+// Trashed: ip pc
+// Preserved: sp
+fn00000310_entry:
+l00000310:
+	call Mem0[0x0001100C<p32>:word32] (retsize: 0;)
+		uses: ip:0x0001100C<p32>
+	return
+fn00000310_exit:
+
+
+void fn0000031C()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      call_weak_fn
+// MayUse: 
+// LiveOut:
+// Trashed: ip pc
+// Preserved: sp
+fn0000031C_entry:
+l0000031C:
+	call Mem0[0x00011010<p32>:word32] (retsize: 0;)
+		uses: ip:0x00011010<p32>
+	return
+fn0000031C_exit:
+
+
+void fn00000328()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      main
+// MayUse: 
+// LiveOut:
+// Trashed: ip pc
+// Preserved: sp
+fn00000328_entry:
+l00000328:
+	call Mem0[0x00011014<p32>:word32] (retsize: 0;)
+		uses: ip:0x00011014<p32>
+	return
+fn00000328_exit:
+
+
+void fn00000334()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      main
+// MayUse: 
+// LiveOut:
+// Trashed: ip pc
+// Preserved: sp
+fn00000334_entry:
+l00000334:
+	call Mem0[0x00011018<p32>:word32] (retsize: 0;)
+		uses: ip:0x00011018<p32>
+	return
+fn00000334_exit:
+
+

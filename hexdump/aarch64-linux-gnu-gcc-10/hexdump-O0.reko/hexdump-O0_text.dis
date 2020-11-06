@@ -1,0 +1,141 @@
+void call_weak_fn()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      _init
+// MayUse: 
+// LiveOut:
+// Trashed: x0 x16 x17
+// Preserved: sp
+call_weak_fn_entry:
+l0000000000000560:
+	branch Mem0[0x0000000000010FD0<p64>:word64] == 0<64> l0000000000000570
+l0000000000000570:
+	return
+l000000000000056C:
+l0000000000000540:
+	word64 x17_12
+	call Mem0[0x0000000000011010<p64>:word64] (retsize: 0;)
+		uses: x16:0x0000000000011010<p64>,x17:x17_12
+		defs: x17:x17_12
+	return
+call_weak_fn_exit:
+
+
+void deregister_tm_clones()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      __do_global_dtors_aux
+// MayUse: 
+// LiveOut:
+// Trashed: NZCV x0 x1 x16 x31
+// Preserved: sp
+deregister_tm_clones_entry:
+l0000000000000580:
+	branch 0x0000000000011028<p64> - 0x0000000000011028<p64> == 0<64> l00000000000005AC
+l0000000000000598:
+	word64 x1_12 = Mem0[0x0000000000010FC0<p64>:word64]
+	branch x1_12 == 0<64> l00000000000005AC
+l00000000000005AC:
+	return
+l00000000000005A4:
+	word64 x16_18
+	call x1_12 (retsize: 0;)
+		uses: x16:x16_18
+		defs: x16:x16_18
+	return
+deregister_tm_clones_exit:
+
+
+void register_tm_clones()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      frame_dummy
+// MayUse: 
+// LiveOut:
+// Trashed: x0 x1 x16 x2
+// Preserved: sp
+register_tm_clones_entry:
+l00000000000005B0:
+	word64 x1_7 = 0x0000000000011028<p64> - 0x0000000000011028<p64>
+	branch (x1_7 >>u 63<i32>) + (x1_7 >> 3<i32>) >> 1<i32> == 0<64> l00000000000005E8
+l00000000000005D4:
+	word64 x2_13 = Mem0[0x0000000000010FE0<p64>:word64]
+	branch x2_13 == 0<64> l00000000000005E8
+l00000000000005E8:
+	return
+l00000000000005E0:
+	word64 x16_19
+	call x2_13 (retsize: 0;)
+		uses: x16:x16_19
+		defs: x16:x16_19
+	return
+register_tm_clones_exit:
+
+
+void __do_global_dtors_aux()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed: sp x0 x1 x16 x17 x29 x30 x31
+// Preserved: NZCV x19
+__do_global_dtors_aux_entry:
+l00000000000005F0:
+	branch CONVERT(Mem11[0x0000000000011028<p64>:byte], byte, word32) != 0<32> l000000000000062C
+l0000000000000608:
+	branch Mem11[0x0000000000010FC8<p64>:word64] == 0<64> l0000000000000620
+l0000000000000614:
+	fn0000000000000530()
+l0000000000000620:
+	deregister_tm_clones()
+	Mem31[0x0000000000011028<p64>:byte] = 1<8>
+l000000000000062C:
+	return
+__do_global_dtors_aux_exit:
+
+
+void frame_dummy()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed: x0 x1 x16 x2
+// Preserved: sp
+frame_dummy_entry:
+l0000000000000640:
+l0000000000000640_thunk_register_tm_clones:
+	register_tm_clones()
+	return
+frame_dummy_exit:
+
+
+void hexdump()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed:
+// Preserved:
+// Terminates process
+hexdump_exit:
+hexdump_entry:
+
+
+void main()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed: sp x0 x1 x16 x17 x2 x29 x3 x30 x4
+// Preserved: x19
+main_entry:
+l00000000000006D0:
+	fn0000000000000520()
+	fn0000000000000550()
+	return
+main_exit:
+
+

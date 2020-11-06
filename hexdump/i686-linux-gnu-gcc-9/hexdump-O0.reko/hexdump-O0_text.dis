@@ -1,0 +1,215 @@
+void __x86.get_pc_thunk.bx()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed: ebx Top
+// Preserved: esp
+__x86.get_pc_thunk.bx_entry:
+l00001060:
+	return
+__x86.get_pc_thunk.bx_exit:
+
+
+void deregister_tm_clones()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      __do_global_dtors_aux
+// MayUse: 
+// LiveOut:
+// Trashed: SCZO eax ecx edx Top
+// Preserved: ebp esp
+deregister_tm_clones_entry:
+l00001070:
+	branch 0x00004014<p32> == 0x00004014<p32> l000010A8
+l0000108B:
+	word32 eax_11 = Mem0[0x00004014<p32>:word32]
+	branch eax_11 == 0<32> l000010A8
+l000010A8:
+	return
+l00001095:
+	call eax_11 (retsize: 4;)
+		uses: Stack +0004:0x00004014<p32>
+	return
+deregister_tm_clones_exit:
+
+
+void register_tm_clones()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      frame_dummy
+// MayUse: 
+// LiveOut:
+// Trashed: SCZO eax ecx edx Top
+// Preserved: ebp ebx esp
+register_tm_clones_entry:
+l000010B0:
+	word32 eax_16 = 0x00004014<p32> - 0x00004014<p32>
+	word32 eax_20 = (eax_16 >>u 0x1F<32>) + (eax_16 >> 2<32>)
+	branch eax_20 >> 1<32> == 0<32> l000010F2
+l000010DE:
+	word32 edx_24 = Mem12[0x00004004<p32>:word32]
+	branch edx_24 == 0<32> l000010F2
+l000010E8:
+	call edx_24 (retsize: 4;)
+		uses: Stack +0004:0x00004014<p32>,Stack +0008:eax_20 >> 1<32>
+l000010F2:
+	return
+register_tm_clones_exit:
+
+
+void __do_global_dtors_aux()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      _fini
+// MayUse: 
+// LiveOut:
+// Trashed: SCZO eax ecx edx Top
+// Preserved: ebp ebx edi esi esp
+__do_global_dtors_aux_entry:
+l00001100:
+	branch Mem18[0x00004014<p32>:byte] != 0<8> l00001182
+l0000111D:
+	branch Mem18[0x00004010<p32>:word32] == 0<32> l0000113A
+l00001127:
+	fn00001050(0x00004000<p32>)
+l0000113A:
+	word32 eax_38 = Mem37[0x00004018<p32>:word32]
+	word32 ebx_41 = (0x000040D8<p32> - 0x000040DC<p32> >> 2<32>) - 1<32>
+	branch eax_38 >=u ebx_41 l00001176
+l00001158:
+l00001160:
+	word32 eax_46 = eax_38 + 1<32>
+	Mem49[0x00004018<p32>:word32] = eax_46
+	word32 edx_90
+	word32 ecx_89
+	call Mem49[0x000040DC<p32> + eax_46 * 4<32>:word32] (retsize: 4;)
+		uses: eax:eax_46,ecx:ecx_89,edx:edx_90
+		defs: ecx:ecx_89,edx:edx_90
+	eax_38 = Mem49[0x00004018<p32>:word32]
+	branch eax_38 <u ebx_41 l00001160
+l00001176:
+	deregister_tm_clones()
+	Mem68[0x00004014<p32>:byte] = 1<8>
+l00001182:
+	return
+__do_global_dtors_aux_exit:
+
+
+void frame_dummy()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      _init
+// MayUse: 
+// LiveOut:
+// Trashed: SCZO eax ecx edx Top
+// Preserved: esp
+frame_dummy_entry:
+l00001190:
+l00001190_thunk_register_tm_clones:
+	register_tm_clones()
+	return
+frame_dummy_exit:
+
+
+void __x86.get_pc_thunk.dx()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed: edx Top
+// Preserved: esp
+__x86.get_pc_thunk.dx_entry:
+l00001195:
+	return
+__x86.get_pc_thunk.dx_exit:
+
+
+void __x86.get_pc_thunk.di()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed: edi Top
+// Preserved: esp
+__x86.get_pc_thunk.di_entry:
+l00001199:
+	return
+__x86.get_pc_thunk.di_exit:
+
+
+void hexdump(word32 dwArg0C)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  Stack +000C:[0..31]
+// LiveOut:
+// Trashed: SCZO eax edx Top
+// Preserved: ebp esp
+hexdump_entry:
+l0000119D:
+	Mem26[dwArg0C + (fp - 0x78<32>):byte] = 0x41<8>
+	Mem29[fp - 0x78<32> + (dwArg0C + 1<32>):byte] = 0x20<8>
+	return
+hexdump_exit:
+
+
+void main(word32 dwArg08)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  Stack +0008:[0..31]
+// LiveOut:
+// Trashed: SCZO eax ecx Top
+// Preserved: ebp ebx edi esi esp
+main_entry:
+l000011F7:
+	__align(fp)
+	strlen(Mem23[dwArg08:word32])
+	fn00001058(0x00004000<p32>)
+	return
+main_exit:
+
+
+void __x86.get_pc_thunk.ax()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed: eax Top
+// Preserved: esp
+__x86.get_pc_thunk.ax_entry:
+l00001257:
+	return
+__x86.get_pc_thunk.ax_exit:
+
+
+void __do_global_ctors_aux()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      _init
+// MayUse: 
+// LiveOut:
+// Trashed: SCZO eax edx Top
+// Preserved: ebp ebx esi esp
+__do_global_ctors_aux_entry:
+l00001260:
+	word32 eax_22 = Mem0[0x000040E4<p32>:word32]
+	branch eax_22 == 0xFFFFFFFF<32> l000012A0
+l000012A0:
+	return
+l00001276:
+	word32 ebx_17 = 0x000040E4<p32>
+l00001288:
+	call eax_22 (retsize: 4;)
+	eax_22 = Mem16[ebx_17 - 4<32>:word32]
+	ebx_17 = ebx_17 - 4<32>
+	branch eax_22 != 0xFFFFFFFF<32> l00001288
+l00001295:
+	return
+__do_global_ctors_aux_exit:
+
+

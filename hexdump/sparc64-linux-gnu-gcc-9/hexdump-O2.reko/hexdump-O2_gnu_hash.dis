@@ -1,0 +1,15 @@
+void fn00000210()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      __do_global_dtors_aux
+// MayUse: 
+// LiveOut:
+// Trashed:
+// Preserved:
+// Terminates process
+fn00000210_exit:
+fn00000210_entry:
+l00000210:
+
+

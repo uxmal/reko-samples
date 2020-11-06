@@ -1,0 +1,27 @@
+void _init(word64 o0, word64 o1, word64 o2, word64 o3, word64 o4, word64 o5, word64 o7)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  o0:[0..63] o1:[0..63] o2:[0..63] o3:[0..63] o4:[0..63] o5:[0..63] o7:[0..63]
+// LiveOut:
+// Trashed: NZVC g0 g1 g2 i0 i1 i2 i3 i4 i5 i6 i7 l7 o0 o1 o2 o3 o4 o5 o7 sp
+// Preserved:
+_init_entry:
+l00000000000004C8:
+	branch Mem0[__sparc_get_pc_thunk.l7(o7, 0x101B30<64>) + 0x20<64>:word64] == 0<64> l00000000000004C8_ds_t
+l00000000000004C8_ds_t:
+l00000000000004F8:
+	word64 o1_42
+	word64 o2_43
+	word64 o3_44
+	word64 o4_45
+	word64 o5_46
+	word64 o7_47
+	__do_global_ctors_aux(frame_dummy(o2, o3, o4, o5, o7, out o1_42, out o2_43, out o3_44, out o4_45, out o5_46, out o7_47), o1_42, o2_43, o3_44, o4_45, o5_46, o7_47)
+	return
+_init_exit:
+l00000000000004C8_ds_f:
+l00000000000004F0:
+	call __gmon_start__ (retsize: 0;)
+		uses: o0:o0,o1:o1,o2:o2,o3:o3,o4:o4,o5:o5,o7:o7
+
+

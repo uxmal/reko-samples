@@ -1,0 +1,179 @@
+void deregister_tm_clones()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      __do_global_dtors_aux
+// MayUse: 
+// LiveOut:
+// Trashed: r2 r25 r28 r4
+// Preserved: sp
+deregister_tm_clones_entry:
+l000004A0:
+	branch Mem0[0x10848<32>:word32] == 0x1083C<32> l000004A0_ds_t
+l000004A0_ds_t:
+l000004A0_ds_f:
+	word32 r25_12 = Mem0[0x10878<32>:word32]
+l000004C0:
+	branch r25_12 == 0<32> l000004C0_ds_t
+l000004C0_ds_t:
+l000004D0:
+	return
+l000004C0_ds_f:
+l000004C8:
+	call r25_12 (retsize: 0;)
+	return
+deregister_tm_clones_exit:
+
+
+void register_tm_clones()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      frame_dummy
+// MayUse: 
+// LiveOut:
+// Trashed: r2 r25 r28 r3 r4 r5
+// Preserved: sp
+register_tm_clones_entry:
+l000004D8:
+	word32 r2_9 = Mem0[0x10848<32>:word32]
+	branch (r2_9 - 0x1083C<32> >>u 0x1F<8>) + (r2_9 - 0x1083C<32> >> 2<8>) >> 1<8> == 0<32> l000004D8_ds_t
+l000004D8_ds_t:
+l000004D8_ds_f:
+	word32 r25_17 = Mem0[0x10868<32>:word32]
+l0000050C:
+	branch r25_17 == 0<32> l0000050C_ds_t
+l0000050C_ds_t:
+l0000051C:
+	return
+l0000050C_ds_f:
+l00000514:
+	call r25_17 (retsize: 0;)
+	return
+register_tm_clones_exit:
+
+
+void __do_global_dtors_aux()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed: r2 r25 r28 r3 r4
+// Preserved: r16 r17 r18 r19 ra sp
+__do_global_dtors_aux_entry:
+l00000524:
+	branch CONVERT(Mem19[0x10890<32>:byte], byte, word32) != 0<32> l00000524_ds_t
+l00000524_ds_t:
+l00000524_ds_f:
+l0000055C:
+	branch __cxa_finalize == 0<32> l0000055C_ds_t
+l0000055C_ds_t:
+l0000055C_ds_f:
+	word32 r2_24 = Mem19[0x10850<32>:word32]
+l00000564:
+	word32 r25_27
+	word32 r3_30
+	call __cxa_finalize (retsize: 0;)
+		uses: r25:r25_27,r3:r3_30,r4:Mem19[r2_24:word32]
+		defs: r25:r25_27,r3:r3_30
+l00000574:
+	word32 r2_40 = Mem19[0x10894<32>:word32]
+	word32 r17_42 = (Mem19[0x10854<32>:word32] - 0x10834<32> >> 2<8>) + -1<i32>
+	branch CONVERT(r2_40 <u r17_42, bool, word32) == 0<32> l00000574_ds_t
+l00000574_ds_t:
+l00000574_ds_f:
+l000005A4:
+	word32 r2_47 = r2_40 + 1<i32>
+	Mem50[0x10894<32>:word32] = r2_47
+	word32 r2_52 = (r2_47 << 2<8>) + 0x10834<32>
+	word32 r4_60
+	call Mem50[r2_52:word32] (retsize: 0;)
+		uses: r2:r2_52,r3:r2_47 << 2<8>,r4:r4_60
+		defs: r4:r4_60
+	r2_40 = Mem50[0x10894<32>:word32]
+	branch CONVERT(r2_40 <u r17_42, bool, word32) != 0<32> l000005A4_ds_t
+l000005A4_ds_t:
+l000005A4_ds_f:
+l000005D0:
+l000005D4:
+	deregister_tm_clones()
+	Mem76[0x10890<32>:byte] = 1<8>
+l000005E8:
+	return
+__do_global_dtors_aux_exit:
+
+
+void frame_dummy()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed: r2 r25 r28 r3 r4 r5
+// Preserved: sp
+frame_dummy_entry:
+l00000604:
+l00000618_thunk_register_tm_clones:
+	register_tm_clones()
+	return
+frame_dummy_exit:
+
+
+word32 hexdump(word32 r6)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      main
+// MayUse:  r6:[0..31]
+// LiveOut: r25
+// Trashed: r2 r25 r3
+// Preserved: r30 sp
+hexdump_entry:
+l00000620:
+	Mem32[fp + -136<i32> + r6 + 0x10<32>:byte] = 0x41<8>
+	Mem38[fp + -136<i32> + (r6 + 1<i32>) + 0x10<32>:byte] = 0x20<8>
+	return 0x620<32>
+hexdump_exit:
+
+
+void main(word32 r4, word32 r5, word32 r30, word32 ra)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  r30:[0..31] r4:[0..31] r5:[0..31] ra:[0..31]
+// LiveOut:
+// Trashed: r2 r25 r28 r3 r4 r5 r6 r7
+// Preserved: r30 ra sp
+main_entry:
+l000006C0:
+	strlen(Mem17[r5:word32])
+	hexdump(r4)
+	return
+main_exit:
+
+
+void __do_global_ctors_aux()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed: r2 r25 r28 r3
+// Preserved: r16 r17 ra sp
+__do_global_ctors_aux_entry:
+l00000760:
+	word32 r25_18 = Mem17[0x1082C<32>:word32]
+	branch r25_18 == -1<i32> l00000760_ds_t
+l00000760_ds_t:
+l00000760_ds_f:
+l00000794:
+	word32 r16_21 = 0x1082C<32>
+l00000798:
+	call r25_18 (retsize: 0;)
+	r16_21 = r16_21 + -4<i32>
+	r25_18 = Mem17[r16_21:word32]
+	branch r25_18 != -1<i32> l00000798_ds_t
+l00000798_ds_t:
+l00000798_ds_f:
+l000007AC:
+	return
+__do_global_ctors_aux_exit:
+
+

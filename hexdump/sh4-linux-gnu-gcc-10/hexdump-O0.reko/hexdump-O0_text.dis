@@ -1,0 +1,184 @@
+void deregister_tm_clones(word32 pr)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  pr:[0..31]
+// LiveOut:
+// Trashed: T r0 r1 r12 r15 r4
+// Preserved: pr
+deregister_tm_clones_entry:
+l00000410:
+	word32 r12_9 = Mem5[0x00000438<p32>:word32] + 0x00000438<p32>
+	branch Mem5[0x00000440<p32>:word32] + r12_9 == Mem5[0x0000043C<p32>:word32] + r12_9 l00000432
+l00000426:
+	word32 r1_18 = Mem15[Mem15[0x00000444<p32>:word32] + r12_9:word32]
+	branch r1_18 == 0<32> l00000432
+l00000432:
+	return
+deregister_tm_clones_exit:
+l0000042E:
+	call Mem15[r1_18:word32] (retsize: 0;)
+		uses: pr:pr,r12:r12_9
+
+
+void register_tm_clones(word32 pr)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  pr:[0..31]
+// LiveOut:
+// Trashed: T r0 r1 r12 r15 r4 r5
+// Preserved: pr
+register_tm_clones_entry:
+l00000448:
+	word32 r12_9 = Mem5[0x00000480<p32>:word32] + 0x00000480<p32>
+	branch (Mem5[0x00000488<p32>:word32] + r12_9 - (Mem5[0x00000484<p32>:word32] + r12_9) >> 2<i32>) + T >> 1<i32> == 0<32> l00000448_ds_t
+l00000448_ds_t:
+l00000448_ds_f:
+l0000046E:
+	word32 r1_28 = Mem26[Mem26[0x0000048C<p32>:word32] + r12_9:word32]
+	branch r1_28 == 0<32> l0000047A
+l0000047A:
+	return
+register_tm_clones_exit:
+l00000476:
+	call Mem26[r1_28:word32] (retsize: 0;)
+		uses: pr:pr,r12:r12_9
+
+
+void __do_global_dtors_aux(word32 r8, word32 r9, word32 r11, word32 pr)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  pr:[0..31] r11:[0..31] r8:[0..31] r9:[0..31]
+// LiveOut:
+// Trashed: T pr r0 r1 r10 r11 r12 r4 r8 r9
+// Preserved: r15
+__do_global_dtors_aux_entry:
+l00000490:
+	word32 r10_20 = Mem18[0x00000508<p32>:word32]
+	word32 r12_24 = Mem18[0x00000504<p32>:word32] + 0x00000504<p32>
+	branch !(Mem23[r12_24 + r10_20:byte] == 0<32>) l000004F6
+l000004AC:
+	branch Mem23[Mem23[0x0000050C<p32>:word32] + r12_24:word32] == 0<32> l000004BC
+l000004BC:
+	word32 r11_37 = Mem23[0x00000520<p32>:word32] + r12_24
+	word32 r1_31 = Mem23[0x00000518<p32>:word32]
+	word32 r0_39 = Mem23[r11_37:word32]
+	word32 r8_40 = (Mem23[0x0000051C<p32>:word32] - r1_31 >> 2<i32>) + 0xFFFFFFFF<32>
+	word32 r9_42 = r1_31 + r12_24
+	branch r0_39 >=u r8_40 l000004BC_ds_t
+l000004BC_ds_t:
+l000004BC_ds_f:
+	word32 r0_44 = r0_39 + 1<32>
+l000004D8:
+	Mem47[r11_37:word32] = r0_44
+	word32 r0_48 = r0_44 << 2<i32>
+	word32 r1_50 = Mem47[r0_48 + r9_42:word32]
+	word32 r4_65
+	call Mem47[r1_50:word32] (retsize: 0;)
+		uses: pr:pr_54,r0:r0_48,r1:r1_50,r10:r10_52,r11:r11_46,r12:r12_53,r4:r4_65,r8:r8_51,r9:r9_49
+		defs: pr:pr_63,r10:r10_60,r11:r11_61,r12:r12_62,r4:r4_65,r8:r8_57,r9:r9_59
+	word32 r0_67 = Mem47[r11_37:word32]
+	branch !(r0_67 >=u r8_40) l000004D8_ds_t
+l000004D8_ds_t:
+	r0_44 = r0_67 + 1<32>
+l000004D8_ds_f:
+l000004EA:
+	word32 r0_72 = Mem71[0x00000524<p32>:word32]
+	word32 r10_84
+	word32 r12_86
+	word32 r4_89
+	call 0x000004F0<p32> + r0_72 (retsize: 0;)
+		uses: pr:pr_78,r0:r0_72,r10:r10_75,r11:r11_76,r12:r12_77,r4:r4_89,r8:r8_73,r9:r9_74
+		defs: r10:r10_84,r12:r12_86,r4:r4_89
+	Mem93[r12_86 + r10_84:byte] = 1<32>
+l000004F6:
+	return
+__do_global_dtors_aux_exit:
+l000004B4:
+	word32 r0_112 = Mem23[0x00000514<p32>:word32]
+	word32 r1_111 = Mem23[0x00000510<p32>:word32]
+	call 0x000004BC<p32> + r1_111 (retsize: 0;)
+		uses: pr:pr,r0:r0_112,r1:r1_111,r10:r10_20,r11:r11,r12:r12_24,r4:Mem23[r0_112 + r12_24:word32],r8:r8,r9:r9
+
+
+void frame_dummy()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed: r1
+// Preserved: r15
+frame_dummy_entry:
+l00000528:
+	word32 r1_4 = Mem0[0x00000530<p32>:word32]
+	call 0x0000052E<p32> + r1_4 (retsize: 0;)
+		uses: r1:r1_4
+	return
+frame_dummy_exit:
+
+
+void hexdump()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed:
+// Preserved:
+// Terminates process
+hexdump_exit:
+hexdump_entry:
+
+
+void main(word32 r4, word32 r5, word32 r12, word32 r14, word32 pr)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  pr:[0..31] r12:[0..31] r14:[0..31] r4:[0..31] r5:[0..31]
+// LiveOut:
+// Trashed: pr r0 r1 r12 r14 r15 r2 r3 r4 r5 r6 r7
+// Preserved:
+main_entry:
+l000005E0:
+	word32 r1_30 = Mem24[0x00000648<p32>:word32]
+	word32 r15_31
+	word32 r12_32
+	word32 r14_33
+	word32 pr_34
+	word32 r0_35
+	call 0x0000060C<p32> + r1_30 (retsize: 0;)
+		uses: pr:pr,r0:0x00000644<p32>,r1:r1_30,r12:Mem11[0x00000644<p32>:word32] + 0x00000644<p32>,r14:fp + 0xFFFFFFE8<32>,r4:Mem24[r5:word32],r5:r5,Stack +0004:r5,Stack +0008:r4,Stack +000C:pr,Stack +0010:r14,Stack +0014:r12
+		defs: pr:pr_34,r0:r0_35,r12:r12_32,r14:r14_33,r15:r15_31
+	word32 r1_47 = Mem24[r14_33 + 8<32>:word32]
+	word32 r3_54 = Mem24[Mem24[0x0000064C<p32>:word32] + r12_32:word32]
+	Mem55[r15_31:word32] = r1_47 * 2<32>
+	word32 r1_59 = Mem55[0x00000650<p32>:word32]
+	call 0x00000632<p32> + r1_59 (retsize: 0;)
+		uses: pr:pr_34,r1:r1_59,r12:r12_32,r14:r14_33,r2:r1_47 * 2<32>,r3:r3_54,r4:r3_54,r5:3<32>,r6:Mem55[r14_33 + 8<32>:word32],r7:r0_35
+	return
+main_exit:
+
+
+void __do_global_ctors_aux(word32 pr)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  pr:[0..31]
+// LiveOut:
+// Trashed: T pr r0 r1 r12 r8
+// Preserved: r15
+__do_global_ctors_aux_entry:
+l00000654:
+	word32 r12_12 = Mem9[0x00000684<p32>:word32] + 0x00000684<p32>
+	word32 r8_16 = Mem9[0x00000688<p32>:word32] + r12_12
+	word32 r0_19 = Mem15[r8_16 + 0xFFFFFFFC<32>:word32]
+	branch r0_19 == 0xFFFFFFFF<32> l0000067A
+l0000066E:
+	word32 r8_21 = r8_16 + 0xFFFFFFFC<32>
+l00000670:
+	call Mem15[r0_19:word32] (retsize: 0;)
+		uses: pr:pr_27,r12:r12_26,r8:r8_22 + 0xFFFFFFFC<32>
+		defs: pr:pr_33,r12:r12_32,r8:r8_30
+	r0_19 = Mem15[r8_21:word32]
+	branch !(r0_19 == 0xFFFFFFFF<32>) l00000670
+l0000067A:
+	return
+__do_global_ctors_aux_exit:
+
+

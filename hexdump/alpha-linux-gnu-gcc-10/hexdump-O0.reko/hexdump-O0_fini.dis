@@ -1,0 +1,18 @@
+void _fini(word64 r0, word64 r8, word64 r9, word64 r10, word64 r13, word64 r16, word64 r26)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  r0:[0..63] r10:[0..63] r13:[0..63] r16:[0..63] r26:[0..63] r8:[0..63] r9:[0..63]
+// LiveOut:
+// Trashed: r0 r1 r16 r2 r27 r29 r8
+// Preserved: r26 r30
+_fini_entry:
+l00000000000008B0:
+	0<64> = r26
+l00000000000008CC:
+	0<64> = r26
+	0<64> = r26
+	fn00000000000005A8(r0, r8, r9, r10, r13, r16, r26, 0x0000000000027188<p64>)
+	return
+_fini_exit:
+
+

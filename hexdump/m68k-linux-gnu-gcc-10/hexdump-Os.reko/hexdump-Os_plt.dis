@@ -1,0 +1,64 @@
+void fn000003F0()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      __do_global_dtors_aux
+// MayUse: 
+// LiveOut:
+// Trashed:
+// Preserved: a7
+fn000003F0_entry:
+l000003F0:
+	call Mem0[0x0000400C<p32>:word32] (retsize: 0;)
+	return
+fn000003F0_exit:
+
+
+void fn00000404()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      _init
+// MayUse: 
+// LiveOut:
+// Trashed:
+// Preserved: a7
+fn00000404_entry:
+l00000404:
+	call Mem0[0x00004010<p32>:word32] (retsize: 0;)
+	return
+fn00000404_exit:
+
+
+void fn00000418()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      main
+// MayUse: 
+// LiveOut:
+// Trashed:
+// Preserved: a7
+fn00000418_entry:
+l00000418:
+	call Mem0[0x00004014<p32>:word32] (retsize: 0;)
+	return
+fn00000418_exit:
+
+
+void fn0000042C()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      main
+// MayUse: 
+// LiveOut:
+// Trashed:
+// Preserved: a7
+fn0000042C_entry:
+l0000042C:
+	call Mem0[0x00004018<p32>:word32] (retsize: 0;)
+	return
+fn0000042C_exit:
+
+

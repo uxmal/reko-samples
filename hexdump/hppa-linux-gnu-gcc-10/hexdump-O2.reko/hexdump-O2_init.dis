@@ -1,0 +1,15 @@
+void _init(word64 r0, word64 r2, word64 r3, word64 r4, word64 r7, word64 r19, word64 r31)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  r0:[0..63] r19:[0..63] r2:[0..63] r3:[0..63] r31:[0..63] r4:[0..31] r7:[0..63]
+// LiveOut:
+// Trashed: r1 r19 r2 r21 r22 r25 r26 r28 r3 r4 r5 r6 r7
+// Preserved: r30
+_init_entry:
+l00000424:
+	word64 r4_47
+	__do_global_ctors_aux(r0, frame_dummy(r2, r19, SLICE(r4, word32, 0), out r4_47), r3, r7, r19, r31)
+	return
+_init_exit:
+
+

@@ -1,0 +1,153 @@
+void deregister_tm_clones()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed:
+// Preserved:
+// Terminates process
+deregister_tm_clones_exit:
+deregister_tm_clones_entry:
+l00000548:
+
+
+void register_tm_clones(word64 r14)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      frame_dummy
+// MayUse:  r14:[0..63]
+// LiveOut:
+// Trashed: CC r1 r14 r2 r3
+// Preserved: r15
+register_tm_clones_entry:
+l00000568:
+	word64 r1_7 = SEQ(SLICE(r1, word32, 32), 0x00002020<p32>) - SEQ(SLICE(r2, word32, 32), 0x00002020<p32>)
+	branch (r1_7 >>u 63<i32>) + (r1_7 >> 3<i32>) >> 1<i32> != 0<64> l00000594
+l00000594:
+l00000592_1:
+	call r14 (retsize: 0;)
+		uses: r1:r1_7,r14:r14,r2:r1_7 >> 3<i32>
+	return
+register_tm_clones_exit:
+
+
+void __do_global_dtors_aux()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      _fini
+// MayUse: 
+// LiveOut:
+// Trashed:
+// Preserved:
+// Terminates process
+__do_global_dtors_aux_exit:
+__do_global_dtors_aux_entry:
+l000005A8:
+
+
+void call___do_global_dtors_aux()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed:
+// Preserved:
+// Terminates process
+call___do_global_dtors_aux_exit:
+call___do_global_dtors_aux_entry:
+l00000648:
+
+
+void frame_dummy(word64 r14)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      _init
+// MayUse:  r14:[0..63]
+// LiveOut:
+// Trashed: CC r1 r14 r15 r2 r3
+// Preserved:
+frame_dummy_entry:
+l00000660:
+	branch CC l00000660_thunk_register_tm_clones
+l00000660_thunk_register_tm_clones:
+	register_tm_clones(r14)
+	return
+frame_dummy_exit:
+l00000666:
+l00000666_thunk_call_frame_dummy:
+	call_frame_dummy()
+l00000666_thunk_call_frame_dummy:
+	call_frame_dummy()
+
+
+void call_frame_dummy()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      frame_dummy
+// MayUse: 
+// LiveOut:
+// Trashed:
+// Preserved:
+// Terminates process
+call_frame_dummy_exit:
+call_frame_dummy_entry:
+l00000668:
+
+
+void hexdump()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed:
+// Preserved:
+// Terminates process
+hexdump_exit:
+hexdump_entry:
+
+
+void main()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed:
+// Preserved:
+// Terminates process
+main_exit:
+main_entry:
+l00000740:
+
+
+void __do_global_ctors_aux()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      _init
+// MayUse: 
+// LiveOut:
+// Trashed:
+// Preserved:
+// Terminates process
+__do_global_ctors_aux_exit:
+__do_global_ctors_aux_entry:
+l000007C8:
+
+
+void call___do_global_ctors_aux()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed:
+// Preserved:
+// Terminates process
+call___do_global_ctors_aux_exit:
+call___do_global_ctors_aux_entry:
+l00000808:
+
+

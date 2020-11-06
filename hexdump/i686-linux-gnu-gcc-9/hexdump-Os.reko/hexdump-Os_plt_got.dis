@@ -1,0 +1,32 @@
+void fn00001040(word32 ebx)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      main
+// MayUse:  ebx:[0..31]
+// LiveOut:
+// Trashed: Top
+// Preserved: esp
+fn00001040_entry:
+l00001040:
+	call Mem0[ebx - 0x14<32>:word32] (retsize: 0;)
+	return
+fn00001040_exit:
+
+
+void fn00001048(word32 ebx)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      __do_global_dtors_aux
+// MayUse:  ebx:[0..31]
+// LiveOut:
+// Trashed: Top
+// Preserved: esp
+fn00001048_entry:
+l00001048:
+	call Mem0[ebx - 0x10<32>:word32] (retsize: 0;)
+	return
+fn00001048_exit:
+
+

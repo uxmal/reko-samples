@@ -2,7 +2,7 @@ void _PROCEDURE_LINKAGE_TABLE_()
 // stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
 
 // Called from:
-//      frame_dummy
+//      __do_global_dtors_aux
 // MayUse: 
 // LiveOut:
 // Trashed: a0 a5 t1
@@ -27,6 +27,8 @@ _PROCEDURE_LINKAGE_TABLE__exit:
 void register_tm_clones()
 // stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
 
+// Called from:
+//      frame_dummy
 // MayUse: 
 // LiveOut:
 // Trashed: a0 a1 a4 a5 t1
@@ -34,7 +36,7 @@ void register_tm_clones()
 register_tm_clones_entry:
 l0000000000000394:
 	word64 a5_7 = 0x0000000000002008<p64> - 0x0000000000002008<p64>
-	branch (a5_7 >>u 0x1F<u32>) + (a5_7 >> 3<u32>) >> 1<i32> == 0<64> l00000000000003C2
+	branch (a5_7 >>u 0x3F<u32>) + (a5_7 >> 3<u32>) >> 1<i32> == 0<64> l00000000000003C2
 l00000000000003B4:
 	word64 t1_14 = Mem0[0x0000000000002028<p64>:word64]
 	branch t1_14 == 0<64> l00000000000003C2
@@ -54,58 +56,39 @@ void __do_global_dtors_aux(word64 ra)
 
 // MayUse:  ra:[0..63]
 // LiveOut:
-// Trashed: a0 a5 ra s0 sp t1
-// Preserved:
+// Trashed: a0 a5 t1
+// Preserved: ra s0 sp
 __do_global_dtors_aux_entry:
 l00000000000003C4:
-l00000000000003C8_thunk_fn00000000000003CC:
-	fn00000000000003CC(ra, 0x00000000000023C8<p64>)
+	word64 s0_16 = 0x0000000000002038<p64>
+	branch CONVERT(Mem5[0x0000000000002038<p64>:byte], byte, word64) != 0<64> l00000000000003F6
+l00000000000003D8:
+	word64 a5_12 = Mem10[0x0000000000002020<p64>:word64]
+	branch a5_12 == 0<64> l00000000000003EC
+l00000000000003E2:
+	word64 t1_34
+	call a5_12 (retsize: 0;)
+		uses: a0:Mem10[0x0000000000002000<p64>:word64],ra:ra,s0:0x0000000000002038<p64>,t1:t1_34
+		defs: s0:s0_16,t1:t1_34
+l00000000000003EC:
+	_PROCEDURE_LINKAGE_TABLE_()
+	Mem25[s0_16:byte] = 1<8>
+l00000000000003F6:
 	return
 __do_global_dtors_aux_exit:
 
 
-void fn00000000000003CC(word64 ra, word64 s0)
+void frame_dummy()
 // stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
 
-// Called from:
-//      __do_global_dtors_aux
-//      frame_dummy
-// MayUse:  ra:[0..63] s0:[0..63]
+// MayUse: 
 // LiveOut:
-// Trashed: a0 a5 ra s0 t1
-// Preserved: sp
-fn00000000000003CC_entry:
-l00000000000003CC:
-	word64 s0_14 = s0 + -912<i32>
-	branch (int64) Mem0[s0 + -912<i32>:byte] != 0<64> l00000000000003F6
-l00000000000003D8:
-	word64 a5_10 = Mem8[0x0000000000002020<p64>:word64]
-	branch a5_10 == 0<64> l00000000000003EC
-l00000000000003E2:
-	word64 t1_30
-	call a5_10 (retsize: 0;)
-		uses: a0:Mem8[0x0000000000002000<p64>:word64],ra:ra,s0:s0 + -912<i32>,t1:t1_30
-		defs: s0:s0_14,t1:t1_30
-l00000000000003EC:
-	_PROCEDURE_LINKAGE_TABLE_()
-	Mem23[s0_14:byte] = 1<8>
-l00000000000003F6:
-	0<64> = qwLoc08
-	return
-fn00000000000003CC_exit:
-
-
-void frame_dummy(word64 ra, word64 s0)
-// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
-
-// MayUse:  ra:[0..63] s0:[0..63]
-// LiveOut:
-// Trashed: a0 a5 ra s0 t1
+// Trashed: a0 a1 a4 a5 t1
 // Preserved: sp
 frame_dummy_entry:
 l00000000000003FE:
-l00000000000003FE_thunk_fn00000000000003CC:
-	fn00000000000003CC(ra, s0)
+l00000000000003FE_thunk_register_tm_clones:
+	register_tm_clones()
 	return
 frame_dummy_exit:
 
@@ -121,26 +104,24 @@ word64 getIndex(word64 a0)
 // Preserved: sp
 getIndex_entry:
 l0000000000000400:
-	return (word64) (a0 <u 1<i32>) + 1<64>
+	return CONVERT(a0 <u 1<i32>, bool, word64) + 1<64>
 getIndex_exit:
 
 
-void foo(word64 ra, word64 a0, word64 qwArg30)
+void foo(word64 a0)
 // stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
 
-// MayUse:  a0:[0..63] ra:[0..63] Stack +0030:[0..63]
+// MayUse:  a0:[0..63]
 // LiveOut:
-// Trashed: a0 a5 s0
-// Preserved: sp
+// Trashed: a0 a5
+// Preserved: ra s0 sp
 foo_entry:
 l0000000000000408:
 	branch a0 == 0<64> l0000000000000428
 l0000000000000428:
 	return
 l000000000000040A:
-	getIndex(a0)
-	Mem14[qwArg30:word32] = 0<32>
-	0<64> = ra
+	Mem15[a0 + (getIndex(a0) << 2<u32>):word32] = 0<32>
 	return
 foo_exit:
 

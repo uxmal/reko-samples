@@ -1,0 +1,22 @@
+void _init(word64 r6, word64 r7, word64 r8, word64 r9, word64 r10, word64 r11, word64 r13)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  r10:[0..63] r11:[0..63] r13:[0..63] r6:[0..63] r7:[0..63] r8:[0..63] r9:[0..63]
+// LiveOut:
+// Trashed:
+// Preserved:
+// Terminates process
+_init_exit:
+_init_entry:
+l00000478:
+	word64 r12_35 = SEQ(SLICE(r12, word32, 32), 0x00001FC0<p32>)
+	word64 r1_37 = Mem34[SEQ(SLICE(fp - 160<i32>, word32, 32), 0x00001FE8<p32>):word64]
+	branch r1_37 == 0<64> l000004A8
+l000004A6:
+	call r1_37 (retsize: 0;)
+		uses: r10:r10,r11:r11,r12:r12_35,r13:r13,r14:0x000004A8<p32>,r6:r6,r7:r7,r8:r8,r9:r9
+l000004A8:
+	frame_dummy(0x000004AE<p32>)
+	__do_global_ctors_aux()
+
+

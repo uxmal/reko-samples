@@ -142,18 +142,18 @@ l00001189:
 __x86.get_pc_thunk.di_exit:
 
 
-word32 getIndex(byte bArg04)
+word32 getIndex(word32 dwArg04)
 // stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
 
 // Called from:
 //      foo
-// MayUse:  Stack +0004:[0..7]
+// MayUse:  Stack +0004:[0..31]
 // LiveOut: eax
 // Trashed: SCZO eax edx Top
 // Preserved: esp
 getIndex_entry:
 l00001190:
-	return (uint32) (uint8) (dwArg04 == 0<32>) + 1<32>
+	return CONVERT(CONVERT(dwArg04 == 0<32>, bool, int8), int8, uint32) + 1<32>
 getIndex_exit:
 
 

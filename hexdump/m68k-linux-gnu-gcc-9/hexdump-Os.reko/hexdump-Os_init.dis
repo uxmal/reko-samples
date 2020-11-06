@@ -1,0 +1,19 @@
+void _init()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed: CVZNX a0 d0 d1
+// Preserved: a5 a6 a7
+_init_entry:
+l000003A8:
+	branch Mem10[0x0000401A<p32>:word32] == 0<32> l000003C6
+l000003C0:
+	fn00000404()
+l000003C6:
+	frame_dummy()
+	__do_global_ctors_aux()
+	return
+_init_exit:
+
+

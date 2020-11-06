@@ -1,0 +1,48 @@
+void strlen()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed:
+// Preserved:
+// Terminates process
+strlen_exit:
+strlen_entry:
+
+
+void fn0000000000000440()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      main
+// MayUse: 
+// LiveOut:
+// Trashed: t1 t3
+// Preserved: sp
+fn0000000000000440_entry:
+l0000000000000440:
+	word64 t3_5 = Mem0[0x0000000000002018<p64>:word64]
+	call t3_5 (retsize: 0;)
+		uses: t1:0x000000000000044C<p64>,t3:t3_5
+	return
+fn0000000000000440_exit:
+
+
+void fn0000000000000450()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      main
+// MayUse: 
+// LiveOut:
+// Trashed: t1 t3
+// Preserved: sp
+fn0000000000000450_entry:
+l0000000000000450:
+	word64 t3_5 = Mem0[0x0000000000002020<p64>:word64]
+	call t3_5 (retsize: 0;)
+		uses: t1:0x000000000000045C<p64>,t3:t3_5
+	return
+fn0000000000000450_exit:
+
+

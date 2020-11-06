@@ -1,0 +1,31 @@
+void _init(word64 r0, word64 r8, word64 r24, word64 r26, word64 r27)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  r0:[0..63] r24:[0..63] r26:[0..63] r27:[0..63] r8:[0..63]
+// LiveOut:
+// Trashed: r0 r1 r16 r17 r24 r27 r29 r8
+// Preserved: r26 r30
+_init_entry:
+l0000000000000450:
+	word64 r26_15
+	word64 r27_8 = Mem0[r27 + 0x11BD0<64>:word64]
+	r26_15 = r26
+	branch r27_8 == 0<64> l0000000000000474
+l000000000000046C:
+	call r27_8 (retsize: 0;)
+		uses: r0:r0,r24:r24,r26:r26,r27:r27_8,r8:r8
+		defs: r26:r26_15
+l0000000000000474:
+	0<64> = r26
+l000000000000047C:
+	0<64> = r26
+	0<64> = r26
+	word64 r16_28 = fn0000000000000718(r0, r8, r26_15, 0x00000000000268E8<p64>, r26)
+l0000000000000494:
+	0<64> = r26
+	0<64> = r26
+	fn0000000000000748(r16_28, r24, r26_15, 0x0000000000026918<p64>)
+	return
+_init_exit:
+
+

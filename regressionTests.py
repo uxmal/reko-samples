@@ -48,8 +48,8 @@ start_dir = os.getcwd()
 if options.decompile_path is not None:
     reko_cmdline = options.decompile_path
 else:
-    reko_cmdline_dir = os.path.abspath(script_dir + "/../src/Drivers/CmdLine")
-    reko_cmdline = os.path.join(reko_cmdline_dir, "bin", options.platform, options.configuration, "decompile.exe")
+    # Assumes reko is on your path.
+    reko_cmdline = "decompile.exe"
 
 
 output_extensions = [".asm", ".c", ".dis", ".h"]

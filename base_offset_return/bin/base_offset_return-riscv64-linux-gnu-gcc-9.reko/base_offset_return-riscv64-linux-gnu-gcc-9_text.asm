@@ -2,7 +2,7 @@
 
 ;; _PROCEDURE_LINKAGE_TABLE_: 0000000000000370
 ;;   Called from:
-;;     00000000000003EC (in fn00000000000003CC)
+;;     00000000000003EC (in __do_global_dtors_aux)
 _PROCEDURE_LINKAGE_TABLE_ proc
 2517 0000     	auipc	a0,00000002
 0513 C985     	addi	a0,a0,-00000368
@@ -22,6 +22,8 @@ l0000000000000392:
 8082           	c.jr	ra
 
 ;; register_tm_clones: 0000000000000394
+;;   Called from:
+;;     00000000000003FE (in frame_dummy)
 register_tm_clones proc
 2517 0000     	auipc	a0,00000002
 0513 C745     	addi	a0,a0,-0000038C
@@ -29,7 +31,7 @@ register_tm_clones proc
 8793 C6C7     	addi	a5,a5,-00000394
 8F89           	c.sub	a5,a0
 D713 4037     	srai	a4,a5,00000003
-D593 03F7     	srli	a1,a5,0000001F
+D593 03F7     	srli	a1,a5,0000003F
 95BA           	c.add	a1,a4
 8585           	c.srai	a1,00000001
 C981           	c.beqz	a1,00000000000003C2
@@ -50,12 +52,6 @@ __do_global_dtors_aux proc
 1141           	c.addi	sp,FFFFFFFFFFFFFFF0
 E022           	c.sdsp	s0,00000000
 2417 0000     	auipc	s0,00000002
-
-;; fn00000000000003CC: 00000000000003CC
-;;   Called from:
-;;     00000000000003C8 (in __do_global_dtors_aux)
-;;     00000000000003FE (in frame_dummy)
-fn00000000000003CC proc
 0413 C704     	addi	s0,s0,-00000390
 4783 0004     	lbu	a5,s0,+00000000
 E406           	c.sdsp	ra,00000008
@@ -77,14 +73,14 @@ F0EF F85F     	jal	ra,0000000000000370
 0023 00F4     	sb	a5,s0,+00000000
 
 l00000000000003F6:
-60A2           	c.ldsp	s0,00000040
-6402           	c.ldsp	zero,00000008
+60A2           	c.ldsp	ra,00000008
+6402           	c.ldsp	s0,00000000
 0141           	c.addi	sp,00000010
 8082           	c.jr	ra
 
 ;; frame_dummy: 00000000000003FE
 frame_dummy proc
-BF59           	c.j	00000000000003CC
+BF59           	c.j	0000000000000394
 
 ;; getIndex: 0000000000000400
 ;;   Called from:
@@ -106,9 +102,9 @@ E406           	c.sdsp	ra,00000008
 F0EF FEFF     	jal	ra,0000000000000400
 1793 0025     	slli	a5,a0,00000002
 943E           	c.add	s0,a5
-60A2           	c.ldsp	s0,00000040
+60A2           	c.ldsp	ra,00000008
 2023 0004     	sw	zero,s0,+00000000
-6402           	c.ldsp	zero,00000008
+6402           	c.ldsp	s0,00000000
 0141           	c.addi	sp,00000010
 8082           	c.jr	ra
 

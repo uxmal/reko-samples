@@ -1,0 +1,14 @@
+void _init(word32 lr)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  lr:[0..31]
+// LiveOut:
+// Trashed: NZCV ip lr pc r2
+// Preserved: r3 sp
+_init_entry:
+l000002F0:
+	call_weak_fn(lr)
+	return
+_init_exit:
+
+

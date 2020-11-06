@@ -1,0 +1,14 @@
+void _fini()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed: cr0 ctr r0 r10 r11 r3 r9
+// Preserved: lr r1 r30
+_fini_entry:
+l00000780:
+	__do_global_dtors_aux()
+	return
+_fini_exit:
+
+

@@ -1,0 +1,13 @@
+void _restgpr0_31()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed: lr r0 r31
+// Preserved: r1
+_restgpr0_31_entry:
+l00000000000009D8:
+	return
+_restgpr0_31_exit:
+
+

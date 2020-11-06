@@ -1,0 +1,18 @@
+void _fini()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      strlen
+// MayUse: 
+// LiveOut:
+// Trashed: r25 r28
+// Preserved: ra sp
+_fini_entry:
+l000007E0:
+	word32 r25_15 = Mem10[0x00020808<p32>:word32]
+	call r25_15 + 1316<i32> (retsize: 0;)
+		uses: r25:r25_15 + 1316<i32>,Stack +0010:0x18830<32>
+	return
+_fini_exit:
+
+

@@ -1,0 +1,20 @@
+;;; Segment .dynamic (00003F2C)
+; DT_NEEDED            libc.so.6
+; DT_INIT              00001000
+; DT_DEBUG             00001244
+; DT_GNU_HASH          00000178
+; DT_STRTAB            0000021C
+; DT_SYMTAB            0000019C
+; DT_STRSZ             00000089
+; DT_SYMENT                  16
+; DT_PLTGOT            00004000
+; DT_PLTRELSZ                 8
+; DT_PLTREL            00000011
+; DT_JMPREL            00000318
+; DT_REL               000002E8
+; DT_RELSZ                   48
+; DT_RELENT                   8
+; DT_VERNEED           000002B8
+; DT_VERNEEDNUM               1
+; DT_VERSYM            000002A6
+; DT_RELCOUNT                 1

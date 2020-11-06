@@ -1,0 +1,117 @@
+void deregister_tm_clones()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      __do_global_dtors_aux
+// MayUse: 
+// LiveOut:
+// Trashed: SCZO rax rdi Top
+// Preserved: rsp
+deregister_tm_clones_entry:
+l0000000000001050:
+	branch 0x0000000000004028<p64> == 0x0000000000004028<p64> l0000000000001078
+l0000000000001063:
+	branch _ITM_deregisterTMCloneTable == 0<64> l0000000000001078
+l0000000000001078:
+	return
+l000000000000106F:
+	call _ITM_deregisterTMCloneTable (retsize: 0;)
+	return
+deregister_tm_clones_exit:
+
+
+void register_tm_clones()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      frame_dummy
+// MayUse: 
+// LiveOut:
+// Trashed: SCZO rax rdi rsi Top
+// Preserved: rsp
+register_tm_clones_entry:
+l0000000000001080:
+	word64 rsi_6 = 0x0000000000004028<p64> - 0x0000000000004028<p64>
+	branch (rsi_6 >>u 0x3F<64>) + (rsi_6 >> 3<64>) >> 1<64> == 0<64> l00000000000010B8
+l00000000000010A4:
+	branch _ITM_registerTMCloneTable == 0<64> l00000000000010B8
+l00000000000010B8:
+	return
+l00000000000010B0:
+	call _ITM_registerTMCloneTable (retsize: 0;)
+	return
+register_tm_clones_exit:
+
+
+void __do_global_dtors_aux()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed: SCZO rax rdi Top
+// Preserved: rbp rsp
+__do_global_dtors_aux_entry:
+l00000000000010C0:
+	branch Mem0[0x0000000000004028<p64>:byte] != 0<8> l00000000000010F8
+l00000000000010F8:
+	return
+l00000000000010C9:
+	branch __cxa_finalize == 0<64> l00000000000010E3
+l00000000000010D7:
+	word64 rax_27
+	call __cxa_finalize (retsize: 8;)
+		uses: rax:rax_27,rdi:Mem9[0x0000000000004020<p64>:word64]
+		defs: rax:rax_27
+l00000000000010E3:
+	deregister_tm_clones()
+	Mem22[0x0000000000004028<p64>:byte] = 1<8>
+	return
+__do_global_dtors_aux_exit:
+
+
+void frame_dummy()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed: SCZO rax rdi rsi Top
+// Preserved: rsp
+frame_dummy_entry:
+l0000000000001100:
+l0000000000001100_thunk_register_tm_clones:
+	register_tm_clones()
+	return
+frame_dummy_exit:
+
+
+void hexdump(word64 rdx)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  rdx:[0..63]
+// LiveOut:
+// Trashed: SCZO rax rdx Top
+// Preserved: rbp rsp
+hexdump_entry:
+l0000000000001105:
+	Mem36[rdx + (fp - 0x98<64>):byte] = 0x41<8>
+	Mem39[fp - 0x98<64> + (rdx + 1<64>):byte] = 0x20<8>
+	return
+hexdump_exit:
+
+
+void main(word64 rsi, word32 edi)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  edi:[0..31] rsi:[0..63]
+// LiveOut:
+// Trashed: SCZO r8 rax rcx rdi rdx rsi Top
+// Preserved: rbp rbx rsp
+main_entry:
+l00000000000011B6:
+	word64 rax_25 = Mem15[rsi:word64]
+	call hexdump (retsize: 8;)
+		uses: r8:CONVERT(SLICE(CONVERT(SLICE(CONVERT(edi, word32, uint64), word32, 0) * 2<32>, word32, uint64), word32, 0), word32, int64),rax:hexdump,rcx:SEQ(SLICE(rax_25, word32, 32), strlen(rax_25)),rdi:hexdump,rdx:CONVERT(SLICE(CONVERT(edi, word32, uint64), word32, 0), word32, int64),rsi:3<u64>,Stack +0008:rsi,Stack +0014:edi
+	return
+main_exit:
+
+

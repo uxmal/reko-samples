@@ -1,0 +1,24 @@
+void __cxa_finalize()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed:
+// Preserved:
+// Terminates process
+__cxa_finalize_exit:
+__cxa_finalize_entry:
+
+
+void strlen()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed:
+// Preserved:
+// Terminates process
+strlen_exit:
+strlen_entry:
+
+

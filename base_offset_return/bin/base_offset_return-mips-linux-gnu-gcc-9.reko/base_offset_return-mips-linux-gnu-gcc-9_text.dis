@@ -62,7 +62,7 @@ void __do_global_dtors_aux()
 // Preserved: r16 r17 r18 r19 ra sp
 __do_global_dtors_aux_entry:
 l00000484:
-	branch (word32) Mem19[0x106E0<32>:byte] != 0<32> l00000484_ds_t
+	branch CONVERT(Mem19[0x106E0<32>:byte], byte, word32) != 0<32> l00000484_ds_t
 l00000484_ds_t:
 l00000484_ds_f:
 l000004BC:
@@ -79,7 +79,7 @@ l000004C4:
 l000004D4:
 	word32 r2_40 = Mem19[0x106E4<32>:word32]
 	word32 r17_42 = (Mem19[0x106B4<32>:word32] - 0x10694<32> >> 2<8>) + -1<i32>
-	branch (word32) (r2_40 <u r17_42) == 0<32> l000004D4_ds_t
+	branch CONVERT(r2_40 <u r17_42, bool, word32) == 0<32> l000004D4_ds_t
 l000004D4_ds_t:
 l000004D4_ds_f:
 l00000504:
@@ -91,7 +91,7 @@ l00000504:
 		uses: r2:r2_52,r3:r2_47 << 2<8>,r4:r4_60
 		defs: r4:r4_60
 	r2_40 = Mem50[0x106E4<32>:word32]
-	branch (word32) (r2_40 <u r17_42) != 0<32> l00000504_ds_t
+	branch CONVERT(r2_40 <u r17_42, bool, word32) != 0<32> l00000504_ds_t
 l00000504_ds_t:
 l00000504_ds_f:
 l00000530:

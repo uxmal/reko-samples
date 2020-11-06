@@ -1,235 +1,947 @@
-=== base_offset_return/bin/base_offset_return-aarch64-linux-gnu-gcc-9
-=== base_offset_return/bin/base_offset_return-alpha-linux-gnu-gcc-9
-=== base_offset_return/bin/base_offset_return-arm-linux-gnueabi-gcc-9
-=== base_offset_return/bin/base_offset_return-arm-linux-gnueabihf-gcc-9
-*** base_offset_return/bin/base_offset_return-arm-linux-gnueabihf-gcc-9
-00000354: error: An error occurred while processing the statement branch (word32) Mem7[Mem7[0x00000374<p32>:word32] + 0x00000352<p32>:byte] != 0<32> l00000372.
+=== base_offset_return\bin\base_offset_return-aarch64-linux-gnu-gcc-9
+=== base_offset_return\bin\base_offset_return-alpha-linux-gnu-gcc-9
+=== base_offset_return\bin\base_offset_return-arm-linux-gnueabi-gcc-9
+=== base_offset_return\bin\base_offset_return-arm-linux-gnueabihf-gcc-9
+*** base_offset_return\bin\base_offset_return-arm-linux-gnueabihf-gcc-9
+00000354: error: An error occurred while processing the statement branch CONVERT(Mem7[Mem7[0x00000374<p32>:word32] + 0x00000352<p32>:byte], byte, word32) != 0<32> l00000372.
     Unable to cast object of type 'Reko.Core.Address32' to type 'Reko.Core.Expressions.Constant'.
-       at Reko.Typing.ExpressionTypeDescender.VisitMemoryAccess(Expression basePointer, TypeVariable tvAccess, Expression effectiveAddress, Expression globals) in C:\reko\src\Decompiler\Typing\ExpressionTypeDescender.cs:line 505
-   at Reko.Typing.ExpressionTypeDescender.VisitMemoryAccess(MemoryAccess access, TypeVariable tv) in C:\reko\src\Decompiler\Typing\ExpressionTypeDescender.cs:line 492
-   at Reko.Core.Expressions.MemoryAccess.Accept[T,C](ExpressionVisitor`2 v, C context) in C:\reko\src\Core\Expressions\MemoryAccess.cs:line 71
-   at Reko.Typing.ExpressionTypeDescender.VisitCast(Cast cast, TypeVariable tv) in C:\reko\src\Decompiler\Typing\ExpressionTypeDescender.cs:line 430
-   at Reko.Core.Expressions.Cast.Accept[T,C](ExpressionVisitor`2 v, C context) in C:\reko\src\Core\Expressions\Cast.cs:line 47
-   at Reko.Typing.ExpressionTypeDescender.VisitBinaryExpression(BinaryExpression binExp, TypeVariable tv) in C:\reko\src\Decompiler\Typing\ExpressionTypeDescender.cs:line 328
-   at Reko.Core.Expressions.BinaryExpression.Accept[T,C](ExpressionVisitor`2 v, C context) in C:\reko\src\Core\Expressions\BinaryExpression.cs:line 54
-   at Reko.Typing.TypeCollector.VisitBranch(Branch branch) in C:\reko\src\Decompiler\Typing\TypeCollector.cs:line 158
-   at Reko.Core.Code.Branch.Accept(InstructionVisitor v) in C:\reko\src\Core\Code\Branch.cs:line 55
-   at Reko.Typing.TypeCollector.CollectTypes() in C:\reko\src\Decompiler\Typing\TypeCollector.cs:line 85
+       at Reko.Typing.ExpressionTypeDescender.VisitMemoryAccess(Expression basePointer, TypeVariable tvAccess, Expression effectiveAddress, Expression globals) in d:\dev\uxmal\reko\master\src\Decompiler\Typing\ExpressionTypeDescender.cs:line 532
+   at Reko.Typing.ExpressionTypeDescender.VisitMemoryAccess(MemoryAccess access, TypeVariable tv) in d:\dev\uxmal\reko\master\src\Decompiler\Typing\ExpressionTypeDescender.cs:line 527
+   at Reko.Typing.ExpressionTypeDescender.VisitConversion(Conversion conversion, TypeVariable tv) in d:\dev\uxmal\reko\master\src\Decompiler\Typing\ExpressionTypeDescender.cs:line 500
+   at Reko.Typing.ExpressionTypeDescender.VisitBinaryExpression(BinaryExpression binExp, TypeVariable tv) in d:\dev\uxmal\reko\master\src\Decompiler\Typing\ExpressionTypeDescender.cs:line 349
+   at Reko.Typing.TypeCollector.CollectTypes() in d:\dev\uxmal\reko\master\src\Decompiler\Typing\TypeCollector.cs:line 76
 00000370: error: An error occurred while processing the statement Mem29[Mem7[0x00000384<p32>:word32] + 0x00000372<p32>:byte] = 1<8>.
     Unable to cast object of type 'Reko.Core.Address32' to type 'Reko.Core.Expressions.Constant'.
-       at Reko.Typing.ExpressionTypeDescender.VisitMemoryAccess(Expression basePointer, TypeVariable tvAccess, Expression effectiveAddress, Expression globals) in C:\reko\src\Decompiler\Typing\ExpressionTypeDescender.cs:line 505
-   at Reko.Typing.ExpressionTypeDescender.VisitMemoryAccess(MemoryAccess access, TypeVariable tv) in C:\reko\src\Decompiler\Typing\ExpressionTypeDescender.cs:line 492
-   at Reko.Core.Expressions.MemoryAccess.Accept[T,C](ExpressionVisitor`2 v, C context) in C:\reko\src\Core\Expressions\MemoryAccess.cs:line 71
-   at Reko.Typing.TypeCollector.VisitStore(Store store) in C:\reko\src\Decompiler\Typing\TypeCollector.cs:line 245
-   at Reko.Core.Code.Store.Accept(InstructionVisitor v) in C:\reko\src\Core\Code\Assignment.cs:line 87
-   at Reko.Typing.TypeCollector.CollectTypes() in C:\reko\src\Decompiler\Typing\TypeCollector.cs:line 85
-=== base_offset_return/bin/base_offset_return-c89-gcc
-*** base_offset_return/bin/base_offset_return-c89-gcc
-error: An error occurred during decompilation. System.IndexOutOfRangeException: Index was outside the bounds of the array.
-   at Reko.Core.Dfa.Automaton.<GetMatches>d__5.MoveNext() in C:\reko\src\Core\Dfa\Automaton.cs:line 79
+       at Reko.Typing.ExpressionTypeDescender.VisitMemoryAccess(Expression basePointer, TypeVariable tvAccess, Expression effectiveAddress, Expression globals) in d:\dev\uxmal\reko\master\src\Decompiler\Typing\ExpressionTypeDescender.cs:line 532
+   at Reko.Typing.ExpressionTypeDescender.VisitMemoryAccess(MemoryAccess access, TypeVariable tv) in d:\dev\uxmal\reko\master\src\Decompiler\Typing\ExpressionTypeDescender.cs:line 527
+   at Reko.Typing.TypeCollector.CollectTypes() in d:\dev\uxmal\reko\master\src\Decompiler\Typing\TypeCollector.cs:line 76
+=== base_offset_return\bin\base_offset_return-c89-gcc
+*** base_offset_return\bin\base_offset_return-c89-gcc
+Error: An error occurred during decompilation.
+    Index was outside the bounds of the array.
+       at Reko.Core.Dfa.Automaton.<GetMatches>d__5.MoveNext()
    at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
    at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
-   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.FindMainFunction(Program program, Address addrEntry) in C:\reko\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 87
-   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in C:\reko\src\ImageLoaders\Elf\ElfLoader.cs:line 742
-   at Reko.ImageLoaders.Elf.ElfImageLoader.Relocate(Program program, Address addrLoad) in C:\reko\src\ImageLoaders\Elf\ElfImageLoader.cs:line 103
-   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in C:\reko\src\Decompiler\Loading\Loader.cs:line 128
-   at Reko.Decompiler.Load(String fileName, String loaderName) in C:\reko\src\Decompiler\Decompiler.cs:line 179
-   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs) in C:\reko\src\Drivers\CmdLine\CmdLineDriver.cs:line 166
-=== base_offset_return/bin/base_offset_return-c99-gcc
-*** base_offset_return/bin/base_offset_return-c99-gcc
-error: An error occurred during decompilation. System.IndexOutOfRangeException: Index was outside the bounds of the array.
-   at Reko.Core.Dfa.Automaton.<GetMatches>d__5.MoveNext() in C:\reko\src\Core\Dfa\Automaton.cs:line 79
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.FindMainFunction(Program program, Address addrEntry) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 88
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 746
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== base_offset_return\bin\base_offset_return-c99-gcc
+*** base_offset_return\bin\base_offset_return-c99-gcc
+Error: An error occurred during decompilation.
+    Index was outside the bounds of the array.
+       at Reko.Core.Dfa.Automaton.<GetMatches>d__5.MoveNext()
    at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
    at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
-   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.FindMainFunction(Program program, Address addrEntry) in C:\reko\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 87
-   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in C:\reko\src\ImageLoaders\Elf\ElfLoader.cs:line 742
-   at Reko.ImageLoaders.Elf.ElfImageLoader.Relocate(Program program, Address addrLoad) in C:\reko\src\ImageLoaders\Elf\ElfImageLoader.cs:line 103
-   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in C:\reko\src\Decompiler\Loading\Loader.cs:line 128
-   at Reko.Decompiler.Load(String fileName, String loaderName) in C:\reko\src\Decompiler\Decompiler.cs:line 179
-   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs) in C:\reko\src\Drivers\CmdLine\CmdLineDriver.cs:line 166
-=== base_offset_return/bin/base_offset_return-hppa-linux-gnu-gcc-9
-*** base_offset_return/bin/base_offset_return-hppa-linux-gnu-gcc-9
-error: An error occurred during decompilation. System.NotImplementedException: The method or operation is not implemented.
-   at Reko.Arch.PaRisc.PaRiscRewriter.RewriteBranch() in C:\reko\src\Arch\PaRisc\PaRiscRewriter.Control.cs:line 71
-   at Reko.Arch.PaRisc.PaRiscRewriter.<GetEnumerator>d__35.MoveNext() in C:\reko\src\Arch\PaRisc\PaRiscRewriter.cs:line 83
-   at Reko.Scanning.ShingledScanner.ScanRange(IProcessorArchitecture arch, MemoryArea mem, Address addrStart, UInt32 cbAlloc, UInt64 workToDo) in C:\reko\src\Decompiler\Scanning\ShingledScanner.cs:line 188
-   at Reko.Scanning.ScannerInLinq.ScanInstructions(ScanResults sr) in C:\reko\src\Decompiler\Scanning\ScannerInLinq.cs:line 129
-   at Reko.Scanning.ScannerInLinq.ScanImage(ScanResults sr) in C:\reko\src\Decompiler\Scanning\ScannerInLinq.cs:line 64
-   at Reko.Scanning.Scanner.ShingleScanProcedures() in C:\reko\src\Decompiler\Scanning\Scanner.cs:line 1016
-   at Reko.Scanning.Scanner.ScanImage() in C:\reko\src\Decompiler\Scanning\Scanner.cs:line 763
-   at Reko.Decompiler.ScanProgram(Program program) in C:\reko\src\Decompiler\Decompiler.cs:line 555
-   at Reko.Decompiler.ScanPrograms() in C:\reko\src\Decompiler\Decompiler.cs:line 543
-   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs) in C:\reko\src\Drivers\CmdLine\CmdLineDriver.cs:line 193
-=== base_offset_return/bin/base_offset_return-i686-linux-gnu-gcc-9
-=== base_offset_return/bin/base_offset_return-m68k-linux-gnu-gcc-9
-=== base_offset_return/bin/base_offset_return-mips-linux-gnu-gcc-9
-=== base_offset_return/bin/base_offset_return-mips64-linux-gnuabi64-gcc-9
-*** base_offset_return/bin/base_offset_return-mips64-linux-gnuabi64-gcc-9
-error: An error occurred during decompilation. System.NotImplementedException: The method or operation is not implemented.
-   at Reko.ImageLoaders.Elf.ElfLoader64.LoadRelEntry(EndianImageReader rdr) in C:\reko\src\ImageLoaders\Elf\ElfLoader64.cs:line 362
-   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelTable.ReadRelocation(EndianImageReader rdr) in C:\reko\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 309
-   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocationTable.RelocateEntries(Program program, UInt64 offStrtab, UInt64 offSymtab, UInt64 symEntrySize) in C:\reko\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 277
-   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocateDynamicSymbols(Program program) in C:\reko\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 178
-   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator64.Relocate(Program program) in C:\reko\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 466
-   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in C:\reko\src\ImageLoaders\Elf\ElfLoader.cs:line 737
-   at Reko.ImageLoaders.Elf.ElfImageLoader.Relocate(Program program, Address addrLoad) in C:\reko\src\ImageLoaders\Elf\ElfImageLoader.cs:line 103
-   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in C:\reko\src\Decompiler\Loading\Loader.cs:line 128
-   at Reko.Decompiler.Load(String fileName, String loaderName) in C:\reko\src\Decompiler\Decompiler.cs:line 179
-   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs) in C:\reko\src\Drivers\CmdLine\CmdLineDriver.cs:line 166
-=== base_offset_return/bin/base_offset_return-mips64el-linux-gnuabi64-gcc-9
-*** base_offset_return/bin/base_offset_return-mips64el-linux-gnuabi64-gcc-9
-error: An error occurred during decompilation. System.NotImplementedException: The method or operation is not implemented.
-   at Reko.ImageLoaders.Elf.ElfLoader64.LoadRelEntry(EndianImageReader rdr) in C:\reko\src\ImageLoaders\Elf\ElfLoader64.cs:line 362
-   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelTable.ReadRelocation(EndianImageReader rdr) in C:\reko\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 309
-   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocationTable.RelocateEntries(Program program, UInt64 offStrtab, UInt64 offSymtab, UInt64 symEntrySize) in C:\reko\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 277
-   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocateDynamicSymbols(Program program) in C:\reko\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 178
-   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator64.Relocate(Program program) in C:\reko\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 466
-   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in C:\reko\src\ImageLoaders\Elf\ElfLoader.cs:line 737
-   at Reko.ImageLoaders.Elf.ElfImageLoader.Relocate(Program program, Address addrLoad) in C:\reko\src\ImageLoaders\Elf\ElfImageLoader.cs:line 103
-   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in C:\reko\src\Decompiler\Loading\Loader.cs:line 128
-   at Reko.Decompiler.Load(String fileName, String loaderName) in C:\reko\src\Decompiler\Decompiler.cs:line 179
-   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs) in C:\reko\src\Drivers\CmdLine\CmdLineDriver.cs:line 166
-=== base_offset_return/bin/base_offset_return-mipsel-linux-gnu-gcc-10
-=== base_offset_return/bin/base_offset_return-mipsisa64r6-linux-gnuabi64-gcc-9
-*** base_offset_return/bin/base_offset_return-mipsisa64r6-linux-gnuabi64-gcc-9
-error: An error occurred during decompilation. System.NotImplementedException: The method or operation is not implemented.
-   at Reko.ImageLoaders.Elf.ElfLoader64.LoadRelEntry(EndianImageReader rdr) in C:\reko\src\ImageLoaders\Elf\ElfLoader64.cs:line 362
-   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelTable.ReadRelocation(EndianImageReader rdr) in C:\reko\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 309
-   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocationTable.RelocateEntries(Program program, UInt64 offStrtab, UInt64 offSymtab, UInt64 symEntrySize) in C:\reko\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 277
-   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocateDynamicSymbols(Program program) in C:\reko\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 178
-   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator64.Relocate(Program program) in C:\reko\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 466
-   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in C:\reko\src\ImageLoaders\Elf\ElfLoader.cs:line 737
-   at Reko.ImageLoaders.Elf.ElfImageLoader.Relocate(Program program, Address addrLoad) in C:\reko\src\ImageLoaders\Elf\ElfImageLoader.cs:line 103
-   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in C:\reko\src\Decompiler\Loading\Loader.cs:line 128
-   at Reko.Decompiler.Load(String fileName, String loaderName) in C:\reko\src\Decompiler\Decompiler.cs:line 179
-   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs) in C:\reko\src\Drivers\CmdLine\CmdLineDriver.cs:line 166
-=== base_offset_return/bin/base_offset_return-mipsisa64r6el-linux-gnuabi64-gcc-9
-*** base_offset_return/bin/base_offset_return-mipsisa64r6el-linux-gnuabi64-gcc-9
-error: An error occurred during decompilation. System.NotImplementedException: The method or operation is not implemented.
-   at Reko.ImageLoaders.Elf.ElfLoader64.LoadRelEntry(EndianImageReader rdr) in C:\reko\src\ImageLoaders\Elf\ElfLoader64.cs:line 362
-   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelTable.ReadRelocation(EndianImageReader rdr) in C:\reko\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 309
-   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocationTable.RelocateEntries(Program program, UInt64 offStrtab, UInt64 offSymtab, UInt64 symEntrySize) in C:\reko\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 277
-   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocateDynamicSymbols(Program program) in C:\reko\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 178
-   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator64.Relocate(Program program) in C:\reko\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 466
-   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in C:\reko\src\ImageLoaders\Elf\ElfLoader.cs:line 737
-   at Reko.ImageLoaders.Elf.ElfImageLoader.Relocate(Program program, Address addrLoad) in C:\reko\src\ImageLoaders\Elf\ElfImageLoader.cs:line 103
-   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in C:\reko\src\Decompiler\Loading\Loader.cs:line 128
-   at Reko.Decompiler.Load(String fileName, String loaderName) in C:\reko\src\Decompiler\Decompiler.cs:line 179
-   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs) in C:\reko\src\Drivers\CmdLine\CmdLineDriver.cs:line 166
-=== base_offset_return/bin/base_offset_return-powerpc-linux-gnu-gcc-9
-=== base_offset_return/bin/base_offset_return-powerpc64-linux-gnu-gcc-9
-=== base_offset_return/bin/base_offset_return-powerpc64le-linux-gnu-gcc-9
-=== base_offset_return/bin/base_offset_return-riscv64-linux-gnu-gcc-9
-=== base_offset_return/bin/base_offset_return-s390x-linux-gnu-gcc-9
-=== base_offset_return/bin/base_offset_return-sh4-linux-gnu-gcc-9
-=== base_offset_return/bin/base_offset_return-sparc64-linux-gnu-gcc-9
-*** base_offset_return/bin/base_offset_return-sparc64-linux-gnu-gcc-9
-error: An error occurred during decompilation. System.NotSupportedException: Relocator for architecture EM_SPARCV9 not implemented yet.
-   at Reko.ImageLoaders.Elf.ElfLoader.CreateRelocator(ElfMachine machine, SortedList`2 symbols) in C:\reko\src\ImageLoaders\Elf\ElfLoader.cs:line 403
-   at Reko.ImageLoaders.Elf.ElfLoader64.CreateRelocator(ElfMachine machine, SortedList`2 symbols) in C:\reko\src\ImageLoaders\Elf\ElfLoader64.cs:line 145
-   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in C:\reko\src\ImageLoaders\Elf\ElfLoader.cs:line 736
-   at Reko.ImageLoaders.Elf.ElfImageLoader.Relocate(Program program, Address addrLoad) in C:\reko\src\ImageLoaders\Elf\ElfImageLoader.cs:line 103
-   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in C:\reko\src\Decompiler\Loading\Loader.cs:line 128
-   at Reko.Decompiler.Load(String fileName, String loaderName) in C:\reko\src\Decompiler\Decompiler.cs:line 179
-   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs) in C:\reko\src\Drivers\CmdLine\CmdLineDriver.cs:line 166
-=== base_offset_return/bin/base_offset_return-x86_64-linux-gnu-gcc-9
-*** base_offset_return/bin/base_offset_return-x86_64-linux-gnu-gcc-9
-error: An error occurred during decompilation. System.IndexOutOfRangeException: Index was outside the bounds of the array.
-   at Reko.Core.Dfa.Automaton.<GetMatches>d__5.MoveNext() in C:\reko\src\Core\Dfa\Automaton.cs:line 79
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.FindMainFunction(Program program, Address addrEntry) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 88
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 746
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== base_offset_return\bin\base_offset_return-hppa-linux-gnu-gcc-9
+*** base_offset_return\bin\base_offset_return-hppa-linux-gnu-gcc-9
+Error: An error occurred during decompilation.
+    The method or operation is not implemented.
+       at Reko.Arch.PaRisc.PaRiscRewriter.RewriteBranch() in d:\dev\uxmal\reko\master\src\Arch\PaRisc\PaRiscRewriter.Control.cs:line 69
+   at Reko.Arch.PaRisc.PaRiscRewriter.<GetEnumerator>d__35.MoveNext() in d:\dev\uxmal\reko\master\src\Arch\PaRisc\PaRiscRewriter.cs:line 84
+   at Reko.Scanning.ShingledScanner.ScanRange(IProcessorArchitecture arch, MemoryArea mem, Address addrStart, UInt32 cbAlloc, UInt64 workToDo) in d:\dev\uxmal\reko\master\src\Decompiler\Scanning\ShingledScanner.cs:line 189
+   at Reko.Scanning.ScannerInLinq.ScanInstructions(ScanResults sr) in d:\dev\uxmal\reko\master\src\Decompiler\Scanning\ScannerInLinq.cs:line 130
+   at Reko.Scanning.ScannerInLinq.ScanImage(ScanResults sr) in d:\dev\uxmal\reko\master\src\Decompiler\Scanning\ScannerInLinq.cs:line 65
+   at Reko.Scanning.Scanner.ShingleScanProcedures() in d:\dev\uxmal\reko\master\src\Decompiler\Scanning\Scanner.cs:line 1025
+   at Reko.Scanning.Scanner.ScanImage() in d:\dev\uxmal\reko\master\src\Decompiler\Scanning\Scanner.cs:line 767
+   at Reko.Decompiler.ScanProgram(Program program) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 587
+   at Reko.Decompiler.ScanPrograms() in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 572
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== base_offset_return\bin\base_offset_return-i686-linux-gnu-gcc-9
+=== base_offset_return\bin\base_offset_return-m68k-linux-gnu-gcc-9
+=== base_offset_return\bin\base_offset_return-mips-linux-gnu-gcc-9
+=== base_offset_return\bin\base_offset_return-mips64-linux-gnuabi64-gcc-9
+*** base_offset_return\bin\base_offset_return-mips64-linux-gnuabi64-gcc-9
+Error: An error occurred during decompilation.
+    The method or operation is not implemented.
+       at Reko.ImageLoaders.Elf.Relocators.MipsRelocator64.RelocateEntry(Program program, ElfSymbol symbol, ElfSection referringSection, ElfRelocation rela) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\MipsRelocator.cs:line 379
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocationTable.RelocateEntries(Program program, UInt64 offStrtab, UInt64 offSymtab, UInt64 symEntrySize) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 284
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocateDynamicSymbols(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 181
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator64.Relocate(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 469
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 742
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== base_offset_return\bin\base_offset_return-mips64el-linux-gnuabi64-gcc-9
+*** base_offset_return\bin\base_offset_return-mips64el-linux-gnuabi64-gcc-9
+Error: An error occurred during decompilation.
+    The method or operation is not implemented.
+       at Reko.ImageLoaders.Elf.Relocators.MipsRelocator64.RelocateEntry(Program program, ElfSymbol symbol, ElfSection referringSection, ElfRelocation rela) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\MipsRelocator.cs:line 379
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocationTable.RelocateEntries(Program program, UInt64 offStrtab, UInt64 offSymtab, UInt64 symEntrySize) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 284
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocateDynamicSymbols(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 181
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator64.Relocate(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 469
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 742
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== base_offset_return\bin\base_offset_return-mipsel-linux-gnu-gcc-10
+=== base_offset_return\bin\base_offset_return-mipsisa64r6-linux-gnuabi64-gcc-9
+*** base_offset_return\bin\base_offset_return-mipsisa64r6-linux-gnuabi64-gcc-9
+Error: An error occurred during decompilation.
+    The method or operation is not implemented.
+       at Reko.ImageLoaders.Elf.Relocators.MipsRelocator64.RelocateEntry(Program program, ElfSymbol symbol, ElfSection referringSection, ElfRelocation rela) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\MipsRelocator.cs:line 379
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocationTable.RelocateEntries(Program program, UInt64 offStrtab, UInt64 offSymtab, UInt64 symEntrySize) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 284
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocateDynamicSymbols(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 181
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator64.Relocate(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 469
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 742
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== base_offset_return\bin\base_offset_return-mipsisa64r6el-linux-gnuabi64-gcc-9
+*** base_offset_return\bin\base_offset_return-mipsisa64r6el-linux-gnuabi64-gcc-9
+Error: An error occurred during decompilation.
+    The method or operation is not implemented.
+       at Reko.ImageLoaders.Elf.Relocators.MipsRelocator64.RelocateEntry(Program program, ElfSymbol symbol, ElfSection referringSection, ElfRelocation rela) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\MipsRelocator.cs:line 379
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocationTable.RelocateEntries(Program program, UInt64 offStrtab, UInt64 offSymtab, UInt64 symEntrySize) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 284
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocateDynamicSymbols(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 181
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator64.Relocate(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 469
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 742
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== base_offset_return\bin\base_offset_return-powerpc-linux-gnu-gcc-9
+=== base_offset_return\bin\base_offset_return-powerpc64-linux-gnu-gcc-9
+=== base_offset_return\bin\base_offset_return-powerpc64le-linux-gnu-gcc-9
+=== base_offset_return\bin\base_offset_return-riscv64-linux-gnu-gcc-9
+=== base_offset_return\bin\base_offset_return-s390x-linux-gnu-gcc-9
+=== base_offset_return\bin\base_offset_return-sh4-linux-gnu-gcc-9
+=== base_offset_return\bin\base_offset_return-sparc64-linux-gnu-gcc-9
+=== base_offset_return\bin\base_offset_return-x86_64-linux-gnu-gcc-9
+*** base_offset_return\bin\base_offset_return-x86_64-linux-gnu-gcc-9
+Error: An error occurred during decompilation.
+    Index was outside the bounds of the array.
+       at Reko.Core.Dfa.Automaton.<GetMatches>d__5.MoveNext()
    at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
    at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
-   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.FindMainFunction(Program program, Address addrEntry) in C:\reko\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 87
-   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in C:\reko\src\ImageLoaders\Elf\ElfLoader.cs:line 742
-   at Reko.ImageLoaders.Elf.ElfImageLoader.Relocate(Program program, Address addrLoad) in C:\reko\src\ImageLoaders\Elf\ElfImageLoader.cs:line 103
-   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in C:\reko\src\Decompiler\Loading\Loader.cs:line 128
-   at Reko.Decompiler.Load(String fileName, String loaderName) in C:\reko\src\Decompiler\Decompiler.cs:line 179
-   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs) in C:\reko\src\Drivers\CmdLine\CmdLineDriver.cs:line 166
-=== base_offset_return/bin/base_offset_return-x86_64-linux-gnux32-gcc-9
-*** base_offset_return/bin/base_offset_return-x86_64-linux-gnux32-gcc-9
-error: An error occurred during decompilation. System.NotSupportedException: Relocator for architecture EM_X86_64 not implemented yet.
-   at Reko.ImageLoaders.Elf.ElfLoader.CreateRelocator(ElfMachine machine, SortedList`2 symbols) in C:\reko\src\ImageLoaders\Elf\ElfLoader.cs:line 403
-   at Reko.ImageLoaders.Elf.ElfLoader32.CreateRelocator(ElfMachine machine, SortedList`2 imageSymbols) in C:\reko\src\ImageLoaders\Elf\ElfLoader32.cs:line 165
-   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in C:\reko\src\ImageLoaders\Elf\ElfLoader.cs:line 736
-   at Reko.ImageLoaders.Elf.ElfImageLoader.Relocate(Program program, Address addrLoad) in C:\reko\src\ImageLoaders\Elf\ElfImageLoader.cs:line 103
-   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in C:\reko\src\Decompiler\Loading\Loader.cs:line 128
-   at Reko.Decompiler.Load(String fileName, String loaderName) in C:\reko\src\Decompiler\Decompiler.cs:line 179
-   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs) in C:\reko\src\Drivers\CmdLine\CmdLineDriver.cs:line 166
-=== base_offset_return/bin/base_offset_return-x86_64-w64-mingw32-gcc-9_3-posix.exe
-*** base_offset_return/bin/base_offset_return-x86_64-w64-mingw32-gcc-9_3-posix.exe
-base_offset_return-x86_64-w64-mingw32-gcc-9_3-posix.exe: warning: Win32 X86-64 main procedure finder not implemented yet.
-0000000064141FAF: warning: Unable to resolve imported reference KERNEL32.dll!RtlAddFunctionTable.
-0000000064142A38: warning: Unable to guess parameters of msvcrt.dll!__iob_func.
-0000000064142820: warning: Unable to resolve imported reference msvcrt.dll!vfprintf.
-0000000064141CFF: warning: Procedure fn0000000064141A10 previously had a return address of 8 bytes on the stack, but now seems to have a return address of 0 bytes on the stack.
-0000000064142A30: warning: Unable to guess parameters of msvcrt.dll!_lock.
-0000000064142A28: warning: Unable to guess parameters of msvcrt.dll!_unlock.
-0000000064141480: warning: Call target address 9090909090909090 is invalid.
-0000000064142A30: warning: Unable to guess parameters of msvcrt.dll!_lock.
-0000000064142A28: warning: Unable to guess parameters of msvcrt.dll!_unlock.
-0000000064142A28: warning: Unable to guess parameters of msvcrt.dll!_unlock.
-0000000064141498: warning: Procedure fn00000000641414C0 previously had a return address of 8 bytes on the stack, but now seems to have a return address of 0 bytes on the stack.
-0000000064141007: warning: Procedure fn0000000064141000 previously had a return address of 8 bytes on the stack, but now seems to have a return address of 0 bytes on the stack.
-000000006414162D: warning: Unable to resolve imported reference KERNEL32.dll!RtlVirtualUnwind.
-00000000641414DA: warning: Procedure fn00000000641414C0 previously had a return address of 8 bytes on the stack, but now seems to have a return address of 0 bytes on the stack.
-000000006414136A: warning: Procedure DllMain previously had a return address of 8 bytes on the stack, but now seems to have a return address of 0 bytes on the stack.
-000000006414139A: warning: Procedure DllMain previously had a return address of 8 bytes on the stack, but now seems to have a return address of 0 bytes on the stack.
-0000000064142820: warning: Unable to resolve imported reference msvcrt.dll!vfprintf.
-0000000064142A28: warning: Unable to guess parameters of msvcrt.dll!_unlock.
-0000000064142A30: warning: Unable to guess parameters of msvcrt.dll!_lock.
-0000000064142A38: warning: Unable to guess parameters of msvcrt.dll!__iob_func.
-0000000064142A78: warning: Unable to resolve imported reference KERNEL32.dll!RtlVirtualUnwind.
-0000000064142A90: warning: Unable to resolve imported reference KERNEL32.dll!RtlAddFunctionTable.
-000000006414192A: error: An error occurred while processing the statement word64 rsi_207 = rdx - r12_204.
-    Pulling difference (ptr64 (struct (0 T_842 t0000))) and (union ((ptr64 (struct (0 T_845 t0000))) u1) (ptr64 u0))
-       at Reko.Core.Expressions.ExpressionTypeAscenderBase.PullDiffDataType(DataType dtLeft, DataType dtRight) in C:\reko\src\Core\Expressions\ExpressionTypeAscenderBase.cs:line 276
-   at Reko.Core.Expressions.ExpressionTypeAscenderBase.VisitBinaryExpression(BinaryExpression binExp) in C:\reko\src\Core\Expressions\ExpressionTypeAscenderBase.cs:line 109
-   at Reko.Core.Expressions.BinaryExpression.Accept[T](ExpressionVisitor`1 v) in C:\reko\src\Core\Expressions\BinaryExpression.cs:line 59
-   at Reko.Typing.TypeCollector.VisitDeclaration(Declaration decl) in C:\reko\src\Decompiler\Typing\TypeCollector.cs:line 182
-   at Reko.Core.Code.Declaration.Accept(InstructionVisitor v) in C:\reko\src\Core\Code\Declaration.cs:line 49
-   at Reko.Typing.TypeCollector.CollectTypes() in C:\reko\src\Decompiler\Typing\TypeCollector.cs:line 85
-64144190: warning: Expected sizes of arrays to have been determined by now
-641441C0: warning: Expected sizes of arrays to have been determined by now
-64142B00: warning: Expected sizes of arrays to have been determined by now
-64142B00: warning: Expected sizes of arrays to have been determined by now
-64144190: warning: Expected sizes of arrays to have been determined by now
-641441C0: warning: Expected sizes of arrays to have been determined by now
-=== base_offset_return/bin/base_offset_return-x86_64-w64-mingw32-gcc-9_3-win32.exe
-*** base_offset_return/bin/base_offset_return-x86_64-w64-mingw32-gcc-9_3-win32.exe
-base_offset_return-x86_64-w64-mingw32-gcc-9_3-win32.exe: warning: Win32 X86-64 main procedure finder not implemented yet.
-0000000069601FAF: warning: Unable to resolve imported reference KERNEL32.dll!RtlAddFunctionTable.
-0000000069602A38: warning: Unable to guess parameters of msvcrt.dll!__iob_func.
-0000000069602820: warning: Unable to resolve imported reference msvcrt.dll!vfprintf.
-0000000069601CFF: warning: Procedure fn0000000069601A10 previously had a return address of 8 bytes on the stack, but now seems to have a return address of 0 bytes on the stack.
-0000000069602A30: warning: Unable to guess parameters of msvcrt.dll!_lock.
-0000000069602A28: warning: Unable to guess parameters of msvcrt.dll!_unlock.
-0000000069601480: warning: Call target address 9090909090909090 is invalid.
-0000000069602A30: warning: Unable to guess parameters of msvcrt.dll!_lock.
-0000000069602A28: warning: Unable to guess parameters of msvcrt.dll!_unlock.
-0000000069602A28: warning: Unable to guess parameters of msvcrt.dll!_unlock.
-0000000069601498: warning: Procedure fn00000000696014C0 previously had a return address of 8 bytes on the stack, but now seems to have a return address of 0 bytes on the stack.
-0000000069601007: warning: Procedure fn0000000069601000 previously had a return address of 8 bytes on the stack, but now seems to have a return address of 0 bytes on the stack.
-000000006960162D: warning: Unable to resolve imported reference KERNEL32.dll!RtlVirtualUnwind.
-00000000696014DA: warning: Procedure fn00000000696014C0 previously had a return address of 8 bytes on the stack, but now seems to have a return address of 0 bytes on the stack.
-000000006960136A: warning: Procedure DllMain previously had a return address of 8 bytes on the stack, but now seems to have a return address of 0 bytes on the stack.
-000000006960139A: warning: Procedure DllMain previously had a return address of 8 bytes on the stack, but now seems to have a return address of 0 bytes on the stack.
-0000000069602820: warning: Unable to resolve imported reference msvcrt.dll!vfprintf.
-0000000069602A28: warning: Unable to guess parameters of msvcrt.dll!_unlock.
-0000000069602A30: warning: Unable to guess parameters of msvcrt.dll!_lock.
-0000000069602A38: warning: Unable to guess parameters of msvcrt.dll!__iob_func.
-0000000069602A78: warning: Unable to resolve imported reference KERNEL32.dll!RtlVirtualUnwind.
-0000000069602A90: warning: Unable to resolve imported reference KERNEL32.dll!RtlAddFunctionTable.
-000000006960192A: error: An error occurred while processing the statement word64 rsi_207 = rdx - r12_204.
-    Pulling difference (ptr64 (struct (0 T_842 t0000))) and (union ((ptr64 (struct (0 T_845 t0000))) u1) (ptr64 u0))
-       at Reko.Core.Expressions.ExpressionTypeAscenderBase.PullDiffDataType(DataType dtLeft, DataType dtRight) in C:\reko\src\Core\Expressions\ExpressionTypeAscenderBase.cs:line 276
-   at Reko.Core.Expressions.ExpressionTypeAscenderBase.VisitBinaryExpression(BinaryExpression binExp) in C:\reko\src\Core\Expressions\ExpressionTypeAscenderBase.cs:line 109
-   at Reko.Core.Expressions.BinaryExpression.Accept[T](ExpressionVisitor`1 v) in C:\reko\src\Core\Expressions\BinaryExpression.cs:line 59
-   at Reko.Typing.TypeCollector.VisitDeclaration(Declaration decl) in C:\reko\src\Decompiler\Typing\TypeCollector.cs:line 182
-   at Reko.Core.Code.Declaration.Accept(InstructionVisitor v) in C:\reko\src\Core\Code\Declaration.cs:line 49
-   at Reko.Typing.TypeCollector.CollectTypes() in C:\reko\src\Decompiler\Typing\TypeCollector.cs:line 85
-69604190: warning: Expected sizes of arrays to have been determined by now
-696041C0: warning: Expected sizes of arrays to have been determined by now
-69602B00: warning: Expected sizes of arrays to have been determined by now
-69602B00: warning: Expected sizes of arrays to have been determined by now
-69604190: warning: Expected sizes of arrays to have been determined by now
-696041C0: warning: Expected sizes of arrays to have been determined by now
-Decompiled 26 binaries in 4.32 seconds ---
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.FindMainFunction(Program program, Address addrEntry) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 88
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 746
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== base_offset_return\bin\base_offset_return-x86_64-linux-gnux32-gcc-9
+*** base_offset_return\bin\base_offset_return-x86_64-linux-gnux32-gcc-9
+Error: An error occurred during decompilation.
+    Relocator for architecture EM_X86_64 not implemented yet.
+       at Reko.ImageLoaders.Elf.ElfLoader.CreateRelocator(ElfMachine machine, SortedList`2 symbols) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 407
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 740
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== base_offset_return\bin\base_offset_return-x86_64-w64-mingw32-gcc-9_3-posix.exe
+=== base_offset_return\bin\base_offset_return-x86_64-w64-mingw32-gcc-9_3-win32.exe
+=== hexdump\aarch64-linux-gnu-gcc-10\hexdump-O0.so
+=== hexdump\aarch64-linux-gnu-gcc-10\hexdump-O2.so
+=== hexdump\aarch64-linux-gnu-gcc-10\hexdump-Os.so
+=== hexdump\aarch64-linux-gnu-gcc-9\hexdump-O0.so
+=== hexdump\aarch64-linux-gnu-gcc-9\hexdump-O2.so
+=== hexdump\aarch64-linux-gnu-gcc-9\hexdump-Os.so
+=== hexdump\aarch64-linux-gnu-gcc\hexdump-O0.so
+=== hexdump\aarch64-linux-gnu-gcc\hexdump-O2.so
+=== hexdump\aarch64-linux-gnu-gcc\hexdump-Os.so
+=== hexdump\alpha-linux-gnu-gcc-10\hexdump-O0.so
+=== hexdump\alpha-linux-gnu-gcc-10\hexdump-O2.so
+=== hexdump\alpha-linux-gnu-gcc-10\hexdump-Os.so
+=== hexdump\alpha-linux-gnu-gcc-9\hexdump-O0.so
+=== hexdump\alpha-linux-gnu-gcc-9\hexdump-O2.so
+=== hexdump\alpha-linux-gnu-gcc-9\hexdump-Os.so
+=== hexdump\alpha-linux-gnu-gcc\hexdump-O0.so
+=== hexdump\alpha-linux-gnu-gcc\hexdump-O2.so
+=== hexdump\alpha-linux-gnu-gcc\hexdump-Os.so
+=== hexdump\arm-linux-gnueabi-gcc-10\hexdump-O0.so
+=== hexdump\arm-linux-gnueabi-gcc-10\hexdump-O2.so
+=== hexdump\arm-linux-gnueabi-gcc-10\hexdump-Os.so
+=== hexdump\arm-linux-gnueabi-gcc-9\hexdump-O0.so
+=== hexdump\arm-linux-gnueabi-gcc-9\hexdump-O2.so
+=== hexdump\arm-linux-gnueabi-gcc-9\hexdump-Os.so
+=== hexdump\arm-linux-gnueabi-gcc\hexdump-O0.so
+=== hexdump\arm-linux-gnueabi-gcc\hexdump-O2.so
+=== hexdump\arm-linux-gnueabi-gcc\hexdump-Os.so
+=== hexdump\arm-linux-gnueabihf-gcc-10\hexdump-O0.so
+*** hexdump\arm-linux-gnueabihf-gcc-10\hexdump-O0.so
+000003D0: error: An error occurred while processing the statement branch CONVERT(Mem7[Mem7[0x000003F0<p32>:word32] + 0x000003CE<p32>:byte], byte, word32) != 0<32> l000003EE.
+    Unable to cast object of type 'Reko.Core.Address32' to type 'Reko.Core.Expressions.Constant'.
+       at Reko.Typing.ExpressionTypeDescender.VisitMemoryAccess(Expression basePointer, TypeVariable tvAccess, Expression effectiveAddress, Expression globals) in d:\dev\uxmal\reko\master\src\Decompiler\Typing\ExpressionTypeDescender.cs:line 532
+   at Reko.Typing.ExpressionTypeDescender.VisitMemoryAccess(MemoryAccess access, TypeVariable tv) in d:\dev\uxmal\reko\master\src\Decompiler\Typing\ExpressionTypeDescender.cs:line 527
+   at Reko.Typing.ExpressionTypeDescender.VisitConversion(Conversion conversion, TypeVariable tv) in d:\dev\uxmal\reko\master\src\Decompiler\Typing\ExpressionTypeDescender.cs:line 500
+   at Reko.Typing.ExpressionTypeDescender.VisitBinaryExpression(BinaryExpression binExp, TypeVariable tv) in d:\dev\uxmal\reko\master\src\Decompiler\Typing\ExpressionTypeDescender.cs:line 349
+   at Reko.Typing.TypeCollector.CollectTypes() in d:\dev\uxmal\reko\master\src\Decompiler\Typing\TypeCollector.cs:line 76
+000003EC: error: An error occurred while processing the statement Mem29[Mem7[0x00000400<p32>:word32] + 0x000003EE<p32>:byte] = 1<8>.
+    Unable to cast object of type 'Reko.Core.Address32' to type 'Reko.Core.Expressions.Constant'.
+       at Reko.Typing.ExpressionTypeDescender.VisitMemoryAccess(Expression basePointer, TypeVariable tvAccess, Expression effectiveAddress, Expression globals) in d:\dev\uxmal\reko\master\src\Decompiler\Typing\ExpressionTypeDescender.cs:line 532
+   at Reko.Typing.ExpressionTypeDescender.VisitMemoryAccess(MemoryAccess access, TypeVariable tv) in d:\dev\uxmal\reko\master\src\Decompiler\Typing\ExpressionTypeDescender.cs:line 527
+   at Reko.Typing.TypeCollector.CollectTypes() in d:\dev\uxmal\reko\master\src\Decompiler\Typing\TypeCollector.cs:line 76
+=== hexdump\arm-linux-gnueabihf-gcc-10\hexdump-O2.so
+*** hexdump\arm-linux-gnueabihf-gcc-10\hexdump-O2.so
+Error: An error occurred during decompilation.
+    An entry with the same key already exists.
+       at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.SortedList`2.Add(TKey key, TValue value)
+   at Reko.Core.EnumerableEx.ToSortedList[TSource,TKey](IEnumerable`1 source, Func`2 keySelector) in d:\dev\uxmal\reko\master\src\Core\EnumerableEx.cs:line 39
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 748
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\arm-linux-gnueabihf-gcc-10\hexdump-Os.so
+*** hexdump\arm-linux-gnueabihf-gcc-10\hexdump-Os.so
+Error: An error occurred during decompilation.
+    An entry with the same key already exists.
+       at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.SortedList`2.Add(TKey key, TValue value)
+   at Reko.Core.EnumerableEx.ToSortedList[TSource,TKey](IEnumerable`1 source, Func`2 keySelector) in d:\dev\uxmal\reko\master\src\Core\EnumerableEx.cs:line 39
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 748
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\arm-linux-gnueabihf-gcc-9\hexdump-O0.so
+*** hexdump\arm-linux-gnueabihf-gcc-9\hexdump-O0.so
+000003D0: error: An error occurred while processing the statement branch CONVERT(Mem7[Mem7[0x000003F0<p32>:word32] + 0x000003CE<p32>:byte], byte, word32) != 0<32> l000003EE.
+    Unable to cast object of type 'Reko.Core.Address32' to type 'Reko.Core.Expressions.Constant'.
+       at Reko.Typing.ExpressionTypeDescender.VisitMemoryAccess(Expression basePointer, TypeVariable tvAccess, Expression effectiveAddress, Expression globals) in d:\dev\uxmal\reko\master\src\Decompiler\Typing\ExpressionTypeDescender.cs:line 532
+   at Reko.Typing.ExpressionTypeDescender.VisitMemoryAccess(MemoryAccess access, TypeVariable tv) in d:\dev\uxmal\reko\master\src\Decompiler\Typing\ExpressionTypeDescender.cs:line 527
+   at Reko.Typing.ExpressionTypeDescender.VisitConversion(Conversion conversion, TypeVariable tv) in d:\dev\uxmal\reko\master\src\Decompiler\Typing\ExpressionTypeDescender.cs:line 500
+   at Reko.Typing.ExpressionTypeDescender.VisitBinaryExpression(BinaryExpression binExp, TypeVariable tv) in d:\dev\uxmal\reko\master\src\Decompiler\Typing\ExpressionTypeDescender.cs:line 349
+   at Reko.Typing.TypeCollector.CollectTypes() in d:\dev\uxmal\reko\master\src\Decompiler\Typing\TypeCollector.cs:line 76
+000003EC: error: An error occurred while processing the statement Mem29[Mem7[0x00000400<p32>:word32] + 0x000003EE<p32>:byte] = 1<8>.
+    Unable to cast object of type 'Reko.Core.Address32' to type 'Reko.Core.Expressions.Constant'.
+       at Reko.Typing.ExpressionTypeDescender.VisitMemoryAccess(Expression basePointer, TypeVariable tvAccess, Expression effectiveAddress, Expression globals) in d:\dev\uxmal\reko\master\src\Decompiler\Typing\ExpressionTypeDescender.cs:line 532
+   at Reko.Typing.ExpressionTypeDescender.VisitMemoryAccess(MemoryAccess access, TypeVariable tv) in d:\dev\uxmal\reko\master\src\Decompiler\Typing\ExpressionTypeDescender.cs:line 527
+   at Reko.Typing.TypeCollector.CollectTypes() in d:\dev\uxmal\reko\master\src\Decompiler\Typing\TypeCollector.cs:line 76
+=== hexdump\arm-linux-gnueabihf-gcc-9\hexdump-O2.so
+*** hexdump\arm-linux-gnueabihf-gcc-9\hexdump-O2.so
+Error: An error occurred during decompilation.
+    An entry with the same key already exists.
+       at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.SortedList`2.Add(TKey key, TValue value)
+   at Reko.Core.EnumerableEx.ToSortedList[TSource,TKey](IEnumerable`1 source, Func`2 keySelector) in d:\dev\uxmal\reko\master\src\Core\EnumerableEx.cs:line 39
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 748
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\arm-linux-gnueabihf-gcc-9\hexdump-Os.so
+*** hexdump\arm-linux-gnueabihf-gcc-9\hexdump-Os.so
+Error: An error occurred during decompilation.
+    An entry with the same key already exists.
+       at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.SortedList`2.Add(TKey key, TValue value)
+   at Reko.Core.EnumerableEx.ToSortedList[TSource,TKey](IEnumerable`1 source, Func`2 keySelector) in d:\dev\uxmal\reko\master\src\Core\EnumerableEx.cs:line 39
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 748
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\arm-linux-gnueabihf-gcc\hexdump-O0.so
+*** hexdump\arm-linux-gnueabihf-gcc\hexdump-O0.so
+000003D0: error: An error occurred while processing the statement branch CONVERT(Mem7[Mem7[0x000003F0<p32>:word32] + 0x000003CE<p32>:byte], byte, word32) != 0<32> l000003EE.
+    Unable to cast object of type 'Reko.Core.Address32' to type 'Reko.Core.Expressions.Constant'.
+       at Reko.Typing.ExpressionTypeDescender.VisitMemoryAccess(Expression basePointer, TypeVariable tvAccess, Expression effectiveAddress, Expression globals) in d:\dev\uxmal\reko\master\src\Decompiler\Typing\ExpressionTypeDescender.cs:line 532
+   at Reko.Typing.ExpressionTypeDescender.VisitMemoryAccess(MemoryAccess access, TypeVariable tv) in d:\dev\uxmal\reko\master\src\Decompiler\Typing\ExpressionTypeDescender.cs:line 527
+   at Reko.Typing.ExpressionTypeDescender.VisitConversion(Conversion conversion, TypeVariable tv) in d:\dev\uxmal\reko\master\src\Decompiler\Typing\ExpressionTypeDescender.cs:line 500
+   at Reko.Typing.ExpressionTypeDescender.VisitBinaryExpression(BinaryExpression binExp, TypeVariable tv) in d:\dev\uxmal\reko\master\src\Decompiler\Typing\ExpressionTypeDescender.cs:line 349
+   at Reko.Typing.TypeCollector.CollectTypes() in d:\dev\uxmal\reko\master\src\Decompiler\Typing\TypeCollector.cs:line 76
+000003EC: error: An error occurred while processing the statement Mem29[Mem7[0x00000400<p32>:word32] + 0x000003EE<p32>:byte] = 1<8>.
+    Unable to cast object of type 'Reko.Core.Address32' to type 'Reko.Core.Expressions.Constant'.
+       at Reko.Typing.ExpressionTypeDescender.VisitMemoryAccess(Expression basePointer, TypeVariable tvAccess, Expression effectiveAddress, Expression globals) in d:\dev\uxmal\reko\master\src\Decompiler\Typing\ExpressionTypeDescender.cs:line 532
+   at Reko.Typing.ExpressionTypeDescender.VisitMemoryAccess(MemoryAccess access, TypeVariable tv) in d:\dev\uxmal\reko\master\src\Decompiler\Typing\ExpressionTypeDescender.cs:line 527
+   at Reko.Typing.TypeCollector.CollectTypes() in d:\dev\uxmal\reko\master\src\Decompiler\Typing\TypeCollector.cs:line 76
+=== hexdump\arm-linux-gnueabihf-gcc\hexdump-O2.so
+*** hexdump\arm-linux-gnueabihf-gcc\hexdump-O2.so
+Error: An error occurred during decompilation.
+    An entry with the same key already exists.
+       at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.SortedList`2.Add(TKey key, TValue value)
+   at Reko.Core.EnumerableEx.ToSortedList[TSource,TKey](IEnumerable`1 source, Func`2 keySelector) in d:\dev\uxmal\reko\master\src\Core\EnumerableEx.cs:line 39
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 748
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\arm-linux-gnueabihf-gcc\hexdump-Os.so
+*** hexdump\arm-linux-gnueabihf-gcc\hexdump-Os.so
+Error: An error occurred during decompilation.
+    An entry with the same key already exists.
+       at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.SortedList`2.Add(TKey key, TValue value)
+   at Reko.Core.EnumerableEx.ToSortedList[TSource,TKey](IEnumerable`1 source, Func`2 keySelector) in d:\dev\uxmal\reko\master\src\Core\EnumerableEx.cs:line 39
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 748
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\c99-gcc\hexdump-O0.so
+=== hexdump\c99-gcc\hexdump-O2.so
+*** hexdump\c99-gcc\hexdump-O2.so
+Error: An error occurred during decompilation.
+    Index was outside the bounds of the array.
+       at Reko.Core.Dfa.Automaton.<GetMatches>d__5.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.FindMainFunction(Program program, Address addrEntry) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 88
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 746
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\c99-gcc\hexdump-Os.so
+*** hexdump\c99-gcc\hexdump-Os.so
+Error: An error occurred during decompilation.
+    Index was outside the bounds of the array.
+       at Reko.Core.Dfa.Automaton.<GetMatches>d__5.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.FindMainFunction(Program program, Address addrEntry) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 88
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 746
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\gcc-10\hexdump-O0.so
+=== hexdump\gcc-10\hexdump-O2.so
+*** hexdump\gcc-10\hexdump-O2.so
+Error: An error occurred during decompilation.
+    Index was outside the bounds of the array.
+       at Reko.Core.Dfa.Automaton.<GetMatches>d__5.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.FindMainFunction(Program program, Address addrEntry) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 88
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 746
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\gcc-10\hexdump-Os.so
+*** hexdump\gcc-10\hexdump-Os.so
+Error: An error occurred during decompilation.
+    Index was outside the bounds of the array.
+       at Reko.Core.Dfa.Automaton.<GetMatches>d__5.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.FindMainFunction(Program program, Address addrEntry) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 88
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 746
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\gcc-9\hexdump-O0.so
+=== hexdump\gcc-9\hexdump-O2.so
+*** hexdump\gcc-9\hexdump-O2.so
+Error: An error occurred during decompilation.
+    Index was outside the bounds of the array.
+       at Reko.Core.Dfa.Automaton.<GetMatches>d__5.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.FindMainFunction(Program program, Address addrEntry) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 88
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 746
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\gcc-9\hexdump-Os.so
+*** hexdump\gcc-9\hexdump-Os.so
+Error: An error occurred during decompilation.
+    Index was outside the bounds of the array.
+       at Reko.Core.Dfa.Automaton.<GetMatches>d__5.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.FindMainFunction(Program program, Address addrEntry) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 88
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 746
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\gcc\hexdump-O0.so
+=== hexdump\gcc\hexdump-O2.so
+*** hexdump\gcc\hexdump-O2.so
+Error: An error occurred during decompilation.
+    Index was outside the bounds of the array.
+       at Reko.Core.Dfa.Automaton.<GetMatches>d__5.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.FindMainFunction(Program program, Address addrEntry) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 88
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 746
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\gcc\hexdump-Os.so
+*** hexdump\gcc\hexdump-Os.so
+Error: An error occurred during decompilation.
+    Index was outside the bounds of the array.
+       at Reko.Core.Dfa.Automaton.<GetMatches>d__5.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.FindMainFunction(Program program, Address addrEntry) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 88
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 746
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\hppa-linux-gnu-gcc-10\hexdump-O0.so
+=== hexdump\hppa-linux-gnu-gcc-10\hexdump-O2.so
+=== hexdump\hppa-linux-gnu-gcc-10\hexdump-Os.so
+=== hexdump\hppa-linux-gnu-gcc-9\hexdump-O0.so
+=== hexdump\hppa-linux-gnu-gcc-9\hexdump-O2.so
+=== hexdump\hppa-linux-gnu-gcc-9\hexdump-Os.so
+=== hexdump\hppa-linux-gnu-gcc\hexdump-O0.so
+=== hexdump\hppa-linux-gnu-gcc\hexdump-O2.so
+=== hexdump\hppa-linux-gnu-gcc\hexdump-Os.so
+=== hexdump\i686-linux-gnu-gcc-10\hexdump-O0.so
+=== hexdump\i686-linux-gnu-gcc-10\hexdump-O2.so
+=== hexdump\i686-linux-gnu-gcc-10\hexdump-Os.so
+=== hexdump\i686-linux-gnu-gcc-9\hexdump-O0.so
+=== hexdump\i686-linux-gnu-gcc-9\hexdump-O2.so
+=== hexdump\i686-linux-gnu-gcc-9\hexdump-Os.so
+=== hexdump\i686-linux-gnu-gcc\hexdump-O0.so
+=== hexdump\i686-linux-gnu-gcc\hexdump-O2.so
+=== hexdump\i686-linux-gnu-gcc\hexdump-Os.so
+=== hexdump\m68k-linux-gnu-gcc-10\hexdump-O0.so
+=== hexdump\m68k-linux-gnu-gcc-10\hexdump-O2.so
+=== hexdump\m68k-linux-gnu-gcc-10\hexdump-Os.so
+=== hexdump\m68k-linux-gnu-gcc-9\hexdump-O0.so
+=== hexdump\m68k-linux-gnu-gcc-9\hexdump-O2.so
+=== hexdump\m68k-linux-gnu-gcc-9\hexdump-Os.so
+=== hexdump\m68k-linux-gnu-gcc\hexdump-O0.so
+=== hexdump\m68k-linux-gnu-gcc\hexdump-O2.so
+=== hexdump\m68k-linux-gnu-gcc\hexdump-Os.so
+=== hexdump\mips-linux-gnu-gcc-9\hexdump-O0.so
+=== hexdump\mips-linux-gnu-gcc-9\hexdump-O2.so
+=== hexdump\mips-linux-gnu-gcc-9\hexdump-Os.so
+=== hexdump\mips64-linux-gnuabi64-gcc-9\hexdump-O0.so
+*** hexdump\mips64-linux-gnuabi64-gcc-9\hexdump-O0.so
+Error: An error occurred during decompilation.
+    The method or operation is not implemented.
+       at Reko.ImageLoaders.Elf.Relocators.MipsRelocator64.RelocateEntry(Program program, ElfSymbol symbol, ElfSection referringSection, ElfRelocation rela) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\MipsRelocator.cs:line 379
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocationTable.RelocateEntries(Program program, UInt64 offStrtab, UInt64 offSymtab, UInt64 symEntrySize) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 284
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocateDynamicSymbols(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 181
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator64.Relocate(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 469
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 742
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\mips64-linux-gnuabi64-gcc-9\hexdump-O2.so
+*** hexdump\mips64-linux-gnuabi64-gcc-9\hexdump-O2.so
+Error: An error occurred during decompilation.
+    The method or operation is not implemented.
+       at Reko.ImageLoaders.Elf.Relocators.MipsRelocator64.RelocateEntry(Program program, ElfSymbol symbol, ElfSection referringSection, ElfRelocation rela) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\MipsRelocator.cs:line 379
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocationTable.RelocateEntries(Program program, UInt64 offStrtab, UInt64 offSymtab, UInt64 symEntrySize) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 284
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocateDynamicSymbols(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 181
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator64.Relocate(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 469
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 742
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\mips64-linux-gnuabi64-gcc-9\hexdump-Os.so
+*** hexdump\mips64-linux-gnuabi64-gcc-9\hexdump-Os.so
+Error: An error occurred during decompilation.
+    The method or operation is not implemented.
+       at Reko.ImageLoaders.Elf.Relocators.MipsRelocator64.RelocateEntry(Program program, ElfSymbol symbol, ElfSection referringSection, ElfRelocation rela) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\MipsRelocator.cs:line 379
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocationTable.RelocateEntries(Program program, UInt64 offStrtab, UInt64 offSymtab, UInt64 symEntrySize) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 284
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocateDynamicSymbols(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 181
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator64.Relocate(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 469
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 742
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\mips64-linux-gnuabi64-gcc\hexdump-O0.so
+*** hexdump\mips64-linux-gnuabi64-gcc\hexdump-O0.so
+Error: An error occurred during decompilation.
+    The method or operation is not implemented.
+       at Reko.ImageLoaders.Elf.Relocators.MipsRelocator64.RelocateEntry(Program program, ElfSymbol symbol, ElfSection referringSection, ElfRelocation rela) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\MipsRelocator.cs:line 379
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocationTable.RelocateEntries(Program program, UInt64 offStrtab, UInt64 offSymtab, UInt64 symEntrySize) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 284
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocateDynamicSymbols(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 181
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator64.Relocate(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 469
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 742
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\mips64-linux-gnuabi64-gcc\hexdump-O2.so
+*** hexdump\mips64-linux-gnuabi64-gcc\hexdump-O2.so
+Error: An error occurred during decompilation.
+    The method or operation is not implemented.
+       at Reko.ImageLoaders.Elf.Relocators.MipsRelocator64.RelocateEntry(Program program, ElfSymbol symbol, ElfSection referringSection, ElfRelocation rela) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\MipsRelocator.cs:line 379
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocationTable.RelocateEntries(Program program, UInt64 offStrtab, UInt64 offSymtab, UInt64 symEntrySize) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 284
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocateDynamicSymbols(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 181
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator64.Relocate(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 469
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 742
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\mips64-linux-gnuabi64-gcc\hexdump-Os.so
+*** hexdump\mips64-linux-gnuabi64-gcc\hexdump-Os.so
+Error: An error occurred during decompilation.
+    The method or operation is not implemented.
+       at Reko.ImageLoaders.Elf.Relocators.MipsRelocator64.RelocateEntry(Program program, ElfSymbol symbol, ElfSection referringSection, ElfRelocation rela) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\MipsRelocator.cs:line 379
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocationTable.RelocateEntries(Program program, UInt64 offStrtab, UInt64 offSymtab, UInt64 symEntrySize) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 284
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocateDynamicSymbols(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 181
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator64.Relocate(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 469
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 742
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\mips64el-linux-gnuabi64-gcc-9\hexdump-O0.so
+*** hexdump\mips64el-linux-gnuabi64-gcc-9\hexdump-O0.so
+Error: An error occurred during decompilation.
+    The method or operation is not implemented.
+       at Reko.ImageLoaders.Elf.Relocators.MipsRelocator64.RelocateEntry(Program program, ElfSymbol symbol, ElfSection referringSection, ElfRelocation rela) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\MipsRelocator.cs:line 379
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocationTable.RelocateEntries(Program program, UInt64 offStrtab, UInt64 offSymtab, UInt64 symEntrySize) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 284
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocateDynamicSymbols(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 181
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator64.Relocate(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 469
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 742
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\mips64el-linux-gnuabi64-gcc-9\hexdump-O2.so
+*** hexdump\mips64el-linux-gnuabi64-gcc-9\hexdump-O2.so
+Error: An error occurred during decompilation.
+    The method or operation is not implemented.
+       at Reko.ImageLoaders.Elf.Relocators.MipsRelocator64.RelocateEntry(Program program, ElfSymbol symbol, ElfSection referringSection, ElfRelocation rela) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\MipsRelocator.cs:line 379
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocationTable.RelocateEntries(Program program, UInt64 offStrtab, UInt64 offSymtab, UInt64 symEntrySize) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 284
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocateDynamicSymbols(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 181
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator64.Relocate(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 469
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 742
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\mips64el-linux-gnuabi64-gcc-9\hexdump-Os.so
+*** hexdump\mips64el-linux-gnuabi64-gcc-9\hexdump-Os.so
+Error: An error occurred during decompilation.
+    The method or operation is not implemented.
+       at Reko.ImageLoaders.Elf.Relocators.MipsRelocator64.RelocateEntry(Program program, ElfSymbol symbol, ElfSection referringSection, ElfRelocation rela) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\MipsRelocator.cs:line 379
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocationTable.RelocateEntries(Program program, UInt64 offStrtab, UInt64 offSymtab, UInt64 symEntrySize) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 284
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocateDynamicSymbols(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 181
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator64.Relocate(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 469
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 742
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\mips64el-linux-gnuabi64-gcc\hexdump-O0.so
+*** hexdump\mips64el-linux-gnuabi64-gcc\hexdump-O0.so
+Error: An error occurred during decompilation.
+    The method or operation is not implemented.
+       at Reko.ImageLoaders.Elf.Relocators.MipsRelocator64.RelocateEntry(Program program, ElfSymbol symbol, ElfSection referringSection, ElfRelocation rela) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\MipsRelocator.cs:line 379
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocationTable.RelocateEntries(Program program, UInt64 offStrtab, UInt64 offSymtab, UInt64 symEntrySize) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 284
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocateDynamicSymbols(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 181
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator64.Relocate(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 469
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 742
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\mips64el-linux-gnuabi64-gcc\hexdump-O2.so
+*** hexdump\mips64el-linux-gnuabi64-gcc\hexdump-O2.so
+Error: An error occurred during decompilation.
+    The method or operation is not implemented.
+       at Reko.ImageLoaders.Elf.Relocators.MipsRelocator64.RelocateEntry(Program program, ElfSymbol symbol, ElfSection referringSection, ElfRelocation rela) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\MipsRelocator.cs:line 379
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocationTable.RelocateEntries(Program program, UInt64 offStrtab, UInt64 offSymtab, UInt64 symEntrySize) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 284
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocateDynamicSymbols(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 181
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator64.Relocate(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 469
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 742
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\mips64el-linux-gnuabi64-gcc\hexdump-Os.so
+*** hexdump\mips64el-linux-gnuabi64-gcc\hexdump-Os.so
+Error: An error occurred during decompilation.
+    The method or operation is not implemented.
+       at Reko.ImageLoaders.Elf.Relocators.MipsRelocator64.RelocateEntry(Program program, ElfSymbol symbol, ElfSection referringSection, ElfRelocation rela) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\MipsRelocator.cs:line 379
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocationTable.RelocateEntries(Program program, UInt64 offStrtab, UInt64 offSymtab, UInt64 symEntrySize) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 284
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocateDynamicSymbols(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 181
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator64.Relocate(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 469
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 742
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\mipsel-linux-gnu-gcc-10\hexdump-O0.so
+=== hexdump\mipsel-linux-gnu-gcc-10\hexdump-O2.so
+=== hexdump\mipsel-linux-gnu-gcc-10\hexdump-Os.so
+=== hexdump\mipsisa64r6-linux-gnuabi64-gcc-9\hexdump-O0.so
+*** hexdump\mipsisa64r6-linux-gnuabi64-gcc-9\hexdump-O0.so
+Error: An error occurred during decompilation.
+    The method or operation is not implemented.
+       at Reko.ImageLoaders.Elf.Relocators.MipsRelocator64.RelocateEntry(Program program, ElfSymbol symbol, ElfSection referringSection, ElfRelocation rela) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\MipsRelocator.cs:line 379
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocationTable.RelocateEntries(Program program, UInt64 offStrtab, UInt64 offSymtab, UInt64 symEntrySize) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 284
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocateDynamicSymbols(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 181
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator64.Relocate(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 469
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 742
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\mipsisa64r6-linux-gnuabi64-gcc-9\hexdump-O2.so
+*** hexdump\mipsisa64r6-linux-gnuabi64-gcc-9\hexdump-O2.so
+Error: An error occurred during decompilation.
+    The method or operation is not implemented.
+       at Reko.ImageLoaders.Elf.Relocators.MipsRelocator64.RelocateEntry(Program program, ElfSymbol symbol, ElfSection referringSection, ElfRelocation rela) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\MipsRelocator.cs:line 379
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocationTable.RelocateEntries(Program program, UInt64 offStrtab, UInt64 offSymtab, UInt64 symEntrySize) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 284
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocateDynamicSymbols(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 181
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator64.Relocate(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 469
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 742
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\mipsisa64r6-linux-gnuabi64-gcc-9\hexdump-Os.so
+*** hexdump\mipsisa64r6-linux-gnuabi64-gcc-9\hexdump-Os.so
+Error: An error occurred during decompilation.
+    The method or operation is not implemented.
+       at Reko.ImageLoaders.Elf.Relocators.MipsRelocator64.RelocateEntry(Program program, ElfSymbol symbol, ElfSection referringSection, ElfRelocation rela) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\MipsRelocator.cs:line 379
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocationTable.RelocateEntries(Program program, UInt64 offStrtab, UInt64 offSymtab, UInt64 symEntrySize) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 284
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocateDynamicSymbols(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 181
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator64.Relocate(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 469
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 742
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\mipsisa64r6-linux-gnuabi64-gcc\hexdump-O0.so
+*** hexdump\mipsisa64r6-linux-gnuabi64-gcc\hexdump-O0.so
+Error: An error occurred during decompilation.
+    The method or operation is not implemented.
+       at Reko.ImageLoaders.Elf.Relocators.MipsRelocator64.RelocateEntry(Program program, ElfSymbol symbol, ElfSection referringSection, ElfRelocation rela) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\MipsRelocator.cs:line 379
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocationTable.RelocateEntries(Program program, UInt64 offStrtab, UInt64 offSymtab, UInt64 symEntrySize) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 284
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocateDynamicSymbols(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 181
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator64.Relocate(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 469
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 742
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\mipsisa64r6-linux-gnuabi64-gcc\hexdump-O2.so
+*** hexdump\mipsisa64r6-linux-gnuabi64-gcc\hexdump-O2.so
+Error: An error occurred during decompilation.
+    The method or operation is not implemented.
+       at Reko.ImageLoaders.Elf.Relocators.MipsRelocator64.RelocateEntry(Program program, ElfSymbol symbol, ElfSection referringSection, ElfRelocation rela) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\MipsRelocator.cs:line 379
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocationTable.RelocateEntries(Program program, UInt64 offStrtab, UInt64 offSymtab, UInt64 symEntrySize) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 284
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocateDynamicSymbols(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 181
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator64.Relocate(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 469
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 742
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\mipsisa64r6-linux-gnuabi64-gcc\hexdump-Os.so
+*** hexdump\mipsisa64r6-linux-gnuabi64-gcc\hexdump-Os.so
+Error: An error occurred during decompilation.
+    The method or operation is not implemented.
+       at Reko.ImageLoaders.Elf.Relocators.MipsRelocator64.RelocateEntry(Program program, ElfSymbol symbol, ElfSection referringSection, ElfRelocation rela) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\MipsRelocator.cs:line 379
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocationTable.RelocateEntries(Program program, UInt64 offStrtab, UInt64 offSymtab, UInt64 symEntrySize) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 284
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocateDynamicSymbols(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 181
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator64.Relocate(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 469
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 742
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\mipsisa64r6el-linux-gnuabi64-gcc-9\hexdump-O0.so
+*** hexdump\mipsisa64r6el-linux-gnuabi64-gcc-9\hexdump-O0.so
+Error: An error occurred during decompilation.
+    The method or operation is not implemented.
+       at Reko.ImageLoaders.Elf.Relocators.MipsRelocator64.RelocateEntry(Program program, ElfSymbol symbol, ElfSection referringSection, ElfRelocation rela) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\MipsRelocator.cs:line 379
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocationTable.RelocateEntries(Program program, UInt64 offStrtab, UInt64 offSymtab, UInt64 symEntrySize) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 284
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocateDynamicSymbols(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 181
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator64.Relocate(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 469
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 742
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\mipsisa64r6el-linux-gnuabi64-gcc-9\hexdump-O2.so
+*** hexdump\mipsisa64r6el-linux-gnuabi64-gcc-9\hexdump-O2.so
+Error: An error occurred during decompilation.
+    The method or operation is not implemented.
+       at Reko.ImageLoaders.Elf.Relocators.MipsRelocator64.RelocateEntry(Program program, ElfSymbol symbol, ElfSection referringSection, ElfRelocation rela) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\MipsRelocator.cs:line 379
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocationTable.RelocateEntries(Program program, UInt64 offStrtab, UInt64 offSymtab, UInt64 symEntrySize) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 284
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocateDynamicSymbols(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 181
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator64.Relocate(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 469
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 742
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\mipsisa64r6el-linux-gnuabi64-gcc-9\hexdump-Os.so
+*** hexdump\mipsisa64r6el-linux-gnuabi64-gcc-9\hexdump-Os.so
+Error: An error occurred during decompilation.
+    The method or operation is not implemented.
+       at Reko.ImageLoaders.Elf.Relocators.MipsRelocator64.RelocateEntry(Program program, ElfSymbol symbol, ElfSection referringSection, ElfRelocation rela) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\MipsRelocator.cs:line 379
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocationTable.RelocateEntries(Program program, UInt64 offStrtab, UInt64 offSymtab, UInt64 symEntrySize) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 284
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocateDynamicSymbols(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 181
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator64.Relocate(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 469
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 742
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\mipsisa64r6el-linux-gnuabi64-gcc\hexdump-O0.so
+*** hexdump\mipsisa64r6el-linux-gnuabi64-gcc\hexdump-O0.so
+Error: An error occurred during decompilation.
+    The method or operation is not implemented.
+       at Reko.ImageLoaders.Elf.Relocators.MipsRelocator64.RelocateEntry(Program program, ElfSymbol symbol, ElfSection referringSection, ElfRelocation rela) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\MipsRelocator.cs:line 379
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocationTable.RelocateEntries(Program program, UInt64 offStrtab, UInt64 offSymtab, UInt64 symEntrySize) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 284
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocateDynamicSymbols(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 181
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator64.Relocate(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 469
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 742
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\mipsisa64r6el-linux-gnuabi64-gcc\hexdump-O2.so
+*** hexdump\mipsisa64r6el-linux-gnuabi64-gcc\hexdump-O2.so
+Error: An error occurred during decompilation.
+    The method or operation is not implemented.
+       at Reko.ImageLoaders.Elf.Relocators.MipsRelocator64.RelocateEntry(Program program, ElfSymbol symbol, ElfSection referringSection, ElfRelocation rela) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\MipsRelocator.cs:line 379
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocationTable.RelocateEntries(Program program, UInt64 offStrtab, UInt64 offSymtab, UInt64 symEntrySize) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 284
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocateDynamicSymbols(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 181
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator64.Relocate(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 469
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 742
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\mipsisa64r6el-linux-gnuabi64-gcc\hexdump-Os.so
+*** hexdump\mipsisa64r6el-linux-gnuabi64-gcc\hexdump-Os.so
+Error: An error occurred during decompilation.
+    The method or operation is not implemented.
+       at Reko.ImageLoaders.Elf.Relocators.MipsRelocator64.RelocateEntry(Program program, ElfSymbol symbol, ElfSection referringSection, ElfRelocation rela) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\MipsRelocator.cs:line 379
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocationTable.RelocateEntries(Program program, UInt64 offStrtab, UInt64 offSymtab, UInt64 symEntrySize) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 284
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.RelocateDynamicSymbols(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 181
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator64.Relocate(Program program) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 469
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 742
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\powerpc-linux-gnu-gcc-10\hexdump-O0.so
+=== hexdump\powerpc-linux-gnu-gcc-10\hexdump-O2.so
+=== hexdump\powerpc-linux-gnu-gcc-10\hexdump-Os.so
+=== hexdump\powerpc-linux-gnu-gcc-9\hexdump-O0.so
+=== hexdump\powerpc-linux-gnu-gcc-9\hexdump-O2.so
+=== hexdump\powerpc-linux-gnu-gcc-9\hexdump-Os.so
+=== hexdump\powerpc-linux-gnu-gcc\hexdump-O0.so
+=== hexdump\powerpc-linux-gnu-gcc\hexdump-O2.so
+=== hexdump\powerpc-linux-gnu-gcc\hexdump-Os.so
+=== hexdump\powerpc64-linux-gnu-gcc-10\hexdump-O0.so
+=== hexdump\powerpc64-linux-gnu-gcc-10\hexdump-O2.so
+=== hexdump\powerpc64-linux-gnu-gcc-10\hexdump-Os.so
+=== hexdump\powerpc64-linux-gnu-gcc-9\hexdump-O0.so
+=== hexdump\powerpc64-linux-gnu-gcc-9\hexdump-O2.so
+=== hexdump\powerpc64-linux-gnu-gcc-9\hexdump-Os.so
+=== hexdump\powerpc64-linux-gnu-gcc\hexdump-O0.so
+=== hexdump\powerpc64-linux-gnu-gcc\hexdump-O2.so
+=== hexdump\powerpc64-linux-gnu-gcc\hexdump-Os.so
+=== hexdump\powerpc64le-linux-gnu-gcc-10\hexdump-O0.so
+=== hexdump\powerpc64le-linux-gnu-gcc-10\hexdump-O2.so
+=== hexdump\powerpc64le-linux-gnu-gcc-10\hexdump-Os.so
+*** hexdump\powerpc64le-linux-gnu-gcc-10\hexdump-Os.so
+000000000001FF28: warning: Unimplemented PowerPC64 relocation type R_PPC64_ADDR64.
+000000000000086C: error: PowerPC instruction 'vmsumshm	v0,v0,v0,v7' is not supported yet.
+000000000000086C: error: PowerPC instruction 'vmsumshm	v0,v0,v0,v7' is not supported yet.
+00000000000007DC: warning: Unable to resolve imported reference hexdump.
+=== hexdump\powerpc64le-linux-gnu-gcc-9\hexdump-O0.so
+=== hexdump\powerpc64le-linux-gnu-gcc-9\hexdump-O2.so
+=== hexdump\powerpc64le-linux-gnu-gcc-9\hexdump-Os.so
+*** hexdump\powerpc64le-linux-gnu-gcc-9\hexdump-Os.so
+000000000001FF28: warning: Unimplemented PowerPC64 relocation type R_PPC64_ADDR64.
+000000000000086C: error: PowerPC instruction 'vmsumshm	v0,v0,v0,v7' is not supported yet.
+000000000000086C: error: PowerPC instruction 'vmsumshm	v0,v0,v0,v7' is not supported yet.
+00000000000007DC: warning: Unable to resolve imported reference hexdump.
+=== hexdump\powerpc64le-linux-gnu-gcc\hexdump-O0.so
+=== hexdump\powerpc64le-linux-gnu-gcc\hexdump-O2.so
+=== hexdump\powerpc64le-linux-gnu-gcc\hexdump-Os.so
+*** hexdump\powerpc64le-linux-gnu-gcc\hexdump-Os.so
+000000000001FF28: warning: Unimplemented PowerPC64 relocation type R_PPC64_ADDR64.
+000000000000086C: error: PowerPC instruction 'vmsumshm	v0,v0,v0,v7' is not supported yet.
+000000000000086C: error: PowerPC instruction 'vmsumshm	v0,v0,v0,v7' is not supported yet.
+00000000000007DC: warning: Unable to resolve imported reference hexdump.
+=== hexdump\riscv64-linux-gnu-gcc-10\hexdump-O0.so
+=== hexdump\riscv64-linux-gnu-gcc-10\hexdump-O2.so
+=== hexdump\riscv64-linux-gnu-gcc-10\hexdump-Os.so
+=== hexdump\riscv64-linux-gnu-gcc-9\hexdump-O0.so
+=== hexdump\riscv64-linux-gnu-gcc-9\hexdump-O2.so
+=== hexdump\riscv64-linux-gnu-gcc-9\hexdump-Os.so
+=== hexdump\riscv64-linux-gnu-gcc\hexdump-O0.so
+=== hexdump\riscv64-linux-gnu-gcc\hexdump-O2.so
+=== hexdump\riscv64-linux-gnu-gcc\hexdump-Os.so
+=== hexdump\s390x-linux-gnu-gcc-10\hexdump-O0.so
+=== hexdump\s390x-linux-gnu-gcc-10\hexdump-O2.so
+=== hexdump\s390x-linux-gnu-gcc-10\hexdump-Os.so
+=== hexdump\s390x-linux-gnu-gcc-9\hexdump-O0.so
+=== hexdump\s390x-linux-gnu-gcc-9\hexdump-O2.so
+=== hexdump\s390x-linux-gnu-gcc-9\hexdump-Os.so
+=== hexdump\s390x-linux-gnu-gcc\hexdump-O0.so
+=== hexdump\s390x-linux-gnu-gcc\hexdump-O2.so
+=== hexdump\s390x-linux-gnu-gcc\hexdump-Os.so
+=== hexdump\sh4-linux-gnu-gcc-10\hexdump-O0.so
+=== hexdump\sh4-linux-gnu-gcc-10\hexdump-O2.so
+=== hexdump\sh4-linux-gnu-gcc-10\hexdump-Os.so
+=== hexdump\sh4-linux-gnu-gcc-9\hexdump-O0.so
+=== hexdump\sh4-linux-gnu-gcc-9\hexdump-O2.so
+=== hexdump\sh4-linux-gnu-gcc-9\hexdump-Os.so
+=== hexdump\sh4-linux-gnu-gcc\hexdump-O0.so
+=== hexdump\sh4-linux-gnu-gcc\hexdump-O2.so
+=== hexdump\sh4-linux-gnu-gcc\hexdump-Os.so
+=== hexdump\sparc64-linux-gnu-gcc-10\hexdump-O0.so
+=== hexdump\sparc64-linux-gnu-gcc-10\hexdump-O2.so
+=== hexdump\sparc64-linux-gnu-gcc-10\hexdump-Os.so
+=== hexdump\sparc64-linux-gnu-gcc-9\hexdump-O0.so
+=== hexdump\sparc64-linux-gnu-gcc-9\hexdump-O2.so
+=== hexdump\sparc64-linux-gnu-gcc-9\hexdump-Os.so
+=== hexdump\sparc64-linux-gnu-gcc\hexdump-O0.so
+=== hexdump\sparc64-linux-gnu-gcc\hexdump-O2.so
+=== hexdump\sparc64-linux-gnu-gcc\hexdump-Os.so
+=== hexdump\x86_64-linux-gnu-gcc-10\hexdump-O0.so
+=== hexdump\x86_64-linux-gnu-gcc-10\hexdump-O2.so
+*** hexdump\x86_64-linux-gnu-gcc-10\hexdump-O2.so
+Error: An error occurred during decompilation.
+    Index was outside the bounds of the array.
+       at Reko.Core.Dfa.Automaton.<GetMatches>d__5.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.FindMainFunction(Program program, Address addrEntry) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 88
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 746
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\x86_64-linux-gnu-gcc-10\hexdump-Os.so
+*** hexdump\x86_64-linux-gnu-gcc-10\hexdump-Os.so
+Error: An error occurred during decompilation.
+    Index was outside the bounds of the array.
+       at Reko.Core.Dfa.Automaton.<GetMatches>d__5.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.FindMainFunction(Program program, Address addrEntry) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 88
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 746
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\x86_64-linux-gnu-gcc-9\hexdump-O0.so
+=== hexdump\x86_64-linux-gnu-gcc-9\hexdump-O2.so
+*** hexdump\x86_64-linux-gnu-gcc-9\hexdump-O2.so
+Error: An error occurred during decompilation.
+    Index was outside the bounds of the array.
+       at Reko.Core.Dfa.Automaton.<GetMatches>d__5.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.FindMainFunction(Program program, Address addrEntry) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 88
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 746
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\x86_64-linux-gnu-gcc-9\hexdump-Os.so
+*** hexdump\x86_64-linux-gnu-gcc-9\hexdump-Os.so
+Error: An error occurred during decompilation.
+    Index was outside the bounds of the array.
+       at Reko.Core.Dfa.Automaton.<GetMatches>d__5.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.FindMainFunction(Program program, Address addrEntry) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 88
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 746
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\x86_64-linux-gnu-gcc\hexdump-O0.so
+=== hexdump\x86_64-linux-gnu-gcc\hexdump-O2.so
+*** hexdump\x86_64-linux-gnu-gcc\hexdump-O2.so
+Error: An error occurred during decompilation.
+    Index was outside the bounds of the array.
+       at Reko.Core.Dfa.Automaton.<GetMatches>d__5.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.FindMainFunction(Program program, Address addrEntry) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 88
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 746
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\x86_64-linux-gnu-gcc\hexdump-Os.so
+*** hexdump\x86_64-linux-gnu-gcc\hexdump-Os.so
+Error: An error occurred during decompilation.
+    Index was outside the bounds of the array.
+       at Reko.Core.Dfa.Automaton.<GetMatches>d__5.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Reko.ImageLoaders.Elf.Relocators.ElfRelocator.FindMainFunction(Program program, Address addrEntry) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\Relocators\ElfRelocator.cs:line 88
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 746
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\x86_64-linux-gnux32-gcc-10\hexdump-O0.so
+*** hexdump\x86_64-linux-gnux32-gcc-10\hexdump-O0.so
+Error: An error occurred during decompilation.
+    Relocator for architecture EM_X86_64 not implemented yet.
+       at Reko.ImageLoaders.Elf.ElfLoader.CreateRelocator(ElfMachine machine, SortedList`2 symbols) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 407
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 740
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\x86_64-linux-gnux32-gcc-10\hexdump-O2.so
+*** hexdump\x86_64-linux-gnux32-gcc-10\hexdump-O2.so
+Error: An error occurred during decompilation.
+    Relocator for architecture EM_X86_64 not implemented yet.
+       at Reko.ImageLoaders.Elf.ElfLoader.CreateRelocator(ElfMachine machine, SortedList`2 symbols) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 407
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 740
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\x86_64-linux-gnux32-gcc-10\hexdump-Os.so
+*** hexdump\x86_64-linux-gnux32-gcc-10\hexdump-Os.so
+Error: An error occurred during decompilation.
+    Relocator for architecture EM_X86_64 not implemented yet.
+       at Reko.ImageLoaders.Elf.ElfLoader.CreateRelocator(ElfMachine machine, SortedList`2 symbols) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 407
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 740
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\x86_64-linux-gnux32-gcc-9\hexdump-O0.so
+*** hexdump\x86_64-linux-gnux32-gcc-9\hexdump-O0.so
+Error: An error occurred during decompilation.
+    Relocator for architecture EM_X86_64 not implemented yet.
+       at Reko.ImageLoaders.Elf.ElfLoader.CreateRelocator(ElfMachine machine, SortedList`2 symbols) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 407
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 740
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\x86_64-linux-gnux32-gcc-9\hexdump-O2.so
+*** hexdump\x86_64-linux-gnux32-gcc-9\hexdump-O2.so
+Error: An error occurred during decompilation.
+    Relocator for architecture EM_X86_64 not implemented yet.
+       at Reko.ImageLoaders.Elf.ElfLoader.CreateRelocator(ElfMachine machine, SortedList`2 symbols) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 407
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 740
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\x86_64-linux-gnux32-gcc-9\hexdump-Os.so
+*** hexdump\x86_64-linux-gnux32-gcc-9\hexdump-Os.so
+Error: An error occurred during decompilation.
+    Relocator for architecture EM_X86_64 not implemented yet.
+       at Reko.ImageLoaders.Elf.ElfLoader.CreateRelocator(ElfMachine machine, SortedList`2 symbols) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 407
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 740
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\x86_64-linux-gnux32-gcc\hexdump-O0.so
+*** hexdump\x86_64-linux-gnux32-gcc\hexdump-O0.so
+Error: An error occurred during decompilation.
+    Relocator for architecture EM_X86_64 not implemented yet.
+       at Reko.ImageLoaders.Elf.ElfLoader.CreateRelocator(ElfMachine machine, SortedList`2 symbols) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 407
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 740
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\x86_64-linux-gnux32-gcc\hexdump-O2.so
+*** hexdump\x86_64-linux-gnux32-gcc\hexdump-O2.so
+Error: An error occurred during decompilation.
+    Relocator for architecture EM_X86_64 not implemented yet.
+       at Reko.ImageLoaders.Elf.ElfLoader.CreateRelocator(ElfMachine machine, SortedList`2 symbols) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 407
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 740
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\x86_64-linux-gnux32-gcc\hexdump-Os.so
+*** hexdump\x86_64-linux-gnux32-gcc\hexdump-Os.so
+Error: An error occurred during decompilation.
+    Relocator for architecture EM_X86_64 not implemented yet.
+       at Reko.ImageLoaders.Elf.ElfLoader.CreateRelocator(ElfMachine machine, SortedList`2 symbols) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 407
+   at Reko.ImageLoaders.Elf.ElfLoader.Relocate(Program program, Address addrLoad) in d:\dev\uxmal\reko\master\src\ImageLoaders\Elf\ElfLoader.cs:line 740
+   at Reko.Loading.Loader.LoadExecutable(String filename, Byte[] image, String loader, Address addrLoad) in d:\dev\uxmal\reko\master\src\Decompiler\Loading\Loader.cs:line 130
+   at Reko.Decompiler.Load(String fileName, String loaderName) in d:\dev\uxmal\reko\master\src\Decompiler\Decompiler.cs:line 192
+   at Reko.CmdLine.CmdLineDriver.Decompile(Dictionary`2 pArgs)
+=== hexdump\x86_64-w64-mingw32-gcc-10-posix\hexdump-O0.so
+=== hexdump\x86_64-w64-mingw32-gcc-10-posix\hexdump-O2.so
+=== hexdump\x86_64-w64-mingw32-gcc-10-posix\hexdump-Os.so
+=== hexdump\x86_64-w64-mingw32-gcc-10-win32\hexdump-O0.so
+=== hexdump\x86_64-w64-mingw32-gcc-10-win32\hexdump-O2.so
+=== hexdump\x86_64-w64-mingw32-gcc-10-win32\hexdump-Os.so
+=== hexdump\x86_64-w64-mingw32-gcc-10\hexdump-O0.so
+=== hexdump\x86_64-w64-mingw32-gcc-10\hexdump-O2.so
+=== hexdump\x86_64-w64-mingw32-gcc-10\hexdump-Os.so
+=== hexdump\x86_64-w64-mingw32-gcc-posix\hexdump-O0.so
+=== hexdump\x86_64-w64-mingw32-gcc-posix\hexdump-O2.so
+=== hexdump\x86_64-w64-mingw32-gcc-posix\hexdump-Os.so
+=== hexdump\x86_64-w64-mingw32-gcc-win32\hexdump-O0.so
+=== hexdump\x86_64-w64-mingw32-gcc-win32\hexdump-O2.so
+=== hexdump\x86_64-w64-mingw32-gcc-win32\hexdump-Os.so
+=== hexdump\x86_64-w64-mingw32-gcc\hexdump-O0.so
+=== hexdump\x86_64-w64-mingw32-gcc\hexdump-O2.so
+=== hexdump\x86_64-w64-mingw32-gcc\hexdump-Os.so
+Stripping SSA identifier numbers
+Decompiled 230 binaries in 113.11 seconds ---

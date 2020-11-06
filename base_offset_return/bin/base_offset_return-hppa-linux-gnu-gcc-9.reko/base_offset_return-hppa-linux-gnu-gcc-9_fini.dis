@@ -14,10 +14,10 @@ l000008CC:
 	r4 = r19 + 0<64>
 	call __do_global_dtors_aux (retsize: 0;)
 	r19 = r4 + 0<64>
-	r2 = (uint64) Mem0[r30 + -84<i64>:word32]
+	r2 = CONVERT(Mem0[r30 + -84<i64>:word32], word32, uint64)
 	r19 = r4 + 0<64>
 	r30 = r30 + -64<i64>
-	r4 = (uint64) Mem0[r30:word32]
+	r4 = CONVERT(Mem0[r30:word32], word32, uint64)
 	return
 	// succ:  _fini_exit
 _fini_exit:

@@ -1,0 +1,16 @@
+void fn00000000001021C0()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      foo
+// MayUse: 
+// LiveOut:
+// Trashed:
+// Preserved:
+// Terminates process
+fn00000000001021C0_exit:
+fn00000000001021C0_entry:
+l00000000001021C0:
+l0000000000102120:
+
+

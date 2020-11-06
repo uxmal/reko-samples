@@ -1,0 +1,184 @@
+void main(word64 r0, word64 r9, word64 r17, word64 r26, word64 r27)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  r0:[0..63] r17:[0..63] r26:[0..63] r27:[0..63] r9:[0..63]
+// LiveOut:
+// Trashed: r0 r16 r17 r18 r19 r20 r24 r27 r29 r8
+// Preserved: r26 r30 r9
+main_entry:
+l00000000000004F0:
+	word64 r27_8 = Mem0[r27 + 0x11B38<64>:word64]
+	word64 r9_20
+	word64 r0_21
+	word64 r26_24
+	word64 r8_25
+	call r27_8 (retsize: 0;)
+		uses: r0:r0,r16:Mem10[r17:word64],r17:r17,r26:r26,r27:r27_8,r29:r27 + 0x19B20<64>,r9:r0,Stack +0000:r26,Stack +0008:r9
+		defs: r0:r0_21,r26:r26_24,r8:r8_25,r9:r9_20
+	word64 r27_36 = Mem16[r26_24 + 0x11B1C<64>:word64]
+	call r27_36 (retsize: 0;)
+		uses: r0:r0_21,r16:Mem16[r26_24 + 0x11B1C<64>:word64],r17:3<64>,r18:r8_25,r19:r0_21,r20:CONVERT(SLICE(r9_20 + r8_25, int32, 0), int32, int64),r26:r26_24,r27:r27_36,r29:r26_24 + 0x19AFC<64>,r9:r9_20
+	return
+main_exit:
+
+
+word64 fn0000000000000568(word64 r0, word64 r26, word64 r29, ptr64 & r16Out)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      fn0000000000000618
+// MayUse:  r0:[0..63] r26:[0..63] r29:[0..63]
+// LiveOut: r0 r16
+// Trashed: r0 r1 r16 r27 r29
+// Preserved: r26 r30
+fn0000000000000568_entry:
+l0000000000000568:
+	word64 r16_16 = r29 - 0x8010<64>
+	branch CONVERT(r29 - 0x8010<64> == r0, bool, word64) != 0<64> l000000000000059C
+l0000000000000588:
+	word64 r27_13 = Mem8[r29 - 0x8000<64>:word64]
+	branch r27_13 == 0<64> l000000000000059C
+l0000000000000590:
+	word64 r27_20
+	call r27_13 (retsize: 0;)
+		uses: r0:r0,r26:r26,r27:r27_20,r29:r29
+		defs: r0:r0_19,r16:r16_16,r27:r27_20
+l000000000000059C:
+	r16Out = r16_16
+	return r0
+fn0000000000000568_exit:
+
+
+void fn0000000000000618(word64 r0, word64 r8, word64 r9, word64 r10, word64 r13, word64 r16, word64 r26, word64 r29)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      _fini
+// MayUse:  r0:[0..63] r10:[0..63] r13:[0..63] r16:[0..63] r26:[0..63] r29:[0..63] r8:[0..63] r9:[0..63]
+// LiveOut:
+// Trashed: r0 r1 r16 r2 r27 r29 r8
+// Preserved: r10 r11 r12 r13 r26 r30 r9
+fn0000000000000618_entry:
+l0000000000000618:
+	word64 r30_26 = fp - 0x30<64>
+	word64 r11_105 = r29
+	word64 r12_10 = r29 - 0x7FC8<64>
+	branch __extbl(Mem9[r29 - 0x7FC8<64>:word64], r0) != 0<64> l00000000000006F0
+l0000000000000648:
+	branch Mem21[r29 - 0x7FF8<64>:word64] == 0<64> l0000000000000668
+l0000000000000650:
+	word64 r27_36
+	word64 r2_39
+	call Mem21[r29 - 0x7FF8<64>:word64] (retsize: 0;)
+		uses: r0:r0,r1:r29,r10:r10,r11:r29,r12:r29 - 0x7FC8<64>,r13:r13,r16:Mem21[r29 - 0x7FD0<64>:word64],r2:r2_39,r26:r26,r27:r27_36,r29:r29,r8:r8_38,r9:r9
+		defs: r0:r0_33,r11:r11_27,r12:r12_29,r16:r16_37,r2:r2_39,r26:r26_31,r27:r27_36,r30:r30_26,r8:r8_38
+	r29 = r26 + 0x199B0<64>
+l0000000000000668:
+	word64 r1_51 = Mem21[r29 - 0x7FC0<64>:word64]
+	word64 r13_45 = r29
+	word64 r9_54 = __src(r29 - 0x81A8<64> - r8, 3<8>) - 1<64>
+	word64 r10_56 = r29 - 0x81B0<64>
+	branch CONVERT(r1_51 <u r8, bool, word64) == 0<64> l00000000000006C8
+l000000000000069C:
+	0<64> = Mem21[r30_26:word64]
+l00000000000006A0:
+	word64 r1_59 = r1_51 + 1<64>
+	Mem61[r13_45 - 0x7FC0<64>:word64] = r1_59
+	word64 r1_63 = r1_59 * 8<64> + r16
+	word64 r27_84
+	call Mem61[r1_63:word64] (retsize: 0;)
+		uses: r0:r0_70,r1:r1_63,r10:r10_71,r11:r11_65,r12:r12_67,r13:r13_60,r16:r16_85,r2:r2_91,r26:r26_68,r27:r27_84,r29:r29_66,r8:r8_72,r9:r9_69
+		defs: r0:r0_81,r10:r10_82,r11:r11_75,r12:r12_77,r13:r13_83,r16:r16_85,r26:r26_79,r27:r27_84,r30:r30_74,r8:r8_86,r9:r9_80
+	r1_51 = Mem61[r13_45 - 0x7FC0<64>:word64]
+	r29 = r26 + 0x1995C<64>
+	word64 r2_91 = CONVERT(r1_51 <u r8, bool, word64)
+	branch r2_91 != 0<64> l00000000000006A0
+l00000000000006C8:
+	0<64> = Mem93[r30_26:word64]
+	word64 r16_100
+	word64 r0_102 = fn0000000000000568(r0, r26, r29, out r16_100)
+	0<64> = Mem93[r30_26:word64]
+	0<64> = Mem93[r30_26:word64]
+	word64 r2_107 = Mem93[r11_105 - 0x7FC8<64>:word64]
+	word64 r1_108 = __insbl(1<64>, r0_102)
+	__mskbl(r2_107, r0_102)
+	__stq_u(Mem93[r11_105 - 0x7FC8<64>:word64], r1_108 | r16_100)
+l00000000000006F0:
+	return
+fn0000000000000618_exit:
+
+
+word64 fn0000000000000718(word64 r0, word64 r8, word64 r26, word64 r29, word64 qwArg00)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      _init
+// MayUse:  r0:[0..63] r26:[0..63] r29:[0..63] r8:[0..63] Stack +0000:[0..63]
+// LiveOut: r16
+// Trashed: r0 r1 r16 r17 r27 r29 r8
+// Preserved: r26 r30
+fn0000000000000718_entry:
+l0000000000000718:
+	0<64> = qwArg00
+l00000000000005B8:
+	word64 r17_10 = r29 - 0x8010<64> - r0
+	__src(r17_10, 3<8>)
+	word64 r16_22 = r29 - 0x8010<64>
+	branch __src((r17_10 >>u 0x3F<8>) + r8, 1<8>) == 0<64> l00000000000005FC
+l00000000000005E8:
+	word64 r27_19 = Mem18[r29 - 0x7FD8<64>:word64]
+	branch r27_19 == 0<64> l00000000000005FC
+l00000000000005F0:
+	word64 r27_28
+	call r27_19 (retsize: 0;)
+		uses: r0:r0,r26:r26,r27:r27_28,r29:r29,r8:r8,Stack +0010:qwArg00
+		defs: r16:r16_22,r27:r27_28
+l00000000000005FC:
+	return r16_22
+fn0000000000000718_exit:
+
+
+void hexdump()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed:
+// Preserved: r30
+hexdump_entry:
+l0000000000000730:
+	return
+hexdump_exit:
+
+
+void fn0000000000000748(word64 r16, word64 r24, word64 r26, word64 r29)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      _init
+// MayUse:  r16:[0..63] r24:[0..63] r26:[0..63] r29:[0..63]
+// LiveOut:
+// Trashed: r1 r16 r24 r27 r29
+// Preserved: r10 r26 r30 r9
+fn0000000000000748_entry:
+l0000000000000748:
+	word64 r27_14 = Mem13[r29 - 0x81C0<64>:word64]
+	word64 r10_11 = 0xFFFFFFFFFFFFFFFF<64>
+	branch CONVERT(r27_14 == r16, bool, word64) != 0<64> l000000000000079C
+l0000000000000770:
+	0<64> = r26
+	0<64> = r24
+	0<64> = r26
+	word64 r9_17 = r29 - 0x81C0<64>
+l0000000000000780:
+	call r27_14 (retsize: 0;)
+		uses: r10:r10_23,r16:r16_25,r24:r24_26,r26:r26_24,r29:r29_22,r9:r9_19 - 8<64>
+		defs: r10:r10_31,r16:r16_34,r24:r24_36,r26:r26_32,r9:r9_29
+	r27_14 = Mem13[r9_17:word64]
+	r29 = r26 + 0x19888<64>
+	branch CONVERT(r27_14 == r16, bool, word64) == 0<64> l0000000000000780
+l000000000000079C:
+	return
+fn0000000000000748_exit:
+
+

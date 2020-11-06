@@ -1,0 +1,18 @@
+void _fini()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed: pr r0 r1 r12 r14
+// Preserved: r15
+_fini_entry:
+l000005C0:
+	word32 r12_15 = Mem12[0x000005D4<p32>:word32] + 0x000005D4<p32>
+l000005D8:
+	word32 r1_16 = Mem12[0x000005E8<p32>:word32]
+	call 0x000005E8<p32> + r1_16 (retsize: 0;)
+		uses: pr:0x000005EC<p32>,r0:0x000005EC<p32>,r1:r1_16,r12:r12_15,r14:fp - 12<i32>
+	return
+_fini_exit:
+
+

@@ -7,8 +7,8 @@ fn00000418_entry:
 l00000418:
 	r1 = r19 + -2048<i32>
 	r22 = r1 + 2012<i64>
-	r21 = (uint64) Mem0[r22:word32]
-	r19 = (uint64) Mem0[r22 + 4<i64>:word32]
+	r21 = CONVERT(Mem0[r22:word32], word32, uint64)
+	r19 = CONVERT(Mem0[r22 + 4<i64>:word32], word32, uint64)
 	call r21 (retsize: 0;)
 	return
 	// succ:  fn00000418_exit
@@ -24,8 +24,8 @@ fn0000042C_entry:
 l0000042C:
 	r1 = r19 + -2048<i32>
 	r22 = r1 + 1980<i64>
-	r21 = (uint64) Mem0[r22:word32]
-	r19 = (uint64) Mem0[r22 + 4<i64>:word32]
+	r21 = CONVERT(Mem0[r22:word32], word32, uint64)
+	r19 = CONVERT(Mem0[r22 + 4<i64>:word32], word32, uint64)
 	call r21 (retsize: 0;)
 	return
 	// succ:  fn0000042C_exit
@@ -45,8 +45,8 @@ l00000440:
 	Mem0[v4:word32] = SLICE(r4, word32, 0)
 	Mem0[r30 + -60<i64>:word32] = SLICE(r3, word32, 0)
 	r1 = r19 + 0<i32>
-	r28 = (uint64) Mem0[r1 + 8<i64>:word32]
-	r3 = (uint64) Mem0[r28:word32]
+	r28 = CONVERT(Mem0[r1 + 8<i64>:word32], word32, uint64)
+	r3 = CONVERT(Mem0[r28:word32], word32, uint64)
 	branch r3 == 0<32> l00000440_ds_t
 	// succ:  l00000440_ds_f l00000440_ds_t
 l00000440_ds_f:
@@ -76,10 +76,10 @@ l00000474:
 	r2 = r31 + 0<64>
 	call fn000006B0 (retsize: 0;)
 l00000480:
-	r2 = (uint64) Mem0[r30 + -84<i64>:word32]
-	r3 = (uint64) Mem0[r30 + -60<i64>:word32]
+	r2 = CONVERT(Mem0[r30 + -84<i64>:word32], word32, uint64)
+	r3 = CONVERT(Mem0[r30 + -60<i64>:word32], word32, uint64)
 	r30 = r30 + -64<i64>
-	r4 = (uint64) Mem0[r30:word32]
+	r4 = CONVERT(Mem0[r30:word32], word32, uint64)
 	return
 	// succ:  gmon_initializer_exit
 gmon_initializer_exit:
@@ -94,12 +94,12 @@ deregister_tm_clones_entry:
 l00000494:
 	r1 = r19 + 0<i32>
 	Mem0[r30 + -20<i64>:word32] = SLICE(r2, word32, 0)
-	r26 = (uint64) Mem0[r1 + 16<i64>:word32]
+	r26 = CONVERT(Mem0[r1 + 16<i64>:word32], word32, uint64)
 	v7 = r30 + 64<i64>
 	r30 = v7
 	Mem0[v7:word32] = SLICE(r4, word32, 0)
 	r1 = r19 + 0<i32>
-	r1 = (uint64) Mem0[r1 + 56<i64>:word32]
+	r1 = CONVERT(Mem0[r1 + 56<i64>:word32], word32, uint64)
 	r28 = r1 + 0<64>
 	Mem0[r30 + -32<i64>:word32] = SLICE(r19, word32, 0)
 	branch r26 == r28 l00000494_ds_t
@@ -113,27 +113,27 @@ l00000494_ds_t:
 	goto l000004D4
 	// succ:  l000004D4
 l000004BC:
-	r28 = (uint64) Mem0[r1 + 28<i64>:word32]
-	r22 = (uint64) Mem0[r28:word32]
+	r28 = CONVERT(Mem0[r1 + 28<i64>:word32], word32, uint64)
+	r22 = CONVERT(Mem0[r28:word32], word32, uint64)
 	branch r22 == 0<32> l000004BC_ds_t
 	// succ:  l000004BC_ds_f l000004BC_ds_t
 l000004BC_ds_f:
-	r2 = (uint64) Mem0[r30 + -84<i64>:word32]
+	r2 = CONVERT(Mem0[r30 + -84<i64>:word32], word32, uint64)
 	goto l000004CC
 	// succ:  l000004CC
 l000004BC_ds_t:
-	r2 = (uint64) Mem0[r30 + -84<i64>:word32]
+	r2 = CONVERT(Mem0[r30 + -84<i64>:word32], word32, uint64)
 	goto l000004D8
 	// succ:  l000004D8
 l000004CC:
 	r2 = r31 + 0<64>
 	call fn000006B0 (retsize: 0;)
 l000004D4:
-	r2 = (uint64) Mem0[r30 + -84<i64>:word32]
+	r2 = CONVERT(Mem0[r30 + -84<i64>:word32], word32, uint64)
 	// succ:  l000004D8
 l000004D8:
 	r30 = r30 + -64<i64>
-	r4 = (uint64) Mem0[r30:word32]
+	r4 = CONVERT(Mem0[r30:word32], word32, uint64)
 	return
 	// succ:  deregister_tm_clones_exit
 deregister_tm_clones_exit:
@@ -148,19 +148,19 @@ register_tm_clones_entry:
 l000004E0:
 	r1 = r19 + 0<i32>
 	Mem0[r30 + -20<i64>:word32] = SLICE(r2, word32, 0)
-	r26 = (uint64) Mem0[r1 + 16<i64>:word32]
+	r26 = CONVERT(Mem0[r1 + 16<i64>:word32], word32, uint64)
 	v7 = r30 + 64<i64>
 	r30 = v7
 	Mem0[v7:word32] = SLICE(r4, word32, 0)
 	r1 = r19 + 0<i32>
-	r1 = (uint64) Mem0[r1 + 56<i64>:word32]
+	r1 = CONVERT(Mem0[r1 + 56<i64>:word32], word32, uint64)
 	r28 = r1 + 0<64>
 	Mem0[r30 + -32<i64>:word32] = SLICE(r19, word32, 0)
 	r28 = r28 - r26
-	r20 = (int32) SLICE(r28, word30, 3)
-	r25 = (uint32) SLICE(r28, bool, 32)
+	r20 = CONVERT(SLICE(r28, word30, 3), word30, int32)
+	r25 = CONVERT(SLICE(r28, bool, 32), bool, uint32)
 	r25 = r25 + r20
-	r25 = (int32) SLICE(r25, word31, 2)
+	r25 = CONVERT(SLICE(r25, word31, 2), word31, int32)
 	branch r25 == 0<32> l000004E0_ds_t
 	// succ:  l000004E0_ds_f l000004E0_ds_t
 l000004E0_ds_f:
@@ -172,27 +172,27 @@ l000004E0_ds_t:
 	goto l00000534
 	// succ:  l00000534
 l0000051C:
-	r28 = (uint64) Mem0[r1 + 32<i64>:word32]
-	r22 = (uint64) Mem0[r28:word32]
+	r28 = CONVERT(Mem0[r1 + 32<i64>:word32], word32, uint64)
+	r22 = CONVERT(Mem0[r28:word32], word32, uint64)
 	branch r22 == 0<32> l0000051C_ds_t
 	// succ:  l0000051C_ds_f l0000051C_ds_t
 l0000051C_ds_f:
-	r2 = (uint64) Mem0[r30 + -84<i64>:word32]
+	r2 = CONVERT(Mem0[r30 + -84<i64>:word32], word32, uint64)
 	goto l0000052C
 	// succ:  l0000052C
 l0000051C_ds_t:
-	r2 = (uint64) Mem0[r30 + -84<i64>:word32]
+	r2 = CONVERT(Mem0[r30 + -84<i64>:word32], word32, uint64)
 	goto l00000538
 	// succ:  l00000538
 l0000052C:
 	r2 = r31 + 0<64>
 	call fn000006B0 (retsize: 0;)
 l00000534:
-	r2 = (uint64) Mem0[r30 + -84<i64>:word32]
+	r2 = CONVERT(Mem0[r30 + -84<i64>:word32], word32, uint64)
 	// succ:  l00000538
 l00000538:
 	r30 = r30 + -64<i64>
-	r4 = (uint64) Mem0[r30:word32]
+	r4 = CONVERT(Mem0[r30:word32], word32, uint64)
 	return
 	// succ:  register_tm_clones_exit
 register_tm_clones_exit:
@@ -210,13 +210,13 @@ l00000540:
 	v6 = r30 + 128<i64>
 	r30 = v6
 	Mem0[v6:word32] = SLICE(r7, word32, 0)
-	r7 = (uint64) Mem0[r1 + 20<i64>:word32]
+	r7 = CONVERT(Mem0[r1 + 20<i64>:word32], word32, uint64)
 	Mem0[r30 + -124<i64>:word32] = SLICE(r6, word32, 0)
 	Mem0[r30 + -120<i64>:word32] = SLICE(r5, word32, 0)
 	Mem0[r30 + -116<i64>:word32] = SLICE(r4, word32, 0)
 	Mem0[r30 + -112<i64>:word32] = SLICE(r3, word32, 0)
 	Mem0[r30 + -32<i64>:word32] = SLICE(r19, word32, 0)
-	r28 = (uint64) Mem0[r7:byte]
+	r28 = CONVERT(Mem0[r7:byte], byte, uint64)
 	branch r28 != 0<32> l00000540_ds_t
 	// succ:  l00000540_ds_f l00000540_ds_t
 l00000540_ds_f:
@@ -228,8 +228,8 @@ l00000540_ds_t:
 	goto l00000608
 	// succ:  l00000608
 l00000570:
-	r28 = (uint64) Mem0[r1 + 36<i64>:word32]
-	r28 = (uint64) Mem0[r28:word32]
+	r28 = CONVERT(Mem0[r1 + 36<i64>:word32], word32, uint64)
+	r28 = CONVERT(Mem0[r28:word32], word32, uint64)
 	branch r28 == 0<32> l00000570_ds_t
 	// succ:  l00000570_ds_f l00000570_ds_t
 l00000570_ds_f:
@@ -241,35 +241,35 @@ l00000570_ds_t:
 	goto l00000594
 	// succ:  l00000594
 l00000580:
-	r28 = (uint64) Mem0[r1 + 52<i64>:word32]
+	r28 = CONVERT(Mem0[r1 + 52<i64>:word32], word32, uint64)
 	r4 = r19 + 0<64>
-	r26 = (uint64) Mem0[r28:word32]
+	r26 = CONVERT(Mem0[r28:word32], word32, uint64)
 	call fn0000042C (retsize: 0;)
 	r19 = r4 + 0<64>
 	// succ:  l00000594
 l00000594:
 	r1 = r19 + 0<i32>
 	r28 = r1 + 0<64>
-	r5 = (uint64) Mem0[r28 + 48<i64>:word32]
+	r5 = CONVERT(Mem0[r28 + 48<i64>:word32], word32, uint64)
 	r1 = r19 + 0<i32>
-	r28 = (uint64) Mem0[r1 + 12<i64>:word32]
+	r28 = CONVERT(Mem0[r1 + 12<i64>:word32], word32, uint64)
 	r5 = r5 - r28
 	r1 = r19 + 0<i32>
-	r5 = (int32) SLICE(r5, word30, 3)
-	r3 = (uint64) Mem0[r1 + 24<i64>:word32]
-	r28 = (uint64) Mem0[r3:word32]
+	r5 = CONVERT(SLICE(r5, word30, 3), word30, int32)
+	r3 = CONVERT(Mem0[r1 + 24<i64>:word32], word32, uint64)
+	r28 = CONVERT(Mem0[r3:word32], word32, uint64)
 	r1 = r19 + 0<i32>
 	r5 = r5 + -1<i64>
-	r1 = (uint64) Mem0[r1 + 12<i64>:word32]
+	r1 = CONVERT(Mem0[r1 + 12<i64>:word32], word32, uint64)
 	r6 = r1 + 0<64>
 l00000608:
-	r2 = (uint64) Mem0[r30 + -148<i64>:word32]
-	r6 = (uint64) Mem0[r30 + -124<i64>:word32]
-	r5 = (uint64) Mem0[r30 + -120<i64>:word32]
-	r4 = (uint64) Mem0[r30 + -116<i64>:word32]
-	r3 = (uint64) Mem0[r30 + -112<i64>:word32]
+	r2 = CONVERT(Mem0[r30 + -148<i64>:word32], word32, uint64)
+	r6 = CONVERT(Mem0[r30 + -124<i64>:word32], word32, uint64)
+	r5 = CONVERT(Mem0[r30 + -120<i64>:word32], word32, uint64)
+	r4 = CONVERT(Mem0[r30 + -116<i64>:word32], word32, uint64)
+	r3 = CONVERT(Mem0[r30 + -112<i64>:word32], word32, uint64)
 	r30 = r30 + -128<i64>
-	r7 = (uint64) Mem0[r30:word32]
+	r7 = CONVERT(Mem0[r30:word32], word32, uint64)
 	return
 	// succ:  __do_global_dtors_aux_exit
 __do_global_dtors_aux_exit:
@@ -287,9 +287,9 @@ l00000624:
 	r30 = v4
 	Mem0[v4:word32] = SLICE(r4, word32, 0)
 	Mem0[r30 + -32<i64>:word32] = SLICE(r19, word32, 0)
-	r2 = (uint64) Mem0[r30 + -84<i64>:word32]
+	r2 = CONVERT(Mem0[r30 + -84<i64>:word32], word32, uint64)
 	r30 = r30 + -64<i64>
-	r4 = (uint64) Mem0[r30:word32]
+	r4 = CONVERT(Mem0[r30:word32], word32, uint64)
 	return
 	// succ:  call___do_global_dtors_aux_exit
 call___do_global_dtors_aux_exit:
@@ -303,7 +303,7 @@ frame_dummy_entry:
 	// succ:  l0000063C
 l0000063C:
 	Mem0[r30 + -20<i64>:word32] = SLICE(r2, word32, 0)
-	r2 = (uint64) Mem0[r30 + -20<i64>:word32]
+	r2 = CONVERT(Mem0[r30 + -20<i64>:word32], word32, uint64)
 	goto 0x000004E0<p32>
 	// succ:  l00000644_thunk_register_tm_clones
 l00000644_thunk_register_tm_clones:
@@ -325,9 +325,9 @@ l00000650:
 	r30 = v4
 	Mem0[v4:word32] = SLICE(r4, word32, 0)
 	Mem0[r30 + -32<i64>:word32] = SLICE(r19, word32, 0)
-	r2 = (uint64) Mem0[r30 + -84<i64>:word32]
+	r2 = CONVERT(Mem0[r30 + -84<i64>:word32], word32, uint64)
 	r30 = r30 + -64<i64>
-	r4 = (uint64) Mem0[r30:word32]
+	r4 = CONVERT(Mem0[r30:word32], word32, uint64)
 	return
 	// succ:  call_frame_dummy_exit
 call_frame_dummy_exit:
@@ -364,8 +364,8 @@ fn000006B0_entry:
 	r30 = fp
 	// succ:  l000006B0
 l000006B0:
-	0<64> = (uint32) SLICE(r22, bool, 2)
-	r21 = (uint64) Mem0[r22 + -2<i64>:word32]
+	0<64> = CONVERT(SLICE(r22, bool, 2), bool, uint32)
+	r21 = CONVERT(Mem0[r22 + -2<i64>:word32], word32, uint64)
 	call r22 (retsize: 0;)
 	return
 	// succ:  fn000006B0_exit
@@ -398,10 +398,10 @@ l000006C4_ds_t:
 l000006DC:
 	r20 = r0 + 4095<i64>
 l00000748:
-	r2 = (uint64) Mem0[r30 + -84<i64>:word32]
-	r3 = (uint64) Mem0[r30 + -60<i64>:word32]
+	r2 = CONVERT(Mem0[r30 + -84<i64>:word32], word32, uint64)
+	r3 = CONVERT(Mem0[r30 + -60<i64>:word32], word32, uint64)
 	r30 = r30 + -64<i64>
-	r4 = (uint64) Mem0[r30:word32]
+	r4 = CONVERT(Mem0[r30:word32], word32, uint64)
 	return
 	// succ:  __canonicalize_funcptr_for_compare_exit
 __canonicalize_funcptr_for_compare_exit:
@@ -420,13 +420,13 @@ l00000800:
 	r30 = v6
 	Mem0[v6:word32] = SLICE(r7, word32, 0)
 	Mem0[r30 + -120<i64>:word32] = SLICE(r5, word32, 0)
-	r5 = (uint64) Mem0[r1 + 44<i64>:word32]
+	r5 = CONVERT(Mem0[r1 + 44<i64>:word32], word32, uint64)
 	Mem0[r30 + -116<i64>:word32] = SLICE(r4, word32, 0)
 	r4 = r19 + 0<64>
 	Mem0[r30 + -112<i64>:word32] = SLICE(r3, word32, 0)
 	Mem0[r30 + -32<i64>:word32] = SLICE(r19, word32, 0)
 	Mem0[r30 + -124<i64>:word32] = SLICE(r6, word32, 0)
-	r6 = (uint64) Mem0[r5 + -4<i64>:word32]
+	r6 = CONVERT(Mem0[r5 + -4<i64>:word32], word32, uint64)
 	r26 = r6 + 0<64>
 	call __canonicalize_funcptr_for_compare (retsize: 0;)
 	r19 = r4 + 0<64>
@@ -454,7 +454,7 @@ l00000858:
 	r2 = r31 + 0<64>
 	call fn000006B0 (retsize: 0;)
 	r5 = r5 + -4<i64>
-	r6 = (uint64) Mem0[r5:word32]
+	r6 = CONVERT(Mem0[r5:word32], word32, uint64)
 	r19 = r4 + 0<64>
 	r26 = r6 + 0<64>
 	r4 = r19 + 0<64>
@@ -475,13 +475,13 @@ l00000858_ds_t:
 	goto l00000858
 	// succ:  l00000858
 l00000898:
-	r2 = (uint64) Mem0[r30 + -148<i64>:word32]
-	r6 = (uint64) Mem0[r30 + -124<i64>:word32]
-	r5 = (uint64) Mem0[r30 + -120<i64>:word32]
-	r4 = (uint64) Mem0[r30 + -116<i64>:word32]
-	r3 = (uint64) Mem0[r30 + -112<i64>:word32]
+	r2 = CONVERT(Mem0[r30 + -148<i64>:word32], word32, uint64)
+	r6 = CONVERT(Mem0[r30 + -124<i64>:word32], word32, uint64)
+	r5 = CONVERT(Mem0[r30 + -120<i64>:word32], word32, uint64)
+	r4 = CONVERT(Mem0[r30 + -116<i64>:word32], word32, uint64)
+	r3 = CONVERT(Mem0[r30 + -112<i64>:word32], word32, uint64)
 	r30 = r30 + -128<i64>
-	r7 = (uint64) Mem0[r30:word32]
+	r7 = CONVERT(Mem0[r30:word32], word32, uint64)
 	return
 	// succ:  __do_global_ctors_aux_exit
 __do_global_ctors_aux_exit:
@@ -499,9 +499,9 @@ l000008B4:
 	r30 = v4
 	Mem0[v4:word32] = SLICE(r4, word32, 0)
 	Mem0[r30 + -32<i64>:word32] = SLICE(r19, word32, 0)
-	r2 = (uint64) Mem0[r30 + -84<i64>:word32]
+	r2 = CONVERT(Mem0[r30 + -84<i64>:word32], word32, uint64)
 	r30 = r30 + -64<i64>
-	r4 = (uint64) Mem0[r30:word32]
+	r4 = CONVERT(Mem0[r30:word32], word32, uint64)
 	return
 	// succ:  call___do_global_ctors_aux_exit
 call___do_global_ctors_aux_exit:

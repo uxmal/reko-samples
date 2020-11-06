@@ -1,0 +1,14 @@
+void _fini(word64 r4, word64 r19)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  r19:[0..63] r4:[0..31]
+// LiveOut:
+// Trashed: r1 r19 r2 r28 r3 r4 r5 r6 r7
+// Preserved: r30
+_fini_entry:
+l00000938:
+	__do_global_dtors_aux(r19)
+	return
+_fini_exit:
+
+

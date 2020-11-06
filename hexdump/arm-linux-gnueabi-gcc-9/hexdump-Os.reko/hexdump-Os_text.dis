@@ -1,0 +1,160 @@
+void main()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed: ip pc r0 r1 r2 r3
+// Preserved: r4 r5 sp
+main_entry:
+l00000340:
+	fn00000328()
+	fn00000334()
+	return
+main_exit:
+
+
+void call_weak_fn(word32 lr)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      _init
+// MayUse:  lr:[0..31]
+// LiveOut:
+// Trashed: NZCV ip lr pc r2 r3
+// Preserved: sp
+call_weak_fn_entry:
+l00000398:
+	branch Mem0[0x000003A8<p32> + Mem0[0x000003B4<p32>:word32] + Mem0[0x000003B8<p32>:word32]:word32] != 0<32> l000003B0
+l000003B0:
+l000003B0_thunk_fn0000031C:
+	fn0000031C()
+	return
+l000003AC_1:
+	call lr (retsize: 0;)
+		uses: lr:lr
+	return
+call_weak_fn_exit:
+
+
+void deregister_tm_clones(word32 lr)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      __do_global_dtors_aux
+// MayUse:  lr:[0..31]
+// LiveOut:
+// Trashed: NZCV lr pc r0 r2 r3
+// Preserved: sp
+deregister_tm_clones_entry:
+l000003BC:
+	word32 r3_10 = 0x000003DC<p32> + Mem0[0x000003F8<p32>:word32]
+	branch 0x000003D0<p32> + Mem0[0x000003F4<p32>:word32] != 0x000003CC<p32> + Mem0[0x000003F0<p32>:word32] l000003DC
+l000003DC:
+	word32 r3_13 = Mem0[r3_10 + Mem0[0x000003FC<p32>:word32]:word32]
+	branch r3_13 != 0<32> l000003EC
+l000003EC:
+	word32 lr_20
+	call r3_13 (retsize: 0;)
+		uses: lr:lr_20
+		defs: lr:lr_20
+	return
+l000003E8_1:
+	call lr (retsize: 0;)
+		uses: lr:lr
+	return
+l000003D8_1:
+	call lr (retsize: 0;)
+		uses: lr:lr
+	return
+deregister_tm_clones_exit:
+
+
+void register_tm_clones(word32 lr)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      frame_dummy
+// MayUse:  lr:[0..31]
+// LiveOut:
+// Trashed: NZCV lr r0 r1 r2 r3
+// Preserved: sp
+register_tm_clones_entry:
+l00000400:
+	word32 r1_8 = 0x00000414<p32> + Mem0[0x00000444<p32>:word32] - (0x00000410<p32> + Mem0[0x00000440<p32>:word32])
+	word32 r3_14 = 0x0000042C<p32> + Mem0[0x00000448<p32>:word32]
+	branch (r1_8 >>u 31<i32>) + (r1_8 >> 2<i32>) >> 1<i32> != 0<32> l0000042C
+l0000042C:
+	word32 r3_17 = Mem0[r3_14 + Mem0[0x0000044C<p32>:word32]:word32]
+	branch r3_17 != 0<32> l0000043C
+l0000043C:
+	word32 lr_24
+	call r3_17 (retsize: 0;)
+		uses: lr:lr_24
+		defs: lr:lr_24
+	return
+l00000438_1:
+	call lr (retsize: 0;)
+		uses: lr:lr
+	return
+l00000428_1:
+	call lr (retsize: 0;)
+		uses: lr:lr
+	return
+register_tm_clones_exit:
+
+
+void __do_global_dtors_aux(word32 r4, word32 lr)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  lr:[0..31] r4:[0..31]
+// LiveOut:
+// Trashed: NZCV ip lr pc r0 r2 r3 r4
+// Preserved: sp
+__do_global_dtors_aux_entry:
+l00000450:
+	word32 r2_8 = 0x00000468<p32> + Mem0[0x000004A8<p32>:word32]
+	branch CONVERT(Mem0[0x00000460<p32> + Mem0[0x000004A4<p32>:word32]:byte], byte, word32) == 0<32> l0000046C
+l0000046C:
+	branch Mem15[r2_8 + Mem0[0x000004AC<p32>:word32]:word32] == 0<32> l0000048C
+l00000480:
+	fn00000310()
+l0000048C:
+	deregister_tm_clones(lr)
+	Mem38[0x000004A0<p32> + Mem15[0x000004B4<p32>:word32]:byte] = 1<8>
+	return
+l00000468_1:
+	word32 ip_49
+	call lr (retsize: 0;)
+		uses: ip:ip_49,lr:lr,r4:r4
+		defs: ip:ip_49
+	return
+__do_global_dtors_aux_exit:
+
+
+void frame_dummy(word32 lr)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  lr:[0..31]
+// LiveOut:
+// Trashed: NZCV lr r0 r1 r2 r3
+// Preserved: sp
+frame_dummy_entry:
+l000004B8:
+l000004B8_thunk_register_tm_clones:
+	register_tm_clones(lr)
+	return
+frame_dummy_exit:
+
+
+void hexdump()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed:
+// Preserved:
+// Terminates process
+hexdump_exit:
+hexdump_entry:
+
+
