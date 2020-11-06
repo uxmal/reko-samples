@@ -1,0 +1,23 @@
+void _init()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed: r2 r25
+// Preserved: r28 ra sp
+_init_entry:
+l00000000000005D0:
+	branch Mem10[0x10998<64>:word64] == 0<64> l00000000000005D0_ds_t
+l00000000000005D0_ds_t:
+l0000000000000600:
+	call Mem10[0x00000000000208D0<p64>:word64] (retsize: 0;)
+		uses: r2:0x18920<64>
+	call Mem10[0x00000000000208C8<p64>:word64] (retsize: 0;)
+		uses: r2:0x0000000000018920<p64>
+	return
+_init_exit:
+l00000000000005D0_ds_f:
+l00000000000005F4:
+	call Mem10[0x10998<64>:word64] (retsize: 0;)
+
+

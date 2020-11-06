@@ -1,0 +1,16 @@
+void fn0000000000001050()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      __do_global_dtors_aux
+// MayUse: 
+// LiveOut:
+// Trashed: Top
+// Preserved: rsp
+fn0000000000001050_entry:
+l0000000000001050:
+	call Mem0[0x0000000000003FE0<p64>:word64] (retsize: 0;)
+	return
+fn0000000000001050_exit:
+
+

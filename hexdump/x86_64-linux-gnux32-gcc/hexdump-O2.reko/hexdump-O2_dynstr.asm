@@ -1,0 +1,10 @@
+;;; Segment .dynstr (0000021C)
+0000021C                                     00 5F 5F 67             .__g
+00000220 6D 6F 6E 5F 73 74 61 72 74 5F 5F 00 5F 49 54 4D mon_start__._ITM
+00000230 5F 64 65 72 65 67 69 73 74 65 72 54 4D 43 6C 6F _deregisterTMClo
+00000240 6E 65 54 61 62 6C 65 00 5F 49 54 4D 5F 72 65 67 neTable._ITM_reg
+00000250 69 73 74 65 72 54 4D 43 6C 6F 6E 65 54 61 62 6C isterTMCloneTabl
+00000260 65 00 5F 5F 63 78 61 5F 66 69 6E 61 6C 69 7A 65 e.__cxa_finalize
+00000270 00 68 65 78 64 75 6D 70 00 6D 61 69 6E 00 73 74 .hexdump.main.st
+00000280 72 6C 65 6E 00 6C 69 62 63 2E 73 6F 2E 36 00 47 rlen.libc.so.6.G
+00000290 4C 49 42 43 5F 32 2E 31 36 00                   LIBC_2.16.     

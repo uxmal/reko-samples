@@ -1,0 +1,175 @@
+void main(word32 esi)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  esi:[0..31]
+// LiveOut:
+// Trashed: SCZO r8 rax rcx rdi rdx rsi Top
+// Preserved: rsp
+main_entry:
+l0000000000001050:
+	word32 edi_27 = SLICE(CONVERT(Mem6[esi:word32], word32, uint64), word32, 0)
+	word32 ecx_18 = 0xFFFFFFFF<32>
+l0000000000001064:
+	branch ecx_18 == 0<32> l0000000000001067
+l0000000000001064_1:
+	edi_27 = edi_67 + 1<i32>
+	ecx_18 = ecx_18 - 1<32>
+	edi_67 = edi_27
+	branch Mem6[edi_67:byte] == 0<8> l0000000000001064
+l0000000000001067:
+	fn0000000000001040()
+	return
+main_exit:
+
+
+void deregister_tm_clones()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      __do_global_dtors_aux
+// MayUse: 
+// LiveOut:
+// Trashed: SCZO rax rdi Top
+// Preserved: rsp
+deregister_tm_clones_entry:
+l0000000000001080:
+	branch SLICE(CONVERT(SLICE(0x000000000000401C<p64>, word32, 0), word32, uint64), word32, 0) == SLICE(CONVERT(SLICE(0x000000000000401C<p64>, word32, 0), word32, uint64), word32, 0) l00000000000010A0
+l0000000000001090:
+	word32 eax_15 = SLICE(CONVERT(Mem0[0x0000000000003FF0<p64>:word32], word32, uint64), word32, 0)
+	branch eax_15 == 0<32> l00000000000010A0
+l00000000000010A0:
+	return
+l000000000000109A:
+	word64 rax_20 = CONVERT(eax_15, word32, uint64)
+	call rax_20 (retsize: 0;)
+		uses: eax:SLICE(rax_20, word32, 0)
+	return
+deregister_tm_clones_exit:
+
+
+void register_tm_clones()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      frame_dummy
+// MayUse: 
+// LiveOut:
+// Trashed: SCZO rax rdi rsi Top
+// Preserved: rsp
+register_tm_clones_entry:
+l00000000000010B0:
+	word32 esi_12 = SLICE(CONVERT(SLICE(0x000000000000401C<p64> - 0x000000000000401C<p64>, word32, 0), word32, uint64), word32, 0)
+	branch SLICE(CONVERT(SLICE(CONVERT((esi_12 >>u 0x1F<32>) + (SLICE(CONVERT(esi_12, word32, uint64), word32, 0) >> 2<32>), word32, uint64), word32, 0) >> 1<32>, word32, uint64), word32, 0) == 0<32> l00000000000010E0
+l00000000000010CC:
+	word32 eax_33 = SLICE(CONVERT(Mem0[0x0000000000003FE8<p64>:word32], word32, uint64), word32, 0)
+	branch eax_33 == 0<32> l00000000000010E0
+l00000000000010E0:
+	return
+l00000000000010D6:
+	word64 rax_38 = CONVERT(eax_33, word32, uint64)
+	call rax_38 (retsize: 0;)
+		uses: eax:SLICE(rax_38, word32, 0)
+	return
+register_tm_clones_exit:
+
+
+void __do_global_dtors_aux()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      _fini
+// MayUse: 
+// LiveOut:
+// Trashed: SCZO rax rdi Top
+// Preserved: r12 rbp rbx rsp
+__do_global_dtors_aux_entry:
+l00000000000010F0:
+	branch Mem0[0x000000000000401C<p64>:byte] != 0<8> l0000000000001168
+l0000000000001168:
+	return
+l00000000000010F9:
+	branch SLICE(CONVERT(Mem9[0x0000000000003FE0<p64>:word32], word32, uint64), word32, 0) == 0<32> l0000000000001114
+l0000000000001109:
+	fn0000000000001048()
+l0000000000001114:
+	word32 eax_32 = SLICE(CONVERT(SLICE(0x0000000000003F48<p64>, word32, 0), word32, uint64), word32, 0)
+	word64 rbx_45 = CONVERT(SLICE(CONVERT(SLICE(CONVERT(SLICE(CONVERT(SLICE(0x0000000000003F4C<p64>, word32, 0), word32, uint64), word32, 0) - eax_32, word32, uint64), word32, 0) >> 2<32>, word32, uint64), word32, 0) - 1<32>, word32, uint64)
+	word32 r12d_90 = SLICE(CONVERT(eax_32, word32, uint64), word32, 0)
+	word32 eax_46 = SLICE(CONVERT(Mem20[0x0000000000004020<p64>:word32], word32, uint64), word32, 0)
+	branch eax_46 >=u SLICE(rbx_45, word32, 0) l0000000000001152
+l0000000000001135:
+l0000000000001138:
+	word32 eax_53 = SLICE(CONVERT(eax_46 + 1<32>, word32, uint64), word32, 0)
+	Mem55[0x0000000000004020<p64>:word32] = eax_53
+	word64 rax_58 = CONVERT(Mem55[r12d_90 + eax_53 * 4<32>:word32], word32, uint64)
+	word64 rdi_66
+	call rax_58 (retsize: 8;)
+		uses: rax:rax_58,rdi:rdi_66
+		defs: rdi:rdi_66
+	eax_46 = SLICE(CONVERT(Mem55[0x0000000000004020<p64>:word32], word32, uint64), word32, 0) (alias)
+	branch eax_46 <u SLICE(rbx_45, word32, 0) l0000000000001138
+l0000000000001152:
+	deregister_tm_clones()
+	Mem87[0x000000000000401C<p64>:byte] = 1<8>
+	return
+__do_global_dtors_aux_exit:
+
+
+void frame_dummy()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      _init
+// MayUse: 
+// LiveOut:
+// Trashed: SCZO rax rdi rsi Top
+// Preserved: rsp
+frame_dummy_entry:
+l0000000000001170:
+l0000000000001170_thunk_register_tm_clones:
+	register_tm_clones()
+	return
+frame_dummy_exit:
+
+
+void hexdump()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed: Top
+// Preserved: rsp
+hexdump_entry:
+l0000000000001175:
+	return
+hexdump_exit:
+
+
+void __do_global_ctors_aux()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      _init
+// MayUse: 
+// LiveOut:
+// Trashed: SCZO rax rbp rbx Top
+// Preserved: rsp
+__do_global_ctors_aux_entry:
+l0000000000001180:
+	word64 rax_26 = CONVERT(Mem0[0x0000000000003F40<p64>:word32], word32, uint64)
+	branch SLICE(rax_26, word32, 0) == 0xFFFFFFFF<32> l00000000000011B8
+l00000000000011B8:
+	return
+l000000000000118B:
+	word64 rbx_20 = CONVERT(SLICE(0x0000000000003F40<p64>, word32, 0), word32, uint64)
+l00000000000011A0:
+	call rax_26 (retsize: 8;)
+	word32 ebx_33 = SLICE(rbx_20, word32, 0)
+	rax_26 = CONVERT(Mem18[ebx_33 - 4<32>:word32], word32, uint64)
+	rbx_20 = CONVERT(ebx_33 - 4<32>, word32, uint64)
+	branch SLICE(rax_26, word32, 0) != 0xFFFFFFFF<32> l00000000000011A0
+l00000000000011AE:
+	return
+__do_global_ctors_aux_exit:
+
+

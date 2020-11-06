@@ -1,25 +1,14 @@
-// _fini
-// Return size: 0
-define _fini
+void _fini(word64 r4, word64 r19)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  r19:[0..63] r4:[0..31]
+// LiveOut:
+// Trashed: r1 r19 r2 r28 r3 r4 r5 r6 r7
+// Preserved: r30
 _fini_entry:
-	r30 = fp
-	// succ:  l000008CC
 l000008CC:
-	Mem0[r30 + -20<i64>:word32] = SLICE(r2, word32, 0)
-	v4 = r30 + 64<i64>
-	r30 = v4
-	Mem0[v4:word32] = SLICE(r4, word32, 0)
-	Mem0[r30 + -32<i64>:word32] = SLICE(r19, word32, 0)
-	r4 = r19 + 0<64>
-	r4 = r19 + 0<64>
-	call __do_global_dtors_aux (retsize: 0;)
-	r19 = r4 + 0<64>
-	r2 = CONVERT(Mem0[r30 + -84<i64>:word32], word32, uint64)
-	r19 = r4 + 0<64>
-	r30 = r30 + -64<i64>
-	r4 = CONVERT(Mem0[r30:word32], word32, uint64)
+	__do_global_dtors_aux(r19)
 	return
-	// succ:  _fini_exit
 _fini_exit:
 
 

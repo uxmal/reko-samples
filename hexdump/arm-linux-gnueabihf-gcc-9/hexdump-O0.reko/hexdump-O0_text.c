@@ -61,17 +61,19 @@ int32 g_dw03C0 = 44;
 void __do_global_dtors_aux()
 {
 	ptr32 r2_n = g_dw03F4 + 0x03D0;
-	if ((word32) (0x03F0 + 0x03CE) != 0x00)
+	if ((word32) g_ptr03F0->b03CE != 0x00)
 		return;
 	if (r2_n + g_dw03F8 == 0x00)
 	{
 		deregister_tm_clones();
-		0x0400 + 0x03EE = (word32) 0x01;
+		g_ptr0400->b03EE = 0x01;
 	}
 }
 
+struct Eq_n * g_ptr03F0 = &g_t10C66;
 word32 g_dw03F4 = 68656;
 int32 g_dw03F8 = 28;
+struct Eq_n * g_ptr0400 = &g_t10C46;
 // 00000404: void frame_dummy()
 void frame_dummy()
 {

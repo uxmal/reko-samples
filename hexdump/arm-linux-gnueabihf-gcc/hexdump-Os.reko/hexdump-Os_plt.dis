@@ -1,0 +1,17 @@
+void fn0000031C()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      call_weak_fn
+// MayUse: 
+// LiveOut:
+// Trashed: ip pc
+// Preserved: sp
+fn0000031C_entry:
+l0000031C:
+	call Mem0[0x00011010<p32>:word32] (retsize: 0;)
+		uses: ip:0x00011010<p32>
+	return
+fn0000031C_exit:
+
+

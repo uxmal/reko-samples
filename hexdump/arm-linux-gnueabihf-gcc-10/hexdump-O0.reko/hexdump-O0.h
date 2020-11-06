@@ -4,7 +4,7 @@
 
 /*
 // Equivalence classes ////////////
-Eq_1: (struct "Globals" (2FC code t02FC) (35C int32 dw035C) (360 int32 dw0360) (380 word32 dw0380) (384 word32 dw0384) (388 word32 dw0388) (38C int32 dw038C) (3B4 word32 dw03B4) (3B8 word32 dw03B8) (3BC word32 dw03BC) (3C0 int32 dw03C0) (3F4 word32 dw03F4) (3F8 int32 dw03F8) (11010 (ptr32 code) ptr11010))
+Eq_1: (struct "Globals" (2FC code t02FC) (35C int32 dw035C) (360 int32 dw0360) (380 word32 dw0380) (384 word32 dw0384) (388 word32 dw0388) (38C int32 dw038C) (3B4 word32 dw03B4) (3B8 word32 dw03B8) (3BC word32 dw03BC) (3C0 int32 dw03C0) (3F0 (ptr32 Eq_80) ptr03F0) (3F4 word32 dw03F4) (3F8 int32 dw03F8) (400 (ptr32 Eq_98) ptr0400) (10C46 Eq_98 t10C46) (10C66 Eq_80 t10C66) (11010 (ptr32 code) ptr11010))
 	globals_t (in globals : (ptr32 (struct "Globals")))
 Eq_3: (fn void ((ptr32 code)))
 	T_3 (in call_weak_fn : ptr32)
@@ -18,9 +18,13 @@ Eq_61: (union "Eq_61" (int32 u0) (uint32 u1))
 	T_61 (in r1_9 >> 2<u32> : word32)
 Eq_62: (union "Eq_62" (int32 u0) (uint32 u1))
 	T_62 (in (r1_9 >>u 31<i32>) + (r1_9 >> 2<u32>) : word32)
+Eq_80: (struct "Eq_80" (3CE byte b03CE))
+	T_80 (in Mem7[0x000003F0<p32>:word32] : word32)
 Eq_93: (fn void ())
 	T_93 (in deregister_tm_clones : ptr32)
 	T_94 (in signature of deregister_tm_clones : void)
+Eq_98: (struct "Eq_98" (3EE byte b03EE))
+	T_98 (in Mem7[0x00000400<p32>:word32] : word32)
 Eq_102: (fn void ())
 	T_102 (in register_tm_clones : ptr32)
 	T_103 (in signature of register_tm_clones : void)
@@ -341,17 +345,17 @@ T_78: (in g_dw03F4 + 0x3D0<u32> : word32)
   OrigDataType: word32
 T_79: (in 000003F0 : ptr32)
   Class: Eq_79
-  DataType: ptr32
-  OrigDataType: ptr32
+  DataType: (ptr32 (ptr32 Eq_80))
+  OrigDataType: (ptr32 (struct (0 T_80 t0000)))
 T_80: (in Mem7[0x000003F0<p32>:word32] : word32)
   Class: Eq_80
-  DataType: word32
-  OrigDataType: word32
+  DataType: (ptr32 Eq_80)
+  OrigDataType: (ptr32 (struct (3CE T_83 t03CE)))
 T_81: (in 000003CE : ptr32)
   Class: Eq_81
   DataType: ptr32
   OrigDataType: ptr32
-T_82: (in 0x3F0<u32> + 0x3CE<u32> : word32)
+T_82: (in Mem7[0x000003F0<p32>:word32] + 0x000003CE<p32> : word32)
   Class: Eq_82
   DataType: word32
   OrigDataType: word32
@@ -367,7 +371,7 @@ T_85: (in 0<32> : word32)
   Class: Eq_84
   DataType: word32
   OrigDataType: word32
-T_86: (in (word32) (0x3F0<u32> + 0x3CE<u32>) != 0<32> : bool)
+T_86: (in (word32) g_ptr03F0->b03CE != 0<32> : bool)
   Class: Eq_86
   DataType: bool
   OrigDataType: bool
@@ -413,17 +417,17 @@ T_96: (in 1<8> : byte)
   OrigDataType: byte
 T_97: (in 00000400 : ptr32)
   Class: Eq_97
-  DataType: ptr32
-  OrigDataType: ptr32
+  DataType: (ptr32 (ptr32 Eq_98))
+  OrigDataType: (ptr32 (struct (0 T_98 t0000)))
 T_98: (in Mem7[0x00000400<p32>:word32] : word32)
   Class: Eq_98
-  DataType: word32
-  OrigDataType: word32
+  DataType: (ptr32 Eq_98)
+  OrigDataType: (ptr32 (struct (3EE T_101 t03EE)))
 T_99: (in 000003EE : ptr32)
   Class: Eq_99
   DataType: ptr32
   OrigDataType: ptr32
-T_100: (in 0x400<u32> + 0x3EE<u32> : word32)
+T_100: (in Mem7[0x00000400<p32>:word32] + 0x000003EE<p32> : word32)
   Class: Eq_100
   DataType: word32
   OrigDataType: word32
@@ -520,8 +524,12 @@ typedef struct Globals {
 	word32 dw03B8;	// 3B8
 	word32 dw03BC;	// 3BC
 	int32 dw03C0;	// 3C0
+	struct Eq_80 * ptr03F0;	// 3F0
 	word32 dw03F4;	// 3F4
 	int32 dw03F8;	// 3F8
+	struct Eq_98 * ptr0400;	// 400
+	Eq_98 t10C46;	// 10C46
+	Eq_80 t10C66;	// 10C66
 	<anonymous> * ptr11010;	// 11010
 } Eq_1;
 
@@ -547,7 +555,15 @@ typedef union Eq_62 {
 	uint32 u1;
 } Eq_62;
 
+typedef struct Eq_80 {
+	byte b03CE;	// 3CE
+} Eq_80;
+
 typedef void (Eq_93)();
+
+typedef struct Eq_98 {
+	byte b03EE;	// 3EE
+} Eq_98;
 
 typedef void (Eq_102)();
 

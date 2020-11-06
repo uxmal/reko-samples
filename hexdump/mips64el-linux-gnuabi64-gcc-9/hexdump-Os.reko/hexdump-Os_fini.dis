@@ -1,0 +1,17 @@
+void _fini()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      strlen
+// MayUse: 
+// LiveOut:
+// Trashed: r2 r25
+// Preserved: r28 ra sp
+_fini_entry:
+l00000000000009C0:
+	call Mem10[0x00000000000209D8<p64>:word64] (retsize: 0;)
+		uses: r2:0x18A20<64>
+	return
+_fini_exit:
+
+

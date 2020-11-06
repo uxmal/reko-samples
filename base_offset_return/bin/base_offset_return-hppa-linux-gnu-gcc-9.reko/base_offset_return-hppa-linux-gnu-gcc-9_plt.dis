@@ -1,0 +1,16 @@
+void fn00001130(word64 r20)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  r20:[0..63]
+// LiveOut:
+// Trashed: r20 r21
+// Preserved: r30
+fn00001130_entry:
+l00001130:
+	word64 r21_6 = CONVERT(Mem0[r20 + 4<i64>:word32], word32, uint64)
+	call r21_6 (retsize: 0;)
+		uses: r20:r20,r21:r21_6
+	return
+fn00001130_exit:
+
+

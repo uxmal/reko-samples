@@ -1,0 +1,20 @@
+void _init()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed: SCZO rax rbp rbx rdi rsi Top
+// Preserved: rsp
+_init_entry:
+l0000000000001000:
+	word64 rax_6 = Mem0[0x0000000000003FF8<p64>:word64]
+	branch rax_6 == 0<64> l0000000000001012
+l0000000000001010:
+	call rax_6 (retsize: 8;)
+l0000000000001012:
+	frame_dummy()
+	__do_global_ctors_aux()
+	return
+_init_exit:
+
+

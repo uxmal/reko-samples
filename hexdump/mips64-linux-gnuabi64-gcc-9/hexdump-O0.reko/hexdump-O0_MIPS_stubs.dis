@@ -1,0 +1,17 @@
+void strlen(word64 r28, word64 ra)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  r28:[0..63] ra:[0..63]
+// LiveOut:
+// Trashed: r15 r2 r24 r25
+// Preserved: sp
+strlen_entry:
+l0000000000000A70:
+	call Mem0[r28 - 0x7FF0<64>:word64] (retsize: 0;)
+		uses: r15:ra,r24:5<i64>
+l0000000000000A8C_thunk__fini:
+	_fini()
+	return
+strlen_exit:
+
+

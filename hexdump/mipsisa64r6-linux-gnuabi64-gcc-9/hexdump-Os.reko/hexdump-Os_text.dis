@@ -1,0 +1,153 @@
+void main(word64 r0, word64 r2, word64 r4, word64 ra)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  r0:[0..63] r2:[0..63] r4:[0..63] ra:[0..63]
+// LiveOut:
+// Trashed: r0 r2 r25 r4 r5 r6 r7 r8
+// Preserved: r16 r28 ra sp
+main_entry:
+l0000000000000720:
+	Mem20[r0:word64] = __read_cpr2(0x19<8>)
+	word64 r25_22 = Mem20[0x10A50<64>:word64]
+	word64 r4_29
+	word64 r5_30
+	call r25_22 (retsize: 0;)
+		uses: r2:r2,r25:r25_22,r4:Mem20[0x10A50<64>:word64],r5:3<i64>,r6:r4,r7:r2,r8:r4 << 1<8>
+		defs: r4:r4_29,r5:r5_30
+	call ra (retsize: 0;)
+		uses: r2:0<64>,r4:r4_29,r5:r5_30
+	return
+main_exit:
+
+
+void deregister_tm_clones(word64 r0, word64 ra)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  r0:[0..63] ra:[0..63]
+// LiveOut:
+// Trashed: r0 r2 r25 r3 r4 r5 r6
+// Preserved: sp
+deregister_tm_clones_entry:
+l0000000000000780:
+	__write_cpr2(0<8>, Mem0[Mem0[0x10A68<64>:word64] + 2<64>:word64])
+	__write_cpr2(0x19<8>, Mem0[r0:word64])
+	__write_cpr2(0x1F<8>, Mem0[r0:word64])
+l00000000000007AC_thunk_register_tm_clones:
+	register_tm_clones(r0, ra)
+	return
+deregister_tm_clones_exit:
+
+
+void register_tm_clones(word64 r0, word64 ra)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      deregister_tm_clones
+// MayUse:  r0:[0..63] ra:[0..63]
+// LiveOut:
+// Trashed: r0 r2 r25 r3 r4 r5 r6
+// Preserved: sp
+register_tm_clones_entry:
+l00000000000007B0:
+	word64 r2_11 = Mem0[0x109F8<64>:word64] - (Mem0[0x109F0<64>:word64] + 2528<i64>)
+	__write_cpr2(0<8>, Mem0[((r2_11 >>u 0x3F<8>) + (r2_11 >> 3<8>) >> 1<8>) + 4<64>:word64])
+	__write_cpr2(0<8>, Mem0[Mem0[0x10A48<64>:word64] + 2<64>:word64])
+	__write_cpr2(0x19<8>, Mem0[r0:word64])
+	__write_cpr2(0x1F<8>, Mem0[r0:word64])
+l00000000000007F4_thunk___do_global_dtors_aux:
+	__do_global_dtors_aux(r0, ra)
+	return
+register_tm_clones_exit:
+
+
+void __do_global_dtors_aux(word64 r0, word64 ra)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      register_tm_clones
+// MayUse:  r0:[0..63] ra:[0..63]
+// LiveOut:
+// Trashed: r0 r2 r25 r3 r4
+// Preserved: r16 r17 r18 r19 r28 ra sp
+__do_global_dtors_aux_entry:
+l00000000000007F8:
+	word64 r18_14 = Mem13[0x109F0<64>:word64]
+	branch CONVERT(Mem18[r18_14 + 0xA80<64>:byte], byte, word64) != 0<64> l00000000000007F8_ds_t
+l00000000000007F8_ds_t:
+l00000000000007F8_ds_f:
+l000000000000082C:
+	__write_cpr2(0<8>, Mem22[Mem22[0x10A70<64>:word64] + 4<64>:word64])
+	word64 r2_24 = Mem22[0x10A00<64>:word64]
+	call Mem22[0x10A70<64>:word64] (retsize: 0;)
+		uses: r2:r2_24,r4:Mem22[r2_24:word64]
+	branch Mem22[Mem22[0x109F0<64>:word64] + 0xA88<64>:word64] <= 0<64> l000000000000082C_ds_t
+l000000000000082C_ds_t:
+l0000000000000894:
+	Mem44[r0:word64] = __read_cpr2(0x19<8>)
+	Mem46[r18_14 + 0xA80<64>:byte] = 1<8>
+l00000000000008A8:
+	call ra (retsize: 0;)
+	return
+__do_global_dtors_aux_exit:
+l000000000000082C_ds_f:
+l0000000000000874:
+
+
+void frame_dummy(word64 r0, word64 ra)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse:  r0:[0..63] ra:[0..63]
+// LiveOut:
+// Trashed: r0 r2 r25 r3
+// Preserved: sp
+frame_dummy_entry:
+l00000000000008C8:
+	__write_cpr2(0x19<8>, Mem0[r0:word64])
+l00000000000008DC_thunk_hexdump:
+	hexdump(r0, ra)
+	return
+frame_dummy_exit:
+
+
+void hexdump(word64 r0, word64 ra)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      frame_dummy
+// MayUse:  r0:[0..63] ra:[0..63]
+// LiveOut:
+// Trashed: r0 r2 r25 r3
+// Preserved: sp
+hexdump_entry:
+l00000000000008E0:
+	__write_cpr2(0x1F<8>, Mem0[r0:word64])
+l00000000000008EC_thunk___do_global_ctors_aux:
+	__do_global_ctors_aux(r0, ra)
+	return
+hexdump_exit:
+
+
+void __do_global_ctors_aux(word64 r0, word64 ra)
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      hexdump
+// MayUse:  r0:[0..63] ra:[0..63]
+// LiveOut:
+// Trashed: r0 r2 r25 r3
+// Preserved: r16 r17 r28 ra sp
+__do_global_ctors_aux_entry:
+l00000000000008F0:
+	word64 r16_21 = Mem14[0x109F0<64>:word64] + 2496<i64>
+l0000000000000928:
+	Mem23[r0:word64] = __read_cpr2(0x19<8>)
+	branch Mem23[r16_21 - 8<64>:word64] != -1<i64> l0000000000000928_ds_t
+l0000000000000928_ds_t:
+	r16_21 = r16_21 + -8<i64>
+l0000000000000928_ds_f:
+l0000000000000938:
+	call ra (retsize: 0;)
+	return
+__do_global_ctors_aux_exit:
+
+

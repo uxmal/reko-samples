@@ -1,0 +1,14 @@
+void _fini()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// MayUse: 
+// LiveOut:
+// Trashed: SCZO rax rdi Top
+// Preserved: rsp
+_fini_entry:
+l00000000000011BC:
+	__do_global_dtors_aux()
+	return
+_fini_exit:
+
+
