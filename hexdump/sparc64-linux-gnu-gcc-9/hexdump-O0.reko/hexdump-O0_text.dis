@@ -258,16 +258,19 @@ l0000000000000724:
 call_frame_dummy_exit:
 
 
-void hexdump()
+void hexdump(word64 o2)
 // stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
 
-// MayUse: 
+// MayUse:  o2:[0..63]
 // LiveOut:
-// Trashed:
-// Preserved:
-// Terminates process
-hexdump_exit:
+// Trashed: g1 g2 i0 i1 i2 i3 i4 i5 i6 i7
+// Preserved: o0 o1 o2 o3 o4 o5 o7 sp
 hexdump_entry:
+l0000000000000730:
+	Mem41[fp + 0x7FF<64> + o2 + -136<i32>:byte] = 0x41<8>
+	Mem47[fp + 0x7FF<64> + (o2 + 1<64>) + -136<i32>:byte] = 0x20<8>
+	return
+hexdump_exit:
 
 
 void main(word64 o1, word64 o7)

@@ -155,10 +155,11 @@ void hexdump()
 // MayUse: 
 // LiveOut:
 // Trashed:
-// Preserved:
-// Terminates process
-hexdump_exit:
+// Preserved: r1
 hexdump_entry:
+l0000062C:
+	return
+hexdump_exit:
 
 
 void _restgpr_14_x()

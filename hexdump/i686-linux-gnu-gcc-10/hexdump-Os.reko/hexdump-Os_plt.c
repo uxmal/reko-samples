@@ -4,9 +4,12 @@
 
 #include "hexdump-Os.h"
 
-// 00001040: void strlen()
-void strlen()
+// 00001040: void strlen(Register (ptr32 Eq_n) ebx)
+// Called from:
+//      main
+void strlen(struct Eq_n * ebx)
 {
+	ebx->ptr000C();
 }
 
 <anonymous> g_t1046 = <code>;

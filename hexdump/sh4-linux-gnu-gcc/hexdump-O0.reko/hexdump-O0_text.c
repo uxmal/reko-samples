@@ -98,9 +98,11 @@ void frame_dummy()
 }
 
 int32 g_dw0530 = -0x00E6;
-// 00000534: void hexdump()
-void hexdump()
+// 00000534: void hexdump(Register int32 r6)
+void hexdump(int32 r6)
 {
+	r6 + (fp + ~0x77) = 0x41;
+	r6 + 0x01 + (fp + ~0x77) = 0x20;
 }
 
 // 000005E0: void main(Register word32 r4, Register word32 r5, Register word32 r12, Register word32 r14, Register word32 pr)

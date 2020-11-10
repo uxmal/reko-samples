@@ -158,10 +158,11 @@ void hexdump()
 // MayUse: 
 // LiveOut:
 // Trashed:
-// Preserved:
-// Terminates process
-hexdump_exit:
+// Preserved: a7
 hexdump_entry:
+l00000584:
+	return
+hexdump_exit:
 
 
 void __do_global_ctors_aux()

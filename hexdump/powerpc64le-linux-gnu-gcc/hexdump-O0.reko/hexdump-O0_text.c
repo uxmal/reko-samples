@@ -29,9 +29,10 @@ void frame_dummy()
 {
 }
 
-// 000000000000076C: void hexdump()
-void hexdump()
+// 000000000000076C: void hexdump(Register word64 r7, Register (ptr64 Eq_n) r31)
+void hexdump(word64 r7, struct Eq_n * r31)
 {
+	r31->qwFFFFE1F8 = r7;
 }
 
 // 0000000000000818: void main()

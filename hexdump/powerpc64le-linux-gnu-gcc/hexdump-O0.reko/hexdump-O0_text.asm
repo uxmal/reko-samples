@@ -153,18 +153,52 @@ frame_dummy proc
 02004C3C     	illegal
 A0774238     	lhz	r3,16952(r23)
 A0FEFF4B     	lhz	r7,-181(r30)
-000000000000076C                                     F8 FF E1 FB             ....
-0000000000000770 01 FF 21 F8 78 0B 3F 7C C0 00 7F F8 C8 00 9F F8 ..!.x.?|........
-0000000000000780 D0 00 BF F8 D8 00 DF F8 E0 00 FF F8 C0 00 3F E9 ..............?.
-0000000000000790 20 00 3F F9 20 00 3F E9 A8 00 3F F9 C8 00 3F E9  .?. .?...?...?.
-00000000000007A0 B0 00 3F F9 A8 00 3F E9 28 00 3F F9 B0 00 3F E9 ..?...?.(.?...?.
-00000000000007B0 B4 07 29 7D 30 00 3F F9 30 00 3F E9 38 00 3F F9 ..)}0.?.0.?.8.?.
-00000000000007C0 40 00 5F 39 D0 00 3F E9 14 4A 2A 7D 41 00 40 39 @._9..?..J*}A.@9
-00000000000007D0 00 00 49 99 D0 00 3F E9 01 00 29 39 20 00 5F 39 ..I...?...)9 ._9
-00000000000007E0 14 4A 2A 7D 20 00 40 39 20 00 49 99 B0 00 5F E9 .J*} .@9 .I..._.
-00000000000007F0 30 00 3F E9 50 50 29 7D B0 00 3F F9 00 00 00 60 0.?.PP)}..?....`
-0000000000000800 00 01 3F 38 F8 FF E1 EB 20 00 80 4E 00 00 00 00 ..?8.... ..N....
-0000000000000810 00 00 00 00 80 01 00 01                         ........       
+
+;; hexdump: 000000000000076C
+hexdump proc
+F8FFE1FB     	stdu	r7,-7688(r31)
+01FF21F8     	illegal
+780B3F7C     	illegal
+C0007FF8     	lfs	f0,32760(r0)
+C8009FF8     	lfd	f0,-24584(r0)
+D000BFF8     	stfs	f0,-16392(r0)
+D800DFF8     	stfd	f0,-8200(r0)
+E000FFF8     	lq	r0,-8(r0)
+C0003FE9     	lfs	f0,16361(r0)
+20003FF9     	subfic	r0,r0,+3FF9
+20003FE9     	subfic	r0,r0,+3FE9
+A8003FF9     	lha	r0,16377(r0)
+C8003FE9     	lfd	f0,16361(r0)
+B0003FF9     	sth	r0,16377(r0)
+A8003FE9     	lha	r0,16361(r0)
+28003FF9     	cmplwi	cr0,r0,3FF9
+B0003FE9     	sth	r0,16361(r0)
+B407297D     	sthu	r0,10621(r7)
+30003FF9     	addic	r0,r0,+3FF9
+30003FE9     	addic	r0,r0,+3FE9
+38003FF9     	addi	r0,r0,+3FF9
+40005F39     	bdnzfl	lt,$00000000000066F8
+D0003FE9     	stfs	f0,16361(r0)
+144A2A7D     	illegal
+41004039     	bdnztl	lt,$0000000000004804
+00004999     	illegal
+D0003FE9     	stfs	f0,16361(r0)
+01002939     	illegal
+20005F39     	subfic	r0,r0,+5F39
+144A2A7D     	illegal
+20004039     	subfic	r0,r0,+4039
+20004999     	subfic	r0,r0,+4999
+B0005FE9     	sth	r0,24553(r0)
+30003FE9     	addic	r0,r0,+3FE9
+5050297D     	rlwimi	r16,r2,05,05,1E
+B0003FF9     	sth	r0,16377(r0)
+00000060     	illegal
+00013F38     	illegal
+F8FFE1EB     	stdu	r7,-7704(r31)
+2000804E     	subfic	r0,r0,-7FB2
+00000000     	illegal
+00000000     	illegal
+80010001     	lwz	r0,1(r1)
 
 ;; main: 0000000000000818
 main proc

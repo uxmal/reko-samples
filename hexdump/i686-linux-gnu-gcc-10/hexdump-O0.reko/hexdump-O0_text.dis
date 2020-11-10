@@ -157,17 +157,17 @@ l0000119D:
 hexdump_exit:
 
 
-void main(word32 dwArg08)
+void main()
 // stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
 
-// MayUse:  Stack +0008:[0..31]
+// MayUse: 
 // LiveOut:
 // Trashed: SCZO eax ecx Top
 // Preserved: ebp ebx edi esi esp
 main_entry:
 l000011F5:
 	__align(fp)
-	strlen(Mem23[dwArg08:word32])
+	strlen(0x00004000<p32>)
 	fn00001058(0x00004000<p32>)
 	return
 main_exit:

@@ -222,7 +222,12 @@ frame_dummy proc
 D101           	mov.l	(00000564),r1                         ; @(04,pc)
 0123           	braf	r1
 0009           	nop
-00000562       09 00 1A FF FF FF 0B 00 09 00               ..........   
+00000562       09 00 1A FF FF FF                           ......       
+
+;; hexdump: 00000568
+hexdump proc
+000B           	rts
+0000056A                               09 00                       ..   
 
 ;; __do_global_ctors_aux: 0000056C
 __do_global_ctors_aux proc

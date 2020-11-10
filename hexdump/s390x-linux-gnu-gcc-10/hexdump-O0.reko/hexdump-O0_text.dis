@@ -8,7 +8,7 @@ void deregister_tm_clones()
 // Terminates process
 deregister_tm_clones_exit:
 deregister_tm_clones_entry:
-l00000548:
+l0000000000000548:
 
 
 void register_tm_clones(word64 r14)
@@ -21,14 +21,13 @@ void register_tm_clones(word64 r14)
 // Trashed: CC r1 r14 r3
 // Preserved: r15
 register_tm_clones_entry:
-l00000568:
-	word64 r3_7 = SEQ(SLICE(r3, word32, 32), 0x00002020<p32>) - SEQ(SLICE(r1, word32, 32), 0x00002020<p32>)
-	word64 r3_10 = (r3_7 >>u 63<i32>) + (r3_7 >> 3<i32>)
-	branch r3_10 >> 1<i32> != 0<64> l00000594
-l00000594:
-l00000592_1:
+l0000000000000568:
+	word64 r3_5 = 0x0000000000002020<p64> - 0x0000000000002020<p64>
+	branch (r3_5 >>u 63<i32>) + (r3_5 >> 3<i32>) >> 1<i32> != 0<64> l0000000000000594
+l0000000000000594:
+l0000000000000592_1:
 	call r14 (retsize: 0;)
-		uses: r1:r3_7 >> 3<i32>,r14:r14,r3:r3_10 >> 1<i32>
+		uses: r14:r14
 	return
 register_tm_clones_exit:
 
@@ -45,7 +44,7 @@ void __do_global_dtors_aux()
 // Terminates process
 __do_global_dtors_aux_exit:
 __do_global_dtors_aux_entry:
-l000005A8:
+l00000000000005A8:
 
 
 void call___do_global_dtors_aux()
@@ -58,7 +57,7 @@ void call___do_global_dtors_aux()
 // Terminates process
 call___do_global_dtors_aux_exit:
 call___do_global_dtors_aux_entry:
-l00000648:
+l0000000000000648:
 
 
 void frame_dummy(word64 r14)
@@ -71,16 +70,16 @@ void frame_dummy(word64 r14)
 // Trashed: CC r1 r14 r15 r3
 // Preserved:
 frame_dummy_entry:
-l00000660:
-	branch CC l00000660_thunk_register_tm_clones
-l00000660_thunk_register_tm_clones:
+l0000000000000660:
+	branch CC l0000000000000660_thunk_register_tm_clones
+l0000000000000660_thunk_register_tm_clones:
 	register_tm_clones(r14)
 	return
 frame_dummy_exit:
-l00000666:
-l00000666_thunk_call_frame_dummy:
+l0000000000000666:
+l0000000000000666_thunk_call_frame_dummy:
 	call_frame_dummy()
-l00000666_thunk_call_frame_dummy:
+l0000000000000666_thunk_call_frame_dummy:
 	call_frame_dummy()
 
 
@@ -96,7 +95,7 @@ void call_frame_dummy()
 // Terminates process
 call_frame_dummy_exit:
 call_frame_dummy_entry:
-l00000668:
+l0000000000000668:
 
 
 void hexdump()
@@ -109,6 +108,7 @@ void hexdump()
 // Terminates process
 hexdump_exit:
 hexdump_entry:
+l0000000000000680:
 
 
 void main()
@@ -121,7 +121,7 @@ void main()
 // Terminates process
 main_exit:
 main_entry:
-l00000740:
+l0000000000000740:
 
 
 void __do_global_ctors_aux()
@@ -136,7 +136,7 @@ void __do_global_ctors_aux()
 // Terminates process
 __do_global_ctors_aux_exit:
 __do_global_ctors_aux_entry:
-l000007C8:
+l00000000000007C8:
 
 
 void call___do_global_ctors_aux()
@@ -149,6 +149,6 @@ void call___do_global_ctors_aux()
 // Terminates process
 call___do_global_ctors_aux_exit:
 call___do_global_ctors_aux_entry:
-l00000808:
+l0000000000000808:
 
 

@@ -8,15 +8,14 @@ void _init(word64 r6, word64 r7, word64 r8, word64 r9, word64 r10, word64 r11, w
 // Terminates process
 _init_exit:
 _init_entry:
-l00000478:
-	word64 r12_35 = SEQ(SLICE(r12, word32, 32), 0x00001FC0<p32>)
-	word64 r1_37 = Mem34[SEQ(SLICE(fp - 160<i32>, word32, 32), 0x00001FE8<p32>):word64]
-	branch r1_37 == 0<64> l000004A8
-l000004A6:
+l0000000000000478:
+	word64 r1_37 = Mem34[0x0000000000001FE8<p64>:word64]
+	branch r1_37 == 0<64> l00000000000004A8
+l00000000000004A6:
 	call r1_37 (retsize: 0;)
-		uses: r10:r10,r11:r11,r12:r12_35,r13:r13,r14:0x000004A8<p32>,r6:r6,r7:r7,r8:r8,r9:r9
-l000004A8:
-	frame_dummy(0x000004AE<p32>)
+		uses: r10:r10,r11:r11,r12:0x0000000000001FC0<p64>,r13:r13,r14:0x00000000000004A8<p64>,r6:r6,r7:r7,r8:r8,r9:r9
+l00000000000004A8:
+	frame_dummy(0x00000000000004AE<p64>)
 	__do_global_ctors_aux()
 
 

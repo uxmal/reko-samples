@@ -105,8 +105,8 @@ void frame_dummy(<anonymous> * lr)
 	register_tm_clones(lr);
 }
 
-// 000003E8: void getIndex()
-void getIndex()
+// 000003E8: void getIndex(Register word32 r0)
+void getIndex(word32 r0)
 {
 }
 

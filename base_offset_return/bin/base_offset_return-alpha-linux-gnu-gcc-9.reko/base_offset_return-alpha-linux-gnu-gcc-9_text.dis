@@ -153,11 +153,12 @@ void getIndex()
 
 // MayUse: 
 // LiveOut:
-// Trashed:
-// Preserved:
-// Terminates process
-getIndex_exit:
+// Trashed: r0
+// Preserved: r30
 getIndex_entry:
+l0000000000000620:
+	return
+getIndex_exit:
 
 
 void foo(word64 r16, word64 r24, word64 r26, word64 r27)

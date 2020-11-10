@@ -137,16 +137,19 @@ l0000053C:
 call_frame_dummy_exit:
 
 
-void hexdump()
+void hexdump(word32 dwArg0C)
 // stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
 
-// MayUse: 
+// MayUse:  Stack +000C:[0..31]
 // LiveOut:
-// Trashed:
-// Preserved:
-// Terminates process
-hexdump_exit:
+// Trashed: CVZNX a0 d0 d1
+// Preserved: a6 a7 d2
 hexdump_entry:
+l00000540:
+	Mem25[fp + 0xFFFFFF88<32> + dwArg0C:byte] = 0x41<8>
+	Mem28[fp + 0xFFFFFF88<32> + (dwArg0C + 1<32>):byte] = 0x20<8>
+	return
+hexdump_exit:
 
 
 void main()

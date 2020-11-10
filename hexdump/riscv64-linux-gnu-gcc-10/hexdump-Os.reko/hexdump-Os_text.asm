@@ -100,4 +100,7 @@ l000000000000050A:
 ;; frame_dummy: 0000000000000512
 frame_dummy proc
 BF69           	c.j	00000000000004AC
-0000000000000514             82 80                                   ..         
+
+;; hexdump: 0000000000000514
+hexdump proc
+8082           	c.jr	ra

@@ -79,7 +79,15 @@ C3              	ret
 frame_dummy proc
 E9 7B FF FF FF  	jmp	1080h
 0000000000001105                66 2E 0F 1F 84 00 00 00 00 00 90      f..........
-0000000000001110 31 C0 48 85 FF 0F 94 C0 83 C0 01 C3 0F 1F 40 00 1.H...........@.
+
+;; getIndex: 0000000000001110
+getIndex proc
+31 C0           	xor	eax,eax
+48 85 FF        	test	rdi,rdi
+0F 94 C0        	setz	al
+83 C0 01        	add	eax,1h
+C3              	ret
+000000000000111C                                     0F 1F 40 00             ..@.
 
 ;; foo: 0000000000001120
 foo proc

@@ -105,9 +105,11 @@ void frame_dummy(<anonymous> * lr)
 	register_tm_clones(lr);
 }
 
-// 00000464: void hexdump()
-void hexdump()
+// 00000464: void hexdump(Register int32 r2)
+void hexdump(int32 r2)
 {
+	fp - 0x7C + r2 = (byte *) 0x41;
+	(fp - 0x08 + (r2 + 0x01))->bFFFFFF8C = 0x20;
 }
 
 // 000004FC: void main()

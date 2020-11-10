@@ -87,9 +87,11 @@ void call_frame_dummy()
 {
 }
 
-// 00000540: void hexdump()
-void hexdump()
+// 00000540: void hexdump(Stack int32 dwArg0C)
+void hexdump(int32 dwArg0C)
 {
+	fp->aFFFFFF88[dwArg0C] = 0x41;
+	fp->aFFFFFF88[dwArg0C + 0x01] = 0x20;
 }
 
 // 000005A0: void main()

@@ -102,16 +102,47 @@ E8BD8010     	pop	{r4,pc}
 ;; frame_dummy: 00000460
 frame_dummy proc
 EAFFFFD0     	b	$000003A8
-00000464             04 B0 2D E5 00 B0 8D E2 94 D0 4D E2     ..-.......M.
-00000470 88 00 0B E5 8C 10 0B E5 90 20 0B E5 94 30 0B E5 ......... ...0..
-00000480 88 30 1B E5 08 30 0B E5 08 30 1B E5 80 30 0B E5 .0...0...0...0..
-00000490 8C 30 1B E5 7C 30 0B E5 80 30 1B E5 0C 30 0B E5 .0..|0...0...0..
-000004A0 7C 30 1B E5 10 30 0B E5 10 30 1B E5 14 30 0B E5 |0...0...0...0..
-000004B0 78 20 4B E2 90 30 1B E5 03 30 82 E0 41 20 A0 E3 x K..0...0..A ..
-000004C0 00 20 C3 E5 90 30 1B E5 01 30 83 E2 04 20 4B E2 . ...0...0... K.
-000004D0 03 30 82 E0 20 20 A0 E3 74 20 43 E5 7C 20 1B E5 .0..  ..t C.| ..
-000004E0 10 30 1B E5 03 30 42 E0 7C 30 0B E5 00 00 A0 E1 .0...0B.|0......
-000004F0 00 D0 8B E2 04 B0 9D E4 1E FF 2F E1             ........../.   
+
+;; hexdump: 00000464
+hexdump proc
+E52DB004     	push	fp
+E28DB000     	add	fp,sp,#0
+E24DD094     	sub	sp,sp,#&94
+E50B0088     	str	r0,[fp,-#&88]
+E50B108C     	str	r1,[fp,-#&8C]
+E50B2090     	str	r2,[fp,-#&90]
+E50B3094     	str	r3,[fp,-#&94]
+E51B3088     	ldr	r3,[fp,-#&88]
+E50B3008     	str	r3,[fp,-#&8]
+E51B3008     	ldr	r3,[fp,-#&8]
+E50B3080     	str	r3,[fp,-#&80]
+E51B308C     	ldr	r3,[fp,-#&8C]
+E50B307C     	str	r3,[fp,-#&7C]
+E51B3080     	ldr	r3,[fp,-#&80]
+E50B300C     	str	r3,[fp,-#&C]
+E51B307C     	ldr	r3,[fp,-#&7C]
+E50B3010     	str	r3,[fp,-#&10]
+E51B3010     	ldr	r3,[fp,-#&10]
+E50B3014     	str	r3,[fp,-#&14]
+E24B2078     	sub	r2,fp,#&78
+E51B3090     	ldr	r3,[fp,-#&90]
+E0823003     	add	r3,r2,r3
+E3A02041     	mov	r2,#&41
+E5C32000     	strb	r2,[r3]
+E51B3090     	ldr	r3,[fp,-#&90]
+E2833001     	add	r3,r3,#1
+E24B2004     	sub	r2,fp,#4
+E0823003     	add	r3,r2,r3
+E3A02020     	mov	r2,#&20
+E5432074     	strb	r2,[r3,-#&74]
+E51B207C     	ldr	r2,[fp,-#&7C]
+E51B3010     	ldr	r3,[fp,-#&10]
+E0423003     	sub	r3,r2,r3
+E50B307C     	str	r3,[fp,-#&7C]
+E1A00000     	mov	r0,r0
+E28BD000     	add	sp,fp,#0
+E49DB004     	pop	fp
+E12FFF1E     	bx	lr
 
 ;; main: 000004FC
 main proc

@@ -4,13 +4,19 @@
 
 #include "hexdump-O0.h"
 
-// 000004E4: void __cxa_finalize()
+// 00000000000004E4: void __cxa_finalize()
 void __cxa_finalize()
 {
+	<anonymous> * r1_n = g_ptr2000;
+	r1_n();
 }
 
-// 00000504: void strlen()
+<anonymous> g_t04F2 = <code>;
+// 0000000000000504: void strlen()
 void strlen()
 {
+	<anonymous> * r1_n = g_ptr2008;
+	r1_n();
 }
 
+<anonymous> g_t0512 = <code>;

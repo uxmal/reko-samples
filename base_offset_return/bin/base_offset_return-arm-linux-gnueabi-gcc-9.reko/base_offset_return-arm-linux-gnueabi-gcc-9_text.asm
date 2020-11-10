@@ -101,8 +101,17 @@ E8BD8010     	pop	{r4,pc}
 ;; frame_dummy: 000003E4
 frame_dummy proc
 EAFFFFD0     	b	$0000032C
-000003E8                         00 00 50 E3 01 00 A0 13         ..P.....
-000003F0 02 00 A0 03 1E FF 2F E1                         ....../.       
+
+;; getIndex: 000003E8
+getIndex proc
+E3500000     	cmp	r0,#0
+13A00001     	movne	r0,#1
+
+l000003F0:
+03A00002     	moveq	r0,#2
+
+l000003F4:
+E12FFF1E     	bx	lr
 
 ;; foo: 000003F8
 foo proc

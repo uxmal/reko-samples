@@ -267,6 +267,7 @@ void getIndex()
 // Terminates process
 getIndex_exit:
 getIndex_entry:
+l00000000000006F0:
 
 
 void foo(word64 o0)

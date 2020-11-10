@@ -1,14 +1,14 @@
-void main(word32 dwArg08)
+void main()
 // stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
 
-// MayUse:  Stack +0008:[0..31]
+// MayUse: 
 // LiveOut:
 // Trashed: SCZO eax ecx edx Top
 // Preserved: ebp ebx esi esp
 main_entry:
 l00001060:
 	__align(fp)
-	strlen(Mem22[dwArg08:word32])
+	strlen(0x00004000<p32>)
 	fn00001058(0x00004000<p32>)
 	return
 main_exit:

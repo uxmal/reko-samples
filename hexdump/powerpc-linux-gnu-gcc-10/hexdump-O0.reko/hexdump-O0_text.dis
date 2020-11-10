@@ -130,16 +130,19 @@ l000005C0:
 call_frame_dummy_exit:
 
 
-void hexdump()
+void hexdump(word32 r5)
 // stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
 
-// MayUse: 
+// MayUse:  r5:[0..31]
 // LiveOut:
-// Trashed:
-// Preserved:
-// Terminates process
-hexdump_exit:
+// Trashed: r10 r11 r9
+// Preserved: r0 r1 r31
 hexdump_entry:
+l000005DC:
+	Mem34[fp + 0xFFFFFF68<32> + r5:byte] = 0x41<8>
+	Mem40[fp + 0xFFFFFF58<32> + (r5 + 1<32>) + 16<i32>:byte] = 0x20<8>
+	return
+hexdump_exit:
 
 
 void main()

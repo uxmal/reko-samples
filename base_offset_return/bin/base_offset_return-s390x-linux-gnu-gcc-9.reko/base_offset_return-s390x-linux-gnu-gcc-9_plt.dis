@@ -3,10 +3,14 @@ void __cxa_finalize()
 
 // MayUse: 
 // LiveOut:
-// Trashed:
-// Preserved:
-// Terminates process
-__cxa_finalize_exit:
+// Trashed: r1
+// Preserved: r15
 __cxa_finalize_entry:
+l0000000000000454:
+	word64 r1_5 = Mem0[0x0000000000002000<p64>:word64]
+	call r1_5 (retsize: 0;)
+		uses: r1:r1_5
+	return
+__cxa_finalize_exit:
 
 

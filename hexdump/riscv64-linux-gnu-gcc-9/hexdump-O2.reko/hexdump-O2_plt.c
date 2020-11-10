@@ -4,17 +4,10 @@
 
 #include "hexdump-O2.h"
 
-// 0000000000000420: void strlen()
-void strlen()
+// 0000000000000420: void strlen(Register word64 t1, Register word64 t3)
+void strlen(word64 t1, word64 t3)
 {
-}
-
-// 0000000000000440: void fn0000000000000440()
-// Called from:
-//      main
-void fn0000000000000440()
-{
-	<anonymous> * t3_n = g_ptr2018;
+	<anonymous> * t3_n = g_ptr2008;
 	t3_n();
 }
 

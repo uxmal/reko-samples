@@ -1,12 +1,16 @@
-void strlen()
+void strlen(word32 ebx)
 // stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
 
-// MayUse: 
+// Called from:
+//      main
+// MayUse:  ebx:[0..31]
 // LiveOut:
-// Trashed:
-// Preserved:
-// Terminates process
-strlen_exit:
+// Trashed: Top
+// Preserved: esp
 strlen_entry:
+l00001040:
+	call Mem0[ebx + 0xC<32>:word32] (retsize: 0;)
+	return
+strlen_exit:
 
 

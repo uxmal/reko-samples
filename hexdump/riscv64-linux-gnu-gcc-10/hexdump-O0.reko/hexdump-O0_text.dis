@@ -91,11 +91,14 @@ void hexdump()
 
 // MayUse: 
 // LiveOut:
-// Trashed:
-// Preserved:
-// Terminates process
-hexdump_exit:
+// Trashed: a4 a5 s0
+// Preserved: sp
 hexdump_entry:
+l00000000000004EA:
+	Mem34[qwLocC8 + (fp + -16<i32>) + 3960<i64>:byte] = 0x41<8>
+	Mem40[qwLocC8 + 1<64> + (fp + -16<i32>) + 3960<i64>:byte] = 0x20<8>
+	return
+hexdump_exit:
 
 
 void main()
@@ -107,7 +110,7 @@ void main()
 // Preserved: s1 sp
 main_entry:
 l0000000000000574:
-	fn0000000000000440()
+	a0_20 = CONVERT(strlen(Mem15[qwLoc30:word64]), size_t, uint64)
 	fn0000000000000450()
 	return
 main_exit:

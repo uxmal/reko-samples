@@ -133,9 +133,10 @@ void hexdump()
 // MayUse: 
 // LiveOut:
 // Trashed:
-// Preserved:
-// Terminates process
-hexdump_exit:
+// Preserved: sp
 hexdump_entry:
+l0000000000000690:
+	return
+hexdump_exit:
 
 

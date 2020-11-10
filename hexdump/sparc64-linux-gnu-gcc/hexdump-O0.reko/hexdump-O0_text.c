@@ -122,9 +122,11 @@ void call_frame_dummy()
 {
 }
 
-// 0000000000000730: void hexdump()
-void hexdump()
+// 0000000000000730: void hexdump(Register int64 o2)
+void hexdump(int64 o2)
 {
+	(fp + 0x07FF + o2)->bFFFFFF78 = 0x41;
+	(fp + 0x07FF + (o2 + 0x01))->bFFFFFF78 = 0x20;
 }
 
 // 00000000000007C4: void main(Register (ptr64 (ptr64 char)) o1, Register word64 o7)

@@ -4,7 +4,7 @@
 
 /*
 // Equivalence classes ////////////
-Eq_1: (struct "Globals" (500 code t0500) (10FC0 (ptr64 code) ptr10FC0) (10FC8 word64 qw10FC8) (10FD0 word64 qw10FD0) (10FE0 (ptr64 code) ptr10FE0) (11000 (ptr64 code) ptr11000) (11008 (ptr64 code) ptr11008) (11010 (ptr64 code) ptr11010) (11018 (ptr64 code) ptr11018) (11028 byte b11028))
+Eq_1: (struct "Globals" (500 code t0500) (B44 code t0B44) (10FC0 (ptr64 code) ptr10FC0) (10FC8 word64 qw10FC8) (10FD0 word64 qw10FD0) (10FE0 (ptr64 code) ptr10FE0) (11000 (ptr64 code) ptr11000) (11008 (ptr64 code) ptr11008) (11010 (ptr64 code) ptr11010) (11018 (ptr64 code) ptr11018) (11028 byte b11028))
 	globals_t (in globals : (ptr64 (struct "Globals")))
 Eq_2: (fn void ())
 	T_2 (in call_weak_fn : ptr64)
@@ -35,12 +35,17 @@ Eq_63: (fn void ())
 Eq_66: (fn void ())
 	T_66 (in register_tm_clones : ptr64)
 	T_67 (in signature of register_tm_clones : void)
-Eq_69: (fn void ())
-	T_69 (in fn0000000000000520 : ptr64)
-	T_70 (in signature of fn0000000000000520 : void)
-Eq_72: (fn void ())
-	T_72 (in fn0000000000000550 : ptr64)
-	T_73 (in signature of fn0000000000000550 : void)
+Eq_76: (struct "Eq_76" 0001 (0 (arr Eq_76) a0000))
+	T_76 (in 0x20<8> : byte)
+	T_82 (in Mem36[fp - 0x88<64> + (x2 + 1<64>):byte] : byte)
+	T_89
+	T_90
+Eq_83: (fn void ())
+	T_83 (in fn0000000000000520 : ptr64)
+	T_84 (in signature of fn0000000000000520 : void)
+Eq_86: (fn void ())
+	T_86 (in fn0000000000000550 : ptr64)
+	T_87 (in signature of fn0000000000000550 : void)
 // Type Variables ////////////
 globals_t: (in globals : (ptr64 (struct "Globals")))
   Class: Eq_1
@@ -314,33 +319,98 @@ T_68: (in register_tm_clones() : void)
   Class: Eq_68
   DataType: void
   OrigDataType: void
-T_69: (in fn0000000000000520 : ptr64)
+T_69: (in x2 : int64)
   Class: Eq_69
-  DataType: (ptr64 Eq_69)
-  OrigDataType: (ptr64 (fn T_71 ()))
-T_70: (in signature of fn0000000000000520 : void)
-  Class: Eq_69
-  DataType: (ptr64 Eq_69)
-  OrigDataType: 
-T_71: (in fn0000000000000520() : void)
+  DataType: int64
+  OrigDataType: int64
+T_70: (in 0x41<8> : byte)
+  Class: Eq_70
+  DataType: byte
+  OrigDataType: byte
+T_71: (in fp : ptr64)
   Class: Eq_71
-  DataType: void
-  OrigDataType: void
-T_72: (in fn0000000000000550 : ptr64)
+  DataType: ptr64
+  OrigDataType: ptr64
+T_72: (in 0x88<64> : word64)
   Class: Eq_72
-  DataType: (ptr64 Eq_72)
-  OrigDataType: (ptr64 (fn T_74 ()))
-T_73: (in signature of fn0000000000000550 : void)
-  Class: Eq_72
-  DataType: (ptr64 Eq_72)
-  OrigDataType: 
-T_74: (in fn0000000000000550() : void)
+  DataType: ui64
+  OrigDataType: ui64
+T_73: (in fp - 0x88<64> : word64)
+  Class: Eq_73
+  DataType: ptr64
+  OrigDataType: ptr64
+T_74: (in fp - 0x88<64> + x2 : word64)
   Class: Eq_74
+  DataType: (ptr64 byte)
+  OrigDataType: (ptr64 (struct (0 T_75 t0000)))
+T_75: (in Mem31[fp - 0x88<64> + x2:byte] : byte)
+  Class: Eq_70
+  DataType: byte
+  OrigDataType: byte
+T_76: (in 0x20<8> : byte)
+  Class: Eq_76
+  DataType: (struct "Eq_76" 0001 (0 (arr Eq_76) a0000))
+  OrigDataType: byte
+T_77: (in 0x88<64> : word64)
+  Class: Eq_77
+  DataType: ui64
+  OrigDataType: ui64
+T_78: (in fp - 0x88<64> : (arr Eq_76))
+  Class: Eq_78
+  DataType: (ptr64 (arr Eq_76))
+  OrigDataType: (ptr64 (struct (0 (arr T_89) a0000)))
+T_79: (in 1<64> : word64)
+  Class: Eq_79
+  DataType: word64
+  OrigDataType: word64
+T_80: (in x2 + 1<64> : word64)
+  Class: Eq_80
+  DataType: int64
+  OrigDataType: int64
+T_81: (in fp - 0x88<64> + (x2 + 1<64>) : word64)
+  Class: Eq_81
+  DataType: (ptr64 Eq_76)
+  OrigDataType: (ptr64 (struct (0 T_82 t0000)))
+T_82: (in Mem36[fp - 0x88<64> + (x2 + 1<64>):byte] : byte)
+  Class: Eq_76
+  DataType: Eq_76
+  OrigDataType: byte
+T_83: (in fn0000000000000520 : ptr64)
+  Class: Eq_83
+  DataType: (ptr64 Eq_83)
+  OrigDataType: (ptr64 (fn T_85 ()))
+T_84: (in signature of fn0000000000000520 : void)
+  Class: Eq_83
+  DataType: (ptr64 Eq_83)
+  OrigDataType: 
+T_85: (in fn0000000000000520() : void)
+  Class: Eq_85
   DataType: void
   OrigDataType: void
+T_86: (in fn0000000000000550 : ptr64)
+  Class: Eq_86
+  DataType: (ptr64 Eq_86)
+  OrigDataType: (ptr64 (fn T_88 ()))
+T_87: (in signature of fn0000000000000550 : void)
+  Class: Eq_86
+  DataType: (ptr64 Eq_86)
+  OrigDataType: 
+T_88: (in fn0000000000000550() : void)
+  Class: Eq_88
+  DataType: void
+  OrigDataType: void
+T_89:
+  Class: Eq_76
+  DataType: Eq_76
+  OrigDataType: (struct 0001 (0 T_82 t0000))
+T_90:
+  Class: Eq_76
+  DataType: Eq_76
+  OrigDataType: (arr Eq_76)
 */
 typedef struct Globals {
 	<anonymous> t0500;	// 500
+	<anonymous> t0B44;	// B44
 	<anonymous> * ptr10FC0;	// 10FC0
 	word64 qw10FC8;	// 10FC8
 	word64 qw10FD0;	// 10FD0
@@ -400,7 +470,11 @@ typedef void (Eq_63)();
 
 typedef void (Eq_66)();
 
-typedef void (Eq_69)();
+typedef struct Eq_76 {	// size: 1 1
+	Eq_76 a0000[];	// 0
+} Eq_76;
 
-typedef void (Eq_72)();
+typedef void (Eq_83)();
+
+typedef void (Eq_86)();
 

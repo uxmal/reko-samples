@@ -86,6 +86,7 @@ void hexdump()
 // Terminates process
 hexdump_exit:
 hexdump_entry:
+l00000000000007E0:
 
 
 void __do_global_ctors_aux()

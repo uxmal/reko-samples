@@ -8,7 +8,7 @@ void main()
 // Terminates process
 main_exit:
 main_entry:
-l000004B0:
+l00000000000004B0:
 
 
 void deregister_tm_clones()
@@ -21,7 +21,7 @@ void deregister_tm_clones()
 // Terminates process
 deregister_tm_clones_exit:
 deregister_tm_clones_entry:
-l00000508:
+l0000000000000508:
 
 
 void register_tm_clones(word64 r14)
@@ -34,14 +34,13 @@ void register_tm_clones(word64 r14)
 // Trashed: CC r1 r14 r3
 // Preserved: r15
 register_tm_clones_entry:
-l00000528:
-	word64 r3_7 = SEQ(SLICE(r3, word32, 32), 0x00002018<p32>) - SEQ(SLICE(r1, word32, 32), 0x00002018<p32>)
-	word64 r3_10 = (r3_7 >>u 63<i32>) + (r3_7 >> 3<i32>)
-	branch r3_10 >> 1<i32> != 0<64> l00000554
-l00000554:
-l00000552_1:
+l0000000000000528:
+	word64 r3_5 = 0x0000000000002018<p64> - 0x0000000000002018<p64>
+	branch (r3_5 >>u 63<i32>) + (r3_5 >> 3<i32>) >> 1<i32> != 0<64> l0000000000000554
+l0000000000000554:
+l0000000000000552_1:
 	call r14 (retsize: 0;)
-		uses: r1:r3_7 >> 3<i32>,r14:r14,r3:r3_10 >> 1<i32>
+		uses: r14:r14
 	return
 register_tm_clones_exit:
 
@@ -58,7 +57,7 @@ void __do_global_dtors_aux()
 // Terminates process
 __do_global_dtors_aux_exit:
 __do_global_dtors_aux_entry:
-l00000568:
+l0000000000000568:
 
 
 void call___do_global_dtors_aux()
@@ -71,7 +70,7 @@ void call___do_global_dtors_aux()
 // Terminates process
 call___do_global_dtors_aux_exit:
 call___do_global_dtors_aux_entry:
-l00000608:
+l0000000000000608:
 
 
 void frame_dummy(word64 r14)
@@ -84,16 +83,16 @@ void frame_dummy(word64 r14)
 // Trashed: CC r1 r14 r15 r3
 // Preserved:
 frame_dummy_entry:
-l00000620:
-	branch CC l00000620_thunk_register_tm_clones
-l00000620_thunk_register_tm_clones:
+l0000000000000620:
+	branch CC l0000000000000620_thunk_register_tm_clones
+l0000000000000620_thunk_register_tm_clones:
 	register_tm_clones(r14)
 	return
 frame_dummy_exit:
-l00000626:
-l00000626_thunk_call_frame_dummy:
+l0000000000000626:
+l0000000000000626_thunk_call_frame_dummy:
 	call_frame_dummy()
-l00000626_thunk_call_frame_dummy:
+l0000000000000626_thunk_call_frame_dummy:
 	call_frame_dummy()
 
 
@@ -109,19 +108,22 @@ void call_frame_dummy()
 // Terminates process
 call_frame_dummy_exit:
 call_frame_dummy_entry:
-l00000628:
+l0000000000000628:
 
 
-void hexdump()
+void hexdump(word64 r14)
 // stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
 
-// MayUse: 
+// MayUse:  r14:[0..63]
 // LiveOut:
-// Trashed:
-// Preserved:
-// Terminates process
-hexdump_exit:
+// Trashed: r14
+// Preserved: r15
 hexdump_entry:
+l0000000000000640:
+	call r14 (retsize: 0;)
+		uses: r14:r14
+	return
+hexdump_exit:
 
 
 void __do_global_ctors_aux()
@@ -136,7 +138,7 @@ void __do_global_ctors_aux()
 // Terminates process
 __do_global_ctors_aux_exit:
 __do_global_ctors_aux_entry:
-l00000648:
+l0000000000000648:
 
 
 void call___do_global_ctors_aux()
@@ -149,6 +151,6 @@ void call___do_global_ctors_aux()
 // Terminates process
 call___do_global_ctors_aux_exit:
 call___do_global_ctors_aux_entry:
-l00000688:
+l0000000000000688:
 
 

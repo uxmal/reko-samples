@@ -1,31 +1,17 @@
-void strlen()
+void strlen(word64 t1, word64 t3)
 // stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
 
-// MayUse: 
+// MayUse:  t1:[0..63] t3:[0..63]
 // LiveOut:
-// Trashed:
-// Preserved:
-// Terminates process
-strlen_exit:
-strlen_entry:
-
-
-void fn0000000000000440()
-// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
-
-// Called from:
-//      main
-// MayUse: 
-// LiveOut:
-// Trashed: t1 t3
+// Trashed: t0 t1 t2 t3
 // Preserved: sp
-fn0000000000000440_entry:
-l0000000000000440:
-	word64 t3_5 = Mem0[0x0000000000002018<p64>:word64]
-	call t3_5 (retsize: 0;)
-		uses: t1:0x000000000000044C<p64>,t3:t3_5
+strlen_entry:
+l0000000000000420:
+	word64 t3_8 = Mem0[0x0000000000002008<p64>:word64]
+	call t3_8 (retsize: 0;)
+		uses: t0:Mem0[0x0000000000002010<p64>:word64],t1:t1 - t3 + -44<i32> >>u 1<u32>,t2:0x0000000000002420<p64>,t3:t3_8
 	return
-fn0000000000000440_exit:
+strlen_exit:
 
 
 void fn0000000000000450()

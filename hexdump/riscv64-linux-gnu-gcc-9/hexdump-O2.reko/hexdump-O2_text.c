@@ -4,10 +4,10 @@
 
 #include "hexdump-O2.h"
 
-// 0000000000000460: void main()
-void main()
+// 0000000000000460: void main(Register (ptr64 (ptr64 char)) a1)
+void main(char ** a1)
 {
-	fn0000000000000440();
+	a0_n = (uint64) strlen(*a1);
 	fn0000000000000450();
 }
 

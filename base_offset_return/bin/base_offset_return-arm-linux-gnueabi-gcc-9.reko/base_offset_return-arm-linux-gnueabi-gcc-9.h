@@ -39,11 +39,11 @@ Eq_111: (fn void ())
 Eq_115: (fn void ((ptr32 code)))
 	T_115 (in register_tm_clones : ptr32)
 	T_116 (in signature of register_tm_clones : void)
-Eq_121: (fn void ())
-	T_121 (in fn000002AC : ptr32)
-	T_122 (in signature of fn000002AC : void)
-Eq_129: (struct "Eq_129" 0005 (0 word32 dw0000))
-	T_129
+Eq_126: (fn void ())
+	T_126 (in fn000002AC : ptr32)
+	T_127 (in signature of fn000002AC : void)
+Eq_134: (struct "Eq_134" 0005 (0 word32 dw0000))
+	T_134
 // Type Variables ////////////
 globals_t: (in globals : (ptr32 (struct "Globals")))
   Class: Eq_1
@@ -513,54 +513,74 @@ T_117: (in register_tm_clones(lr) : void)
   Class: Eq_117
   DataType: void
   OrigDataType: void
-T_118: (in r0 : ui32)
+T_118: (in r0 : word32)
   Class: Eq_118
-  DataType: ui32
-  OrigDataType: ui32
+  DataType: word32
+  OrigDataType: word32
 T_119: (in 0<32> : word32)
   Class: Eq_118
-  DataType: ui32
+  DataType: word32
   OrigDataType: word32
 T_120: (in r0 == 0<32> : bool)
   Class: Eq_120
   DataType: bool
   OrigDataType: bool
-T_121: (in fn000002AC : ptr32)
-  Class: Eq_121
-  DataType: (ptr32 Eq_121)
-  OrigDataType: (ptr32 (fn T_123 ()))
-T_122: (in signature of fn000002AC : void)
-  Class: Eq_121
-  DataType: (ptr32 Eq_121)
-  OrigDataType: 
-T_123: (in fn000002AC() : void)
+T_121: (in 0<32> : word32)
+  Class: Eq_118
+  DataType: word32
+  OrigDataType: word32
+T_122: (in r0 != 0<32> : bool)
+  Class: Eq_122
+  DataType: bool
+  OrigDataType: bool
+T_123: (in r0 : ui32)
   Class: Eq_123
+  DataType: ui32
+  OrigDataType: ui32
+T_124: (in 0<32> : word32)
+  Class: Eq_123
+  DataType: ui32
+  OrigDataType: word32
+T_125: (in r0 == 0<32> : bool)
+  Class: Eq_125
+  DataType: bool
+  OrigDataType: bool
+T_126: (in fn000002AC : ptr32)
+  Class: Eq_126
+  DataType: (ptr32 Eq_126)
+  OrigDataType: (ptr32 (fn T_128 ()))
+T_127: (in signature of fn000002AC : void)
+  Class: Eq_126
+  DataType: (ptr32 Eq_126)
+  OrigDataType: 
+T_128: (in fn000002AC() : void)
+  Class: Eq_128
   DataType: void
   OrigDataType: void
-T_124: (in 0<32> : word32)
-  Class: Eq_124
-  DataType: word32
-  OrigDataType: word32
-T_125: (in 0<32> : word32)
-  Class: Eq_125
-  DataType: (ptr32 (arr Eq_129))
-  OrigDataType: (ptr32 (struct (0 (arr T_129) a0000)))
-T_126: (in 5<32> : word32)
-  Class: Eq_126
-  DataType: ui32
-  OrigDataType: ui32
-T_127: (in r0 * 5<32> : word32)
-  Class: Eq_127
-  DataType: ui32
-  OrigDataType: ui32
-T_128: (in 0<32>[r0 * 5<32>] : word32)
-  Class: Eq_124
-  DataType: word32
-  OrigDataType: word32
-T_129:
+T_129: (in 0<32> : word32)
   Class: Eq_129
-  DataType: Eq_129
-  OrigDataType: (struct 0005 (0 T_128 t0000))
+  DataType: word32
+  OrigDataType: word32
+T_130: (in 0<32> : word32)
+  Class: Eq_130
+  DataType: (ptr32 (arr Eq_134))
+  OrigDataType: (ptr32 (struct (0 (arr T_134) a0000)))
+T_131: (in 5<32> : word32)
+  Class: Eq_131
+  DataType: ui32
+  OrigDataType: ui32
+T_132: (in r0 * 5<32> : word32)
+  Class: Eq_132
+  DataType: ui32
+  OrigDataType: ui32
+T_133: (in 0<32>[r0 * 5<32>] : word32)
+  Class: Eq_129
+  DataType: word32
+  OrigDataType: word32
+T_134:
+  Class: Eq_134
+  DataType: Eq_134
+  OrigDataType: (struct 0005 (0 T_133 t0000))
 */
 typedef struct Globals {
 	<anonymous> t028C;	// 28C
@@ -642,9 +662,9 @@ typedef void (Eq_111)();
 
 typedef void (Eq_115)(code *);
 
-typedef void (Eq_121)();
+typedef void (Eq_126)();
 
-typedef struct Eq_129 {	// size: 5 5
+typedef struct Eq_134 {	// size: 5 5
 	word32 dw0000;	// 0
-} Eq_129;
+} Eq_134;
 

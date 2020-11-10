@@ -54,12 +54,14 @@ void frame_dummy()
 // 00000000000004EA: void hexdump()
 void hexdump()
 {
+	(qwLocC8 + (fp + -16))->b0F78 = 0x41;
+	(qwLocC8 + 0x01 + (fp + -16))->b0F78 = 0x20;
 }
 
 // 0000000000000574: void main()
 void main()
 {
-	fn0000000000000440();
+	a0_n = (uint64) strlen(*qwLoc30);
 	fn0000000000000450();
 }
 

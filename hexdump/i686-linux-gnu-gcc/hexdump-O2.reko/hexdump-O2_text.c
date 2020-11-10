@@ -4,11 +4,11 @@
 
 #include "hexdump-O2.h"
 
-// 00001060: void main(Stack (ptr32 (ptr32 char)) dwArg08)
-void main(char ** dwArg08)
+// 00001060: void main()
+void main()
 {
 	__align(fp);
-	strlen(*dwArg08);
+	strlen(&g_t4000);
 	fn00001058(&g_t4000);
 }
 

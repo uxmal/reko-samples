@@ -6,12 +6,38 @@
 // Equivalence classes ////////////
 Eq_1: (struct "Globals")
 	globals_t (in globals : (ptr64 (struct "Globals")))
+Eq_3: (struct "Eq_3" (FFFFE1F8 word64 qwFFFFE1F8))
+	T_3 (in r31 : (ptr64 Eq_3))
 // Type Variables ////////////
 globals_t: (in globals : (ptr64 (struct "Globals")))
   Class: Eq_1
   DataType: (ptr64 Eq_1)
   OrigDataType: (ptr64 (struct "Globals"))
+T_2: (in r7 : word64)
+  Class: Eq_2
+  DataType: word64
+  OrigDataType: word64
+T_3: (in r31 : (ptr64 Eq_3))
+  Class: Eq_3
+  DataType: (ptr64 Eq_3)
+  OrigDataType: (ptr64 (struct (FFFFE1F8 T_6 tFFFFE1F8)))
+T_4: (in -7688<i64> : int64)
+  Class: Eq_4
+  DataType: int64
+  OrigDataType: int64
+T_5: (in r31 + -7688<i64> : word64)
+  Class: Eq_5
+  DataType: word64
+  OrigDataType: word64
+T_6: (in Mem5[r31 + -7688<i64>:word64] : word64)
+  Class: Eq_2
+  DataType: word64
+  OrigDataType: word64
 */
 typedef struct Globals {
 } Eq_1;
+
+typedef struct Eq_3 {
+	word64 qwFFFFE1F8;	// FFFFE1F8
+} Eq_3;
 

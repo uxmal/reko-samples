@@ -97,8 +97,14 @@ D65F03C0     	ret	x30
 ;; frame_dummy: 0000000000000580
 frame_dummy proc
 17FFFFDE     	b	#&4F8
-0000000000000584             1F 20 03 D5 1F 00 00 F1 E0 17 9F 1A     . ..........
-0000000000000590 00 04 00 11 C0 03 5F D6                         ......_.       
+0000000000000584             1F 20 03 D5                             . ..       
+
+;; getIndex: 0000000000000588
+getIndex proc
+F100001F     	cmp	x0,#0
+1A9F17E0     	csinc	w0,w31,w31,NE
+11000400     	add	w0,w0,#1
+D65F03C0     	ret	x30
 
 ;; foo: 0000000000000598
 foo proc

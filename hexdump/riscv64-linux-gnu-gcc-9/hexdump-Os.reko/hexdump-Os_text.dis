@@ -1,13 +1,13 @@
-void main()
+void main(word64 a1)
 // stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
 
-// MayUse: 
+// MayUse:  a1:[0..63]
 // LiveOut:
 // Trashed: a0 a1 a2 a3 a4 t1 t3
 // Preserved: ra sp
 main_entry:
 l0000000000000460:
-	fn0000000000000440()
+	a0_10 = CONVERT(strlen(Mem5[a1:word64]), size_t, uint64)
 	fn0000000000000450()
 	return
 main_exit:
@@ -114,9 +114,10 @@ void hexdump()
 // MayUse: 
 // LiveOut:
 // Trashed:
-// Preserved:
-// Terminates process
-hexdump_exit:
+// Preserved: sp
 hexdump_entry:
+l000000000000051A:
+	return
+hexdump_exit:
 
 

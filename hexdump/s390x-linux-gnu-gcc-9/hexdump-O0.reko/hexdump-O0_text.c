@@ -4,37 +4,37 @@
 
 #include "hexdump-O0.h"
 
-// 00000548: void deregister_tm_clones()
+// 0000000000000548: void deregister_tm_clones()
 void deregister_tm_clones()
 {
 }
 
-// 00000568: void register_tm_clones(Register Eq_n r14)
+// 0000000000000568: void register_tm_clones(Register (ptr64 code) r14)
 // Called from:
 //      frame_dummy
-void register_tm_clones(Eq_n r14)
+void register_tm_clones(<anonymous> * r14)
 {
-	Eq_n r1_n = SEQ(SLICE(r1, word32, 32), 0x2020) - SEQ(SLICE(r2, word32, 32), 0x2020);
+	Eq_n r1_n = 0x2020 - 0x2020;
 	if ((r1_n >>u 63) + (r1_n >> 3) >> 1 == 0x00)
 		r14();
 }
 
-// 000005A8: void __do_global_dtors_aux()
+// 00000000000005A8: void __do_global_dtors_aux()
 // Called from:
 //      _fini
 void __do_global_dtors_aux()
 {
 }
 
-// 00000648: void call___do_global_dtors_aux()
+// 0000000000000648: void call___do_global_dtors_aux()
 void call___do_global_dtors_aux()
 {
 }
 
-// 00000660: void frame_dummy(Register Eq_n r14)
+// 0000000000000660: void frame_dummy(Register (ptr64 code) r14)
 // Called from:
 //      _init
-void frame_dummy(Eq_n r14)
+void frame_dummy(<anonymous> * r14)
 {
 	if (CC)
 		register_tm_clones(r14);
@@ -42,31 +42,31 @@ void frame_dummy(Eq_n r14)
 		call_frame_dummy();
 }
 
-// 00000668: void call_frame_dummy()
+// 0000000000000668: void call_frame_dummy()
 // Called from:
 //      frame_dummy
 void call_frame_dummy()
 {
 }
 
-// 00000680: void hexdump()
+// 0000000000000680: void hexdump()
 void hexdump()
 {
 }
 
-// 00000740: void main()
+// 0000000000000740: void main()
 void main()
 {
 }
 
-// 000007C8: void __do_global_ctors_aux()
+// 00000000000007C8: void __do_global_ctors_aux()
 // Called from:
 //      _init
 void __do_global_ctors_aux()
 {
 }
 
-// 00000808: void call___do_global_ctors_aux()
+// 0000000000000808: void call___do_global_ctors_aux()
 void call___do_global_ctors_aux()
 {
 }

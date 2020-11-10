@@ -113,11 +113,12 @@ void getIndex()
 
 // MayUse: 
 // LiveOut:
-// Trashed:
-// Preserved:
-// Terminates process
-getIndex_exit:
+// Trashed: SCZO rax Top
+// Preserved: rsp
 getIndex_entry:
+l0000000000001160:
+	return
+getIndex_exit:
 
 
 void foo(word32 eax, word64 rdi)

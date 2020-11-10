@@ -4,7 +4,7 @@
 
 /*
 // Equivalence classes ////////////
-Eq_1: (struct "Globals" (500 code t0500) (10FC0 (ptr64 code) ptr10FC0) (10FC8 word64 qw10FC8) (10FD0 word64 qw10FD0) (10FE0 (ptr64 code) ptr10FE0) (11000 (ptr64 code) ptr11000) (11008 (ptr64 code) ptr11008) (11010 (ptr64 code) ptr11010) (11018 (ptr64 code) ptr11018) (11028 byte b11028))
+Eq_1: (struct "Globals" (500 code t0500) (B90 code t0B90) (10FC0 (ptr64 code) ptr10FC0) (10FC8 word64 qw10FC8) (10FD0 word64 qw10FD0) (10FE0 (ptr64 code) ptr10FE0) (11000 (ptr64 code) ptr11000) (11008 (ptr64 code) ptr11008) (11010 (ptr64 code) ptr11010) (11018 (ptr64 code) ptr11018) (11028 byte b11028))
 	globals_t (in globals : (ptr64 (struct "Globals")))
 Eq_2: (fn void ())
 	T_2 (in call_weak_fn : ptr64)
@@ -341,6 +341,7 @@ T_74: (in register_tm_clones() : void)
 */
 typedef struct Globals {
 	<anonymous> t0500;	// 500
+	<anonymous> t0B90;	// B90
 	<anonymous> * ptr10FC0;	// 10FC0
 	word64 qw10FC8;	// 10FC8
 	word64 qw10FD0;	// 10FD0

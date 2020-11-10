@@ -149,17 +149,96 @@ D101           	mov.l	(00000530),r1                         ; @(04,pc)
 0123           	braf	r1
 0009           	nop
 0000052E                                           09 00               ..
-00000530 1A FF FF FF E6 2F B8 7F BC 7F F3 6E E3 61 0C 71 ...../.....n.a.q
-00000540 40 11 E3 61 CC 71 5F 11 E3 61 CC 71 6E 11 E3 61 @..a.q_..a.qn..a
-00000550 CC 71 7D 11 E3 61 4C 71 E3 62 0C 72 20 52 2F 11 .q}..aLq.b.r R/.
-00000560 E3 61 10 71 E3 62 4C 72 2F 52 20 11 E3 61 CC 71 .a.q.bLr/R ..a.q
-00000570 1F 52 E3 61 10 71 21 11 E3 61 4C 71 E3 62 10 72 .R.a.q!..aLq.b.r
-00000580 20 52 2E 11 E3 61 10 71 11 52 E3 61 4C 71 2D 11  R...a.q.R.aLq-.
-00000590 E3 61 4C 71 E3 62 4C 72 2D 52 2C 11 E3 62 18 72 .aLq.bLr-R,..b.r
-000005A0 E3 61 CC 71 1E 51 2C 31 41 E2 20 21 E3 61 CC 71 .a.q.Q,1A. !.a.q
-000005B0 1E 51 01 71 E3 62 18 72 20 E3 13 60 34 02 E3 61 .Q.q.b.r ..`4..a
-000005C0 10 71 11 52 E3 61 4C 71 1D 51 18 32 E3 61 10 71 .q.R.aLq.Q.2.a.q
-000005D0 21 11 09 00 44 7E 48 7E E3 6F F6 6E 0B 00 09 00 !...D~H~.o.n....
+00000530 1A FF FF FF                                     ....           
+
+;; hexdump: 00000534
+hexdump proc
+2FE6           	mov.l	r14,@-r15
+7FB8           	add	#B8,r15
+7FBC           	add	#BC,r15
+6EF3           	mov	r15,r14
+61E3           	mov	r14,r1
+710C           	add	#0C,r1
+1140           	mov.l	r4,@(0,r1)
+61E3           	mov	r14,r1
+71CC           	add	#CC,r1
+115F           	mov.l	r5,@(60,r1)
+61E3           	mov	r14,r1
+71CC           	add	#CC,r1
+116E           	mov.l	r6,@(56,r1)
+61E3           	mov	r14,r1
+71CC           	add	#CC,r1
+117D           	mov.l	r7,@(52,r1)
+61E3           	mov	r14,r1
+714C           	add	#4C,r1
+62E3           	mov	r14,r2
+720C           	add	#0C,r2
+5220           	mov.l	@(0,r2),r2
+112F           	mov.l	r2,@(60,r1)
+61E3           	mov	r14,r1
+7110           	add	#10,r1
+62E3           	mov	r14,r2
+724C           	add	#4C,r2
+522F           	mov.l	@(60,r2),r2
+1120           	mov.l	r2,@(0,r1)
+61E3           	mov	r14,r1
+71CC           	add	#CC,r1
+521F           	mov.l	@(60,r1),r2
+61E3           	mov	r14,r1
+7110           	add	#10,r1
+1121           	mov.l	r2,@(4,r1)
+61E3           	mov	r14,r1
+714C           	add	#4C,r1
+62E3           	mov	r14,r2
+7210           	add	#10,r2
+5220           	mov.l	@(0,r2),r2
+112E           	mov.l	r2,@(56,r1)
+61E3           	mov	r14,r1
+7110           	add	#10,r1
+5211           	mov.l	@(4,r1),r2
+61E3           	mov	r14,r1
+714C           	add	#4C,r1
+112D           	mov.l	r2,@(52,r1)
+61E3           	mov	r14,r1
+714C           	add	#4C,r1
+62E3           	mov	r14,r2
+724C           	add	#4C,r2
+522D           	mov.l	@(52,r2),r2
+112C           	mov.l	r2,@(48,r1)
+62E3           	mov	r14,r2
+7218           	add	#18,r2
+61E3           	mov	r14,r1
+71CC           	add	#CC,r1
+511E           	mov.l	@(56,r1),r1
+312C           	add	r2,r1
+E241           	mov	#41,r2
+2120           	mov.b	r2,@r1
+61E3           	mov	r14,r1
+71CC           	add	#CC,r1
+511E           	mov.l	@(56,r1),r1
+7101           	add	#01,r1
+62E3           	mov	r14,r2
+7218           	add	#18,r2
+E320           	mov	#20,r3
+6013           	mov	r1,r0
+0234           	mov.b	r3,@(r0,r2)
+61E3           	mov	r14,r1
+7110           	add	#10,r1
+5211           	mov.l	@(4,r1),r2
+61E3           	mov	r14,r1
+714C           	add	#4C,r1
+511D           	mov.l	@(52,r1),r1
+3218           	sub	r1,r2
+61E3           	mov	r14,r1
+7110           	add	#10,r1
+1121           	mov.l	r2,@(4,r1)
+0009           	nop
+7E44           	add	#44,r14
+7E48           	add	#48,r14
+6FE3           	mov	r14,r15
+6EF6           	mov.l	@r15+,r14
+000B           	rts
+000005DE                                           09 00               ..
 
 ;; main: 000005E0
 main proc

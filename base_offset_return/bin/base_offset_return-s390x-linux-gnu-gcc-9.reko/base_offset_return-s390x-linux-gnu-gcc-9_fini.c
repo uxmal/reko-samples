@@ -4,7 +4,7 @@
 
 #include "base_offset_return-s390x-linux-gnu-gcc-9.h"
 
-// 00000668: void _fini()
+// 0000000000000668: void _fini()
 void _fini()
 {
 	__do_global_dtors_aux();

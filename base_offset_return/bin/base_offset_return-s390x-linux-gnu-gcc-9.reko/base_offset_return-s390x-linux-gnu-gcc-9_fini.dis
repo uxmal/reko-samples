@@ -8,7 +8,7 @@ void _fini()
 // Terminates process
 _fini_exit:
 _fini_entry:
-l00000668:
+l0000000000000668:
 	__do_global_dtors_aux()
 
 

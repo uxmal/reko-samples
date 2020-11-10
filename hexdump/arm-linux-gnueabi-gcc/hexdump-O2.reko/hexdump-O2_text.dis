@@ -152,9 +152,10 @@ void hexdump()
 // MayUse: 
 // LiveOut:
 // Trashed:
-// Preserved:
-// Terminates process
-hexdump_exit:
+// Preserved: sp
 hexdump_entry:
+l000004B4:
+	return
+hexdump_exit:
 
 

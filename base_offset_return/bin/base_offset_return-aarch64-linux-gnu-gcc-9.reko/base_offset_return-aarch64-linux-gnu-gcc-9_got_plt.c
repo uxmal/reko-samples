@@ -5,5 +5,5 @@
 #include "base_offset_return-aarch64-linux-gnu-gcc-9.h"
 
 <anonymous> * g_ptr11000 = &g_t0460;
-<anonymous> * g_ptr11008 = &g_t0460;
+<anonymous> * g_ptr11008 = &g_t09E8;
 <anonymous> * g_ptr11010 = &g_t0460;

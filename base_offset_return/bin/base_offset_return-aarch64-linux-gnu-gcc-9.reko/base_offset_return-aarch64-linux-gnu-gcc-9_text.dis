@@ -117,11 +117,12 @@ void getIndex()
 
 // MayUse: 
 // LiveOut:
-// Trashed:
-// Preserved:
-// Terminates process
-getIndex_exit:
+// Trashed: NZCV w0
+// Preserved: sp
 getIndex_entry:
+l0000000000000588:
+	return
+getIndex_exit:
 
 
 void foo(word64 x0)

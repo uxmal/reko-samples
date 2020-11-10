@@ -190,7 +190,12 @@ call_frame_dummy proc
 9DE3BF50     	save	%sp,FFFFFFFFFFFFFF50,%sp
 81CFE008     	return	%i7+00000008
 01000000     	sethi	00000000,%g0
-0000000000000790 9D E3 BF 50 81 CF E0 08 01 00 00 00             ...P........   
+
+;; hexdump: 0000000000000790
+hexdump proc
+9DE3BF50     	save	%sp,FFFFFFFFFFFFFF50,%sp
+81CFE008     	return	%i7+00000008
+01000000     	sethi	00000000,%g0
 
 ;; __do_global_ctors_aux: 000000000000079C
 ;;   Called from:

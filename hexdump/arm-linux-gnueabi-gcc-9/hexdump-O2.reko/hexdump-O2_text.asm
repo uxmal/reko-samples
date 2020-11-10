@@ -125,4 +125,7 @@ E8BD8010     	pop	{r4,pc}
 ;; frame_dummy: 000004B4
 frame_dummy proc
 EAFFFFD0     	b	$000003FC
-000004B8                         1E FF 2F E1                     ../.   
+
+;; hexdump: 000004B8
+hexdump proc
+E12FFF1E     	bx	lr

@@ -4,7 +4,7 @@
 
 #include "hexdump-Os.h"
 
-<anonymous> * g_ptr2018 = &g_t0840;
+<anonymous> * g_ptr2008 = &g_tFFFFFFFF;
 <anonymous> * g_ptr2020 = &g_t0E48;
 <anonymous> * g_ptr2030 = null;
 <anonymous> * g_ptr2040 = null;

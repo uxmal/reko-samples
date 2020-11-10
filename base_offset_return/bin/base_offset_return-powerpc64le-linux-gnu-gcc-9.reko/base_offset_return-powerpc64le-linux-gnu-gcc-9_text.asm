@@ -146,8 +146,17 @@ frame_dummy proc
 60784238     	ori	r24,r3,4238
 A0FEFF4B     	lhz	r7,-181(r30)
 00000060     	illegal
-00000000000006B0 74 00 63 7C 82 D1 63 78 01 00 63 38 20 00 80 4E t.c|..cx..c8 ..N
-00000000000006C0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 42 60 ..............B`
+
+;; getIndex: 00000000000006B0
+getIndex proc
+7400637C     	andis.	r0,r0,637C
+82D16378     	lwz	r22,25464(r17)
+01006338     	illegal
+2000804E     	subfic	r0,r0,-7FB2
+00000000     	illegal
+00000000     	illegal
+00000000     	illegal
+00004260     	illegal
 
 ;; foo: 00000000000006D0
 foo proc

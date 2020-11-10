@@ -134,16 +134,19 @@ l00000460_thunk_register_tm_clones:
 frame_dummy_exit:
 
 
-void hexdump()
+void hexdump(word32 r2)
 // stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
 
-// MayUse: 
+// MayUse:  r2:[0..31]
 // LiveOut:
-// Trashed:
-// Preserved:
-// Terminates process
-hexdump_exit:
+// Trashed: r2 r3
+// Preserved: fp r0 sp
 hexdump_entry:
+l00000464:
+	Mem31[fp - 0x7C<32> + r2:byte] = 0x41<8>
+	Mem37[fp - 8<32> + (r2 + 1<32>) - 116<i32>:byte] = 0x20<8>
+	return
+hexdump_exit:
 
 
 void main()

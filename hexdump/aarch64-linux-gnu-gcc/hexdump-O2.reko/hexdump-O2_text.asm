@@ -120,4 +120,7 @@ D65F03C0     	ret	x30
 frame_dummy proc
 17FFFFDC     	b	#&5F0
 0000000000000684             1F 20 03 D5 1F 20 03 D5 1F 20 03 D5     . ... ... ..
-0000000000000690 C0 03 5F D6                                     .._.           
+
+;; hexdump: 0000000000000690
+hexdump proc
+D65F03C0     	ret	x30

@@ -8,7 +8,7 @@ void deregister_tm_clones()
 // Terminates process
 deregister_tm_clones_exit:
 deregister_tm_clones_entry:
-l00000478:
+l0000000000000478:
 
 
 void register_tm_clones(word64 r14)
@@ -21,13 +21,13 @@ void register_tm_clones(word64 r14)
 // Trashed: CC r1 r14 r2 r3
 // Preserved: r15
 register_tm_clones_entry:
-l00000498:
-	word64 r1_7 = SEQ(SLICE(r1, word32, 32), 0x00002010<p32>) - SEQ(SLICE(r2, word32, 32), 0x00002010<p32>)
-	branch (r1_7 >>u 63<i32>) + (r1_7 >> 3<i32>) >> 1<i32> != 0<64> l000004C4
-l000004C4:
-l000004C2_1:
+l0000000000000498:
+	word64 r1_5 = 0x0000000000002010<p64> - 0x0000000000002010<p64>
+	branch (r1_5 >>u 63<i32>) + (r1_5 >> 3<i32>) >> 1<i32> != 0<64> l00000000000004C4
+l00000000000004C4:
+l00000000000004C2_1:
 	call r14 (retsize: 0;)
-		uses: r1:r1_7,r14:r14,r2:r1_7 >> 3<i32>
+		uses: r14:r14
 	return
 register_tm_clones_exit:
 
@@ -44,7 +44,7 @@ void __do_global_dtors_aux()
 // Terminates process
 __do_global_dtors_aux_exit:
 __do_global_dtors_aux_entry:
-l000004D8:
+l00000000000004D8:
 
 
 void call___do_global_dtors_aux()
@@ -57,7 +57,7 @@ void call___do_global_dtors_aux()
 // Terminates process
 call___do_global_dtors_aux_exit:
 call___do_global_dtors_aux_entry:
-l00000578:
+l0000000000000578:
 
 
 void frame_dummy(word64 r14)
@@ -70,16 +70,16 @@ void frame_dummy(word64 r14)
 // Trashed: CC r1 r14 r15 r2 r3
 // Preserved:
 frame_dummy_entry:
-l00000590:
-	branch CC l00000590_thunk_register_tm_clones
-l00000590_thunk_register_tm_clones:
+l0000000000000590:
+	branch CC l0000000000000590_thunk_register_tm_clones
+l0000000000000590_thunk_register_tm_clones:
 	register_tm_clones(r14)
 	return
 frame_dummy_exit:
-l00000596:
-l00000596_thunk_call_frame_dummy:
+l0000000000000596:
+l0000000000000596_thunk_call_frame_dummy:
 	call_frame_dummy()
-l00000596_thunk_call_frame_dummy:
+l0000000000000596_thunk_call_frame_dummy:
 	call_frame_dummy()
 
 
@@ -95,7 +95,7 @@ void call_frame_dummy()
 // Terminates process
 call_frame_dummy_exit:
 call_frame_dummy_entry:
-l00000598:
+l0000000000000598:
 
 
 void getIndex()
@@ -108,7 +108,7 @@ void getIndex()
 // Terminates process
 getIndex_exit:
 getIndex_entry:
-l000005B0:
+l00000000000005B0:
 
 
 void foo()
@@ -121,7 +121,7 @@ void foo()
 // Terminates process
 foo_exit:
 foo_entry:
-l000005C8:
+l00000000000005C8:
 
 
 void __do_global_ctors_aux()
@@ -136,7 +136,7 @@ void __do_global_ctors_aux()
 // Terminates process
 __do_global_ctors_aux_exit:
 __do_global_ctors_aux_entry:
-l00000610:
+l0000000000000610:
 
 
 void call___do_global_ctors_aux()
@@ -149,6 +149,6 @@ void call___do_global_ctors_aux()
 // Terminates process
 call___do_global_ctors_aux_exit:
 call___do_global_ctors_aux_entry:
-l00000650:
+l0000000000000650:
 
 

@@ -134,16 +134,23 @@ l000003E4_thunk_register_tm_clones:
 frame_dummy_exit:
 
 
-void getIndex()
+void getIndex(word32 r0)
 // stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
 
-// MayUse: 
+// MayUse:  r0:[0..31]
 // LiveOut:
-// Trashed:
-// Preserved:
-// Terminates process
-getIndex_exit:
+// Trashed: NZCV r0
+// Preserved: sp
 getIndex_entry:
+l000003E8:
+	branch r0 == 0<32> l000003F0
+l000003EC_1:
+l000003F0:
+	branch r0 != 0<32> l000003F4
+l000003F0_1:
+l000003F4:
+	return
+getIndex_exit:
 
 
 void foo(word32 r0)

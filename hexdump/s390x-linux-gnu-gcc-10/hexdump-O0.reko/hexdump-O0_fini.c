@@ -4,7 +4,7 @@
 
 #include "hexdump-O0.h"
 
-// 00000820: void _fini()
+// 0000000000000820: void _fini()
 void _fini()
 {
 	__do_global_dtors_aux();

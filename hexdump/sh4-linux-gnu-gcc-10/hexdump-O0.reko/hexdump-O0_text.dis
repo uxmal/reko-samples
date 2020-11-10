@@ -116,16 +116,19 @@ l00000528:
 frame_dummy_exit:
 
 
-void hexdump()
+void hexdump(word32 r6)
 // stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
 
-// MayUse: 
+// MayUse:  r6:[0..31]
 // LiveOut:
-// Trashed:
-// Preserved:
-// Terminates process
-hexdump_exit:
+// Trashed: r0 r1 r2 r3
+// Preserved: r14 r15
 hexdump_entry:
+l00000534:
+	Mem68[r6 + (fp + 0xFFFFFF88<32>):byte] = 0x41<32>
+	Mem77[r6 + 1<32> + (fp + 0xFFFFFF88<32>):byte] = 0x20<32>
+	return
+hexdump_exit:
 
 
 void main(word32 r4, word32 r5, word32 r12, word32 r14, word32 pr)

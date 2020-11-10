@@ -4,5 +4,5 @@
 
 #include "hexdump-O0.h"
 
-<anonymous> g_t0840;
 <anonymous> g_t0E00;
+<anonymous> g_tFFFFFFFF;

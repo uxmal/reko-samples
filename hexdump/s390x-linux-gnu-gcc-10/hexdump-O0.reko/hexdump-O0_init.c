@@ -4,14 +4,14 @@
 
 #include "hexdump-O0.h"
 
-// 00000478: void _init(Register word64 r6, Register word64 r7, Register word64 r8, Register word64 r9, Register word64 r10, Register word64 r11, Register word64 r13)
+// 0000000000000478: void _init(Register word64 r6, Register word64 r7, Register word64 r8, Register word64 r9, Register word64 r10, Register word64 r11, Register word64 r13)
 void _init(word64 r6, word64 r7, word64 r8, word64 r9, word64 r10, word64 r11, word64 r13)
 {
-	word64 r12_n = SEQ(SLICE(r12, word32, 32), 8128);
-	Eq_n r1_n = *SEQ(SLICE(fp - 0x00A0, word32, 32), 8168);
-	if (r1_n != 0x00)
+	<anonymous> * r1_n = g_ptr1FE8;
+	if (r1_n != null)
 		r1_n();
-	frame_dummy(1198);
+	frame_dummy(&g_t04AE);
 	__do_global_ctors_aux();
 }
 
+<anonymous> g_t04AE = <code>;

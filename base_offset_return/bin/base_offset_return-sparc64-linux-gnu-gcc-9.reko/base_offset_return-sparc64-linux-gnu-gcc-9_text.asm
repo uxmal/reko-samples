@@ -166,8 +166,15 @@ call_frame_dummy proc
 9DE3BF50     	save	%sp,FFFFFFFFFFFFFF50,%sp
 81CFE008     	return	%i7+00000008
 01000000     	sethi	00000000,%g0
-00000000000006F0 9D E3 BF 50 82 10 20 00 83 7E 24 01 82 00 60 01 ...P.. ..~$...`.
-0000000000000700 81 CF E0 08 91 38 60 00                         .....8`.       
+
+;; getIndex: 00000000000006F0
+getIndex proc
+9DE3BF50     	save	%sp,FFFFFFFFFFFFFF50,%sp
+82102000     	or	%g0,00000000,%g1
+837E2401     	illegal
+82006001     	add	%g1,00000001,%g1
+81CFE008     	return	%i7+00000008
+91386000     	sra	%g1,00000000,%o0
 
 ;; foo: 0000000000000708
 foo proc

@@ -4,8 +4,11 @@
 
 #include "hexdump-Os.h"
 
-// 0000048C: void __cxa_finalize()
+// 000000000000048C: void __cxa_finalize()
 void __cxa_finalize()
 {
+	<anonymous> * r1_n = g_ptr2008;
+	r1_n();
 }
 
+<anonymous> g_t049A = <code>;

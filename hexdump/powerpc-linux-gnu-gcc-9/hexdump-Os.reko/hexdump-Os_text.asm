@@ -192,7 +192,10 @@ call_frame_dummy proc
 38210010     	addi	r1,r1,+0010
 7C0803A6     	mtlr	r0
 4E800020     	blr
-0000062C                                     4E 80 00 20             N.. 
+
+;; hexdump: 0000062C
+hexdump proc
+4E800020     	blr
 
 ;; _restgpr_14_x: 00000630
 _restgpr_14_x proc

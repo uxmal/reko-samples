@@ -122,12 +122,35 @@ frame_dummy proc
 call_frame_dummy proc
 4E75           	rts
 0000053E                                           4E 71               Nq
-00000540 4E 56 FF 84 2F 02 2D 6E 00 08 FF FC 2D 6E FF FC NV../.-n....-n..
-00000550 FF 84 20 2E 00 0C 2D 40 FF 88 2D 6E FF 84 FF F8 .. ...-@..-n....
-00000560 20 2E FF 88 2D 40 FF F4 2D 6E FF F4 FF F0 41 EE  ...-@..-n....A.
-00000570 FF 8C D1 EE 00 10 10 BC 00 41 20 2E 00 10 52 80 .........A ...R.
-00000580 1D BC 00 20 08 8C 22 2E FF 88 20 2E FF F4 24 01 ... .."... ...$.
-00000590 94 80 20 02 2D 40 FF 88 4E 71 24 1F 4E 5E 4E 75 .. .-@..Nq$.N^Nu
+
+;; hexdump: 00000540
+hexdump proc
+4E56 FF84     	link	a6,#$FF84
+2F02           	move.l	d2,-(a7)
+2D6E 0008 FFFC 	move.l	$0008(a6),-$0004(a6)
+2D6E FFFC FF84 	move.l	-$0004(a6),-$007C(a6)
+202E 000C     	move.l	$000C(a6),d0
+2D40 FF88     	move.l	d0,-$0078(a6)
+2D6E FF84 FFF8 	move.l	-$007C(a6),-$0008(a6)
+202E FF88     	move.l	-$0078(a6),d0
+2D40 FFF4     	move.l	d0,-$000C(a6)
+2D6E FFF4 FFF0 	move.l	-$000C(a6),-$0010(a6)
+41EE FF8C     	lea	-$0074(a6),a0
+D1EE 0010     	adda.l	$0010(a6),a0
+10BC 0041     	move.b	#$41,(a0)
+202E 0010     	move.l	$0010(a6),d0
+5280           	addq.l	#$01,d0
+1DBC 0020 088C 	move.b	#$20,(-$74,a6,d0)
+222E FF88     	move.l	-$0078(a6),d1
+202E FFF4     	move.l	-$000C(a6),d0
+2401           	move.l	d1,d2
+9480           	sub.l	d0,d2
+2002           	move.l	d2,d0
+2D40 FF88     	move.l	d0,-$0078(a6)
+4E71           	nop
+241F           	move.l	(a7)+,d2
+4E5E           	unlk	a6
+4E75           	rts
 
 ;; main: 000005A0
 main proc

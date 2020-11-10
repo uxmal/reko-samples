@@ -63,16 +63,18 @@ frame_dummy_entry:
 l0000000000000760:
 
 
-void hexdump()
+void hexdump(word64 r7, word64 r31)
 // stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
 
-// MayUse: 
+// MayUse:  r31:[0..63] r7:[0..63]
 // LiveOut:
 // Trashed:
 // Preserved:
 // Terminates process
 hexdump_exit:
 hexdump_entry:
+l000000000000076C:
+	Mem5[r31 + -7688<i64>:word64] = r7
 
 
 void main()

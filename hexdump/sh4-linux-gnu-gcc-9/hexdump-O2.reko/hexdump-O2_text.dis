@@ -174,10 +174,11 @@ void hexdump()
 // MayUse: 
 // LiveOut:
 // Trashed:
-// Preserved:
-// Terminates process
-hexdump_exit:
+// Preserved: r15
 hexdump_entry:
+l00000568:
+	return
+hexdump_exit:
 
 
 void __do_global_ctors_aux(word32 pr)

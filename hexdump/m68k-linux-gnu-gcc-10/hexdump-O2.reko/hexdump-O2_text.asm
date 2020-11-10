@@ -144,7 +144,12 @@ frame_dummy proc
 ;; call_frame_dummy: 00000580
 call_frame_dummy proc
 4E75           	rts
-00000582       4E 71 4E 75 4E 71                           NqNuNq       
+00000582       4E 71                                       Nq           
+
+;; hexdump: 00000584
+hexdump proc
+4E75           	rts
+00000586                   4E 71                               Nq       
 
 ;; __do_global_ctors_aux: 00000588
 ;;   Called from:

@@ -87,11 +87,11 @@ void hexdump(int32 dwArg0C)
 	(&(&(&(&(&(&(&(&(&(&(&(&(&(&(&(&(&(&(&(fp - 0x78)[dwArg0C + 0x01].a0000)[0].a0000)[0].a0000)[0].a0000)[0].a0000)[0].a0000)[0].a0000)[0].a0000)[0].a0000)[0].a0000)[0].a0000)[0].a0000)[0].a0000)[0].a0000)[0].a0000)[0].a0000)[0].a0000)[0].a0000)[0].a0000)[0] = (Eq_n) 0x20;
 }
 
-// 000011F7: void main(Stack (ptr32 (ptr32 char)) dwArg08)
-void main(char ** dwArg08)
+// 000011F7: void main()
+void main()
 {
 	__align(fp);
-	strlen(*dwArg08);
+	strlen(&g_t4000);
 	fn00001058(&g_t4000);
 }
 

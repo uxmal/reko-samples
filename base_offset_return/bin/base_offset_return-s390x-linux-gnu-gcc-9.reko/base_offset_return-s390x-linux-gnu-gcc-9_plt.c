@@ -4,8 +4,11 @@
 
 #include "base_offset_return-s390x-linux-gnu-gcc-9.h"
 
-// 00000454: void __cxa_finalize()
+// 0000000000000454: void __cxa_finalize()
 void __cxa_finalize()
 {
+	<anonymous> * r1_n = g_ptr2000;
+	r1_n();
 }
 
+<anonymous> g_t0462 = <code>;

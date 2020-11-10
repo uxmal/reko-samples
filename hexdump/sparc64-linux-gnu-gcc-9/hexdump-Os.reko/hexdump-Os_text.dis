@@ -279,11 +279,12 @@ void hexdump()
 
 // MayUse: 
 // LiveOut:
-// Trashed:
-// Preserved:
-// Terminates process
-hexdump_exit:
+// Trashed: i0 i1 i2 i3 i4 i5 i6 i7
+// Preserved: o0 o1 o2 o3 o4 o5 o7 sp
 hexdump_entry:
+l0000000000000790:
+	return
+hexdump_exit:
 
 
 void __do_global_ctors_aux(word64 o0, word64 o1, word64 o2, word64 o3, word64 o4, word64 o5, word64 o7)

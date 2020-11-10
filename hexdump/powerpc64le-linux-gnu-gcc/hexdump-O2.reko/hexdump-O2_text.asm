@@ -185,8 +185,17 @@ frame_dummy proc
 30774238     	addic	r3,r23,+4238
 A0FEFF4B     	lhz	r7,-181(r30)
 00000060     	illegal
-00000000000007E0 20 00 80 4E 00 00 00 00 00 00 00 00 00 00 00 00  ..N............
-00000000000007F0 00 00 00 60 00 00 00 60 00 00 00 60 00 00 00 60 ...`...`...`...`
+
+;; hexdump: 00000000000007E0
+hexdump proc
+2000804E     	subfic	r0,r0,-7FB2
+00000000     	illegal
+00000000     	illegal
+00000000     	illegal
+00000060     	illegal
+00000060     	illegal
+00000060     	illegal
+00000060     	illegal
 
 ;; __do_global_ctors_aux: 0000000000000800
 __do_global_ctors_aux proc

@@ -80,9 +80,11 @@ void call_frame_dummy()
 {
 }
 
-// 000005DC: void hexdump()
-void hexdump()
+// 000005DC: void hexdump(Register int32 r5)
+void hexdump(int32 r5)
 {
+	fp + ~0x97 + r5 = (byte *) 0x41;
+	(fp + ~0xA7 + (r5 + 0x01))->b0010 = 0x20;
 }
 
 // 0000067C: void main()

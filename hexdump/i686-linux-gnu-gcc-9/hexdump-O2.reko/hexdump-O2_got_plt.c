@@ -6,7 +6,7 @@
 
 struct Eq_n g_t4000 = 
 	{
-		hexdump,
+		&g_t1046,
 	};
 <anonymous> * g_ptr4004 = null;
 <anonymous> * g_ptr400C = &g_t1046;
