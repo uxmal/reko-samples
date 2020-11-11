@@ -4,9 +4,24 @@
 
 #include "hexdump-O0.h"
 
-// 0000000000000548: void deregister_tm_clones()
-void deregister_tm_clones()
+// 0000000000000548: void deregister_tm_clones(Register (ptr64 code) r14)
+// Called from:
+//      __do_global_dtors_aux
+void deregister_tm_clones(<anonymous> * r14)
 {
+	if (0x2020 != 0x2020)
+	{
+		<anonymous> * r1_n = g_ptr1FE0;
+		if (r1_n != null)
+		{
+			word64 r14_n;
+			r1_n();
+		}
+		else
+			r14();
+	}
+	else
+		r14();
 }
 
 // 0000000000000568: void register_tm_clones(Register (ptr64 code) r14)
@@ -15,20 +30,56 @@ void deregister_tm_clones()
 void register_tm_clones(<anonymous> * r14)
 {
 	Eq_n r1_n = 0x2020 - 0x2020;
-	if ((r1_n >>u 63) + (r1_n >> 3) >> 1 == 0x00)
+	if ((r1_n >>u 63) + (r1_n >> 3) >> 1 != 0x00)
+	{
+		<anonymous> * r1_n = g_ptr1FF8;
+		if (r1_n != null)
+		{
+			word64 r14_n;
+			r1_n();
+		}
+		else
+			r14();
+	}
+	else
 		r14();
 }
 
-// 00000000000005A8: void __do_global_dtors_aux()
+// 00000000000005A8: void __do_global_dtors_aux(Register ptr64 r12, Register word64 r13)
 // Called from:
 //      _fini
-void __do_global_dtors_aux()
+void __do_global_dtors_aux(ptr64 r12, word64 r13)
 {
+	byte * r9_n = &g_b2020;
+	ptr64 r15_n = fp + -320;
+	if (g_b2020 == 0x00)
+	{
+		if (g_qw1FD8 != 0x00)
+			__cxa_finalize();
+		<anonymous> * r10_n[] = g_a1E30;
+		Eq_n r11_n = (7736 - 7728 >> 3) - 1;
+		Eq_n r1_n = g_t2028;
+		while (r1_n < r11_n)
+		{
+			Eq_n r1_n = (word64) r1_n + 1;
+			g_t2028 = r1_n;
+			<anonymous> * r1_n = r10_n[r1_n];
+			r1_n();
+			r1_n = g_t2028;
+		}
+		deregister_tm_clones(&g_t0636);
+		*r9_n = 0x01;
+	}
+	struct Eq_n * v13_n = r15_n + 232;
+	<anonymous> * r14_n = v13_n->ptr0028;
+	r14_n();
 }
 
-// 0000000000000648: void call___do_global_dtors_aux()
-void call___do_global_dtors_aux()
+<anonymous> g_t0636 = <code>;
+// 0000000000000648: void call___do_global_dtors_aux(Register (ptr64 code) r14)
+void call___do_global_dtors_aux(<anonymous> * r14)
 {
+	r14();
 }
 
 // 0000000000000660: void frame_dummy(Register (ptr64 code) r14)
@@ -39,35 +90,60 @@ void frame_dummy(<anonymous> * r14)
 	if (CC)
 		register_tm_clones(r14);
 	else
-		call_frame_dummy();
+		call_frame_dummy(r14);
 }
 
-// 0000000000000668: void call_frame_dummy()
+// 0000000000000668: void call_frame_dummy(Register (ptr64 code) r14)
 // Called from:
 //      frame_dummy
-void call_frame_dummy()
+void call_frame_dummy(<anonymous> * r14)
 {
+	r14();
 }
 
-// 0000000000000680: void hexdump()
-void hexdump()
+// 0000000000000680: void hexdump(Register word64 r2, Register word64 r3, Register int64 r4, Register word64 r5, Register word64 r6, Register word64 r11, Register (ptr64 code) r14)
+void hexdump(word64 r2, word64 r3, int64 r4, word64 r5, word64 r6, word64 r11, <anonymous> * r14)
 {
+	(fp + -0x0200 + r4)->b00DC = 0x41;
+	(fp + -0x0200 + (r4 + 1))->b00DC = 0x20;
+	int64 r1_n = (int64) (word32) r3;
+	word64 r1_n = r3 - r1_n;
+	r14();
 }
 
-// 0000000000000740: void main()
-void main()
+// 0000000000000740: void main(Register word64 r6, Register word64 r7, Register word64 r8, Register word64 r9, Register word64 r10, Register word64 r11, Register word64 r12, Register word64 r13, Register (ptr64 code) r14)
+void main(word64 r6, word64 r7, word64 r8, word64 r9, word64 r10, word64 r11, word64 r12, word64 r13, <anonymous> * r14)
 {
+	strlen();
+	fn0000000000000524();
+	r14();
 }
 
-// 00000000000007C8: void __do_global_ctors_aux()
+// 00000000000007C8: void __do_global_ctors_aux(Register word64 r11, Register ptr64 r12, Register word64 r13, Register (ptr64 code) r14)
 // Called from:
 //      _init
-void __do_global_ctors_aux()
+void __do_global_ctors_aux(word64 r11, ptr64 r12, word64 r13, <anonymous> * r14)
 {
+	<anonymous> * r1_n = g_ptr1E20;
+	if (r1_n != (<anonymous> *) ~0x00)
+	{
+		<anonymous> ** r11_n = &g_ptr1E20;
+		do
+		{
+			struct Eq_n * r15_n;
+			r1_n();
+			r1_n = (<anonymous> *) *r11_n;
+		} while (r1_n != (<anonymous> *) ~0x00);
+		<anonymous> * r14_n = r15_n->ptr0110;
+		r14_n();
+	}
+	else
+		r14();
 }
 
-// 0000000000000808: void call___do_global_ctors_aux()
-void call___do_global_ctors_aux()
+// 0000000000000808: void call___do_global_ctors_aux(Register (ptr64 code) r14)
+void call___do_global_ctors_aux(<anonymous> * r14)
 {
+	r14();
 }
 

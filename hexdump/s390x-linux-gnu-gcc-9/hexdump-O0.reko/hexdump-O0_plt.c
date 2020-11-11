@@ -5,6 +5,8 @@
 #include "hexdump-O0.h"
 
 // 00000000000004E4: void __cxa_finalize()
+// Called from:
+//      __do_global_dtors_aux
 void __cxa_finalize()
 {
 	<anonymous> * r1_n = g_ptr2000;
@@ -13,6 +15,8 @@ void __cxa_finalize()
 
 <anonymous> g_t04F2 = <code>;
 // 0000000000000504: void strlen()
+// Called from:
+//      main
 void strlen()
 {
 	<anonymous> * r1_n = g_ptr2008;
@@ -20,3 +24,12 @@ void strlen()
 }
 
 <anonymous> g_t0512 = <code>;
+// 0000000000000524: void fn0000000000000524()
+// Called from:
+//      main
+void fn0000000000000524()
+{
+	<anonymous> * r1_n = g_ptr2010;
+	r1_n();
+}
+

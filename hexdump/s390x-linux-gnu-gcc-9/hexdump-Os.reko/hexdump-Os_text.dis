@@ -11,17 +11,36 @@ main_entry:
 l00000000000004B0:
 
 
-void deregister_tm_clones()
+void deregister_tm_clones(word64 r14)
 // stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
 
-// MayUse: 
+// Called from:
+//      __do_global_dtors_aux
+// MayUse:  r14:[0..63]
 // LiveOut:
-// Trashed:
-// Preserved:
-// Terminates process
-deregister_tm_clones_exit:
+// Trashed: CC r1 r14 r2
+// Preserved: r15
 deregister_tm_clones_entry:
 l0000000000000508:
+	branch 0x0000000000002018<p64> != 0x0000000000002018<p64> l000000000000051A
+l000000000000051A:
+	word64 r1_7 = Mem0[0x0000000000001FF0<p64>:word64]
+	branch r1_7 != 0<64> l0000000000000526
+l0000000000000526:
+	word64 r14_13
+	call r1_7 (retsize: 0;)
+		uses: r14:r14_13
+		defs: r14:r14_13
+	return
+l0000000000000524_1:
+	call r14 (retsize: 0;)
+		uses: r14:r14
+	return
+l0000000000000518_1:
+	call r14 (retsize: 0;)
+		uses: r14:r14
+	return
+deregister_tm_clones_exit:
 
 
 void register_tm_clones(word64 r14)
@@ -38,6 +57,18 @@ l0000000000000528:
 	word64 r1_5 = 0x0000000000002018<p64> - 0x0000000000002018<p64>
 	branch (r1_5 >>u 63<i32>) + (r1_5 >> 3<i32>) >> 1<i32> != 0<64> l0000000000000554
 l0000000000000554:
+	word64 r1_13 = Mem0[0x0000000000001FE8<p64>:word64]
+	branch r1_13 != 0<64> l0000000000000560
+l0000000000000560:
+	word64 r14_21
+	call r1_13 (retsize: 0;)
+		uses: r14:r14_21,r2:0x0000000000002018<p64>
+		defs: r14:r14_21
+	return
+l000000000000055E_1:
+	call r14 (retsize: 0;)
+		uses: r14:r14
+	return
 l0000000000000552_1:
 	call r14 (retsize: 0;)
 		uses: r14:r14
@@ -45,32 +76,63 @@ l0000000000000552_1:
 register_tm_clones_exit:
 
 
-void __do_global_dtors_aux()
+void __do_global_dtors_aux(word64 r12, word64 r13)
 // stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
 
 // Called from:
 //      _fini
-// MayUse: 
+// MayUse:  r12:[0..63] r13:[0..63]
 // LiveOut:
-// Trashed:
-// Preserved:
-// Terminates process
-__do_global_dtors_aux_exit:
+// Trashed: CC r1 r10 r11 r12 r13 r14 r2 r9
+// Preserved: r15
 __do_global_dtors_aux_entry:
 l0000000000000568:
+	word64 r9_23 = 0x0000000000002018<p64>
+	word64 r15_24 = fp + -320<i64>
+	branch Mem22[0x0000000000002018<p64>:byte] != 0<8> l00000000000005FA
+l0000000000000582:
+	branch Mem22[0x0000000000001FE0<p64>:word64] == 0<64> l000000000000059E
+l0000000000000592:
+	__cxa_finalize()
+l000000000000059E:
+	word64 r10_36 = 0x0000000000001E70<p64>
+	word64 r11_37 = (0x0000000000001E78<p64> - 0x0000000000001E70<p64> >> 3<i32>) - 1<i64>
+	word64 r1_39 = Mem22[0x0000000000002020<p64>:word64]
+	branch r1_39 >=u r11_37 l00000000000005F0
+l00000000000005CA:
+	word64 r1_42 = r1_39 + 1<i64>
+	Mem44[0x0000000000002020<p64>:word64] = r1_42
+	word64 r1_47 = Mem44[r10_36 + (r1_42 << 3<i32>):word64]
+	call r1_47 (retsize: 0;)
+		uses: r1:r1_47,r10:r10_46,r11:r11_50,r12:r12_51,r13:r13_52,r14:0x00000000000005E2<p64>,r9:r9_49
+		defs: r10:r10_56,r11:r11_57,r12:r12_58,r13:r13_59,r15:r15_54,r9:r9_55
+	r1_39 = Mem44[0x0000000000002020<p64>:word64]
+	branch r1_39 < r11_37 l00000000000005CA
+l00000000000005F0:
+	deregister_tm_clones(0x00000000000005F6<p64>)
+	Mem73[r9_23:byte] = 1<8>
+l00000000000005FA:
+	word64 v13_77 = r15_24 + 232<i64>
+	word64 r14_89 = Mem78[v13_77 + 40<i64>:word64]
+	call r14_89 (retsize: 0;)
+		uses: r10:Mem78[v13_77 + 8<i64>:word64],r11:Mem78[v13_77 + 16<i64>:word64],r12:Mem78[v13_77 + 24<i64>:word64],r13:Mem78[v13_77 + 32<i64>:word64],r14:r14_89,r9:Mem78[v13_77:word64]
+	return
+__do_global_dtors_aux_exit:
 
 
-void call___do_global_dtors_aux()
+void call___do_global_dtors_aux(word64 r14)
 // stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
 
-// MayUse: 
+// MayUse:  r14:[0..63]
 // LiveOut:
-// Trashed:
-// Preserved:
-// Terminates process
-call___do_global_dtors_aux_exit:
+// Trashed: r14
+// Preserved: r15
 call___do_global_dtors_aux_entry:
 l0000000000000608:
+	call r14 (retsize: 0;)
+		uses: r14:r14,Stack +0070:r14,Stack +0078:fp - 160<i64>,Stack +FFFFFFD0:r14,Stack +FFFFFFD8:fp - 160<i64>
+	return
+call___do_global_dtors_aux_exit:
 
 
 void frame_dummy(word64 r14)
@@ -79,36 +141,40 @@ void frame_dummy(word64 r14)
 // Called from:
 //      _init
 // MayUse:  r14:[0..63]
-// LiveOut:
-// Trashed: CC r1 r14 r15 r2 r3
-// Preserved:
+// LiveOut: r15
+// Trashed: r1 r14 r15 r2 r3
+// Preserved: CC
 frame_dummy_entry:
 l0000000000000620:
 	branch CC l0000000000000620_thunk_register_tm_clones
 l0000000000000620_thunk_register_tm_clones:
 	register_tm_clones(r14)
 	return
-frame_dummy_exit:
 l0000000000000626:
 l0000000000000626_thunk_call_frame_dummy:
-	call_frame_dummy()
+	call_frame_dummy(r14)
+	return
 l0000000000000626_thunk_call_frame_dummy:
-	call_frame_dummy()
+	call_frame_dummy(r14)
+	return
+frame_dummy_exit:
 
 
-void call_frame_dummy()
+void call_frame_dummy(word64 r14)
 // stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
 
 // Called from:
 //      frame_dummy
-// MayUse: 
+// MayUse:  r14:[0..63]
 // LiveOut:
-// Trashed:
-// Preserved:
-// Terminates process
-call_frame_dummy_exit:
+// Trashed: r14
+// Preserved: r15
 call_frame_dummy_entry:
 l0000000000000628:
+	call r14 (retsize: 0;)
+		uses: r14:r14,Stack +0070:r14,Stack +0078:fp - 160<i64>,Stack +FFFFFFD0:r14,Stack +FFFFFFD8:fp - 160<i64>
+	return
+call_frame_dummy_exit:
 
 
 void hexdump(word64 r14)
@@ -126,31 +192,52 @@ l0000000000000640:
 hexdump_exit:
 
 
-void __do_global_ctors_aux()
+void __do_global_ctors_aux(word64 r11, word64 r12, word64 r13, word64 r14)
 // stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
 
 // Called from:
 //      _init
-// MayUse: 
+// MayUse:  r11:[0..63] r12:[0..63] r13:[0..63] r14:[0..63]
 // LiveOut:
-// Trashed:
-// Preserved:
-// Terminates process
-__do_global_ctors_aux_exit:
+// Trashed: CC r1 r11 r12 r13 r14
+// Preserved: r15
 __do_global_ctors_aux_entry:
 l0000000000000648:
+	word64 r1_25 = Mem0[0x0000000000001E60<p64>:word64]
+	branch r1_25 != 0xFFFFFFFFFFFFFFFF<64> l0000000000000654
+l0000000000000654:
+	word64 r11_21 = 0x0000000000001E60<p64>
+l0000000000000666:
+	word64 r15_29
+	call r1_25 (retsize: 0;)
+		uses: r11:r11_22 + -8<i64>,r12:r12_26,r13:r13_27,r14:0x000000000000066E<p64>
+		defs: r11:r11_32,r12:r12_33,r13:r13_34,r15:r15_29
+	r1_25 = Mem19[r11_21:word64]
+	branch r1_25 != 0xFFFFFFFFFFFFFFFF<64> l0000000000000666
+l000000000000067C:
+	word64 r14_46 = Mem19[r15_29 + 272<i64>:word64]
+	call r14_46 (retsize: 0;)
+		uses: r11:Mem19[r15_29 + 248<i64>:word64],r12:Mem19[r15_29 + 256<i64>:word64],r13:Mem19[r15_29 + 264<i64>:word64],r14:r14_46
+	return
+l0000000000000652_1:
+	call r14 (retsize: 0;)
+		uses: r11:r11,r12:r12,r13:r13,r14:r14
+	return
+__do_global_ctors_aux_exit:
 
 
-void call___do_global_ctors_aux()
+void call___do_global_ctors_aux(word64 r14)
 // stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
 
-// MayUse: 
+// MayUse:  r14:[0..63]
 // LiveOut:
-// Trashed:
-// Preserved:
-// Terminates process
-call___do_global_ctors_aux_exit:
+// Trashed: r14
+// Preserved: r15
 call___do_global_ctors_aux_entry:
 l0000000000000688:
+	call r14 (retsize: 0;)
+		uses: r14:r14,Stack +0070:r14,Stack +0078:fp - 160<i64>,Stack +FFFFFFD0:r14,Stack +FFFFFFD8:fp - 160<i64>
+	return
+call___do_global_ctors_aux_exit:
 
 

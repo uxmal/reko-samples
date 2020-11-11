@@ -4,4 +4,7 @@
 
 #include "hexdump-O0.h"
 
+word64 g_qw1FD8 = 0x00;
+<anonymous> * g_ptr1FE0 = null;
 <anonymous> * g_ptr1FE8 = null;
+<anonymous> * g_ptr1FF8 = null;

@@ -1,6 +1,8 @@
 void __cxa_finalize()
 // stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
 
+// Called from:
+//      __do_global_dtors_aux
 // MayUse: 
 // LiveOut:
 // Trashed: r1
@@ -17,6 +19,8 @@ __cxa_finalize_exit:
 void strlen()
 // stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
 
+// Called from:
+//      main
 // MayUse: 
 // LiveOut:
 // Trashed: r1
@@ -28,5 +32,23 @@ l0000000000000504:
 		uses: r1:r1_5
 	return
 strlen_exit:
+
+
+void fn0000000000000524()
+// stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
+
+// Called from:
+//      main
+// MayUse: 
+// LiveOut:
+// Trashed: r1
+// Preserved: r15
+fn0000000000000524_entry:
+l0000000000000524:
+	word64 r1_5 = Mem0[0x0000000000002010<p64>:word64]
+	call r1_5 (retsize: 0;)
+		uses: r1:r1_5
+	return
+fn0000000000000524_exit:
 
 

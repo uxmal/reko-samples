@@ -4,9 +4,24 @@
 
 #include "base_offset_return-s390x-linux-gnu-gcc-9.h"
 
-// 0000000000000478: void deregister_tm_clones()
-void deregister_tm_clones()
+// 0000000000000478: void deregister_tm_clones(Register (ptr64 code) r14)
+// Called from:
+//      __do_global_dtors_aux
+void deregister_tm_clones(<anonymous> * r14)
 {
+	if (0x2010 != 0x2010)
+	{
+		<anonymous> * r1_n = g_ptr1FF0;
+		if (r1_n != null)
+		{
+			word64 r14_n;
+			r1_n();
+		}
+		else
+			r14();
+	}
+	else
+		r14();
 }
 
 // 0000000000000498: void register_tm_clones(Register (ptr64 code) r14)
@@ -15,20 +30,56 @@ void deregister_tm_clones()
 void register_tm_clones(<anonymous> * r14)
 {
 	Eq_n r1_n = 0x2010 - 0x2010;
-	if ((r1_n >>u 63) + (r1_n >> 3) >> 1 == 0x00)
+	if ((r1_n >>u 63) + (r1_n >> 3) >> 1 != 0x00)
+	{
+		<anonymous> * r1_n = g_ptr1FE8;
+		if (r1_n != null)
+		{
+			word64 r14_n;
+			r1_n();
+		}
+		else
+			r14();
+	}
+	else
 		r14();
 }
 
-// 00000000000004D8: void __do_global_dtors_aux()
+// 00000000000004D8: void __do_global_dtors_aux(Register ptr64 r12, Register word64 r13)
 // Called from:
 //      _fini
-void __do_global_dtors_aux()
+void __do_global_dtors_aux(ptr64 r12, word64 r13)
 {
+	byte * r9_n = &g_b2010;
+	ptr64 r15_n = fp + -320;
+	if (g_b2010 == 0x00)
+	{
+		if (g_qw1FE0 != 0x00)
+			__cxa_finalize();
+		<anonymous> * r10_n[] = g_a1E58;
+		Eq_n r11_n = (7776 - 7768 >> 3) - 1;
+		Eq_n r1_n = g_t2018;
+		while (r1_n < r11_n)
+		{
+			Eq_n r1_n = (word64) r1_n + 1;
+			g_t2018 = r1_n;
+			<anonymous> * r1_n = r10_n[r1_n];
+			r1_n();
+			r1_n = g_t2018;
+		}
+		deregister_tm_clones(&g_t0566);
+		*r9_n = 0x01;
+	}
+	struct Eq_n * v13_n = r15_n + 232;
+	<anonymous> * r14_n = v13_n->ptr0028;
+	r14_n();
 }
 
-// 0000000000000578: void call___do_global_dtors_aux()
-void call___do_global_dtors_aux()
+<anonymous> g_t0566 = <code>;
+// 0000000000000578: void call___do_global_dtors_aux(Register (ptr64 code) r14)
+void call___do_global_dtors_aux(<anonymous> * r14)
 {
+	r14();
 }
 
 // 0000000000000590: void frame_dummy(Register (ptr64 code) r14)
@@ -39,14 +90,15 @@ void frame_dummy(<anonymous> * r14)
 	if (CC)
 		register_tm_clones(r14);
 	else
-		call_frame_dummy();
+		call_frame_dummy(r14);
 }
 
-// 0000000000000598: void call_frame_dummy()
+// 0000000000000598: void call_frame_dummy(Register (ptr64 code) r14)
 // Called from:
 //      frame_dummy
-void call_frame_dummy()
+void call_frame_dummy(<anonymous> * r14)
 {
+	r14();
 }
 
 // 00000000000005B0: void getIndex()
@@ -54,20 +106,50 @@ void getIndex()
 {
 }
 
-// 00000000000005C8: void foo()
-void foo()
+// 00000000000005C8: void foo(Register int64 r2, Register word64 r11, Register word64 r12, Register word64 r13, Register (ptr64 code) r14)
+void foo(int64 r2, word64 r11, word64 r12, word64 r13, <anonymous> * r14)
 {
+	if (r2 == 0x00)
+		r14();
+	else
+		fn00000000000005DC(r2);
 }
 
-// 0000000000000610: void __do_global_ctors_aux()
+// 00000000000005DC: void fn00000000000005DC(Register int64 r2)
+// Called from:
+//      foo
+//      fn00000000000005DC
+void fn00000000000005DC(int64 r2)
+{
+	fn00000000000005DC(r2_n);
+	int64 r2_n = (int64) (word32) r2;
+}
+
+// 0000000000000610: void __do_global_ctors_aux(Register word64 r11, Register ptr64 r12, Register word64 r13, Register (ptr64 code) r14)
 // Called from:
 //      _init
-void __do_global_ctors_aux()
+void __do_global_ctors_aux(word64 r11, ptr64 r12, word64 r13, <anonymous> * r14)
 {
+	<anonymous> * r1_n = g_ptr1E48;
+	if (r1_n != (<anonymous> *) ~0x00)
+	{
+		<anonymous> ** r11_n = &g_ptr1E48;
+		do
+		{
+			struct Eq_n * r15_n;
+			r1_n();
+			r1_n = (<anonymous> *) *r11_n;
+		} while (r1_n != (<anonymous> *) ~0x00);
+		<anonymous> * r14_n = r15_n->ptr0110;
+		r14_n();
+	}
+	else
+		r14();
 }
 
-// 0000000000000650: void call___do_global_ctors_aux()
-void call___do_global_ctors_aux()
+// 0000000000000650: void call___do_global_ctors_aux(Register (ptr64 code) r14)
+void call___do_global_ctors_aux(<anonymous> * r14)
 {
+	r14();
 }
 

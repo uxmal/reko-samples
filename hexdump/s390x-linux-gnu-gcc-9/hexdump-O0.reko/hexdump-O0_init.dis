@@ -3,19 +3,24 @@ void _init(word64 r6, word64 r7, word64 r8, word64 r9, word64 r10, word64 r11, w
 
 // MayUse:  r10:[0..63] r11:[0..63] r13:[0..63] r6:[0..63] r7:[0..63] r8:[0..63] r9:[0..63]
 // LiveOut:
-// Trashed:
-// Preserved:
-// Terminates process
-_init_exit:
+// Trashed: CC r1 r10 r11 r12 r13 r14 r2 r3 r4 r6 r7 r8 r9
+// Preserved: r15
 _init_entry:
 l0000000000000478:
+	word64 r12_35 = 0x0000000000001FC0<p64>
 	word64 r1_37 = Mem34[0x0000000000001FE8<p64>:word64]
 	branch r1_37 == 0<64> l00000000000004A8
 l00000000000004A6:
 	call r1_37 (retsize: 0;)
 		uses: r10:r10,r11:r11,r12:0x0000000000001FC0<p64>,r13:r13,r14:0x00000000000004A8<p64>,r6:r6,r7:r7,r8:r8,r9:r9
+		defs: r11:r11_47,r12:r12_48,r13:r13_49
 l00000000000004A8:
 	frame_dummy(0x00000000000004AE<p64>)
-	__do_global_ctors_aux()
+	__do_global_ctors_aux(r11, r12_35, r13, 0x00000000000004B4<p64>)
+	word64 r15_57 = <invalid>
+	call Mem34[r15_57 + 272<i64>:word64] (retsize: 0;)
+		uses: r10:Mem34[r15_57 + 240<i64>:word64],r11:Mem34[r15_57 + 248<i64>:word64],r12:Mem34[r15_57 + 256<i64>:word64],r13:Mem34[r15_57 + 264<i64>:word64],r14:Mem34[r15_57 + 272<i64>:word64],r6:Mem34[r15_57 + 208<i64>:word64],r7:Mem34[r15_57 + 216<i64>:word64],r8:Mem34[r15_57 + 224<i64>:word64],r9:Mem34[r15_57 + 232<i64>:word64]
+	return
+_init_exit:
 
 

@@ -5,6 +5,8 @@
 #include "base_offset_return-s390x-linux-gnu-gcc-9.h"
 
 // 0000000000000454: void __cxa_finalize()
+// Called from:
+//      __do_global_dtors_aux
 void __cxa_finalize()
 {
 	<anonymous> * r1_n = g_ptr2000;

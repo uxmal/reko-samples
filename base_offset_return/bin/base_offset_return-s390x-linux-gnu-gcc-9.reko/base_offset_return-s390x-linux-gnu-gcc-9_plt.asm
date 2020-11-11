@@ -4,6 +4,8 @@
 0000000000000450 07 00 07 00                                     ....           
 
 ;; __cxa_finalize: 0000000000000454
+;;   Called from:
+;;     0000000000000508 (in __do_global_dtors_aux)
 __cxa_finalize proc
 C010 0000 0DD6 	larl	r1,0000000000002000
 E310 1000 0004 	lg	r1,(r1)

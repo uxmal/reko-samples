@@ -1,14 +1,18 @@
-void _fini()
+void _fini(word64 r6, word64 r7, word64 r8, word64 r9, word64 r10, word64 r11, word64 r12, word64 r13, word64 r14)
 // stackDelta: 0; fpuStackDelta: 0; fpuMaxParam: -1
 
-// MayUse: 
+// MayUse:  r10:[0..63] r11:[0..63] r12:[0..63] r13:[0..63] r14:[0..63] r6:[0..63] r7:[0..63] r8:[0..63] r9:[0..63]
 // LiveOut:
-// Trashed:
-// Preserved:
-// Terminates process
-_fini_exit:
+// Trashed: CC r1 r10 r11 r12 r13 r14 r2 r4 r6 r7 r8 r9
+// Preserved: r15
 _fini_entry:
 l00000000000006A0:
-	__do_global_dtors_aux()
+	__do_global_dtors_aux(0x0000000000001FC0<p64>, r13)
+	word64 r4_79
+	call r14 (retsize: 0;)
+		uses: r10:r10,r11:r11,r12:r12,r13:r13,r14:r14,r4:r4_79,r6:r6,r7:r7,r8:r8,r9:r9
+		defs: r4:r4_79
+	return
+_fini_exit:
 
 

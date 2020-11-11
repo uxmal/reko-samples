@@ -5,6 +5,8 @@
 #include "hexdump-Os.h"
 
 // 000000000000048C: void __cxa_finalize()
+// Called from:
+//      __do_global_dtors_aux
 void __cxa_finalize()
 {
 	<anonymous> * r1_n = g_ptr2008;

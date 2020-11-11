@@ -171,7 +171,7 @@ call_frame_dummy proc
 getIndex proc
 9DE3BF50     	save	%sp,FFFFFFFFFFFFFF50,%sp
 82102000     	or	%g0,00000000,%g1
-837E2401     	illegal
+837E2401     	movrz	%i0,+00000001,%g1
 82006001     	add	%g1,00000001,%g1
 81CFE008     	return	%i7+00000008
 91386000     	sra	%g1,00000000,%o0

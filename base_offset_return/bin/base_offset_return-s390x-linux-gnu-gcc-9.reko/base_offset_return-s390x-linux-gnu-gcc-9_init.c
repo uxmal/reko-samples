@@ -7,11 +7,15 @@
 // 00000000000003E8: void _init(Register word64 r6, Register word64 r7, Register word64 r8, Register word64 r9, Register word64 r10, Register word64 r11, Register word64 r13)
 void _init(word64 r6, word64 r7, word64 r8, word64 r9, word64 r10, word64 r11, word64 r13)
 {
+	ptr64 r12_n = 0x1FC8;
 	<anonymous> * r1_n = g_ptr1FF8;
 	if (r1_n != null)
 		r1_n();
 	frame_dummy(&g_t041E);
-	__do_global_ctors_aux();
+	__do_global_ctors_aux(r11, r12_n, r13, &g_t0424);
+	struct Eq_n * r15_n = (struct Eq_n *) <invalid>;
+	r15_n->ptr0110();
 }
 
 <anonymous> g_t041E = <code>;
+<anonymous> g_t0424 = <code>;

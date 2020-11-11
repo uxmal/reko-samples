@@ -6,3 +6,4 @@
 
 <anonymous> * g_ptr2000 = &g_t04F2;
 <anonymous> * g_ptr2008 = &g_t0512;
+<anonymous> * g_ptr2010 = &g_t0BB2;
